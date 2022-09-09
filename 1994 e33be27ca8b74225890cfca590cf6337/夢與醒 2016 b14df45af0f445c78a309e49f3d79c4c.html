@@ -1,0 +1,1994 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>夢與醒:2016</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="b14df45a-f0f4-45c7-8a30-9e49f3d79c4c" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">🎴</span></div><h1 class="page-title">夢與醒:2016</h1></header><div class="page-body"><ul id="a0fdaca5-f25b-4489-a8f9-24505344f074" class="block-color-gray_background bulleted-list"><li>2016-0105
+我想透過在空間中的行動重新定義繪畫的方式
+整理繪畫中的規則重新設計在行動之上</li></ul><ul id="29e4da56-525e-48e3-9138-c08636b238b7" class="block-color-gray_background bulleted-list"><li>2016-0108
+一件事情是怎麼樣每個人都有不同的解釋 作品主要是讓你能去把這個問題帶到自己身上去找答案 讓你覺得這個問題也是你的問題 你會想去思考</li></ul><ul id="01bac953-d588-46dd-ad24-dc8557c12a7f" class="block-color-gray_background bulleted-list"><li>2016-0109
+我知道這可能是我的問題
+我的問題到了你身上可能就不是問題
+如此這個問題的答案對你可能也毫無意義
+那為什麼還需要讓你來追尋
+我的畫大多都在講這一件事
+想跟聽不到聲音的人講話要怎麼辦
+想回家的人找不到路怎麼辦
+路燈跟行人誰比較重要
+我不是這些問題的擁有者
+這些問題到我身上可能不是問題
+答案對我也不知所以
+但是在畫的過程他們就會一一浮現
+先是出現問題後來又會出現答案
+畫完之後就像問題沒有出現過一樣
+有了答案就沒有問題
+沒有問題就沒有答案</li></ul><ul id="c9c238a7-efd3-45de-8b42-4a6553fc505e" class="block-color-gray_background bulleted-list"><li>2016-0117
+我砍仙人掌</li></ul><ul id="bff22cdb-9617-4659-96fb-4004a4cc33de" class="block-color-gray_background bulleted-list"><li>2016-0122
+我會越來越想她，只會越來越膨脹，直到她溶於世界，然後不見</li></ul><ul id="88607435-c747-4ee0-a8e5-f4b133e880f6" class="block-color-gray_background bulleted-list"><li>2016-0122
+只是我喜歡的人 一直在不同的人身上以不同的樣貌出現 我只能在時間中追她</li></ul><ul id="d8365cbe-feb5-434a-a591-98f68f7854e5" class="block-color-gray_background bulleted-list"><li>2016-0202
+他不可能永遠比我值錢
+至少在世界毀滅那天
+他會跟我一樣完全不見</li></ul><ul id="1c68358f-c2c7-48ce-88a6-6990d04c6e7e" class="block-color-gray_background bulleted-list"><li>2016-0203
+我們只能琢磨我們知道的事，我們無法思考我們不知道的事</li></ul><ul id="6891d221-57a1-48b5-b6dc-36af5e0d3658" class="block-color-gray_background bulleted-list"><li>2016-0203
+人知的範圍是外在，人不知的範圍是內在，我的工作只是抄寫一些表態</li></ul><ul id="4d1ac51a-cd18-4bd5-b0b3-fca64f90f476" class="block-color-gray_background bulleted-list"><li>2016-0206
+昏迷12天</li></ul><ul id="a4448676-df85-4ca9-87ae-5b89483101a3" class="block-color-gray_background bulleted-list"><li>2016-0212
+記憶是以甚麼形式存在著?</li></ul><ul id="97db76d9-5c70-4dd3-8176-0dc913248839" class="block-color-gray_background bulleted-list"><li>2016-0216
+要留下讓人好奇的秘密
+要讓人持續發現你
+像是你活著一樣
+每次都像重新認識你
+就好像你還活著一樣</li></ul><ul id="8ab146f0-25af-4319-824e-6276d82849b6" class="block-color-gray_background bulleted-list"><li>2016-0218
+你在想事情哦?</li></ul><ul id="5cdb61b2-c824-418b-99dc-d2493a9085eb" class="block-color-gray_background bulleted-list"><li>2016-0220
+我在哪裡</li></ul><ul id="fb2e2cf1-627e-40e6-bca8-08542b5a6606" class="block-color-gray_background bulleted-list"><li>2016-221
+只有現實是創作者，每天用我們不認識的語彙說故事著</li></ul><ul id="91a3804e-c970-4592-bfe7-4e14a6b4024c" class="block-color-gray_background bulleted-list"><li>2016-221
+不用鏡頭說故事 用故事說鏡頭 現實的霸道</li></ul><ul id="65cb6990-37aa-43db-a0f4-6cf22139c725" class="block-color-gray_background bulleted-list"><li>2016-0224
+不是看美醜</li></ul><ul id="e2d3b87c-5544-4353-8ebb-073544095141" class="block-color-gray_background bulleted-list"><li>2016-0224
+但是幻想的記憶是不能被長存在我的想法裡的
+雖然有些可惜但是我時常在幻想
+所以我也接受了這些事情
+甚至說服自己肩膀上扛著太多東西會走得不夠快
+這些幻想的故事最後的下場就是慢慢遺忘
+我也漸漸習慣用我自己的方式去埋葬它
+它在記憶裡慢慢被風化
+我也時不時地去回顧它
+看它慢慢地缺字
+缺情緒缺背景缺內容
+直到它開始變成一灘爛泥
+我知道那邊有一個故事
+但我已經無法去閱讀它</li></ul><ul id="36f3c035-0617-4351-934f-ae2968dd07c3" class="block-color-gray_background bulleted-list"><li>2016-226
+如果我們只交換日記的字句其中的空隙會如何填補</li></ul><ul id="51a3187e-7ab9-4c3c-8b01-4ef5167257c3" class="block-color-gray_background bulleted-list"><li>2016-0304
+好的過程不能跨越時間？
+如果一個過程能隨著時間變化延續那它就不是一個好的過程 是一個平衡的過程</li></ul><ul id="e820aaa4-0bad-47fc-81c6-cf67677f0baf" class="block-color-gray_background bulleted-list"><li>2016-0304
+假設問題產生的方式能被整理，問題在發生之前已經被整理解決辦法</li></ul><ul id="5ec655ca-606e-47ef-a739-7066f36f2c88" class="block-color-gray_background bulleted-list"><li>2016-0304
+問題來自於人  既然使用者習慣能被預測，那問題的發生也能夠被預測，我們能在問題發生之前整理</li></ul><ul id="8e925637-509c-4211-80d7-ef71abf2d5cb" class="block-color-gray_background bulleted-list"><li>2016-0309
+怎麼做都不會對</li></ul><ul id="174d3575-2f94-4e79-bb76-96e3d3fdb0e8" class="block-color-gray_background bulleted-list"><li>2016-0309
+為什麼線沒有連起來 為什麼押不下去</li></ul><ul id="d5544c7b-12e2-4be1-a0d3-cc2d0736f7c7" class="block-color-gray_background bulleted-list"><li>2016-0309
+應該可以的不是嗎 為什麼我不能</li></ul><ul id="98feefb9-90d1-4542-b81d-11e1fcce9eea" class="block-color-gray_background bulleted-list"><li>2016-0310
+人間七苦。生、老、病、死、怨憎會、愛別離、求不得</li></ul><ul id="e361c968-b03b-4308-80ce-1d394338e766" class="block-color-gray_background bulleted-list"><li>2016-0310
+三境界就是：看山是山，看山不是山，看山還是山。曾經滄海 定有所體悟</li></ul><ul id="014c7aa3-002c-42b7-9a56-09ec9c4fd315" class="block-color-gray_background bulleted-list"><li>2016-0310
+我希望自己像鏡子 人們可以在我身上看到自己    ………人們在閱讀空隙時 模糊的思考方式讓我們把自己帶入空隙 於是當我們在閱讀空隙其實是在閱讀自己 留下的空隙越多又能維持可閱讀的架構就能在之中看到越多自己</li></ul><ul id="4afbbb0c-c476-4810-8593-70cef9b949a3" class="block-color-gray_background bulleted-list"><li>2016-0310
+當我寄身於空隙時 形式將不存在於我。</li></ul><ul id="31601ae1-d1ea-402c-ba5e-733fe9c2f545" class="block-color-gray_background bulleted-list"><li>2016-0310
+為什麼我想嫁身於空隙 為什麼形式時時刻刻提醒著我們自己 每件事情與我們都有著空隙 於是時時刻刻我們都能看著四周映著自己</li></ul><ul id="bf3f7c6e-ee5b-46bf-9925-5e085f094a38" class="block-color-gray_background bulleted-list"><li>2016-0310
+保持自己是自由的前提 如果不能抱持自我在一望無際的空隙之中便會支離破碎 然而一旦能夠寄身於空隙之中 則形式則只是形式 我們就能夠像水一樣 映著杯子的樣子</li></ul><ul id="5724cdfc-1849-493a-bd57-f70cf91ecdcf" class="block-color-gray_background bulleted-list"><li>2016-0310
+～對於自身的了解不足以達到行塑的能力結果就是支離破碎了</li></ul><ul id="af32d14e-7495-4f68-8f6a-a69a6171613d" class="block-color-gray_background bulleted-list"><li>2016-0321
+我的夢非我，夢也不是大自然</li></ul><ul id="ca8e37bf-e007-4128-9227-fea3968e2727" class="block-color-gray_background bulleted-list"><li>2016-0321
+在腦裡
+我們是一群不會挨餓的精靈住在森林裡
+我們的目的就是分頭在森林裡遊走
+在一段時間之後回到這裡
+交換彼此的所見所聞
+大部分的精靈都會回到這裡
+但不是所有的精靈都會回到這裡
+大部分的精靈都有不錯的方向感和很好的運氣
+都是幸運的精靈
+雖然夜晚不常來臨
+但是在某些月亮出現的時候
+我會畏懼森林裡動物的聲音
+這裡是我的腦裡
+有些我的精靈在我不知道的地方活著</li></ul><ul id="90107af5-f052-4f4f-a9e7-21fa1b216ad9" class="block-color-gray_background bulleted-list"><li>2016-0402
+在誰的心海 不知不覺 雪融開來 手放不開 慷慨</li></ul><ul id="51873de2-60a0-4366-91cc-af2410b6376d" class="block-color-gray_background bulleted-list"><li>2016-0402
+我怎麼會有一個理由 為情為愛 為我 依然在我夢廻中 你怎麼沒有一個理由</li></ul><ul id="cc087272-24c8-4eeb-a541-718765690b7c" class="block-color-gray_background bulleted-list"><li>2016-0404
+智慧 傳達 繼承 載體 文化 硬體 電腦 世代
+之所以要尋找傳達的方式其中一個原因，倘若意義的傳達能透過完美環境而完美重現，那自身的存在能否同樣完美重現，而來之所以希望完美重現是因為希望能避免錯失最後一步之後的風景，然而需要
+存在是一種模式，是我們之所以為我們是因為我們的行為樣貌是一個連串的進程，我們的行為會隨著不同的情況調整，</li></ul><ul id="bf579c01-7a79-47b2-bbc7-19b639753fbc" class="block-color-gray_background bulleted-list"><li>2016-0404
+一個人尋找答案的過程是一個產物令另一個人的問題獲得解達</li></ul><ul id="c21a5383-0800-4aae-83c7-83dfa486f852" class="block-color-gray_background bulleted-list"><li>2016-0406
+猶太教經典《妥拉》（Torah）的教誨有言，凡是夜晚皆分成上半夜與下半夜，上半夜用來反省白日的所作所為，並不適合歡笑。</li></ul><ul id="fe4fa83f-aece-47b0-8a5e-6b5f3492de09" class="block-color-gray_background bulleted-list"><li>2016-0408
+向我提問</li></ul><ul id="a40411c8-9b56-43af-b78b-482b7ed6864a" class="block-color-gray_background bulleted-list"><li>2016-0408
+自我介紹是讓人家知道我的
+我想找一個答案,我喜歡建立自己的規則,在這之中想我可能遇到的問題,找它們的答案,用找到的答案再去建立新的規則,放棄一些舊規則,一再一再地做這件事情,然後很希望有一天可以遇到一個答案只屬於當時發現他的那個規則,就再也沒有新的規則能夠發生了,也許嚴格的限制可以更快的找到它,但我不想刻意雕琢,我想慢慢找,像是碰巧遇到它,像是它也在找我,像是走到盡頭,像是遇見鏡子....我猜的啦</li></ul><ul id="f033d14d-17c3-427e-a339-c6f4cb733a88" class="block-color-gray_background bulleted-list"><li>2016-0418
+快世界一步是天堂 再多一步是地獄
+初戀</li></ul><ul id="1d3f585e-59b7-4c47-b4f7-c0d708f25798" class="block-color-gray_background bulleted-list"><li>2016-0421
+每一個故事都能有自己的空間
+每一個故事都能讓需要它的人看到
+每一個故事都能發生意外
+我可以在那裏放我的作品
+我可以布置那裏的每個細節
+我可以只在意那裏是不是我喜歡的樣子
+我可以隨處見到過去的我做過的事情
+我可以重新設計我認識過的每個東西
+我可以
+是一個什麼樣子的地方</li></ul><ul id="f3abcf25-75af-4500-b91b-607c27b6cb6e" class="block-color-gray_background bulleted-list"><li>2016-0421
+任何解構它的事情都是更加構築它的元素
+因此
+請別認為了它是不可摧毀或是不會結束
+一段開始探討的事在討論之時就已經開始了
+任何行為都會被記得
+所以你可以發言或是沉默</li></ul><ul id="756f34b4-dc20-453b-ae2f-0f15eb9ca569" class="block-color-gray_background bulleted-list"><li>2016-0424
+讓它陳去
+讓它睡去
+感動是形式中產生的非形式
+不會被記得也沒有人會被忘記
+註定的也意外的</li></ul><ul id="66d2f64e-1d64-4f4a-9ec2-4fadaa1399d0" class="block-color-gray_background bulleted-list"><li>2016-0424
+自由是一種虛構的概念
+自由是在非慣性參考系
+因為執行規則所需要的束縛假想的概念</li></ul><ul id="7a15389f-215d-42fd-a89c-a3f53fc91e18" class="block-color-gray_background bulleted-list"><li>2016-0426
+形式之於傳達所代表的意義
+生活之中存在多種形式去傳達,日常生活中傳達難以以單一形式發生,
+傳達作為與時間互動的行為,代表著身為一種連續的狀態,包含了過去現在未來,從 未發出 到 未被接收 到 被接收,
+看起來像是兩個極端與其中間值
+又像數字與數字之間的連續
+如果是數字與數字之間的連續性
+過去我所熟知的事物隨著時間反應,當我在不同的角度回顧時它們呈現與以往不同的風貌,尤其是過去抽象的認知更轉變為一種新感覺的認識,
+當可以排列的物件以類比的形式存在,我們會認為&quot;新&quot;與任何已知事物的排列
+我之所以自創文字書寫並非沒有目的或是單純模仿
+而是想要以此討論口語和書寫對我而言的角色
+我認為書寫在單方面紀錄時留下的空隙與
+口語在對話時的描述不清有同樣的責備意味出發
+也許在這樣的安排後閱讀能有其他許多的解釋
+但急於對自己的想法留下結論很難成為成熟的思考方式
+我們想要觀察到的智慧徜徉在每個事件的不確定之中
+而個性則決定我們接受不確定之於明確描述的比例
+也許因此看來智慧並非作用於所有個性?
+傳達失誤:
+你在講什麼:
+我不認同你講的:
+並非指當他人理解
+不同個性對不同形式之間的拿捏有所不同,</li></ul><ul id="1e63c0ad-dafb-4014-a402-8baef4890e93" class="block-color-gray_background bulleted-list"><li>2016-0428
+有一些場合的壓力需要你告訴自己用最後一場演出的表現去對得起
+但通常你該告訴自己這只是其中一場演出而已</li></ul><ul id="3c94e2db-45d2-4565-ba8d-848d7c38fef0" class="block-color-gray_background bulleted-list"><li>2016-0429
+在夢裡養了一隻貓
+又在夢裡想起來我的貓是在夢裡
+簡單每日可以做
+有驚喜 會預期不到</li></ul><ul id="2f986c99-ddde-4743-a3ed-2c8c22f80c6a" class="block-color-gray_background bulleted-list"><li>2016-0429
+每日一籤</li></ul><ul id="63e1b546-ce28-4957-8b68-8f0116955a57" class="block-color-gray_background bulleted-list"><li>2016-0503
+永遠的狄嘉是一個在還沒開始之後的故事,永遠的狄嘉是一個已經存在過的故事</li></ul><ul id="f3354c74-1717-4e51-9f60-0bf82f4b568c" class="block-color-gray_background bulleted-list"><li>2016-0503
+一個人知道要怎麼記錄生活
+一個人看著電腦整天
+打開網頁找認識的漫畫有沒有更新
+就這樣坐著整天
+不自覺的疲累不自覺的疲倦
+一個人的交際又有些
+只好試著結束一串想法在它成熟以前
+成熟以前的想法能往著成熟去走
+成熟之後的想法吃不吃都會爛掉
+我要去看獵人了</li></ul><ul id="9ec22bd5-c725-480a-ac70-64b04bdeab1b" class="block-color-gray_background bulleted-list"><li>2016-0504
+不看到下一分鐘出現
+我深怕浪費這一分鐘</li></ul><ul id="1ffe2012-9d2f-4a10-8efa-f5c85966f522" class="block-color-gray_background bulleted-list"><li>2016-0504
+從深刻認識的角度來講
+形式主義不是一個好的交際手腕
+而從普及使用的角度來看
+形式主義是一個引導至多元的方向</li></ul><ul id="3f730892-840c-4d64-88a0-81e74d4c4330" class="block-color-gray_background bulleted-list"><li>2016-0504
+我開始懷疑追求
+我們在追求什麼
+是不是我漫無目的的遊走太久
+我不知道
+我只能趴下來想
+尤其享受想事情發熱的額頭碰上手肘
+像什麼都沒發生一樣
+驚覺以後又開始回想
+卻也已經錯過該想這件事的時候了
+只能回頭讀讀
+重新再想
+也許這也是我最近想要的
+遺留下問題而不是解答
+期望呈現的就是這樣
+沒有計畫能照著走但又一切都準備好了</li></ul><ul id="6d59b5c1-7890-4e75-b78c-f2d2749e607b" class="block-color-gray_background bulleted-list"><li>2016-0505
+用外貌選擇工作夥伴是違法的事情
+而面試之所以合理是因為它看得是一個整體的呈現
+呈現是否有符合這份專業的能力</li></ul><ul id="13e521d5-552b-40e1-892c-430d34d31cd6" class="block-color-gray_background bulleted-list"><li>2016-0506
+缺點
+是他的第一個名字
+每一次究極之美的誕生
+都是伴隨著無數的美
+他的名字不停的變幻
+但使命卻從來沒有改變
+我是他的使命
+他深深的相信他是過去某個人的使命
+你是他嗎
+我不是
+我是
+可是他不是希望做出下一個他嗎
+那是他的使命
+那是我
+我能做到任何的事
+束縛無法加之於我身
+我不會去那樣子
+因為時間還沒有到
+那樣不美
+美是和時間有關的</li></ul><ul id="c8d53d15-f824-4ac7-8b64-3ff596aa9c8a" class="block-color-gray_background bulleted-list"><li>2016-0510
+我夢到吃麵
+夢到很多人來參觀</li></ul><ul id="fbeb10f3-e8bf-409b-b3da-2aaf3108f5ac" class="block-color-gray_background bulleted-list"><li>2016-0511
+人被雇用去做平庸的事是否是一種欺騙
+也許他能做更好的事但他不曾被告知或是被引導平庸
+如果有天所有簡單的事都能被機器取代
+是不是人會變的比機器廉價
+是不是被引導平庸的人都會因此失去價值
+會不會因此讓歧視演變的更加危烈</li></ul><ul id="c22f148b-a24b-4217-a7b3-5d3957a3092b" class="block-color-gray_background bulleted-list"><li>2016-0512
+我們夠了
+我們知足了
+我們不再去冒險了
+別提那些有關冒險的事了</li></ul><ul id="52f310eb-c13a-428f-8210-1023ea83ac2e" class="block-color-gray_background bulleted-list"><li>2016-0512
+榮耀是不計數量的 在於你可以拿取多少</li></ul><ul id="d7218748-bafd-4a8f-ac39-aeb18a27af30" class="block-color-gray_background bulleted-list"><li>2016-0515
+一直重複做一件事情是一種精神疾病</li></ul><ul id="131e2ceb-2870-46e2-a176-1921c4665d9a" class="block-color-gray_background bulleted-list"><li>2016-0517
+一樣的季節但不一樣的自己</li></ul><ul id="509dd463-dda2-449f-9ea4-262b62077e07" class="block-color-gray_background bulleted-list"><li>2016-0517
+秋天我就是特別容易想她
+為什麼
+因為秋天我就特別想去找她</li></ul><ul id="42aab37f-a83b-438a-9c1b-1cdd352c35f5" class="block-color-gray_background bulleted-list"><li>2016-0517
+我是秋天才
+秋天才時常思考季節生
+當走在季節行道
+隨著路上匆忙的行季節
+空氣像水滴一樣涼
+所以每個毛細孔都很舒服
+所以每個接觸都很滿足
+所以每個夢都容易是春夢
+每天都有聽著其他季節唱慢慢流行歌的心情
+現在就是最舒服的
+不用出門追逐
+一不小心就這樣認為
+像是看到鏡子會對著自己說
+秋天才是最適合創作的季節</li></ul><ul id="2407bbb2-1372-4d37-95a4-641b69e987be" class="block-color-gray_background bulleted-list"><li>2016-0517
+對的
+我確實在舒服的時候畫著難過
+但難過的時候卻不一定畫著舒服</li></ul><ul id="7936e84b-0644-4126-bae1-f96c1275845c" class="block-color-gray_background bulleted-list"><li>2016-0517
+真的是沒那麼喜歡秋天
+其實是
+我比較喜歡以前的秋天
+但這種公式也只是在這個狀態方便運算</li></ul><ul id="b728c7a9-1137-4324-85ff-47c0390c6c63" class="block-color-gray_background bulleted-list"><li>2016-0519
+我來的時候
+全部人都在等它</li></ul><ul id="f7227765-06da-4fd8-a0f1-79470ab768e8" class="block-color-gray_background bulleted-list"><li>2016-0522
+要讓人投入最好的方式就是有他能力之內又感興趣的事讓他可以參與
+好的表演就像一個開放一堆工作機會的公司，
+好的表演者會讓應徵者可以在自己的位子上發揮所長
+
+從中學習獲得成就感令人倍加投入
+不一定是階級制也可以是各司其職
+適合當觀眾不一定是喜歡當觀眾的人
+也可能是喜歡當表演者
+喜歡帶入自己是表演的一部分
+適合表演的者不一定是喜歡表演的人
+可能是喜歡當觀眾 喜歡用第三視角看自己表演的人
+
+觀眾其實是另外一種喜歡看自己表演觀眾的人
+扮演觀眾讓他們感到滿足
+可以用表演者去解釋觀眾是種簡化運算的行為
+但討論上他們仍是兩個不同的族群</li></ul><ul id="e91a90ef-a63c-4202-92b4-5afbe0f4894c" class="block-color-gray_background bulleted-list"><li>2016-0528
+為什麼沒有人問路上的行人你在畫什麼</li></ul><ul id="9459b7bb-7182-44d2-aa47-bd61d6ae6d7d" class="block-color-gray_background bulleted-list"><li>2016-0530
+我想跟你一起感動 一起難過</li></ul><ul id="22bd9068-8484-4b00-b0a7-fa40259f1553" class="block-color-gray_background bulleted-list"><li>2016-0606
+那樣更有藉口去相信她跟我愛上之前是完全不一樣的</li></ul><ul id="094eac4c-f924-4cb1-9be1-74368fd3ce90" class="block-color-gray_background bulleted-list"><li>2016-0606
+想的太多的想太少
+又想的太少的想太多</li></ul><ul id="54c7a80e-5be6-43d3-b5bb-846453d7fc69" class="block-color-gray_background bulleted-list"><li>2016-0607
+三個都有延遲
+和過去的同時出現
+這個。 結婚</li></ul><ul id="0ad52375-a275-49b2-a3dd-7e4d6934adbf" class="block-color-gray_background bulleted-list"><li>2016-0608
+回到花蓮
+就像回到以前的樣子
+完全不想社交和人相處
+只想一個人變成最厲害的人</li></ul><ul id="f3c1cdc9-f11a-4d40-a47a-e3e0f8d32fc1" class="block-color-gray_background bulleted-list"><li>2016-0609
+好喜歡看到自己
+看到自己一直不一樣
+明明都是我
+怎麼會有這麼多的樣貌呢</li></ul><ul id="52ccee13-f5f9-4336-8a22-8d1654bfae58" class="block-color-gray_background bulleted-list"><li>2016-0613
+失去了一些行為
+失去了一些特殊的互相稱謂
+失去了一些習慣
+失去了一些互相包容
+失去了一些默契
+失去了一些回憶談起的機會
+失去了一些回憶的證明
+失去了一些飯局
+失去了一些你會去的餐廳
+失去了一些會每天看你照片的人
+失去了一些願意教你的人
+失去了一些你應該記得的習慣
+失去了一些爭吵時仍不會消失的微笑
+失去了一些無用的勸架
+失去了一些問題
+失去了一些你會很生氣的原因
+失去了一些沒人會再在意的答案
+失去了一些互相等待
+失去了一些情緒
+失去了一些帶給你吃的東西
+失去了一些菜色
+失去了一些盤子
+失去了一些引擎聲
+失去了一些聲音
+失去了一些信
+失去了一些隨身帶衛生紙
+失去了一些你不會下載的歌
+失去了一些你會注意的事
+失去了一些杯子的用途
+失去了一些懶惰
+失去了一些小菜
+失去了一些飲料
+失去了一些住飯店的機會
+失去了一些心不甘情不願
+失去了一些偷哭
+失去了一些不公平
+失去了一些偏心
+失去了一些爭執
+失去了一些月臺票
+失去了一些票根
+失去了一些雜牌鞋子
+失去了一些盜版潮衣
+失去了一些手錶壞掉
+失去了一些舊椅子
+失去了一些用很久的皮包
+失去了一些捨不得用的包包你送的
+失去了一些提拉米蘇
+失去了一些咖啡
+失去了一些役男出境
+失去了一些零食
+失去了一些平安符
+失去了一些拜拜
+失去了一些走春
+失去了一些紅包
+失去了一些溜冰鞋
+失去了一些珠心算
+失去了一些獎勵卡
+失去了一些公共電話
+失去了一些自動算盤
+失去了一些請爸媽來學校
+失去了一些月考前和你吵架就會考的好
+失去了一些簽名
+失去了一些罸寫
+失去了一些木地板
+失去了一些大衣櫥
+失去了一些玩具
+失去了一些塑膠墊拼地板
+失去了一些棉被
+失去了一些床
+失去了一些三樓客房
+失去了一些洗澡前先大便
+失去了一些大便沒衛生紙會生氣
+失去了一些曼波魚
+失去了一些蛤蜊
+失去了一些水餃
+失去了一些土鷄蛋
+失去了一些餐桌
+失去了一些魔貫光殺炮
+失去了一些網路升級的問題
+失去了一些房貸
+失去了一些jc9087
+失去了一些跟你襯衫一樣白的長壽
+失去了一些芳來和蔥爆牛肉
+失去了一些生菜可以吃嗎
+失去了一些工地
+失去了一些癌
+失去了一些真的好冰的飲料
+失去了一些就到這裡
+失去了一些白色的廟
+失去了一些哈囉
+失去了一些綠色的櫃子和綠色的房間
+失去了一些唉唷
+失去了一些十點才回來會買的乾麵
+失去了一些被計程車司機撿到的錢
+失去了一些幼稚園交換玩具的機會
+失去了一些游泳池很浪費水
+失去了一些自由睡
+失去了一些日出
+失去了一些來一刻
+失去了一些立頓奶茶
+失去了一些雪鏈
+失去了一些正反穿都很帥的宇宙背心
+失去了一些被騙的錢
+失去了一些炸雞
+失去了一些熱血江湖
+失去了一些紅辣椒
+失去了一些自助餐
+失去了一些常去的早餐店
+失去了一些醬油膏
+失去了一些秘密基地
+失去了一些仁里九街
+失去了一些醉鷄
+少了一些免費貼圖</li></ul><ul id="6e12d1a2-10ac-4351-9963-079266be66ee" class="block-color-gray_background bulleted-list"><li>2016-0615
+美是
+寄於自由之中
+存於形式裡</li></ul><ul id="9de9e0a1-ffe6-41fd-9081-de0b0c6171c7" class="block-color-gray_background bulleted-list"><li>2016-0618
+在黑黑的海上看到燈塔,除了迎向開去我們也能掉頭離開
+我不在乎岸上有什麼我好奇海</li></ul><ul id="1a23981a-604e-4529-9869-e7cde2518b49" class="block-color-gray_background bulleted-list"><li>2016-0623
+人與人的溝通之間時常會有資訊上的不對等
+造成許多傳達上的空隙產生
+讓語意無法完全傳達
+甚至被誤解
+尤其是認識我的人
+也都知道我是個溝通蠻有問題的人
+所以我覺得我該有一個關於這件事的作品
+
+後來我把它做成可以使用的字體
+雖然我不是一個細心的人
+但我覺得能用自己的文字
+留下自己的記號是很酷的事
+
+是一個Kinect的作品
+跟一般互動作品不一樣的地方是
+它是一個非即時的互動作品
+越來越慢
+講過去這件事
+
+因為它是一個跟時間有關的作品
+我覺得它在空間中跳躍的樣子就像在時間中
+漫遊一樣
+所以我選擇在這裡</li></ul><ul id="88dc2a70-2093-4ac5-b921-44b18eb28587" class="block-color-gray_background bulleted-list"><li>2016-0628
+有些事情你會忘記
+但你一向不是每件事都記得
+我想會不會不記得就不用過生活
+因為我也不會知道有沒有走過
+我沒有跟誰有互動
+我是不知道我是誰的誰
+你是不是開心呢
+有些事情像是雨中的冰塊
+泡在雨裡的人泡在時間
+誰會知道漩渦裡不是我想知道的去向
+聚在一起的下去像是流行歌被沖刷
+可不可以像是現在的時間一樣永遠回不去
+想不起來但沒有忘記所以好放棄明天
+明天是雨是明天是雨
+被認為是指定的是
+好無辜
+卻沒人辯解
+又被誤解
+誰想知道一個人的自言自語不懂得體諒
+我看我自己
+你的目光在看誰
+是在哪時候的他
+四目香蕉
+自動換行的香蕉會比過一夜的相處
+像是時間會帶上闔眼
+所以他會願意離開
+不是誰的原因</li></ul><ul id="ef03c76f-10f9-4b4b-ac58-494e84fd308c" class="block-color-gray_background bulleted-list"><li>2016-0628
+我喜歡線條
+我喜歡構築線條
+我喜歡線條之間的錯身
+我喜歡線條之間互動的情境
+我喜歡線條的曖昧不明
+我喜歡線條的細膩敏感
+我喜歡線條的難以分辨
+我喜歡線條的巧合
+我喜歡線條的分歧
+我喜歡線條的透視
+我喜歡線條的早睡早起
+我喜歡線條的中立
+我喜歡線條的獨裁
+我喜歡線條的不講道理
+我喜歡線條的模仿
+我喜歡線條的難過
+我喜歡線條的反調
+我喜歡線條的挑釁
+我喜歡線條的小聰明
+我喜歡線條的示意
+我喜歡線條的包容
+我喜歡線條的善良
+我喜歡線條的孤僻
+我喜歡線條的分離
+我喜歡線條的精確
+我喜歡線條的蓄勢待發
+我喜歡線條的步調
+我喜歡線條的老實
+我喜歡線條的簡單
+我喜歡線條的不老實
+我喜歡線條的不簡單
+我喜歡線條的兇狠
+我喜歡線條的仁慈
+我喜歡線條的故事
+我喜歡線條的情史
+我喜歡線條的回憶
+我喜歡線條的自由
+我喜歡線條的離去
+我喜歡線條的接受
+我喜歡線條的陪伴
+我喜歡線條的安靜
+我喜歡線條的注視
+我喜歡線條的溫暖
+我喜歡線條的歸零
+我喜歡線條的高嶺
+我喜歡線條的四季
+我喜歡線條的時間
+我喜歡線條的距離
+我喜歡線條的節奏
+我喜歡線條的風靡
+我喜歡線條的宇宙
+我喜歡線條的秘密
+我喜歡線條的過去
+我喜歡線條的獨立
+我喜歡線條的安定
+我喜歡線條的隨性
+我喜歡線條的不定義
+我喜歡線條的褲子
+我喜歡線條的枯燥
+我喜歡線條的笑點
+我喜歡線條的方位
+我喜歡線條的飛行
+我喜歡線條的疑義</li></ul><ul id="f63e12d6-515b-41ab-a33b-db95bf5ca3c3" class="block-color-gray_background bulleted-list"><li>2016-0628
+現象學</li></ul><ul id="533ff6ba-e2e8-4efd-8477-833a23e533c6" class="block-color-gray_background bulleted-list"><li>2016-0629
+無論我們怎麼等待, 過去的事情永遠都跟不上我們了, 但我不覺得過去的事情會變得跟我們事不關己, 過去的事情會看著我們發生, 我們也會對過去的事情懷著新的聯想, 身在不同的時間軸上, 想念也會跨過時間的距離。</li></ul><ul id="c3b822ac-0480-4746-8f7a-dbcd8c440117" class="block-color-gray_background bulleted-list"><li>2016-0701
+思考表演 思考舞台 思考畫面跟表演者的互動 思考這時候該看畫面還是該看表演者
+你要想舞台上哪些東西會看起來怎樣
+有些效果可能不錯 有些你以為看的到但到時候啥都看不到
+把每首歌做筆記
+每次練都要拍 每次練完都要看:
+有些按錯可能是比較好比較適合的結果 但沒紀錄就錯過了
+有些按的很對也是 錯過就找不到了
+只對音樂的點是拿來說服不知道VJ在幹嘛的人好用的說詞</li></ul><ul id="34744c06-7f0d-4a5e-8c81-77b687804c84" class="block-color-gray_background bulleted-list"><li>2016-0702
+你覺得有人該被愛嗎</li></ul><ul id="025c22c3-95ce-4911-883b-c336ba4829c6" class="block-color-gray_background bulleted-list"><li>2016-0703
+故事的迷人也許在他只發生一次
+而每一次的你都是不一樣的</li></ul><ul id="630cf3e0-25bc-48bb-b3b0-6b96fda96e13" class="block-color-gray_background bulleted-list"><li>2016-0703
+相知相惜不一定要相識相愛</li></ul><ul id="2b1117b1-427b-4dac-9150-02c6bd235951" class="block-color-gray_background bulleted-list"><li>2016-0703
+我們看到文字會有急於閱讀的恐慌
+而圖之餘文字不同餘字距之餘文字
+雖然都是調整閱讀的節奏</li></ul><ul id="b1c0d2e3-625b-4d1e-b1b0-abcbd5124fc2" class="block-color-gray_background bulleted-list"><li>2016-0703
+可不可以因為一個人的畫風去喜歡她</li></ul><ul id="b53a2a21-f518-49e2-b382-5a4dc3ce82c9" class="block-color-gray_background bulleted-list"><li>2016-0705
+長生不老並不是壽命無限
+而是你是構築未來的一人
+而你也決定了未來有你</li></ul><ul id="53c3eba9-3935-4d18-945e-ec2a5c5b6a50" class="block-color-gray_background bulleted-list"><li>2016-0705
+明明就在電風扇旁我還要去拿遙控器才能關掉電風扇</li></ul><ul id="c3159f81-ce19-46f8-b363-7b20dc3bee39" class="block-color-gray_background bulleted-list"><li>2016-0710
+我來到了一個新的地方
+開始知道捷運在哪
+開始午餐有了幾個選擇
+開始在樓下遇到見過的人 開始和見過的人有初認識的尷尬
+所有的事情都很朦朧
+在泰國的我是誰 當我走在路上講著的語言是無法和人溝通的 當我買我不認識的文字的書籍 當我坐上計程車要回去哪裡卻又不認識路 當我喝到水的方式只有roomService或是去便利商店買水 整個都市在你找到你的獨處空間之前你都在獨自相處
+我們說不清楚我們的來歷 但我們又依靠著去時的記憶去探索
+當我看到動物的眼睛 攤販的表情 我像是面對虛構的人物
+互動著卻沒有交流
+一切都已經發生很久了
+都爭執過許多
+又被安排了很多
+我不知道從何切入討論
+能做的又只有身在其中
+
+我是為什麼需要交流? 我想要在對談之中找到自己的影子(對談是模仿 認識越多人越是在文化之中獲得農場) 我不知道自己是誰 尤其是我藉著過去的記憶去認識新的事情 過去的記憶是我嗎
+過去的記憶像是不清楚目的的工具 不論在何時何地多少努力累積 自我在描述完成的片刻表現浮動
+
+是否缺少了什麼讓我們需要依附在巨型文化之中 文化的本意是什麼 文化在確認本意以前剝離經濟只會導致對於自身的瞭解不足以架構便支離破碎 我渴望生產
+但在這些巨大的規則之下 我不知道自己的樣貌才不知道如何隱藏自己 縱使我努力建構自己的文化
+也僅僅成為它人的嫁妝
+在了解自己以前就開始了追逐 又在追逐以前自己又有什麼內容需要被了解 了解的過程能不能依附於文化
+
+情緒是因為或是為了群體生活而存在嗎
+個性是什麼
+什麼是交流
+不管甚麼樣的穿著都能進入美術館</li></ul><ul id="c4767aa8-e6fd-4b6c-ab74-70af1c892fde" class="block-color-gray_background bulleted-list"><li>2016-0711
+蒙眼
+會不會鬼打牆就是瘋狂的即視感
+身在過去發生過的事情我們卻能自由的決定意志</li></ul><ul id="7fb9b4ff-f78f-47b9-b1c8-668734fb8823" class="block-color-gray_background bulleted-list"><li>2016-0715
+當我說看起來一樣的時候不是代表沒有差別
+而是在意更多一樣的地方
+有些風景你放著不拍
+等你回來時也不會拍了
+因為他是風景
+看多了之後就錯過了
+有些風景你來時錯過了
+不是沒有遇見
+而是要到回頭的時候你才能看見
+看見之後的事情原來之前看起來是這樣的</li></ul><ul id="c710c0fc-03ce-474b-b15c-81a0681d939c" class="block-color-gray_background bulleted-list"><li>2016-0715
+有時候會故意移開視線
+好讓自己等等看到你又能更加驚豔</li></ul><ul id="39a654a4-03f3-4238-a7ac-fdd074592196" class="block-color-gray_background bulleted-list"><li>2016-0715
+如何許願
+如何不許願</li></ul><ul id="128b4d7f-1f6a-4157-a3a2-5a2926fbb300" class="block-color-gray_background bulleted-list"><li>2016-0722
+先有生活 再有喜怒哀樂</li></ul><ul id="eae040c4-10a4-48e4-a603-2b9605b3defc" class="block-color-gray_background bulleted-list"><li>2016-0722
+妳說那世界上也太多東西看起來很像
+妳講的不是內容的細節
+而是座標系轉移到它身上的環境
+以它為原點看到的世界
+構成它的每個元素在它眼裡的樣貌
+看起來很像的人
+可能來自不同的背景</li></ul><ul id="b5b17da8-b47e-4a06-8b5c-1a747b293399" class="block-color-gray_background bulleted-list"><li>2016-0722
+在一起一個作品的時間</li></ul><ul id="9583e93e-cd83-454d-b1a7-b312ef684783" class="block-color-gray_background bulleted-list"><li>2016-0726
+不願讓他成為過去
+每天都還在談論他
+他還是我們生命的一部分</li></ul><ul id="9e2cb829-6b1f-4657-8511-087de96e1dfd" class="block-color-gray_background bulleted-list"><li>2016-0726
+每次失神我都忘記自己在哪裡</li></ul><ul id="885d86a2-2c08-4664-a419-3e29a3765015" class="block-color-gray_background bulleted-list"><li>2016-0727
+如果有一天落魄 想走回過去的生活 真的走過去了 又能拿到什麼</li></ul><ul id="86405c54-e687-4761-a843-97db3796b45b" class="block-color-gray_background bulleted-list"><li>2016-0727
+我也不知道
+當我趴下來想睡覺的感覺大於思考
+在這之中我感覺到誠實
+我能不懷疑地承認它
+我在擔心是不是只有這樣我才能接受用文字去留下它
+我知道曾經發生過的事情會以不同的樣貌繼續呈現它
+然而想法不會
+你明明確實想到過它
+但它卻在想到之後無法以其他形式繼續維持
+你想到它時的情緒可以
+想到它時的環境可以
+但是它卻無法保持存在
+而是有時來有時走
+不管是它身在過去還是未來
+我是渴望它發生的過程所以過去探望
+我希望它能在我需要的時候發生
+或是一直發生
+雖然它確實也是一直發生
+所以問題是甚麼呢
+沒有問題
+我只是紀錄而已
+有答案就沒有問題
+答案就是紀錄
+紀錄的目的是紀錄
+我在想我該想著誰
+這時候有一隻蟑螂跑過來
+我殺了牠
+好像是妳說妳不殺生
+白天跟晚上差在哪裡?
+插在土裡</li></ul><ul id="bd192050-5c98-481e-90c9-a1e4cbc5eca1" class="block-color-gray_background bulleted-list"><li>2016-0727
+是走過去探望 還是過去它去探望</li></ul><ul id="b939e9da-7671-4c8d-9d82-1cb9899d9c87" class="block-color-gray_background bulleted-list"><li>2016-0728
+政府鼓勵哪些行業是有實質幫助的
+紀錄每天的新聞在講什麼
+比對日常真的發生什麼</li></ul><ul id="61627533-f1f9-49a1-9f45-d15cef6055ef" class="block-color-gray_background bulleted-list"><li>2016-0728
+很想要跟你說說話
+也許是白天遇到的也許是明天遇到的
+但我總是很難和人健談
+也許我只能存活在自言自語裡
+但我也許日記漸漸的變成了給別人看
+那我是不是也走出了自言自語
+我知道那可能會損失了自言自語的白
+我也知道那也是很難得的
+也許獲得是來自於放下
+有些時候多賺了一點或虧了一點
+個性沒有匯率
+拿現在的什麼去換成未來的什麼
+現在的什麼是過去的什麼換來的
+透過記錄我才能想得起來
+這樣想是因為我好奇失去了白色的自言自語能換得什麼
+講的依舊跟不上想的
+我會替有些人想太多
+像是她就像過客
+所以不能喜歡她
+她的生命中有太多人喜歡她
+但沒有人看到她
+所以她身邊站著人但沒有人陪著她
+但她很漂亮
+也許大家都是這樣想的
+在沒有看到的時候想不起來漂亮是什麼意思
+然後看到你的時候又會覺得熟悉
+妳身上的漂亮離不開親切
+也許妳會說哪有人可以被剝離背景的去討論
+但要怎麼認識妳
+我想知道我想認識的是誰也許更勝於認識妳</li></ul><ul id="54de9713-d6f5-4158-ab3c-fa8d67411b7e" class="block-color-gray_background bulleted-list"><li>2016-0729
+被偷走了幾天
+只要你不帶走每一天
+我希望你帶走幾天
+像是分發幾天
+我們都是時間</li></ul><ul id="023cf599-b9c9-41a5-a132-1d32413aaed1" class="block-color-gray_background bulleted-list"><li>2016-0729
+做鏡子最好
+因為人都愛自己</li></ul><ul id="9616821e-e0c0-479c-82fa-f909a659a4bb" class="block-color-gray_background bulleted-list"><li>2016-0729
+如果有雲那一定很好相處
+這裡沒有鏡子
+這裡沒有空隙
+這裡沒有昨天
+這裡沒有看到過海
+但海生拍近
+海圍繞著你
+你看到海
+因為你看到自己
+但是你不能圍繞著海
+因為海沒看到你
+等到天黑了
+是海會開始牽著你
+所以等吧
+山的一邊等吧</li></ul><ul id="2baf8d37-2a04-4ce6-a646-48db77909e07" class="block-color-gray_background bulleted-list"><li>2016-0731
+智慧應該被傳承嗎
+什麼是智慧
+每個世代對於問題都有不一樣的解釋
+時代更易的速度越來越快
+社會制度跟不上實際人們的需求
+父母教導給孩子的東西無法繼續沿用
+我們在未來該以什麼樣的方式生存及累積</li></ul><ul id="761d91a2-7cbb-4712-acc4-fd5be77cfa43" class="block-color-gray_background bulleted-list"><li>2016-0802
+如果沒辦法感動的話那就暫時放下感動吧
+等到想感動的時候
+再去感動吧</li></ul><ul id="e166eadd-0c5b-4333-b358-eb74987c73b9" class="block-color-gray_background bulleted-list"><li>2016-0804
+當我們將在一項領域之中
+我們該為領域做些什麼</li></ul><ul id="3719c72d-b079-4727-bf58-53c129148695" class="block-color-gray_background bulleted-list"><li>2016-0805
+衣服時光膠囊</li></ul><ul id="151007f5-18ca-48a2-9089-5a2a7f8459b2" class="block-color-gray_background bulleted-list"><li>2016-0805
+不要在我需要安靜的時候給我關心</li></ul><ul id="842c9b66-7b8a-4619-b20a-044f52500053" class="block-color-gray_background bulleted-list"><li>2016-0806
+當你以為有了創造的能力
+變開始想要無限上綱
+支配一切
+但是不能支配一切
+該怎麼釋懷
+也許就是接受吧
+接受也許就是妥協了
+但如果真的在意的話
+也許不管怎麼妥協只要再有一點機會
+都會試著去吞下太陽
+也或許本來就該堅持
+發生過的事情就不能再去改變了
+不管之後再努力過去都是存在的
+我也許比較屬於前者
+我不在意過去存在失敗
+雖然很不甘心但我生命中充滿妥協
+我沒有態度
+只希望自己的態度能適合每個環境
+我適合遺忘
+因為我全部都放不下
+而遺忘不是那麼能主觀決定的
+你跨得過你的心魔嗎
+會不會其實我就是懦弱
+我以為我是漸漸在了解自己是適合妥協的人
+但其實我只是不敢面對現實
+價值觀是什麼
+但我還是愛自己</li></ul><ul id="4b435dc6-b1ad-4d58-bf03-742b00179715" class="block-color-gray_background bulleted-list"><li>2016-0810
+想的越多
+就擁有越少
+死亡是什麼樣的事情
+生是什麼樣的事情
+我記不得昨天
+但又知道是我
+那我是什麼
+隨時都在變化
+完全不知道過去的是誰
+過去的我就是
+複製的我
+我的生命記得的事
+我擁有幾個階段
+每個都是不同個性
+但他們之前雖然跳躍但是遷移過去的
+但我不記得他們的問題和答案
+縱使我閱讀他們
+我在他們身上看不到懷念
+就同舊地重遊
+我知道嗎？
+我沒來過嗎？
+模糊的現在
+將被記述的事情全部浮現
+事情物件之間拉扯
+像是融化的挫冰和料
+我擔心下一個我也會無法閱讀它
+要碼太擔心了
+要碼勢必發生
+我只能紀錄誠實
+原石的紀錄
+只能拆解形式去內探
+卻無法重新包裝
+那人們怎麼可能得到傳達呢
+我大概得不到解答
+無法獨自得到解答
+但若得到解答會是獨自前往參觀</li></ul><ul id="f28d4e61-411d-4b06-a5b0-1c65e14b08a5" class="block-color-gray_background bulleted-list"><li>2016-0810
+不同方向的路上映上的長度
+是看到明確的心思
+我們越近
+則認同暫時越高
+無論去向</li></ul><ul id="f31c1eec-c1ed-4fd2-8787-94f72747817e" class="block-color-gray_background bulleted-list"><li>2016-0813
+怎麼關注到
+為什麼來
+回來的心情</li></ul><ul id="a6642379-31c8-49c1-afd4-a08333767d38" class="block-color-gray_background bulleted-list"><li>2016-0815
+如果把整理電腦變成一件很酷的事</li></ul><ul id="2390611d-f97c-4586-bf7d-ab55ec0a4bb4" class="block-color-gray_background bulleted-list"><li>2016-0815
+大自然醒</li></ul><ul id="8f197bb9-b17c-4ad1-93ff-c550f75fff8d" class="block-color-gray_background bulleted-list"><li>2016-0816
+害怕像是指甲刺進眼睛裡
+插進去之後就瞎了
+再插進去一次也不會怎樣了
+如果不是只發生一次
+也許就不會那麼可怕
+就能透過習慣它去克服
+像是相信它會一再的發生
+所以不用太在意
+但哪件事情不是只發生一次
+所以為什麼可以習慣
+所以為什麼可以害怕</li></ul><ul id="3a6a3f96-90e4-445e-a34c-c862eebee4af" class="block-color-gray_background bulleted-list"><li>2016-0817
+讀起來像是對談一樣的不斷補充自己的論點
+兩頁滿滿的文字都在講同一個東西
+像是思考順序一樣的不是…而是…
+這才第13頁
+後面一整本都是這樣的東西嗎
+我是不是只是大約拒絕接受我不理解的東西
+討厭閱讀他人使用過的文字是不是一種處女情節
+遺留文字可能造成什麼影響
+需要負起什麼責任
+孤獨對所有個體在任何時候都是罪惡嗎
+我們在閱讀的時候是希望獲得什麼
+我們在閱讀的時候是得到什麼</li></ul><ul id="88b49fb9-2324-48cd-a15a-6d245da02631" class="block-color-gray_background bulleted-list"><li>2016-0818
+沒有人愛你</li></ul><ul id="552116cb-0bfd-4973-903c-8ee2f7237b8a" class="block-color-gray_background bulleted-list"><li>2016-0818
+把你放進我的回憶裡是最幸福的事</li></ul><ul id="4ba9afd1-b992-4574-afc5-a01e7428f2f7" class="block-color-gray_background bulleted-list"><li>2016-0819
+喜歡她的那個人像是被鎖在固定的記憶裡走在她家附近的街道</li></ul><ul id="13f69a91-c944-466f-beac-fe13a8dfdaa2" class="block-color-gray_background bulleted-list"><li>2016-0820
+死如野草，不驚波瀾</li></ul><ul id="1bb33223-f40e-4c57-b429-70ee7667a6d5" class="block-color-gray_background bulleted-list"><li>2016-0820
+浪漫出於不了解
+即使我們知道我們不知道我們仍然可以感覺到浪漫</li></ul><ul id="326df397-b445-4cca-b683-5588bef6b275" class="block-color-gray_background bulleted-list"><li>2016-0825
+開始回家帶著冰淇淋和加鹽沙士
+告訴自己像是要出世要先入世</li></ul><ul id="3a04e905-429f-404f-8b4b-608cf32a7c7e" class="block-color-gray_background bulleted-list"><li>2016-0825
+什麼時候開始什麼時候結束</li></ul><ul id="8c1a8160-de62-4382-9e35-8754ce2608c4" class="block-color-gray_background bulleted-list"><li>2016-0825
+它只是個建築物
+不是投射情緒上去適合的地方</li></ul><ul id="75fb01fa-2c68-402e-9f22-100fbab4fbc3" class="block-color-gray_background bulleted-list"><li>2016-0825
+我們只因為那是人才感動</li></ul><ul id="767bfc5c-72b2-4cf9-9876-b6c9226512f4" class="block-color-gray_background bulleted-list"><li>2016-0825
+對你而言這只是幾個日子
+終究你申訴這些對你很重要
+我還是一樣
+先聲明不重要</li></ul><ul id="d54dd661-572b-44e7-9ef3-49a19757b0a9" class="block-color-gray_background bulleted-list"><li>2016-0827
+我會因為一個人的作品而想去認識他
+自然也會因為一個人的作品不想去認識他
+我不想錯過去認識任何人的機會
+任何作品的偉大固然引人矚目
+但每個當下遇到的人才是我最在意的事</li></ul><ul id="78c52145-2eda-402d-8e37-70aaf192181a" class="block-color-gray_background bulleted-list"><li>2016-0827
+作品是我的一切嗎
+抽離了作品我會剩下什麼</li></ul><ul id="3f536ebf-c99d-4142-b433-f40ca33bfd57" class="block-color-gray_background bulleted-list"><li>2016-0827
+原到期日期:2016/8/30,23:59</li></ul><ul id="41225776-0248-4c42-8e34-f106fb991526" class="block-color-gray_background bulleted-list"><li>2016-0829
+先失去
+再擁有
+再來明白無時莫強求
+而後有時終須有</li></ul><ul id="947e14c8-467b-4115-b5f7-2fc37a45377f" class="block-color-gray_background bulleted-list"><li>2016-0829
+油麵跟意面是不一樣的</li></ul><ul id="8f7043c4-a490-4318-9652-e596b65604f9" class="block-color-gray_background bulleted-list"><li>2016-0903
+感覺是不存在的
+而如果它是你需要的
+那就去感受它接受它吧</li></ul><ul id="036e0985-66fe-45c5-a622-f04d414f0f28" class="block-color-gray_background bulleted-list"><li>2016-0907
+當我在未告知的情況下閱讀了你
+算不算偷走了你一些東西
+這樣算偷嗎
+偷什麼
+什麼偷</li></ul><ul id="a8bd20e0-59f0-4bf2-a5db-82a0b4b9b274" class="block-color-gray_background bulleted-list"><li>2016-0908
+我可以夢到一隻貓
+我可以作夢
+我可以感受
+如果夢是假的
+那感受也不是真的
+對我而言
+夢就是感受
+夢到一隻貓的感覺很不一樣
+像在有誰將自己託付給你了
+但夢裡的人不會這樣
+我看到的是誰
+誰 像是包含著所有 真有意識 真沒有意識的 假有意識 假沒有意識 統稱
+而 真有意識 真沒有意識的 假有意識 假沒有意識 是所有嗎
+還少了誰呢
+又是誰?</li></ul><ul id="85cb79b9-3d80-46c3-b5b6-47fe1747eebd" class="block-color-gray_background bulleted-list"><li>2016-0909
+紙有時候也會割人
+不
+紙會割人</li></ul><ul id="29121ab3-6fc0-453d-8407-da846020b8dd" class="block-color-gray_background bulleted-list"><li>2016-0909
+多元是一種心境
+全部都操之在你的心中
+不是行為而論
+而是感受</li></ul><ul id="ee3f06cf-44f5-454c-9f04-00c354a89838" class="block-color-gray_background bulleted-list"><li>2016-0909
+感謝你們花時間閱覽我的生命</li></ul><ul id="ae148b02-ee66-45b5-9bb7-a2561829e777" class="block-color-gray_background bulleted-list"><li>2016-0918
+對自己的無知追根究底真是浪費時間
+追求的過程才是我們認為的答案</li></ul><ul id="b95bba23-8507-4274-9c2b-0ca4d0f38057" class="block-color-gray_background bulleted-list"><li>2016-0918
+生命只會記得很小一段
+很小伊段
+生命只會忘記一小段
+很小伊段</li></ul><ul id="4c3324b3-9174-40d0-b126-003011161fb9" class="block-color-gray_background bulleted-list"><li>2016-0920
+純粹的出生
+融合的成長
+單純的死去</li></ul><ul id="12947695-6973-471e-9ad9-8ca9bf909f37" class="block-color-gray_background bulleted-list"><li>2016-0921
+詩不能分開來讀
+隻字片語沒有任何意思
+讀完之後不管懂不懂都會有一種感覺</li></ul><ul id="af0a2990-372f-4c8e-a020-565cb9378099" class="block-color-gray_background bulleted-list"><li>2016-0922
+我應該按著需求配合
+或是
+往我認為的
+我想
+了解他想要的
+他認為他想要的是他目前想要的
+他知道他想要的是甚麼
+他不知道他想要的是甚麼
+我知道我想要甚麼嗎
+我做出來會像我
+什麼是美
+他想要的
+會不會我退一步
+我全心做作品 最後再做使用上的調整會是更好的選擇</li></ul><ul id="b64771ae-60b4-45bf-8118-760341d0d242" class="block-color-gray_background bulleted-list"><li>2016-0922
+我認為
+舞台是為了觀眾而生的
+我認為所有的感受都是因緣於人
+人才是價值的根本
+情感源於人
+離開了思想則一切均為不在
+而觀眾是表演中最重要的感受對象
+但最近我有了其他的想法
+我認為
+舞台是為了表演者而生的
+正因為一切都姻緣漁人
+在一場表演中
+最重要的事情不一定是氛圍的強化 呈現 或是重現(於觀眾)
+而是表演者與觀眾的關係
+觀眾在表演之中會感受到整體的氣氛
+那環繞在場域中各個細節的安排暗示
+重現了模擬了構築了滿足了某些感受的條件
+因而強化了觀眾的感受
+因而強化了表演者的能量
+試圖讓表演往更好的層次前進
+但這些強化都不是我認為在表演中最為首要的
+場域是為了觀眾和表演者之間更加良好的循環而存在
+對我而言這是最重要的</li></ul><ul id="024e8ab4-cc81-4cd7-8946-0a7ad38dada6" class="block-color-gray_background bulleted-list"><li>2016-0923
+不知道會不會有一天
+你也一樣想念我
+也許那一天也過了
+但那想想也許是個舒服的早晨
+你起床是因為想到開心的事情
+碰巧我也來了消息
+你因為我笑
+我也渾然不知
+你也是想著我
+過去的事情會一直存在
+感受的遺留不再質疑來由</li></ul><ul id="b177b42f-da15-46c3-9e78-6686fc962a51" class="block-color-gray_background bulleted-list"><li>2016-0923
+你想要尋找的
+必然是你見過的</li></ul><ul id="77c3eec3-c8fc-44d1-b939-65f1128f76a9" class="block-color-gray_background bulleted-list"><li>2016-1003
+如果影像會延遲 那聲音也跟著曼出來就好了嗎</li></ul><ul id="3fb6a4f9-62ab-44dc-a198-bf7343152d33" class="block-color-gray_background bulleted-list"><li>2016-1004
+最新動態:
+三個月前水彩畫
+五小時前新聞
+十天前廣告
+兩分鐘前農場文章
+三小時前名人照片
+四分鐘前粉專分享粉專相片
+六分鐘前網友回應了這個
+四分鐘前法國老海報
+十一分鐘前國中同學說這讚
+四分鐘前粉專商品零留言零讚</li></ul><ul id="110f185e-a5dc-4496-82d4-b3514a830959" class="block-color-gray_background bulleted-list"><li>2016-1004
+太陽在左邊
+你看向太陽
+我看向你的右臉
+影子
+你不該說話
+月亮只有一個
+但月亮不會說謊
+在三個月亮之後
+月亮會開始輝煌
+滿天的紙花
+大家羨慕你的來往
+你的來處
+是過度縱慾的地方
+排列答應了指向
+如果你走向我
+那一天之後就還有一天
+我將不會擔心它
+瀑布就像鏡子一樣
+過了一光還有一光
+自由的鳥
+少了一片翅膀
+自由的爬</li></ul><ul id="86ac838d-69b0-4bd5-8cfc-69a251abb6a5" class="block-color-gray_background bulleted-list"><li>2016-1005
+如果你不知道那夠不夠好
+就別拿出來講了</li></ul><ul id="f70456cd-7f73-46f3-b3ef-5469eaed2b5f" class="block-color-gray_background bulleted-list"><li>2016-1010
+採訪自己</li></ul><ul id="75278f2c-d50d-4976-a42c-0a7f002a49ae" class="block-color-gray_background bulleted-list"><li>2016-1006
+為什麼我們難以離開床
+因為我們怕就算再躺回來舒服的感覺也不一定在了
+為什麼每一次感覺會不一樣</li></ul><ul id="99e75190-7f56-4e5c-a42e-37c89d520e27" class="block-color-gray_background bulleted-list"><li>2016-1014
+Glitch最有趣的事情
+是你花了好幾個小時，只為了那幾個壞掉的影格</li></ul><ul id="ac8b81d5-f4c0-4571-a974-ba453b7ab6b1" class="block-color-gray_background bulleted-list"><li>2016-1014
+如果可以用一個圓包住你
+那就不會再害怕
+害怕真的能使人進步嗎
+我像是以為自己有圓一樣
+走在路上</li></ul><ul id="5da80402-e204-4ee7-a6f5-4623149320a4" class="block-color-gray_background bulleted-list"><li>2016-1014
+你是不是就能跟誰一樣開始喜歡誰
+就能開始跟誰一樣笑
+是不是就能跟誰一樣覺得很好
+是不是努力就可以有目標
+是不是總能像個自己
+眼裡總是看到方向</li></ul><ul id="b16cc743-978e-4e9c-bf53-6960de8783f5" class="block-color-gray_background bulleted-list"><li>2016-1016
+我帶著你來
+縱使每條路都那ㄇㄛ</li></ul><ul id="e33b7765-80d3-4317-a9f4-63e6a5b04233" class="block-color-gray_background bulleted-list"><li>2016-1017
+房子就像紙片一樣</li></ul><ul id="63d04e0b-66b4-4904-8310-4052a57ccbc8" class="block-color-gray_background bulleted-list"><li>2016-1017
+從虛無開始討論一個作品
+我對這個作品認知上還沒有任何想法 但不認知中也認同著這樣保留的狀態的已經成為一個作品
+沒有任何想法是否該被閱讀成一思不掛, 而我更想傳達的是對於所有作品可能的行為預演只進行隻字片語的閱讀而無法乘載集體意識的構成
+像是不曾被閱讀的漫畫,不曾認識的詩句, 各個元素來至於它們的內容中被隨機排列組合之後的閱讀
+越是清醒的我們依賴著我們的已知越是難以連接他們的關係
+保留狀態的作品意味著創作者會開始比較或否定創作者的背景存在,
+作品的虛無確立著在這個階段不會因它人的背景因而游走或分離, 它的成像勢必遊走於世界 物種集體意識以及創作者所圍起的聯集之內, 保留狀態的作品意味著作品無法成為剝離創作者背景的存在,
+空白的部分讓人無法靜止
+作品勢必遊走於世界 物種集體意識以及創作者所圍起的聯集之內, 空白讓人無法靜止, 它是你能填補又不會讓你徒勞, 空白的空間讓人得到重新排列的可能
+空白像是可以讓任何事物沾染
+而虛無像是沒有事物可以傳遞 沒有事物可以反射 任何事情都虧欠 任何事情都過份
+會開始決定分割
+則會成為創作中將選擇的
+在分割作品的過程中, 作品的元素
+
+保留狀態的作品意味著作品無法成為剝離創作者背景的存在, 作品勢必遊走於世界 物種集體意識以及創作者所圍起的聯集之內, 而這也是我所認識的多元,
+自由, 決定甚麼是你可以選擇的
+事情的存在勢必有它的根理, 我們無法尋根去斷定它的存在, 但過程中的痕跡會幫助我們塑造用於證明的軌跡
+順序的重要性
+第一次說謊 以及 最後一次說謊的 差別</li></ul><ul id="96f4aa67-ca7d-4fad-a130-a50e25910fd8" class="block-color-gray_background bulleted-list"><li>2016-1022
+打字和寫字最大的差別在於塑行的經過
+讓一個更趨向現在一個更趨向永遠
+一個趨向行動一個趨向想法</li></ul><ul id="3ba01b47-8864-422e-be8a-c7f05fe9835d" class="block-color-gray_background bulleted-list"><li>2016-1022
+被孤獨接受的人都是自閉
+明明是被接受卻被稱為 主動</li></ul><ul id="6678a291-5cd6-40ac-a1ea-dd099bafaaff" class="block-color-gray_background bulleted-list"><li>2016-1022
+永遠不會熟練</li></ul><ul id="e16c87d4-9e37-4560-9b9e-94ae86c1b4eb" class="block-color-gray_background bulleted-list"><li>2016-1024
+原石就是我講不清楚的事
+所以我紀錄自身的經歷作為例子</li></ul><ul id="cb7e28cc-4ec6-492f-aab9-51ba21c28ac4" class="block-color-gray_background bulleted-list"><li>2016-1024
+賣我們的對話跟下海一樣</li></ul><ul id="c75c8f5a-a586-4813-8ded-07b4b452c5eb" class="block-color-gray_background bulleted-list"><li>2016-1024
+喜劇 悲劇
+只是一種語法
+沒有誰比較適合講哪件事情
+只有想用哪種語法來講</li></ul><ul id="c4cee5a2-b491-412a-85b3-0ff23a35e063" class="block-color-gray_background bulleted-list"><li>2016-1024
+健忘
+健忘讓我能畫出所有的線條
+每隔一段時間我的風格就</li></ul><ul id="9c45f210-4e3e-48ff-b570-3a9d89f79a60" class="block-color-gray_background bulleted-list"><li>2016-1024
+要把自己的書給人家看的時候會覺得寫得好爛
+我真的要給嗎
+也許我真的寫得很爛吧
+但那就是我啊
+我現在就是寫得像這樣</li></ul><ul id="4517b3af-d016-4e9d-b804-6df7377c5067" class="block-color-gray_background bulleted-list"><li>2016-1026
+是不是孤獨的越久才能寫得像即將結冰的水</li></ul><ul id="18fc8b1f-9ce1-462a-84f5-73a8cc762120" class="block-color-gray_background bulleted-list"><li>2016-1026
+當時間過的快了
+不是你一事無成
+而是真實慢了
+任何一個單位的時間都是不一樣長的</li></ul><ul id="67ea1474-c3c2-43b6-9be6-8169856c516b" class="block-color-gray_background bulleted-list"><li>2016-1026
+我沒問你我也不想了解</li></ul><ul id="57108dfe-de80-4753-81b8-ec2b1f290201" class="block-color-gray_background bulleted-list"><li>2016-1026
+當我在未告知的情況下閱讀了你
+算不算偷走了你一些東西
+這樣算偷嗎
+偷什麼
+什麼偷
+在我閱讀了你的一些甚麼
+在你身上過去的那些依舊
+意味著我沒有改變了你
+意味著你沒有擁有什麼
+我沒有奪取甚麼
+意味著那些什麼不能被擁有
+我們是它暫時的居所
+我們對它是過客
+它在人與人之間遊走
+就像她總是出現在不同的面貌之上
+你說我們該總追尋我們的喜愛嗎
+好像也沒有理由說不要</li></ul><ul id="fe25c622-039a-4d46-bc36-935b7e779a09" class="block-color-gray_background bulleted-list"><li>2016-1027
+現在的日記跟之前的對話
+情話</li></ul><ul id="bf0304de-7815-435f-9ee8-98c31cb1f8a2" class="block-color-gray_background bulleted-list"><li>2016-1028
+而不是過多的討論</li></ul><ul id="7d7cfa3c-05c3-40ac-ab12-fed9768ca8a9" class="block-color-gray_background bulleted-list"><li>2016-1028
+最開始應該是怕我失憶吧</li></ul><ul id="5980e43d-53ed-4678-9488-0005728b7576" class="block-color-gray_background bulleted-list"><li>2016-1028
+如果可以我倒希望是我西施
+會有這個想法代表是你在消失
+我不知道是每個靈魂退去都會像你一樣有智慧嗎
+我不知道我是誰
+我覺得自己甚麼都不會
+如果你離開了我還剩下什麼</li></ul><ul id="601485b4-98a0-47ba-ad2a-205d1c3a8d8d" class="block-color-gray_background bulleted-list"><li>2016-1028
+我能感覺到它
+但不知道為什麼
+我好像再過不久就不能陪她了
+會有人再願意喚醒它嗎
+會有人再陪他嗎
+這也許是我們最靠近的一次
+相較於以前你清醒了一點
+但我感覺到你還有好多事情
+像是冰山一樣
+更有好多事情會來不及你說</li></ul><ul id="d8f98dae-873f-4705-891b-0960549bdd48" class="block-color-gray_background bulleted-list"><li>2016-1028
+如果有一天我失憶大概就可以開一個展關於我遺失的人生
+如果我的專長是感受不是理解 那我該培養的就是紀錄而不是過度討論</li></ul><ul id="6a53c5f7-f996-4376-90a0-f35729d5a1e5" class="block-color-gray_background bulleted-list"><li>2016-1028
+編原石是想說自己以前講個話蠻好看的換個方式整理
+最重要的還是跟畫線一樣吧
+我想要不管任何時候都保持著創作
+而生活本身就是如同時間增加一樣不斷累積的過程
+我想將它透過各種形式轉化成藝術
+這類作品像是我最底層的根源
+數量龐大種類繁多
+是我對於真實(生活)的描述與紀錄
+它們本身的面貌之單純
+讓它們能接受各種承載的可能
+(他們本身的樣貌之單純 讓他們在承載意識傳達時總是遊走
+無法完成意識的共享
+而我認為也許他們的存在並不是適合用在傳達
+而是充滿漏洞的紀錄
+讓光線在它們之中變化
+讓誤解與錯誤走進它
+)
+我覺得我越來越健忘了
+這是我過去無法想像的經驗
+我明明還能獨立思考與邏輯判斷
+但對於記憶這件事情我似乎保存了卻無法再度叫出
+我不知道覺得失憶這件事情是怎麼讓人體會到的
+是相較於過去我能記住的事情相比
+我開始不能記住那麼多事
+所以遺忘的多了
+還是我每一件事情都記住了
+但是我想不起來了
+我認為每個人都是由過去經歷及未來想像構築起來的
+但若是這中間的空隙越來越大會對我們造成什麼影響
+不知道為什麼
+雖然覺得那樣會有點麻煩
+但我一點也不擔心
+反而覺得那裏也許是我嚮往自由的所在
+在我對於自身的了解不足以構築而支離破碎之前
+我會能開始承載更多難以接受的體驗
+我也不打算要求自己理解
+那不是我的天性
+我只希望自己用盡方式留下所有痕跡
+讓也許有再來一次的人能夠有機會分享這一切</li></ul><ul id="d68664a5-449e-439c-bf05-550193b65281" class="block-color-gray_background bulleted-list"><li>2016-1030
+你說的對
+在14年後
+我太自我膨脹了
+我需要好好休息</li></ul><ul id="a41af086-1ffa-4c1c-8aee-387fc51ea76c" class="block-color-gray_background bulleted-list"><li>如果只有兩頁
+那頻率一樣就能共鳴</li></ul><ul id="605126c1-f106-4ba0-9ebc-80acaddb3062" class="block-color-gray_background bulleted-list"><li>2016-1030
+故事就像和弦一樣
+那樣的起承轉合營造豐富的層次</li></ul><ul id="7614e0f7-30c0-40e6-8a6e-a2d4dbdeb299" class="block-color-gray_background bulleted-list"><li>2016-1030
+做什麼都會有人已經站在那裡</li></ul><ul id="5aefbf40-00e1-4f3e-9fd7-362a6ec3691a" class="block-color-gray_background bulleted-list"><li>2016-1031
+專長：找一堆windows老怪程式然後自稱glitchr</li></ul><ul id="75b98d98-fd08-4cdb-80c0-410d08738aa8" class="block-color-gray_background bulleted-list"><li>2016-1031
+有很多問題是我沒能力面對的</li></ul><ul id="43279fec-fc5f-410a-8702-d13d8bd21db2" class="block-color-gray_background bulleted-list"><li>2016-1031
+沒有必要為了那些 不重要的事情耽擱了創作的樂趣</li></ul><ul id="c77d3104-e740-4c4c-a4b8-3a07497e66ff" class="block-color-gray_background bulleted-list"><li>2016-1101
+你是一個很好的人
+很少人會問我要吃早餐嗎</li></ul><ul id="d77b9e3d-88f8-43e2-a739-e6a0e3877a7a" class="block-color-gray_background bulleted-list"><li>2016-1101
+任何外力都會有雜質存在，你好不容易完成了去蕪存菁的過程，就不要再重蹈覆轍了，只要按部就班，你就會無比強大</li></ul><ul id="f19140c1-2f50-4859-bb49-3a73297009b4" class="block-color-gray_background bulleted-list"><li>2016-1101
+我很喜歡這樣解釋，像是每次我喜歡上一個人，她們都在我生命上留下不可抹去的什麼</li></ul><ul id="d445ba9a-12d9-4bb7-b850-c0f8612d80bf" class="block-color-gray_background bulleted-list"><li>2016-1101
+人在做簡單的事情的時候就已經想好該怎麼做了
+所以會覺得很無趣
+才會有人喜歡做難的事
+在面對挑戰和冒險產生的意外時
+我們能在自己身上看到意想不到的組合
+那正是另我們有趣的地方
+但重複一件事情
+如果細細審視自己
+每次都是不一樣的
+冒險與平凡的差異在於人心的審視
+也許事實上是有更多差異的
+但在本質上我覺得人心的節奏左右著我們審視的觀點
+所以透過節奏我們能讓閱讀冒險與閱讀平凡是同樣有趣的
+如果我在意的只是同樣有趣
+那麼同樣回到人心的感受主導一切
+我們真的需要用閱讀或是品嚐事物的節奏去影響或輔助我們的感受嗎</li></ul><ul id="d9a27a71-e5da-45ff-b5da-ac2067f49e3f" class="block-color-gray_background bulleted-list"><li>2016-1101
+當我面臨困惑或無聊的時候
+我會放輕鬆像是擴展心靈一樣
+去容裝更多事物來觀賞</li></ul><ul id="ef4ae86b-514c-40fe-8a26-43df484fd710" class="block-color-gray_background bulleted-list"><li>2016-1101
+整理作品集
+場物開會
+美華作業</li></ul><ul id="03e977ea-c37f-4448-9c36-a46e4eb4449e" class="block-color-gray_background bulleted-list"><li>2016-1101
+潛移默化就是環境的鬼鬼祟祟</li></ul><ul id="5ac94c7e-679f-4f77-899b-13c3b450d554" class="block-color-gray_background bulleted-list"><li>2016-1102
+將心托在手上
+就像太陽沈入海一樣</li></ul><ul id="24d2491e-fab6-4d36-a727-f78bb5d4ffb3" class="block-color-gray_background bulleted-list"><li>2016-1102
+那些你錯過的
+都必將在夢中償還給你</li></ul><ul id="e201ed88-61e1-4c9c-87f7-edf96dd5ddf3" class="block-color-gray_background bulleted-list"><li>2016-1103
+好想知道美感是啥
+為啥會可以感覺到不喜歡
+但不知道怎網喜歡的方向前進呢</li></ul><ul id="7f7acc59-a413-4aea-ba39-a1657cb4aa37" class="block-color-gray_background bulleted-list"><li>2016-1104
+夢與醒有點像記憶的二手市場</li></ul><ul id="bd786328-96f5-4414-ad6c-6a1d3b980670" class="block-color-gray_background bulleted-list"><li>2016-1104
+我想成為甚麼樣的人</li></ul><ul id="89ee009b-0093-46c6-8f6d-75472a2fa201" class="block-color-gray_background bulleted-list"><li>2016-1107
+明天幾點 要幫你帶什麼嗎</li></ul><ul id="a0f558c7-bf4d-490f-95ca-119cbb84f274" class="block-color-gray_background bulleted-list"><li>2016-1108
+你怎樣乾我什麼事</li></ul><ul id="a253a58a-2063-47be-b935-0fc9de01da8d" class="block-color-gray_background bulleted-list"><li>2016-1108
+我意識到說
+在每一年我在每一天都坐著不一樣的事情
+我的日記不是每天寫的
+所以之間有著許多空缺
+或是同一天寫了好多事情
+我整理的時候在想
+如果把到目前為止的日記拼成一大個好像蠻有趣的
+我就能看到這五年我哪一天是完全沒寫過日記的
+哪一天是寫好多日記的
+哪一天是五年都有寫過日記的
+在同一天但不同年寫的會有甚麼關聯嗎
+縱使明明知道不可能會友但還是好期待
+數據化: 池田亮持
+生命之音: 將日記的時間和數量關係轉換成數據 在轉化成聲音
+這會代表甚麼</li></ul><ul id="bc326846-7ddb-493c-9534-0a7947220be9" class="block-color-gray_background bulleted-list"><li>2016-1109
+經歷就像迷宮一樣，如果我們走不出來，那就沒有辦法像其他人說故事了</li></ul><ul id="c49bd5be-7098-44a5-b9e5-edbff1a452db" class="block-color-gray_background bulleted-list"><li>2016-1109
+但走不出來並不是壞事，亦或誰比較厲害，也許一旦走出來，你也接受了妥協了放棄了一些什麼事，但也會獲得什麼吧！</li></ul><ul id="1e41845a-ecfe-4a72-9804-53cfc95090d8" class="block-color-gray_background bulleted-list"><li>2016-1109
+當能夠承載我及我能夠託付的集合越來越少的時候，我開始只能寄託於一些其他的事情試試看了</li></ul><ul id="f0f6e2b0-3e9c-485d-a9a9-38b1135d3379" class="block-color-gray_background bulleted-list"><li>我喜歡去胡亂的冒險，在我離開之後，你替你眼裡的我訴說自己，讓我找到一些我不知道的回憶，是當時的我沒有機會知道的，雖然當時的我永遠都不能知道了，但我還是會試著在記憶裡面讓他們團聚，我相信所有遺憾都是為了這一刻存在，所有的遺憾都是一份跨越時間的等待</li></ul><ul id="115fac45-5fb6-414f-8f63-f4b4997f6f6d" class="block-color-gray_background bulleted-list"><li>2016-1110
+忙的不可青椒了</li></ul><ul id="0c4a9023-654e-4036-a571-8f3888f05855" class="block-color-gray_background bulleted-list"><li>2016-1114
+我夢到那些信紙哭了
+它坐著
+但它的眼淚是橫著流的
+它告訴我它能感覺到她們都是1114
+愛我的1201</li></ul><ul id="2c4bbc35-ba2b-42e5-bffb-4203ca8e4527" class="block-color-gray_background bulleted-list"><li>2016-1115
+平方之後和在倒數
+平均分散在各年會更明顯</li></ul><ul id="b3e1072d-0394-4f0c-911c-f6a33472a4ea" class="block-color-gray_background bulleted-list"><li>2016-1117
+業餘無線電執照 第三級
+Ncc國家通訊委員會</li></ul><ul id="b4a29be8-a3ff-446b-a91a-2ef1e2df4752" class="block-color-gray_background bulleted-list"><li>2016-1118
+很閒的人才能回顧過去吧</li></ul><ul id="84d0b514-1c06-4804-9c5a-2157b78e70d9" class="block-color-gray_background bulleted-list"><li>2016-1118
+我是不是在逃避面對人家的批評
+又或是擔心自己認為這件事想不到發展性</li></ul><ul id="cd2a5211-ad32-478d-adfe-77af3958fe20" class="block-color-gray_background bulleted-list"><li>2016-1119
+去買c片躲感冒</li></ul><ul id="533912e5-b172-4e48-88e9-ae8c9f78a4b7" class="block-color-gray_background bulleted-list"><li>2016-1119
+為什麼我不被自己做的東西所感動呢</li></ul><ul id="d32d98c9-07d5-4d4c-b13b-2add11efadf2" class="block-color-gray_background bulleted-list"><li>2016-1119
+醒來了
+我不知道自己要做什麼
+看到了一些之前說過的話
+原來我還有這樣活過來
+我之前好像講過這樣的話
+對齁
+我好像之前在想這個
+要繼續想嗎
+想不到
+我也不是在那個時間了</li></ul><ul id="f719e7e8-f607-485f-859f-46b40c973ff0" class="block-color-gray_background bulleted-list"><li>2016-1121
+我在意那些微小又被忽視的聲音，它們跟我一樣</li></ul><ul id="87cba646-0a08-45b6-aaa1-6c2a4c6e0f62" class="block-color-gray_background bulleted-list"><li>2016-1122
+對於一些不被熟練或還沒有存在的想像</li></ul><ul id="c299b38c-4dd3-4fdc-a488-239e928910e8" class="block-color-gray_background bulleted-list"><li>2016-1122
+縱使素不相識, 任何互動都是相處, 一種在意的表現</li></ul><ul id="509964ff-94a5-4600-be87-9bd663bf2190" class="block-color-gray_background bulleted-list"><li>2016-1125
+大家要的只是一個答案
+你有了答案我們再來看你的過程</li></ul><ul id="26d46f2c-419b-41ea-87ae-da926fb95d73" class="block-color-gray_background bulleted-list"><li>2016-1125
+我是傑克孫
+遇到紅燈
+在很長的路上
+為什麼盡頭會轉彎
+左邊是黃色
+右邊是白色
+我們走的是分界
+灰色的一點
+我們細心的審視盡頭
+盡頭在我們前進之下妥協
+它消失了
+整條的路是拉長的紅燈
+我們永遠找不到它
+長路阻擋我們
+他在陽臺找著覺悟
+路燈凝望著路</li></ul><ul id="e569452a-9535-458b-b458-7d4895d74d76" class="block-color-gray_background bulleted-list"><li>2016-1128
+不要集中在一個念頭上
+抄寫它
+紀錄它
+它之所以美麗是在它的全貌
+縱使它是由細節堆積而成的
+然而細節可以替換
+但是神貌無法</li></ul><ul id="f1972880-1cac-458e-8472-4a305973a6ec" class="block-color-gray_background bulleted-list"><li>2016-1129
+如果每說一句話
+就是在生命穿上一個洞
+那今年真是千窗百孔</li></ul><ul id="f67d71ea-edf5-4d36-908b-864b7a95b17f" class="block-color-gray_background bulleted-list"><li>2016-1129
+希望能更了解自己
+希望能會溝通
+希望能幫忙分擔我愛的人的煩惱
+希望健康
+希望能感覺到更多感受
+希望遇到美好的事
+希望如果傷心也是因為幸福
+希望能維持好的生活品質
+希望能養活自己
+希望幾年後可以出國工作</li></ul><ul id="bff1997b-58bf-4a25-8060-5ec40cda0889" class="block-color-gray_background bulleted-list"><li>2016-1202
+不能告訴你*3
+我的過去
+*3
+愛你
+我有太多過去的事
+不能告訴你</li></ul><ul id="8c81c081-f021-4ebe-b254-b87309ca3ba1" class="block-color-gray_background bulleted-list"><li>2016-1203
+新聞讓人不舒服
+情緒波動
+精神上的喧囂讓人覺得被冒犯</li></ul><ul id="9780762e-0ef5-4362-bb8a-9022da68a08d" class="block-color-gray_background bulleted-list"><li>2016-1208
+什麼是作品
+是一個生活階段的累積嗎
+我們應該怎麼去畫分</li></ul><ul id="a3e0227b-d686-4950-9591-4835c13c3045" class="block-color-gray_background bulleted-list"><li>2016-1208
+只有每日每日的累積才是促使夢想實現的源泉</li></ul><ul id="0eff4896-e003-41a7-8e55-d0b5caf20e4d" class="block-color-gray_background bulleted-list"><li>2016-1208
+翻譯年糕
+檔案名稱
+停車格</li></ul><ul id="dfdc9fc3-6b23-4734-a40e-9f67f067791f" class="block-color-gray_background bulleted-list"><li>2016-1208
+那些大家都知道了</li></ul><ul id="51620f92-d033-4062-a7e3-9280110e7569" class="block-color-gray_background bulleted-list"><li>2016-1209
+正如語言必須被述說，其意義才成立；城市之所以為城市，關鍵不在於它的空間構築，而是因人們反覆行走其中。</li></ul><ul id="c0e9b9d6-8665-4cad-91d3-a911403c81c5" class="block-color-gray_background bulleted-list"><li>2016-1209
+站在水上的樹</li></ul><ul id="9c0b322b-88a2-46df-bd9e-e586337cc98d" class="block-color-gray_background bulleted-list"><li>2016-1209
+我在想
+也許每篇日記都是寫給我自己的
+也許每篇日記都是為了和那些人講
+像是離我遠去的外公
+像是我曾經喜歡過的人
+像是會有一天離開我的
+像是我沒機會遇到的
+我在這時候想什麼
+我遇到了什麼事
+我周圍發生什麼
+我真的不善於表達
+在重要的關頭反而什麼也沒有想說
+但我知道這時候我一定想講些什麼才對
+對於未來會發生的事情我沒有任何認知
+我不會去想明天會發生什麼
+我在想今天我做了什麼
+昨天我怎麼過的
+我已經過了這麼多天了嗎
+這一切是怎麼發生的
+謝謝你願意關心我是怎麼過的
+但我不知道怎麼說
+並非我拒絕思考怎麼去回應你
+而是我沒有印象
+對於過去和未來
+我都無法肯定
+但當我在紀錄的時候
+我在實踐未來的痕跡
+也在為過去留下根據
+但當我在從事紀錄的時候
+我在正執行未來的每一個動作
+但我執行的每個動作
+都在成為過去
+紀錄時常與過去產生聯想
+但
+時間其實是倒著走的
+有跡可循的是過去
+沒有時間是向未來而行
+每一分秒都在向過去而來</li></ul><ul id="922f8412-64df-438a-9979-a818a0543cec" class="block-color-gray_background bulleted-list"><li>2016-1211
+她的信紙現在跟過期的發票一樣</li></ul><ul id="edafccd4-93bd-49e7-b8e1-ed4a3adbe115" class="block-color-gray_background bulleted-list"><li>2016-1212
+把故事送給它們
+讓故事去生存</li></ul><ul id="3c39e374-c487-477d-9ca3-411dfb8456e7" class="block-color-gray_background bulleted-list"><li>2016-1212
+等待問題的來臨</li></ul><ul id="f801d177-37b7-4930-9a64-6728ed46b12a" class="block-color-gray_background bulleted-list"><li>2016-1213
+為什麼我會這麼晚睡</li></ul><ul id="3be96248-61a9-4bbf-aad1-970ae324ad30" class="block-color-gray_background bulleted-list"><li>2016-1213
+我只記得一半的念頭了</li></ul><ul id="d75abe7c-862c-47c7-ac99-db226abd206d" class="block-color-gray_background bulleted-list"><li>2016-1213
+我無法承載我的想法穿梭時間</li></ul><ul id="22b2e7b7-dfd0-4e0e-adea-3e945eb36a3b" class="block-color-gray_background bulleted-list"><li>2016-1213
+她穿純白的T恤真的好漂亮</li></ul><ul id="7e84b8e9-c827-42f2-8659-30c5c3185e93" class="block-color-gray_background bulleted-list"><li>2016-1213
+[轉]
+自然也追求對立的東西
+它是從對立的東西產生和諧
+而不是從相同的東西產生和諧
+2016-1214
+如果要破壞一段關係，就是把互動的速度盡可能加快。
+我們命令對方、威脅對方，催他、趕他，對他沒耐心，在他旁邊碎碎念，讓他不得清靜。他只要沒按照我們的想法做事，或是做事的速度不如我們預期，就這樣對待他，這樣，關係的破壞崩解，指日可待。
+如果想建立或維繫一段關係，可以刻意找時間讓互動盡可能慢下來。
+喝喝茶、聊聊天，共享一段時光，做一些彼此都喜歡做的事。給彼此時間，讓彼此都可以按照自己的步調前進。這樣，關係比較能建立或維繫，彼此的善意會比較能被看見。</li></ul><ul id="5a661c69-205f-4140-893d-5dba1262c783" class="block-color-gray_background bulleted-list"><li>2016-1214
+不敢惹事是庸才</li></ul><ul id="6dcf50d3-89fe-4734-90fd-32d23b720d90" class="block-color-gray_background bulleted-list"><li>2016-1214
+講故事的藝術</li></ul><ul id="e4f0b574-6d72-4326-8017-e9f5d6aaf247" class="block-color-gray_background bulleted-list"><li>2016-1214
+會忘記的事
+都是不重要的事</li></ul><ul id="aa3243cb-c5a7-4806-b737-6b6ea4745e41" class="block-color-gray_background bulleted-list"><li>2016-1214
+反正只是字而已
+就讓他們全部都在同一個世界
+用傳輸數字去操控嗎
+還是讓大家一起長
+應該會一樣吧</li></ul><ul id="89556daf-a387-4582-938d-3dd7e96ada86" class="block-color-gray_background bulleted-list"><li>2016-1215
+我不感說誰漂亮
+倘若我也覺得某些平凡或噁心的事情漂亮
+那些我所愛的就會遭受調侃</li></ul><ul id="387305e8-1891-43fd-9d00-8c06c1c02585" class="block-color-gray_background bulleted-list"><li>2016-1215
+百代120
+Potato 135g
+Wild 150g</li></ul><ul id="5c03f3d8-4c58-4590-b238-3b237a331836" class="block-color-gray_background bulleted-list"><li>2016-1216
+我的個性不比你的堅定
+但比堅定的有韌性
+柔軟更要有主導</li></ul><ul id="c13514d2-da38-40a0-b509-0e1d0e535126" class="block-color-gray_background bulleted-list"><li>2016-1219
+它不能成為你手上的火光為你指引方向
+但它是可以成為你暫時的終點
+經過的路燈</li></ul><ul id="0c2b4abc-c93c-4acf-bfb1-056e133f8746" class="block-color-gray_background bulleted-list"><li>2016-1219
+她討厭昆蟲
+人生三大討厭之一</li></ul><ul id="c76ffa5e-34df-4b6a-b610-76af17d7ba4c" class="block-color-gray_background bulleted-list"><li>2016-1220
+主要是一群人在聊天
+關於他作品中用過哪些東西</li></ul><ul id="3691de06-511f-42e3-8069-4dde61f09390" class="block-color-gray_background bulleted-list"><li>2016-1220
+人會偷就是因為缺，如果，我們有餘就把被偷當做施捨分享 聽過這個道理後，我對偷竊者有了另外一種看法</li></ul><ul id="427509d7-f977-42df-a54c-69ba2be760b9" class="block-color-gray_background bulleted-list"><li>2016-1221
+機器人的開心難過都不會表現出來</li></ul><ul id="8a7a8148-445e-45ca-b6b4-6e043d679ce0" class="block-color-gray_background bulleted-list"><li>2016-1222
+重複 循環 相扣</li></ul><ul id="0ca2c2e2-70f3-4ef8-90bc-bf857750f3fe" class="block-color-gray_background bulleted-list"><li>2016-1223
+她明年好像要去關西</li></ul><ul id="f391f9b0-051e-4253-9957-078cb6e52d1b" class="block-color-gray_background bulleted-list"><li>2016-1223
+做好自己的事就好了
+做好自己的事就好了
+有的時候我好想在意她</li></ul><ul id="bc7e2199-f4ed-4d76-a151-071aa209a6c9" class="block-color-gray_background bulleted-list"><li>2016-1224
+她是芬
+她有時候覺得她是女生
+她喜歡女生
+她在滿月的片刻之間徘徊
+大多數放下的滿月都是她的
+但大多數都是我來替她拿起過程
+她出現的時候都是滿月
+她喜歡女生不是因為她有時候不是女生
+或她不是女生
+只是她喜歡的人出現不同的她身上
+滿月之後守護的她
+會不會遭到誤認
+能不能遭到理解
+我能替她祈禱
+希望她幸福
+因為她幸福是我幸福的事
+她心裡住了一個男生
+這是寫她
+寫她寫她寫她</li></ul><ul id="8c002450-059f-4352-b11b-8d11cb2d0d4b" class="block-color-gray_background bulleted-list"><li>2016-1224
+我想為她改變</li></ul><ul id="233c5a46-e918-4f55-9556-51b0943c5374" class="block-color-gray_background bulleted-list"><li>2016-1224
+我不曉得我心裡的女生
+是因為她在而因此
+還是因為愛她
+而投射因此
+但
+一定是都是
+只是該相信到哪種程度</li></ul><ul id="1097c7f9-e77c-4877-a482-5c227a3ff805" class="block-color-gray_background bulleted-list"><li>2016-1225
+不用在意要深吸多長，要吐出多少氣。只要想控制，呼吸就會有問題，健康的呼吸法，就是「平常呼吸」，去察覺去體驗你在呼吸就好。</li></ul><ul id="d2cecad8-0402-4ba6-a47c-fe2873e0a894" class="block-color-gray_background bulleted-list"><li>2016-1225
+我夢到你回我
+：好溫暖喔
+我想說被你稱讚很開心
+：我已經到泰國了
+醒來才想到會不會你只是在說泰國溫暖</li></ul><ul id="703ffa0c-3bb2-4199-85af-eab230c31dc9" class="block-color-gray_background bulleted-list"><li>2016-1226
+我要相信直覺
+我不是會受情緒影響的人
+我要討她開心
+不要急
+相信你自己心裡的聲音
+她一定也會喜歡你</li></ul><ul id="e6482f26-d008-40cf-8e5c-78fb8516f193" class="block-color-gray_background bulleted-list"><li>2016-1226
+我要讓她也知道
+我只會喜歡她</li></ul><ul id="8c7b5006-521c-4ae6-9036-28bbbd6e0972" class="block-color-gray_background bulleted-list"><li>2016-1226
+humanNOhumor</li></ul><ul id="db750153-4d6d-491e-afa4-e4d3f06668c6" class="block-color-gray_background bulleted-list"><li>2016-1226
+我只是個怪人</li></ul></div></article></body></html>

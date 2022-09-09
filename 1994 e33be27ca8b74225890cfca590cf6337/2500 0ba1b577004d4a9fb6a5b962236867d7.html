@@ -1,0 +1,901 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>2500</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="0ba1b577-004d-4a9f-b6a5-b962236867d7" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">💉</span></div><h1 class="page-title">2500</h1></header><div class="page-body"><h3 id="de1316e4-f05f-47a4-9ce0-a8743fc2d91a" class="">1.</h3><pre id="a87a757b-f52e-4759-ab8c-ebb8a4bc055d" class="code"><code>我不在紙上寫字
+只在無話可說的時候寫符號
+什麼時候都像結尾
+什麼時候都不能修改
+什麼時候都可以放鬆
+什麼時候都可以放空
+要快的像救護車一樣
+要快的像電話
+要快的像一切剛好
+像寫文字的人總有奇怪
+總是糊糊的腦
+像是質量太大
+所以時間漫過了頭
+昏昏的頭
+於是因為紙張的額度
+和文字的不足
+到了一個隨時可以停止
+又到了一個現在</code></pre><h3 id="6a5b283f-cf0a-4390-8aff-42479e7e718d" class="">2.</h3><pre id="a13ad638-6b51-48b8-87bf-722980217ba7" class="code"><code>時間又回復正常了
+像是不相信大家說的
+如果不是日常所需
+那又何必存在
+我不像我
+像是廁所會走出人來
+我像我
+在它還沒有走出來
+是不是仍然有舞台
+是不是突然就會粉身碎骨
+是不是被閱讀的現在
+就應該感到憂心
+我在我的方向上
+是不是有漏想什麼
+只有一步一步地走
+像是遙遠的地方也會有著共鳴
+像是大家都喜歡古時的懦弱</code></pre><h3 id="faecf354-53fa-4afe-97ba-265a9999f553" class="">3.</h3><pre id="4052a279-6d01-4019-b170-06992a00503f" class="code"><code>我把故事蓋去
+總有一天它會在不適合的時間被讀
+那人沒有感動
+即使那人努力過
+那是不恰當的時間
+時間發生的有些虧
+連結像是想不起來的文字
+於是時間還是會走
+還是會有更有趣的事
+這無聊的文
+無聊的字
+是不是該靜下心
+想想接下來的事
+不要太快了
+像是所有事情的詛咒一樣
+能瞭解嗎
+能讀得懂自己的文字嗎
+提心吊膽吧
+門又被打開了
+仔細聽是不是背後會有腳步聲
+寫故事的人
+要到哪個時候的哪裡去</code></pre><h3 id="2b519f18-46e0-4e46-a37e-6e6bfc67fefa" class="">4.</h3><pre id="e6ad7131-e87b-40fa-8334-c2fbbaf90765" class="code"><code>故事是有限的
+消失在七點之後
+我不是誰
+所以說服力都沒有
+事情自然有根據
+像是城市的巷弄裡
+事情有著太多的空隙
+所以所有根據都能塞進縫裡
+我很焦躁
+但不夠有條理
+只會跟著時間走
+又能走出什麼
+所有人都擔心
+像是手都忘記寫
+於是又一次一次的
+只能等待巧合
+我就是述寫著杯與埃
+又能就像是只一樣的寫嗎
+是不是還能漂亮
+這文字落下時
+腦海裡又是誰的衣裳
+我想的是誰的聲音
+不要因為我自得其樂的插話
+而誤解我的句子
+那故事又從何而來
+大概再十分鐘以後給未來</code></pre><h3 id="bb44b3a5-7cb9-46c0-b0a9-58674df87ac9" class="">5.</h3><pre id="136a3f45-52f2-4d9e-9fdc-01702322b07b" class="code"><code>讓精神遊走
+如果肉體開始痛
+如果不知該聽信何方
+器官開始分散
+只能向自己開始記述
+能數過多少天
+這又是誰的心裡
+哪裡才有舒服的位置
+過去在意的都不算了什麼
+如此陌生的居所
+還記得怎麼回去嗎
+這是誰
+事情會結束嗎
+我還能不能展示我是誰
+還有沒有人在等我
+我相信我過去說過的嗎
+我質疑過什麼嗎
+有完成的事情嗎
+我回想得起來什麼
+我能</code></pre><h3 id="943d632a-e6dd-456c-b9be-570a52cf0143" class="">6.</h3><pre id="4c8a5a94-5dfb-4326-9c64-ce3765cb73fb" class="code"><code>如何描述出一個清晰的景象
+如何具體的表達
+在一片混亂之中不能再有更多交互
+混亂之中如何自處
+心之所向沒有聲音
+心之所向真實存在
+心之所向是我過去相信的原因
+心之所向將我帶至這裡
+混亂之中該往哪裡梳理
+到處都是談論混亂的聲音
+但它們清醒
+它們能講述共鳴的聲音
+像是害怕從身旁走過去
+像是莫名的癢 莫名的痛
+像是我不能說出大多人的聲音
+像是你的心裡也有我
+像是我胡亂指向的形容
+像是我也沒經歷也沒同意的詢問
+又要開始詢問了嗎
+我還是試著努力
+像大多數人說的那樣
+也許大家都是有罪的
+或是有罪的人都吸引我們效仿
+除非我能救他</code></pre><h3 id="9f9b367e-9d31-435b-9f0d-3990573fd18f" class="">7.</h3><pre id="eba55fd2-c2c2-4a65-b182-b821ed8b5f6f" class="code"><code>我是所有人的起點
+所有的恐懼都會員制我這裡
+所有人都能理解我的恐懼
+所有人都不同我恐懼
+出口走出所有人
+說恐懼的事像我的根
+像我的墨鏡
+忘記自己寫到哪裡
+忘記有人要我別說
+忘記你也懷疑我的記憶
+懷疑我的經歷
+只要寫下總會有時間
+總會有筆尖停留的差別
+總要一輩子的時間來製造一隻鬼
+離開總會需要理由
+是不是能帶有應該的尊重
+好難應該的帶有
+什麼時候可以跟著浪潮走
+什麼時後可以向著熟練走</code></pre><h3 id="85c73274-c324-4473-922d-32c93a6def15" class="">8.</h3><pre id="d5792bb4-d580-4dff-ab44-977d389d0e6f" class="code"><code>我是可以的可能的暫時停留的
+會經歷的只是經歷的
+不是你該掛念太久
+不是你該保持緊繃
+你該舒服的是自己
+該緩緩回去的是自己
+自己從來不遠離
+迫切拉著你的才是遠離
+像是緊張每一次的開門
+或是哪一通電話
+你是海中的個體
+去哪都該跟著你的心
+是不是該深入涼沁的寂靜
+是不是該望著離開的自己
+是不是會想到最吵得經過
+是不是停留在某個腳印
+就像安靜的我一樣
+為了不明確的地方堆積時間
+又不曾守護自己的心與息
+所以擁抱然後混亂然後擁抱然後混亂
+然後珍惜的地方已經一個也沒留下
+然後誰不也都是這樣
+就算是釣魚的人也一樣</code></pre><h3 id="485f7417-932c-4dde-948a-435fc7d09a71" class="">9.</h3><pre id="7f936c92-67dd-474a-ba25-01dfdbe9ee84" class="code"><code>能不能不要隨意向現實許願
+遠離自己就會提出願許
+提出願許就會遠離
+第一個第二個也許就停了
+我還有幾個
+去海邊淨灘就能救贖了
+要慢一點
+記得從來不快
+記得永遠不快
+記得保持不快
+一切會好一點
+只要多留心一點
+像是定期買彩券
+那貧窮為何可以加自己罪
+只要開始禱告
+那還不全完算是許願
+如果沒有成真
+那為什麼算許願
+一切都不急
+珍惜一切點滴
+每次過年就要求一點吉利</code></pre><h3 id="581e4508-7dbd-4fd7-89cd-8323a5f56167" class="">10.</h3><pre id="1020a43c-faad-4c95-82d3-8c3564a516be" class="code"><code>如何在清醒中保持睡夢
+原來睡夢不是唯一的出口
+我喝的是水嗎
+升旗的人是太陽嗎
+是時機壞的時候時機好
+還是時時機機壞壞好
+時不時沒有訣竅
+最憂心的是怎麼回到過去
+為什麼還沒睡去
+肯定並非我的本意
+知識在游走之中
+每個人都有語言
+都會想不起來這裡是哪裡
+有時會更加嚴重
+像是犯了鄉愁
+只是為什麼不是深夜卻又如此清醒
+誰又還會在意空隙
+我也離不開夢裡的聲音
+誰都可以成為夢裡
+誰都可以突然從牆壁走出聲音
+誰都可以貼著筆用同樣的情緒
+誰都可以想到憂鬱怎麼回訊息
+怎麼保持清醒
+怎麼保持好心情
+在夢裡還沒離開就已經死去</code></pre><h3 id="d26df95c-e1fe-47d6-be20-6aca0ed11948" class="">11.</h3><pre id="e916a2e2-ed9a-4d5b-8cbf-5e00d926b024" class="code"><code>不管從何開始都從何開始
+然後交接給下一個
+永遠不會離開重複的幾個詞
+然後不要跟著念頭走
+所有的終點都不是同一個地方
+然後從身體內發出悶濕
+念頭太多從來沒有從何開始
+然後開門的聲音不代表門開
+進來的人沒有出去的人離開
+然後每一次新的都是藉口
+藉口堆向了念頭的盡頭
+然後重覆的地方讓他看起來延續
+像是你不記得做過的
+然後每一刻欣醒
+就快要不能不雙向否定冷笑話
+然後無人可解的瘋人
+在然後之間找到一點存在的笑話
+然後像是情緒一樣沒說
+偶爾會擔心是不是有少一次提起</code></pre><h3 id="a0384162-4ce1-4c6e-bf87-32f7e2670ae9" class="">12.</h3><pre id="41bd248a-db91-4f87-82ae-d5a58d6c7a38" class="code"><code>你所擁有的想法只是想法
+從來不被你永遠
+距離就像一隻鬼的誕生一樣
+嘴唇上的傷口像是肩上一樣
+只有斷章取義的時候才有價值
+放在一起就只是放在一起
+問一下為什麼放在一起
+知道的話寫信告訴我天氣
+天氣知道我好奇的盡頭
+一切就像突然發生
+然後美好又毫無意義
+只有在意的人能說明他的價值
+他的價值不是他的價值
+像是句子的間距也影響天氣
+所以才會在回不回頭之間猶豫
+於是你只是一種文體
+卻無法被量化的情緒
+你在句子和日子和鋸子類似的穿梭
+現在已經不是過去
+只是你還沒有擁有
+所以還在前往墓地</code></pre><h3 id="bcad7abf-4844-4a3f-8a21-e870fc8c96d4" class="">13.</h3><pre id="14b3de43-fef8-42ae-9c99-99763e652ae6" class="code"><code>開始以為會像恐懼
+如果你擔心不足
+就將恐懼過分的發揮
+要記得恐懼是不能控的
+所以一切都是自然現象
+在過分也解讀之前
+你也忘記忘記能帶給你的
+在事情為什麼這樣之前
+懷疑要保留還是回頭
+不要想著在向前
+我發自內心恐懼
+一切什麼都不能代表
+而剛開始時是還有機會的
+像是不需要先想到最後
+也許你也咬緊牙根
+避免自己毫無反應
+但不要懷疑剛剛提過的東西
+其實就只是其實而已
+你在觸摸之前想過的聲音
+總是在敲擊懷疑是不是外面的聲音
+你看如果你看的到如果
+事情不只是在想法多一次否定就能看完提醒</code></pre><hr id="53e110b9-9442-4cc1-aeea-32b27a12d8b8"/><p id="82cd0230-e19f-4fd3-ad00-f58c8902199b" class="">
+</p><p id="61fa8745-cb72-4855-90b0-92e7f1b9319a" class="">
+</p><p id="5f6e44a3-1ade-483c-92e0-6c4724c09828" class="">
+</p><p id="2ecbf3cd-089d-4520-87ff-fb99ab6083b0" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mi>e</mi><mi>s</mi><mi>c</mi><mi>r</mi><mi>i</mi><mi>b</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Described</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">Descr</span><span class="mord mathnormal">ib</span><span class="mord mathnormal">e</span><span class="mord mathnormal">d</span></span></span></span></span><span>﻿</span></span><div class="indented"><p id="aaa0e834-03ae-45c9-8975-b6740e5d9320" class="">
+</p><p id="22282c1f-b183-47c2-97f7-a1746c64a453" class=""><em><span style="border-bottom:0.05em solid">2500</span></em> is writen in 2019 and contains a total of 13 poems. The name is derived from the use of a total of 2,500 words.</p><p id="7ec2a261-2162-4ea7-9b86-237f9738ce01" class="">First and only edition in <span style="border-bottom:0.05em solid"><em>2019小誌交換 Zinexchange VOL.3</em></span><em> </em>. There are crossword puzzles for left-handed and right-handed versions.</p></div></p><p id="8ae70ef0-5931-4524-a530-cc6839003d2d" class="">
+</p><p id="b3d08d60-81fd-4928-9c35-aca4ec1c460e" class="">
+</p><p id="5bdd40b1-40c6-4023-9ad5-b06d0b8e9805" class="">
+</p><p id="0bc77bd9-9c4f-4d86-90ae-40a3605cee9d" class="">
+</p><p id="ce9d5a92-54ff-456f-bca0-8781a4fd80d9" class="">
+</p><p id="5b4f66b1-be5c-4eac-811d-5641e30bbb06" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi></mrow><annotation encoding="application/x-tex">Preview</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord mathnormal">re</span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mord mathnormal">i</span><span class="mord mathnormal">e</span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span></span></span></span></span><span>﻿</span></span></p><p id="55207164-c9ab-4d0a-b5d8-6451d5bbedd1" class="">
+</p><figure id="ffcff627-5750-4800-aeed-0eac92319aeb" class="image"><a href="2500%200ba1b577004d4a9fb6a5b962236867d7/Untitled.png"><img style="width:240px" src="2500%200ba1b577004d4a9fb6a5b962236867d7/Untitled.png"/></a></figure><figure id="c93b93b4-85a4-4d81-b070-6efa3cef8ba7" class="image"><a href="2500%200ba1b577004d4a9fb6a5b962236867d7/Untitled%201.png"><img style="width:240px" src="2500%200ba1b577004d4a9fb6a5b962236867d7/Untitled%201.png"/></a></figure></div></article></body></html>

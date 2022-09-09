@@ -1,0 +1,929 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>原石 vol.01</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="fe36bd2e-0fce-4226-98c0-e0346df736f0" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">🐧</span></div><h1 class="page-title">原石 vol.01</h1></header><div class="page-body"><h3 id="21ebefe4-c5d6-48ac-a646-7d734339657c" class="">1.</h3><pre id="3577f386-92bf-4588-b1a2-4161359c7bd1" class="code"><code>當我們討論一張海報的美與醜
+我們其實是在各自闡述不同的物件
+
+一張海報本身並無帶著時間的單位
+不帶著時間的去與人論及美醜像是自言自語著
+試著討論美醜只能用著帶有時間性的讚美
+
+沒有事物能夠為了表現美而存在
+美的出現只有其是否願意降臨
+
+我們只能試著營造彷彿它造訪過的足跡
+或是它可能前往的方向
+不能重現它的出現
+就像我們不能用文字去紀錄我們不曾看完的高牆
+就像我們不能細述看不到盡頭的道路
+倘若真的必須討論物件
+我們只能與之平等相待
+只能去敘述一張海報的個性 
+像是去敘述我們認識的一個人
+一段關係的成立必須是雙向的
+必須與之負責
+當我們在陳述一張海報的個性為何時
+其內容同時也在描述我們的個性
+
+倘若是外行人來看的話
+一張好的海報一定誠實呈現著創作者的個性</code></pre><hr id="8df03d0e-0a4d-4e2a-8151-a77c831999b9"/><h3 id="7dfac278-1d38-4842-bae6-c83c2babfb10" class="">2.</h3><pre id="70c95e3f-be4f-42f3-90f2-ac149a13d1f2" class="code"><code>她的背影像是一個讓人心跳暫停的畫面, 
+也許是我的感受性欠佳
+也許因為我很無趣, 
+當我後來回過頭來
+一直回想到那種美的感覺,
+
+有些話原本可以說得更清楚的
+只要它沒嘗試說的那麼多
+那個畫面說的那麼的少
+但我像是沒有看到一樣
+進行那個當下我猶未完成的動作
+
+美的瞬間是多麼的短暫
+
+深怕一個駐足都會讓構築的一切支離破碎
+尤其是做不到捨得的時候
+而我原本也以為可以一直帶著這個畫面
+畢竟我懷疑時間都應該會捨不得帶走
+只是它還是逐漸消退
+
+我對它的印象越來越模糊
+越來越不清楚
+我不能使用文字紀錄
+文字之間的空隙會把其中的意義稀釋
+不曾見過的高度無法去試著重現
+我馬上拒絶了這個想法
+我馬上改了念頭
+
+也許美就是必須帶著時間
+必須隨著時間飄散
+那正是它的個性
+也許美就是這般不流於形式只存在於自由之中
+唯有令它有趣的事件才能使它寄身於是</code></pre><hr id="4284fb53-c7fb-4e49-ad4d-c9885d213bbb"/><h3 id="83c188d1-6ea0-454d-97b7-7f7216643d78" class="">3.</h3><pre id="e2f80650-9ada-4b28-82db-ea9cdea1d1fa" class="code"><code>發現真相的過程只存在於發現真相的人
+發現真相的過程並不是適合所有人的解答
+而是適用於發現真相者的個性
+真相的存在確立
+但觀察真相的存在虛無飄渺
+觀察真相的過程像是真相不斷遊走
+若不是對自身的存在明確建立
+每一次觀察都反而可能讓自身的個性遊走
+因為真相的存在確立
+描述真相的過程並不會驅使真相逃避
+而是自身的個性遊走使得每次的真相飄移
+真相像是球體
+觀察真相的過程若是一昧的使勁則只是遠走
+重點是抓住思考的節奏
+描述的過程才不會過於遊走
+
+我發現了一些事情
+我很想和大家分享他們
+它們
+
+真相的存在
+能夠精準描述的，並不就是真相
+真相並不會被描述僅僅抓牢
+我不希望你認為他是自私的行為
+只顧著自講自話</code></pre><hr id="e82c6518-02bf-4143-83a7-6d42b709c91b"/><h3 id="135c01ea-32d7-48d9-ab47-fe0cb4178fb0" class="">4.</h3><pre id="b2b3a6fb-ff0f-4d2e-b0d6-af590bf92757" class="code"><code>我是為了什麼在創作
+
+我們漫無目的的活著
+我們像是有名字的靈魂但卻沒有記憶
+想要捍衛自己的文化卻什麼都記不清楚
+像是身上流著末代的血
+像是很多事情還沒完成就要淡去
+而我們經歷過的所有事情都成為了建立遺憾的部分
+
+像是很多事情成了遺憾
+也許死亡的瞬間是沒有人帶有遺憾的
+活著的時候才能帶著遺憾
+
+遺憾成了被遺忘的事情
+
+是因為我們願意放下遺憾
+在重走一次我們走過的路
+重新認識我們認為熟知的
+再一次去面對我們失敗的問題
+再一次試著去尋找答案
+
+所有的人格特質都代表著曾經的文化
+所有的文化都始於一個人都終於一個人</code></pre><hr id="96d2d975-a903-47c0-924a-fa05e4b84cac"/><h3 id="51b8bf20-777f-422d-823f-d04e6209fd14" class="">5.</h3><pre id="7808db1f-e96f-470e-9906-1b4781ca08b2" class="code"><code>我很喜歡聽到其他人對於畫面裡線條的猜測,
+
+像是不在意傳達的人想要發出的聲音
+只聽從自己想要聽從的
+像是不在意接收的人想要接收的聲音
+只發出自己想要發出的
+
+也許這就是自由
+是一個我們在規則邊緣遊走的模糊地帶
+
+過去一陣子
+我認為傳達之間的空隙如同畫面之間的填補一樣
+縱使我們再努力呈現我們意識所趨
+並沒有事情能夠完美重現
+
+這讓我很沮喪
+我擔心如果有一個收到我的訊息會因而有美好改變的人
+因此錯過
+他的一輩子可能就只有這麼一次機會
+他甚至沒有可以難過的機會
+
+創作符號時
+我覺得很孤單
+我覺得我就是這樣
+我不希望有人也會感覺到這樣
+如果能有一種傳達的方式可以避免這種事情的發生
+也許我過分的擔心只是因為我的膽小
+傳達之間的空隙也許是像一個準備方案去為了未來可能發生的事
+空隙存在於我們之周
+縱使我們面對一顆石頭都會因為我們的不了解或是觀察不夠入微
+而讓我們接收到的資訊與石頭的傳達之間產生空隙
+但空隙的填補一直都由我們過去的經驗負責
+相較於尋找一個完美重現傳達的方法
+也許我們可以明立的短期目標是消化我們的過去
+
+我時常在揣測自由
+那是我最不常提起及我認為對我而言最在意的東西</code></pre><hr id="7f6c3956-5544-4983-8b27-a4b71f1b83b4"/><h3 id="34a544b6-3ca9-4940-b41f-979b45bc9738" class="">6.</h3><pre id="06250469-120a-45a9-8350-fd1aa86eb618" class="code"><code>就算我們一起經歷了 
+但結束之後我們依然
+什麼都不是
+
+我們經歷過一些只有彼此才知道的事
+這些事是不是真的存在
+如果我們不再交流了不再接觸了不再對談
+那些事情是不是跟沒存在過一樣
+也沒有人知道
+
+對於我們很重要的答案 
+花了很多時間才找到的 /碰巧怎麼會在這裡發現的
+
+從
+被珍惜的
+變成石頭
+
+我不相信會有什麼東西剩下除了難過
+我們就只剩下難過
+
+我知道沒有事情你該為了誰去做事情都是自己去做的
+但我知道我都是因為你
+
+我事後懷疑是不是分開真的都會難過
+是不是真的該有這麼難過
+
+最難過的是因為你離開
+也不是因為你離開
+我知道之後我也會跟其他人
+一樣忘記你
+所以我才很難過
+
+我只祈禱一件事
+他不知道也不在乎我難過</code></pre><hr id="e51bc539-88d6-44c3-a155-8850cbc45a91"/><h3 id="4a4e09b8-645d-4eec-8c59-244483953f32" class="">7.</h3><pre id="9efa17df-905d-4eb5-88ec-87ef374b9495" class="code"><code>我知道這可能是我的問題
+我的問題到了你身上可能就不是問題
+如此
+這個問題的答案對你可能也毫無意義
+那為什麼還需要讓你來追尋
+
+想跟聽不到聲音的人講話要怎麼辦
+想回家的人找不到路怎麼辦
+路燈跟行人誰比較重要
+
+我不是這些問題的擁有者
+這些問題到我身上可能不是問題
+答案對我也不知所以
+
+但是在畫的過程它們會一一浮現
+先是出現問題 後來又會出現答案
+畫完之後就像問題沒有出現過一樣
+有了答案就沒有問題
+
+我的畫大多都在講這一件事
+沒有問題就沒有答案</code></pre><hr id="10f079fd-d145-4a2e-b2f9-250bec3d6b8e"/><h3 id="bce8009e-54ac-4128-8443-e61496aad13d" class="">8.</h3><pre id="707e01d0-9196-4947-bd75-7f48dce1e397" class="code"><code>有疑義才使關係得以存在的
+完成之後 我們就再也沒有關係了 
+
+我只想追尋 
+寶藏的價值 只持續於我追尋到的前一刻 當我不知道它是否存在時 
+它對我才有價值
+
+寶藏的維持是一件困難的事 
+寶藏的維持是以結果論為重點 
+
+不論從何而來
+呈現寶藏的樣貌代表了它的存在 
+而最初發現的路不一定是最省力亦或最適合的 
+維持的意義在於走熟一條路 
+或是培養推測新路可能性的能力 
+使用寶藏是最不確定的實情 
+這一刻的存在像是否定之前的所作所為
+我們要學著沒有疑義的消費
+像是浪費它 
+
+我們拿得起的東西就應該要放得下 
+吝嗇寶藏的使用使得自己怠惰 縱慾使用寶藏使得自己陷入泥沼</code></pre><hr id="21514c76-f972-4adf-9305-d46229596601"/><h3 id="ea0b29f4-9a87-40a1-9783-58717c999fc1" class="">9.</h3><pre id="10685468-fe4f-4217-b31d-f0e1b2358857" class="code"><code>自由是一種虛構的概念
+自由是在非慣性參考系
+因為執行規則所需要的束縛假想的概念
+
+生活之中存在多種形式去傳達
+形式之於傳達所代表的意義
+
+日常生活中傳達難以以單一形式發生
+傳達作為與時間互動的行為
+代表著身為一種連續的狀態
+包含了過去現在未來
+從未發出到未被接收到被接收
+看起來像是兩個極端與其中間值
+又像數字與數字之間的連續
+如果是數字與數字之間的連續性
+
+過去我所熟知的事物隨著時間反應
+當我在不同的角度回顧時
+它們呈現與以往不同的風貌
+尤其是過去抽象的認知
+更轉變為一種新感覺的認識
+
+當可以排列的物件以類比的形式   存在,我們會認為&quot;新&quot;與任何已知事物的排列
+我之所以自創文字書寫並非沒有   目的或是單純模仿
+而是想要以此討論口語和書寫對   我而言的角色
+我認為書寫在單方面紀錄時留下   的空伱與
+口語在對話時的描述不清有同樣   的責備意味出發
+也許在這樣的安排後閱讀能有其   他許多的解釋
+但急於對自己的想法留下結論很   難成為成熟的思考方式
+我們想要觀察到的智慧徜徉在每   個事件的不確定之中
+而個性則決定我們接受不確定之   於明確描述的比例
+也許因此看來智慧並非作用於所   有個性?
+
+傳達失誤:
+你在講什麼:
+我不認同你講的:
+並非指當他人理解
+不同個性對不同形式之間的拿捏有所不同</code></pre><hr id="7ea69fb7-6da3-43b2-b7e0-cf854cb0638d"/><h3 id="d7f8ae23-5b8a-4f13-9cf6-b8448ebe6297" class="">10.</h3><pre id="377f81b5-5ab9-47bd-b4c8-0ef36c8872e0" class="code"><code>沒有絶對的事物就是模糊邏輯要探討的領域
+
+僅由被記錄之後的文本去獲得遺留文字的人所希望傳達的訊息
+文本在傳遞訊息時的不確定性會由被閱讀者的成長經歷填補
+
+我們容易認為每個問題都會有答案
+但是答案會隨著不同的背景而有所改變
+
+對於所見所聽所聞都是傳遞的方式
+但是發生都是只有當下
+因此傳達的不明確可以透過討論彌補其間空隙
+
+問題的存在會使我們的意識所向有明確的方向性
+驅使我們的傳達言而有物
+但是不是每一個問題都有明確的存在
+
+文本在傳遞訊息之中帶有非常不同的地位
+文本的遺留與時間產生反應而有影響性的空隙產生
+
+假設今天你在比賽中看到一條終點線在你面前
+你也沒有其他的選擇
+那就是終點線
+不管是誰都會使出全力往終點線前進
+
+建立在我們稱之為已知的科學範疇中
+能被稱為理論的都是非黑即白
+因為之於人類可以活動的範圍 
+理論可以涵蓋的時空更加廣大
+我們對於求知的慣性都建立在這樣的基礎上是不會有立即性的問題
+
+但是在人與人的相處之中
+不同的成長背景塑造不一樣的人
+不該有任何明確終點線存在於不同的環境之中
+
+我們能接受的只有比較大的機率會有類似的模式發生在彼此之上
+但每個環節影響的結果都有可能大相逕庭
+改變過後的答案與來自於過去的問題之間的關係開始曖昧
+問題的明確存在性也因此朦朧
+當問題的存在不具有明確的性質
+我們的意向該如何流動
+每一件事情都會有它的原因
+並因而所以</code></pre><hr id="a10be6d2-d72f-4e5e-b29d-0491ce0b3e83"/><p id="a8160749-8b74-49a7-814c-0f10d39aca53" class="">
+</p><p id="e165e74f-ef69-4e74-ab79-e7be222d407f" class="">
+</p><p id="e897b348-16dd-4dac-81e3-4ccc7c672bb6" class="">
+</p><p id="ec6d4eab-8f0a-45bc-8c1c-093bf4565008" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mi>e</mi><mi>s</mi><mi>c</mi><mi>r</mi><mi>i</mi><mi>b</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Described</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">Descr</span><span class="mord mathnormal">ib</span><span class="mord mathnormal">e</span><span class="mord mathnormal">d</span></span></span></span></span><span>﻿</span></span><div class="indented"><p id="72297776-29cd-4fbb-b534-3726d236d9ae" class="">
+</p><p id="1d25c6f7-c81f-4d54-9fc3-71a87dc57689" class=""><em><span style="border-bottom:0.05em solid">原石vol.01</span></em> is writen in 2016 and contains a total of 10 poems.
+First and only edition print for few friends.</p></div></p><p id="7219544c-7e09-4f8a-8665-c1a8d0c39b34" class="">
+</p><p id="740c2e79-f3ad-4590-b257-24c3cac02498" class="">
+</p><p id="e791a720-2573-45e0-96bf-d29773bcd65f" class="">
+</p><p id="f7ba1412-c3f1-46b0-9b95-90a20f3f7528" class="">
+</p><p id="ea824423-5b3f-407b-af65-578bcb6896f1" class="">
+</p><p id="7db652cc-7bfc-4c9a-88d6-c7f0fcdab34c" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi></mrow><annotation encoding="application/x-tex">Preview</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord mathnormal">re</span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mord mathnormal">i</span><span class="mord mathnormal">e</span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span></span></span></span></span><span>﻿</span></span></p><p id="544deaa5-f0a4-4669-b63b-1964fa4430bf" class="">
+</p><figure id="22bdbb81-bcc5-4d85-96db-90986195bca6" class="image"><a href="%E5%8E%9F%E7%9F%B3%20vol%2001%20fe36bd2e0fce422698c0e0346df736f0/Untitled.png"><img style="width:192px" src="%E5%8E%9F%E7%9F%B3%20vol%2001%20fe36bd2e0fce422698c0e0346df736f0/Untitled.png"/></a></figure><figure id="5d0cd583-d97b-4a6f-a690-ba52c7527760" class="image"><a href="%E5%8E%9F%E7%9F%B3%20vol%2001%20fe36bd2e0fce422698c0e0346df736f0/Untitled%201.png"><img style="width:192px" src="%E5%8E%9F%E7%9F%B3%20vol%2001%20fe36bd2e0fce422698c0e0346df736f0/Untitled%201.png"/></a></figure></div></article></body></html>

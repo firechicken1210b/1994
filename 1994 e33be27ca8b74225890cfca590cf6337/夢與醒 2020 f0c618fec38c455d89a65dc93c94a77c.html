@@ -1,0 +1,2201 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>夢與醒:2020</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="f0c618fe-c38c-455d-89a6-5dc93c94a77c" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">🎴</span></div><h1 class="page-title">夢與醒:2020</h1></header><div class="page-body"><ul id="95030204-1f9c-46dc-8a20-1a14932b4f41" class="block-color-gray_background bulleted-list"><li>2020-0102
+在電腦中找不到我的歸屬</li></ul><ul id="56a2df2b-887a-4447-96eb-fbfbde802a4e" class="block-color-gray_background bulleted-list"><li>2020-0102
+自圓其說的小世界</li></ul><ul id="ef2c0eeb-fd95-43d0-84be-110f7fbb495b" class="block-color-gray_background bulleted-list"><li>2020-0102
+想要火焰的溫暖
+而倒在火焰之中</li></ul><ul id="85b4a5ac-2293-48f3-b368-d6e175f3b59f" class="block-color-gray_background bulleted-list"><li>2020-0106
+Arduino dfu
+Atmel flip
+Dropbox 程式相關 hex
+上傳之後再燒靭體</li></ul><ul id="05b2d9e8-7bf8-4b73-8c9b-8a08f19a76d3" class="block-color-gray_background bulleted-list"><li>2020-0108
+Win7 vm
+Ym
+Play.bat</li></ul><ul id="c1126b9a-da2b-42d2-b4c0-73f665d84e57" class="block-color-gray_background bulleted-list"><li>2020-0111
+買過年禮品</li></ul><ul id="ca30e12e-19da-4f41-8e37-0f9b599dfade" class="block-color-gray_background bulleted-list"><li>2020-0112
+小匹生快樂
+去年的這天我一起去吃出一張嘴，然後散步到附近的公園，</li></ul><ul id="965277e7-76ce-40a0-b71d-0f1360dcba1c" class="block-color-gray_background bulleted-list"><li>2020-0113
+不被大局所迷惑</li></ul><ul id="707a14cb-761e-44bc-8696-1fbb095fcac6" class="block-color-gray_background bulleted-list"><li>2020-0115
+終點起點出現離開</li></ul><ul id="368635a8-7c58-436c-b8db-a106887c3fb8" class="block-color-gray_background bulleted-list"><li>2020-0116
+Panda 樹梅派
+跑影片1080</li></ul><ul id="68fe0efb-326d-4ce7-adf0-25510f3a17f2" class="block-color-gray_background bulleted-list"><li>2020-0122
+世界上最美好的地方不是曾經出現過的各種美好
+而是一個人能供給的就會有一個人需要</li></ul><ul id="0f6e4745-8210-4eb9-b60e-a3319d7cb4b8" class="block-color-gray_background bulleted-list"><li>2020-0122
+穿襪子 鞋子 手錶
+書 包包 牙套橡皮筋 護膚液
+指甲刀 刮鬍刀 鼻毛刀
+電腦</li></ul><ul id="7273f55a-9202-40e0-8862-6b2fa848783b" class="block-color-gray_background bulleted-list"><li>2020-0124
+我逐漸變成老人
+不在總是充滿活力
+想唱情歌
+卻已不認識任何歌詞
+會不會沒什麼魅力</li></ul><ul id="a91f7ca0-5feb-4935-a8a7-874f1bf8f3a7" class="block-color-gray_background bulleted-list"><li>2020-0124
+祝媽新年快樂身體健康 和爸永遠是一對神仙眷屬
+祝爸今年每一天都開心鼠了</li></ul><ul id="6b1fa5c5-e2c1-4d10-978e-e72bd8ca6fd0" class="block-color-gray_background bulleted-list"><li>2020-0125
+我現在就正處於我最美好的回憶中
+所以我才這麼感動</li></ul><ul id="e843ebd5-a55a-4eb5-99bf-5d5f112137a2" class="block-color-gray_background bulleted-list"><li>2020-0125
+能和妳一起活著好開心</li></ul><ul id="0e866ff4-e1cc-44d5-96b9-591725b8ef88" class="block-color-gray_background bulleted-list"><li>2020-0126
+在作品中必須帶有符號
+我才能也發表符號相關的作品
+符號房間 在房間的格局中符號無法一眼收盡 你必須不斷變化視角來觀賞符號 而眼到之處皆為符號無法重複的組合
+光房
+Netflix 抽象設計第二季第一集
+只打黃光就看不到黃色的符號
+紅光就看不到紅色的</li></ul><ul id="0b3820e7-bbee-4b24-906f-9e9f0ca4d28a" class="block-color-gray_background bulleted-list"><li>2020-0126
+2
+10
+20
+40
+80</li></ul><ul id="2e6f9fa0-443a-4045-a15f-a6db06755706" class="block-color-gray_background bulleted-list"><li>2020-0127
+你一定會老去，但這些逝去的時間能帶你到哪裡</li></ul><ul id="10c6bf13-6a8f-45b6-95df-75f59996dc05" class="block-color-gray_background bulleted-list"><li>2020-0127
+雲端處理跟網路爬蟲
+學生創基</li></ul><ul id="143db7df-e034-443d-8301-2118283fc09b" class="block-color-gray_background bulleted-list"><li>2020-0128
+睡前決定一議題
+睡醒紀錄
+睡醒第一件事是紀錄睡前決定思考的議題</li></ul><ul id="d28b249f-24da-456b-9c44-a114904ae79f" class="block-color-gray_background bulleted-list"><li>2020-0128
+我把創作視為理所當然</li></ul><ul id="61325814-4d62-467d-952b-6e9f9afe67c4" class="block-color-gray_background bulleted-list"><li>2020-0128
+和我愛的人一起變得更健康和有錢</li></ul><ul id="c6438847-3db7-41c3-9dfb-761a63a8cb70" class="block-color-gray_background bulleted-list"><li>2020-0128
+我想做的事太多了</li></ul><ul id="bf8af358-ff86-4add-9b68-88cb7de0123b" class="block-color-gray_background bulleted-list"><li>2020-0128
+Etoro.trade
+Etoro.tw</li></ul><ul id="0efdb89b-6b66-4bb5-bc74-e464aa19230b" class="block-color-gray_background bulleted-list"><li>2020-0129
+捍衛生死線</li></ul><ul id="fb3089e0-82da-4cec-acd1-acfb2f5b7571" class="block-color-gray_background bulleted-list"><li>2020-0129
+時間的</li></ul><ul id="55192a07-ec29-4896-ab3c-ae92dd86a4af" class="block-color-gray_background bulleted-list"><li>2020-0129
+時間的掌握
+我常常想珍惜和愛人能相處的任何時刻
+並把所有愛人在我身邊的時間都拿來相處
+我很感謝她也注意到需要自己的時間
+代表她也注意到我們總是把所有時間拿來相處
+我很感謝她明確的說出動機 縱使是不明確的目的
+也讓我開始思考自己是不是也有一樣的問題
+我可以開始思考自己為什麼要賺錢
+為什麼要變得更好
+要怎麼樣去達成這些事
+我沒有明確去講出自己手上及腦中有哪些事情
+我沒有在睡醒時去紀錄睡前思考的問題
+我沒有確實去紀錄自己的時間還有金錢的流向
+我要明確去講出自己手上及腦中有哪些事情
+我要在睡醒時紀錄睡前思考的問題
+我要確實去紀錄自己的時間還有金錢的流向</li></ul><ul id="7c0f3651-441a-4a9f-905f-b37749221139" class="block-color-gray_background bulleted-list"><li>2020-0130
+630-700 刷牙
+拉頭 頭部《》伸展
+肩膀伸展 深呼吸
+伸展腰頭 向上 深呼吸
+伸展腰 拉左右下
+抱頭下彎
+拉肩 肩膀伸展
+手臂畫半圓
+拉背 手臂向後拉住手掌 左右
+拉臂 手臂比七 左右
+弓箭步
+深蹲</li></ul><ul id="1ed33631-0996-4c5a-a379-922fc0aba2b3" class="block-color-gray_background bulleted-list"><li>2020-0131
+52 10</li></ul><ul id="0512de5d-4776-4646-8652-84ba6e402a8f" class="block-color-gray_background bulleted-list"><li>2020-0204
+堅持不全然是對意志力的考驗</li></ul><ul id="b88d3338-6e54-4796-bfc9-0a970e8eba4d" class="block-color-gray_background bulleted-list"><li>2020-0204
+不說話之旅
+靜默</li></ul><ul id="c373cbdb-dea8-4e5a-9b57-15ded4e4598f" class="block-color-gray_background bulleted-list"><li>2020-0205
+薪水沒發： 我認為我需要知道
+為何兩個月後通知
+為何七月發放
+28000是所得還是什麼方式給
+我要如何知道我能收到
+我要如何得知金流改善</li></ul><ul id="cc050503-cc7f-4d92-9625-43c18da322c7" class="block-color-gray_background bulleted-list"><li>2020-0205
+在&#x27;15 至 &#x27;17 年間從事參與現場的影像及執行 , 主要對象是獨立樂團美秀的現場 VJ 及實驗 Au-
+dio/Visual 團體無物 , 支援內容多為現場非樂器類器材整合及影像聲音的程式互動  , 擅長工具為圖像語言 Processing, 經驗多累積在產生性藝術及
+聲音分析上。</li></ul><ul id="5a43e573-01da-423b-b701-0b8cb64ef1e7" class="block-color-gray_background bulleted-list"><li>2020-0206
+今天出去公車費+材料費</li></ul><ul id="afbe9db9-15ab-45ec-82e7-6ddcd5286020" class="block-color-gray_background bulleted-list"><li>2020-0206
+我喜歡紀錄自己，喜歡符號，善於忘記事情</li></ul><ul id="1b63c531-6f1c-4170-ae3c-cd6421b58e63" class="block-color-gray_background bulleted-list"><li>2020-0210
+樂於成為你能成為的</li></ul><ul id="b100724d-9c85-4888-8007-54c0676f73b9" class="block-color-gray_background bulleted-list"><li>2020-0213
+12號去科教館</li></ul><ul id="e4901c4d-7834-4673-b265-d195d2218e80" class="block-color-gray_background bulleted-list"><li>2020-0214
+8672 軟體的udp
+1392 環控
+管子4公分
+半邊16公分
+寬6高5
+主機長寬高40/17/37
+側門 寬50高60
+Ip 101/102
+Ctrl+d. Debug</li></ul><ul id="e85bd9c1-1e7a-463f-b9d3-852969aecd0c" class="block-color-gray_background bulleted-list"><li>2020-0221
+煎烤
+最高溫 15分
+10分</li></ul><ul id="a8e7306d-bd4c-4bd5-8f3a-4bf8670b28a1" class="block-color-gray_background bulleted-list"><li>2020-0224
+原
+33.5
+15.5
+今日電費加值</li></ul><ul id="5dcb8654-306c-4f8a-9ebd-ca00cf51d4f4" class="block-color-gray_background bulleted-list"><li>2020-0227
+一個吝嗇的人也不願接受他人的幫助</li></ul><ul id="22158cc7-2214-42fa-8b39-0bdefdb9c18f" class="block-color-gray_background bulleted-list"><li>2020-0227
+定期思考何時何地如何創作
+定期思考創作該如何組成</li></ul><ul id="0e9f9d6b-a446-494b-b921-9c4eb58e981c" class="block-color-gray_background bulleted-list"><li>2020-0229
+鮪魚 210
+罐頭 52 #2
+香菇 138 #2
+米 109 10餐澱粉
+麵條 84
+泡麵 318 5餐 __911
+玉米 44 #2</li></ul><ul id="43c7a049-7f32-42b2-aa16-24dd4f0b5e1f" class="block-color-gray_background bulleted-list"><li>2020-0301
+喉嚨
+吞嚥有時候不順
+喝水的時候喉嚨深處會養養的
+胸悶
+容易喘
+心臟
+小動作心跳就容易快</li></ul><ul id="aa88f0dd-2ab8-4a62-bb37-568f03899f64" class="block-color-gray_background bulleted-list"><li>2020-0302
+寬 27.5
+Hdmi
+Dp
+Dp
+Vga</li></ul><ul id="4c7fb4dc-2d85-4a66-935d-4a10da210eef" class="block-color-gray_background bulleted-list"><li>2020-0305
++105</li></ul><ul id="b11ef4de-7b07-4d4d-80b9-8201d14375af" class="block-color-gray_background bulleted-list"><li>2020-0306
+我是某些人以前的樣子
+某些人以後能看到我的影子</li></ul><ul id="2a8e29b9-2a15-41ff-8741-9c1f74480e43" class="block-color-gray_background bulleted-list"><li>2020-0306
+你知道你正在如何使用你的生命嗎</li></ul><ul id="0c6b4845-165b-465c-b724-15c8bc4af2ac" class="block-color-gray_background bulleted-list"><li>2020-0307
+找教學看
+慢慢整理vfx</li></ul><ul id="2262f1ef-dc49-4341-a3e0-1a86b3a06403" class="block-color-gray_background bulleted-list"><li>2020-0308
+清醒的每一天與夢的每一天
+是一樣匱乏的
+有夢與醒的每一天
+是我追求的</li></ul><ul id="7bacbf91-fb48-4619-9095-5ae764a6b92c" class="block-color-gray_background bulleted-list"><li>2020-0308
+我過去曾經試過當各種的人</li></ul><ul id="3f046f00-ca56-4cfc-bed1-6e2f5e713acb" class="block-color-gray_background bulleted-list"><li>2020-0308
+我覺得沒有被尊重時
+我問自己
+我如何給予尊重</li></ul><ul id="09778103-7535-42fb-88ef-75b006f61975" class="block-color-gray_background bulleted-list"><li>2020-0309
+Pixeline</li></ul><ul id="001dc0d4-abc5-49f9-b942-2608cbc23c2c" class="block-color-gray_background bulleted-list"><li>2020-0309
+可以詢問關於這個行業的職業規劃</li></ul><ul id="5ab57b8d-54be-44f5-861f-0d33183927a3" class="block-color-gray_background bulleted-list"><li>2020-0311
+前情
+描述問題
+問題影響
+限期改善
+
+簡先生您好，
+日前與您提及房間樓上會長時間有似擲筊的聲音，再持續了快一個禮拜的時間後與簡先生在2/27第一次提及，提及後雖有改善，但已造成了實際影響，與我同居的女性租戶因此造成身體上的不適，也影響到了工作。
+謝謝簡先生有向我們說明情況，並協助我們與該房客調解，但近日仍有此情況發生，今日3/11也發生於早上六點持續到八點，已再度影響到我們的健康及工作，我們尊重其他房客的自由，並也希望互相尊重，希望簡先生能為其調解，感謝</li></ul><ul id="41b49242-07f4-4405-8af8-e5b9aa95ec99" class="block-color-gray_background bulleted-list"><li>2020-0311
+手機鑰匙錢包口罩</li></ul><ul id="01ee9a3b-fc1c-4770-b571-17607fd68a47" class="block-color-gray_background bulleted-list"><li>2020-0311
+Diegesis
+Diegetic
+敘事音樂
+畫內音 畫外音
+
+參考鏡頭語言
+好萊烏之聲</li></ul><ul id="0761d1ad-7c33-4389-8c07-ef93f9e4d569" class="block-color-gray_background bulleted-list"><li>2020-0312
+線材連接
+更新檔案
+設定解析度
+設定ip
+設定com arduino
+Serial沒有連接上
+左上一列數字是
+12進出34晝夜
+Zx轉彎 v歸零
+右側數字是油門</li></ul><ul id="a045a093-7bcd-4c3b-82c5-2c31197fb200" class="block-color-gray_background bulleted-list"><li>2020-0314
+從你口中說出一樣感動的話</li></ul><ul id="ed729def-9f48-4047-85cb-5194b935ae71" class="block-color-gray_background bulleted-list"><li>2020-0316
+如果和笨蛋爭論，那笨蛋就會變成兩個</li></ul><ul id="3af1cc8b-b7aa-4374-94ac-ddf6ee4be42a" class="block-color-gray_background bulleted-list"><li>2020-0317
+裝水的時候想到我剛來愛迪斯打破了以前在黑山你給我的杯子</li></ul><ul id="56b74502-dfea-481e-b387-138c039be4c6" class="block-color-gray_background bulleted-list"><li>2020-0317
+透過現場的音樂讓路過的參與者藉由聆聽，與台電的太陽能發電數據連結，隨著數據更新每十分鐘一次，聆聽現場的聲音就能知道當時的太陽能發電狀況，讓太陽能的數據可以結合人們的一天中不同時間的體驗帶入生活之中
+隨著早上發電量還在上升而舒緩的聲音（田園交響曲...），中午發電量最高如同烈日的音樂（夏 四季協奏曲...），到傍晚逐漸下降步入休息的聲音（蕭邦夜曲...），太陽能反應著人們的作息，也反應著天氣的狀況，在烈日特別高掛的日子，太陽能發電總量特別高時，人們也會一起聽見烈陽高照的聲音
+作品會隨著太陽能發電數據的變化，以及時間去挑選適時的音樂（適合持續十分鐘的古典樂）
+我想結合的小trick
+在有沒帶口罩的人走過這個廊道時，音樂會慢慢轉換成海頓的驚愕交響曲或是貝多芬的命運交響曲，希望能提醒大家進出公開場合要記得配戴口罩
+為了因應疫情，現在在百貨公司和像電幻一號所這樣的公開藝術環境都會需要配合量體溫噴酒精及帶口罩，齊心謹慎面對的同時也是緊張的社會壓力，我希望防疫帶來緊張的同時也能透過一些輕鬆風趣但不隨便的方式一起執行
+//太陽能受到太陽的影響，發電量也同時反應著當天不同時間的太陽角度//</li></ul><ul id="1f730477-3feb-4159-bacb-5653dd193c75" class="block-color-gray_background bulleted-list"><li>2020-0318
+米 189
+條例包 312  26#12
+麵 96</li></ul><ul id="9c9326b3-717c-437a-a70c-f5438b24e7fb" class="block-color-gray_background bulleted-list"><li>2020-0318
+安全而且負擔得起</li></ul><ul id="961bb5df-5df0-4161-a723-e30a8a420ab2" class="block-color-gray_background bulleted-list"><li>2020-0320
+當你能熱愛自己所害怕的蔬菜，生命將開始產生巨大的改變</li></ul><ul id="cf64a552-42af-4a53-8533-e99b4d83abf4" class="block-color-gray_background bulleted-list"><li>2020-0320
+電卡37
+0320
+372截止今天
+189</li></ul><ul id="fd2a8972-16b2-4395-a44b-52b80231b42a" class="block-color-gray_background bulleted-list"><li>2020-0321
+拉麵店</li></ul><ul id="953bc55e-fc3f-47bf-a009-4b968d1a648f" class="block-color-gray_background bulleted-list"><li>2020-0324
+我需要規則去感覺我存在</li></ul><ul id="1797f2cc-104e-4861-b6d0-87ab069587ee" class="block-color-gray_background bulleted-list"><li>2020-0328
+心裡覺得悶悶的
+有點浪費時間
+下雨了
+想你了</li></ul><ul id="e103c403-0dbe-445d-9c4a-9dc37a7b1da3" class="block-color-gray_background bulleted-list"><li>2020-0329
+昨天爸爸和我們聊舊家要依照阿嬤的遺囑過戶給叔叔，談到我們家以後也是留下這棟勝安這棟房子，以前在仁里的家也是阿嬤幫忙出頭期款，希望我和弟以後不要太計較，誰繼承了房子，也要幫對方出頭期款，談到爸如果過世了唯一的需求就是幫忙好好照顧媽媽，談到我們家都還是比較過勞，阿公阿嬤大概都是五十快六十就離開了，談到不要播佛經，播些他喜歡的流行歌，不要蓋死人被，但可以蓋他喜歡的厚棉被，看天氣再決定要穿啥，如果要拜水果不用忌諱芭樂，如果拜芭樂記得拜硬一點的</li></ul><ul id="3beef429-ecfa-4959-a318-60106c531499" class="block-color-gray_background bulleted-list"><li>2020-0329
+三個檔案以上就有奇怪錯誤</li></ul><ul id="85a1f014-3e92-48ad-9efb-211eab7a5660" class="block-color-gray_background bulleted-list"><li>2020-0329
+我把自己散落在各個地方
+就像我會不斷的找回它</li></ul><ul id="301a100c-c614-4683-a38a-a97d96eaf765" class="block-color-gray_background bulleted-list"><li>2020-0329
+任何人都可以是我
+我可以是任何人</li></ul><ul id="ea9798d9-6dad-41e3-a21f-0f3577426d94" class="block-color-gray_background bulleted-list"><li>2020-0329
+像雨中的馬
+像跟風走的孩子</li></ul><ul id="083ed7ec-4f13-4227-bb11-30644e1bc13c" class="block-color-gray_background bulleted-list"><li>2020-0329
+為什麼你要保持自己
+如果你在忘掉又再記得之間
+對於同樣的問題
+你給了更多的機會
+生命太唯一了
+為什麼你只給自己一次生到死的機會</li></ul><ul id="0f55f20d-7952-4245-ba97-4f867cb51b1a" class="block-color-gray_background bulleted-list"><li>2020-0329
+為什麼當你問了我是誰就必須承認是孤單的
+為什麼當你問了我在哪就必須承認我是存在的</li></ul><ul id="21438482-df74-4592-80da-d609d79c7c1b" class="block-color-gray_background bulleted-list"><li>2020-0329
+自己配不上自己的靈魂</li></ul><ul id="fc46706c-618d-442d-9f0a-b3d15d13727b" class="block-color-gray_background bulleted-list"><li>2020-0330
+不太知道要做什麼，但是要很酷</li></ul><ul id="22b78dd4-3267-4514-8bb4-943e761f29f8" class="block-color-gray_background bulleted-list"><li>2020-0331
+下午寫作品介紹
+測試出目前我的操作方式送不出array 猜是spawn那的設計 但我確實還不懂vfx的用法
+中午與道元討論聲音
+五點再討論一次
+今天上午 測試keijiro的vfx用法
+了解到如何讓聲音loopback回去unity
+中午和道元開會 調整時間圖表製作
+製作聲音移動方式及錄音
+大概3點製作完成
+4：30斷線 之前開始製作樂譜
+重新連回
+上傳目前unity檔案
+11點討論後半段的圖表細節</li></ul><ul id="660000b4-5ba8-4f0b-9eaf-eb58e2cf0907" class="block-color-gray_background bulleted-list"><li>2020-0331
+如果還有下次
+準備兩台主機</li></ul><ul id="99e14c97-ccfe-4dcc-9f05-4433300e4c7d" class="block-color-gray_background bulleted-list"><li>2020-0401
+學習擁抱傷痛的方式不好嗎</li></ul><ul id="52afcb4e-bd28-45dc-9ec6-16c5ff6b386b" class="block-color-gray_background bulleted-list"><li>2020-0401
+上午在填樂譜 中午轉錄第一版
+兩點討論第一版
+發現audacity第一軌會是stereo 需在轉錄的同時做分割 不然會空著
+3點半送出第二版 修正時間
+音量透過距離修正為24調整大聲
+
+5點前完成一次開會
+目前將要根據現在的動作和聲音來想視覺
+
+六點先想了一些視覺
+先做再說</li></ul><ul id="f1e3f531-285e-4c44-af7c-eae303521b05" class="block-color-gray_background bulleted-list"><li>2020-0402
+杏美齒摸</li></ul><ul id="0079f183-feee-4f04-97ea-3d84b9c4c188" class="block-color-gray_background bulleted-list"><li>2020-0402
+5+8
+照三餐
+吃完早睡
+3：30拿下棉花 一小時
+東西放涼吃不吃辣
+不用漱口水</li></ul><ul id="6849a5b8-dd5d-488d-91eb-c048c29e6c7b" class="block-color-gray_background bulleted-list"><li>2020-0403
+4/3
+130-210更新樂譜
+與鄭小確認
+4/2
+製作了約3個vfx set
+看到</li></ul><ul id="17024104-a2bf-4f57-92aa-dfe0e6e9dc2a" class="block-color-gray_background bulleted-list"><li>2020-0404
+我過去看到引領著自己的惡魔就是我</li></ul><ul id="d9c41960-5913-4a32-b0c8-a7c418bbcb6c" class="block-color-gray_background bulleted-list"><li>2020-0404
+少了那種乾淨優雅的感覺</li></ul><ul id="fe8acbaf-c8cc-49f6-aea1-31ffe9fc0d2f" class="block-color-gray_background bulleted-list"><li>2020-0405
+複雜而武斷
+單一而多元</li></ul><ul id="a85abc17-02c3-422a-bc41-fb4047cab1a0" class="block-color-gray_background bulleted-list"><li>2020-0406
+小匹今天自稱老婆
+我很開心</li></ul><ul id="daf71cf6-570a-4be0-bb76-7c14e2dd5a8d" class="block-color-gray_background bulleted-list"><li>2020-0407
+單檔4g 4個檔
+其中一個合成聲音上去
+1940/1980/2020/2060</li></ul><ul id="bdb773e1-5dac-43b8-a434-7a0db79513ae" class="block-color-gray_background bulleted-list"><li>2020-0409
+在工作中其實會遇到很多不合理之處
+或是我會想怎麼做
+或是意會到自己有很多沒想清楚之處</li></ul><ul id="3933c83b-ae6b-45e1-bbd5-99f122cc2839" class="block-color-gray_background bulleted-list"><li>2020-0410
+如果我看不懂大家說的
+那也將沒人看的懂我說的</li></ul><ul id="6a2467c5-ad69-456f-85f8-7e59a55fa06f" class="block-color-gray_background bulleted-list"><li>2020-0412
+溝通只是工具 人與人連結的是情緒</li></ul><ul id="baec26fb-65ee-41ec-96d6-e73855bd8654" class="block-color-gray_background bulleted-list"><li>2020-0413
+Ipad mini
+Ipad air</li></ul><ul id="e905cc32-60c4-4660-bde6-10f9702487e1" class="block-color-gray_background bulleted-list"><li>2020-0414
+看到世界上有這麼多優秀的人
+那為什麼我還要努力</li></ul><ul id="33dfe9f6-9737-4898-bf27-de8a74154258" class="block-color-gray_background bulleted-list"><li>2020-0414
+我好想跟誰分享</li></ul><ul id="21708c6f-eff8-4b9d-9859-26eef2407eb8" class="block-color-gray_background bulleted-list"><li>2020-0416
+用過去完成事情的經驗創造收入
+去資助下一趟旅程的開始</li></ul><ul id="2df830e3-2081-4778-9c9b-1783945b337a" class="block-color-gray_background bulleted-list"><li>2020-0416
+收斂是開始減少問題
+開始解決
+開始選擇剩下哪些問題</li></ul><ul id="ef9033d1-34c4-42cc-8db8-00abb79efa83" class="block-color-gray_background bulleted-list"><li>2020-0419
+我被日蝕擊落</li></ul><ul id="f62717fb-2670-49b8-b6e5-efb36964331b" class="block-color-gray_background bulleted-list"><li>2020-0420
+這些都是壓力
+為什麼不把你的壓力說出來呢
+成長的壓力
+工作的壓力
+休息的壓力
+交際的壓力</li></ul><ul id="e3f4bbfa-2c2e-42bc-9715-20ac6ff79edc" class="block-color-gray_background bulleted-list"><li>2020-0422
+忙碌只是偷懶的一種形式 96
+
+如果沒有確認哪些是攸關的工作，也沒有定下緊湊的工作開始與結束時間，瑣碎的小事就會顯得很重要 99
+
+我在虛構要做的事情，好躲避重要的事嗎 102
+
+豐富的資訊創造貧乏的注意力 109
+
+保持思考，不要直接接受閱讀的內容 109
+
+想知道如何估算最近的新產品市場規模，請上本書的官方網站 194
+
+想了解授權人與被授權人的個案研究實例，請連上
+<a href="http://www.fourhourblog.com/">www.fourhourblog.com</a>
+並附有實際金額的完整契約 200</li></ul><ul id="44775650-9cc0-4585-81b3-558fe89a172a" class="block-color-gray_background bulleted-list"><li>2020-0423
+下雨就好不想出門上班
+的情緒很直接
+和哪些點子連接在一起一定會賺錢</li></ul><ul id="a7b97e76-e4bf-480c-bd4a-599b8251c114" class="block-color-gray_background bulleted-list"><li>2020-0423
+寄我於過去的平靜</li></ul><ul id="21348e31-eec7-4cad-8da5-eb2e15c95881" class="block-color-gray_background bulleted-list"><li>2020-0424
+Camera field
+Camera filter pack blur
+Hk
+Blur boom shader</li></ul><ul id="6cfe7255-9438-4f1c-8c1e-ded89c45d2c5" class="block-color-gray_background bulleted-list"><li>2020-0427
+聲音在同半邊亂跳 找不到源頭</li></ul><ul id="efaeca2c-ce1f-48cf-984b-fc31ff8146d5" class="block-color-gray_background bulleted-list"><li>2020-0428
+提到自己平凡的人其實都期待自己不凡
+就像宣稱自己富有的人其實都期待自己貧窮</li></ul><ul id="2d3c8efb-e384-444c-970d-d1cdf8b020d0" class="block-color-gray_background bulleted-list"><li>2020-0428
+蚵仔在跑</li></ul><ul id="4e793432-ee71-434e-b521-3725284e0ae8" class="block-color-gray_background bulleted-list"><li>2020-0429
+聯絡投影廠商 採購投幣機</li></ul><ul id="213f53de-cf30-4e2f-abe7-07aac6c2d596" class="block-color-gray_background bulleted-list"><li>2020-0429
+我們今天看太多動畫了</li></ul><ul id="7a06b8a9-73c8-4ed7-bbbf-709337eed8ab" class="block-color-gray_background bulleted-list"><li>2020-0430
+螢幕usb未街
+開機無反應
+1110
+電源未插上</li></ul><ul id="95d2eb53-eae8-4754-9959-3708da4a69c2" class="block-color-gray_background bulleted-list"><li>2020-0430
+專心在自己的旅程</li></ul><ul id="e082c8f0-6044-4333-bbca-2b2cae42b3c0" class="block-color-gray_background bulleted-list"><li>2020-0430
+我有很迷惑嗎</li></ul><ul id="1463141f-1bd5-4f6c-b313-245f4b1e1ddf" class="block-color-gray_background bulleted-list"><li>2020-0430
+你會使用的工時</li></ul><ul id="4cf97a2b-d234-483e-934a-ff5f76d96683" class="block-color-gray_background bulleted-list"><li>2020-0501
+9點 整理雲端資料夾
+10 閱讀 鄭的檔案更新</li></ul><ul id="fad2b9d5-d4ec-4a7b-b70d-15e8cd62e58d" class="block-color-gray_background bulleted-list"><li>2020-0504
+Overthinking
+思考超速</li></ul><ul id="04d85b4e-0e2d-49e3-934e-5093387937ba" class="block-color-gray_background bulleted-list"><li>2020-0504
+努力的本質是不是一種壓迫
+甚至是裝忙</li></ul><ul id="72001cec-41e1-462f-bd2d-250ed20e65fd" class="block-color-gray_background bulleted-list"><li>2020-0504
+我的冥想
+在冥想的時候放鬆
+提醒自己關注腦袋中的流動
+提醒自己放鬆
+感受腦袋中的事情一件一件流過
+看著它們像看著水流過
+提醒自己用鼻子呼吸
+耳朵去聽各個周圍的聲音
+直到聽到最遠的地方發出的聲音
+這個最遠的地方就在我的心裡
+向外一看便是我自己
+保持呼吸
+各式各樣的聲音在我的頭一圈環繞
+身體各處有時候會是養的
+提醒自己那只是噪音
+不要把意念都集中在那一點
+也不需要去行動
+保持分散的自己
+呼吸
+提醒自己腦袋越是安靜
+越不要去思考事情
+就能得到越多平靜</li></ul><ul id="99784c0c-54e7-46ad-a8a4-2491526096e8" class="block-color-gray_background bulleted-list"><li>2020-0505
+比起壓抑 提醒
+我想尋求更基源的平靜及努力
+發自內心 自然而然的
+
+過去的樣貌不是我的敵人
+我要追求的只是平靜的心 平靜的努力</li></ul><ul id="6785a1e2-610c-43f7-9d53-b7dce228d3b9" class="block-color-gray_background bulleted-list"><li>2020-0505
+我的夢想是什麼</li></ul><ul id="1a5aa525-9aca-44ae-8f9d-96754776b305" class="block-color-gray_background bulleted-list"><li>2020-0505
+完成檢查聲音表及給出reply</li></ul><ul id="3d8e24d3-ffee-46d2-abc8-60ec24cf033f" class="block-color-gray_background bulleted-list"><li>2020-0506
+生活本身就是不斷的發散了
+那我們能做的不就只剩收斂</li></ul><ul id="dfc6026f-ff73-415c-8c0a-2652fa855b61" class="block-color-gray_background bulleted-list"><li>2020-0506
+如果我們不去觀察
+就不會覺得生命是發散的</li></ul><ul id="8740884d-4f82-4862-a1e7-237a8c03d685" class="block-color-gray_background bulleted-list"><li>2020-0506
+Summer56
+Happy56
+Share56
+Save56
+Thanks56
+Ice56
+Use56
+Red56
+Sky56
+Buy56
+Big56
+Bus56
+Hot
+Wow
+Cow
+You56</li></ul><ul id="db9ed707-4327-4c73-98dc-9c78060b8161" class="block-color-gray_background bulleted-list"><li>2020-0506
+主機正常
+視訊沒畫面
+插頭開機正常無火花
+Hdmi於內顯上</li></ul><ul id="45765de5-0976-44fd-b8b3-b8f596a47b8c" class="block-color-gray_background bulleted-list"><li>2020-0507
+我們的浮躁及壓抑都是年輕的夢
+
+荷爾蒙個性
+靈魂個性
+
+身體個性 你做什麼樣的事 行為特徵
+靈魂個性 你是什麼樣的人</li></ul><ul id="7f2e11a9-b6ca-42e4-a72f-443f867baf20" class="block-color-gray_background bulleted-list"><li>2020-0507
+如果你願意記得我所有的優點
+那我也會帶走我剩下的缺點</li></ul><ul id="679192ed-b912-45f9-8bf8-c8d7e80b4afd" class="block-color-gray_background bulleted-list"><li>2020-0507
+對自己不需要的東西即沒有意義
+對我沒有意義即我不需要</li></ul><ul id="e882081a-9979-453b-8b75-8160ac235696" class="block-color-gray_background bulleted-list"><li>2020-0508
+開文學電腦</li></ul><ul id="18bb9fe8-6261-4a74-bf5c-000159aaaac3" class="block-color-gray_background bulleted-list"><li>2020-0509
+感興趣 已知的事情連結</li></ul><ul id="d3ae9ea5-90c1-4df1-a128-5bda806f30cd" class="block-color-gray_background bulleted-list"><li>2020-0509
+這世界這麼美好
+而我們卻只能將世界轉換成一些食物消化然後產生一坨屎</li></ul><ul id="dda9c7da-f57b-47ba-8f0b-fd2d480c4b1c" class="block-color-gray_background bulleted-list"><li>2020-0509
+我們的存在宛如過去的影子</li></ul><ul id="3c33208f-6ef0-4f28-9a5e-95584706fa8c" class="block-color-gray_background bulleted-list"><li>2020-0510
+現在我會接收那是另一個故事
+你是書裡的主人翁，講著我沒看過也不可能了解的經歷也很精彩</li></ul><ul id="62884e10-310f-444c-8f0b-2a5b6b38c3f0" class="block-color-gray_background bulleted-list"><li>2020-0511
+在我睡夢之中
+她藉我能力正在遨遊</li></ul><ul id="d4490a69-26ac-465a-ae0a-85a4adacaefe" class="block-color-gray_background bulleted-list"><li>2020-0511
+今天星期一
+Material s,佔據我的心</li></ul><ul id="d3614420-1093-4817-921f-c2d3e1930085" class="block-color-gray_background bulleted-list"><li>2020-0511
+Steam反過來是materials</li></ul><ul id="54ed1afb-aefa-4aeb-9ed8-5365a26b376e" class="block-color-gray_background bulleted-list"><li>2020-0511
+借恩多300</li></ul><ul id="d872da33-5ec2-4251-9de8-3ae8b226a194" class="block-color-gray_background bulleted-list"><li>2020-0511
+Immerse display pro</li></ul><ul id="8f80e7ee-c4be-4881-9c44-e38dc21e9d8c" class="block-color-gray_background bulleted-list"><li>2020-0511
+我已經沒有什麼東西想創造了</li></ul><ul id="4d1b12e7-ebec-49f4-807e-c06e7400144d" class="block-color-gray_background bulleted-list"><li>2020-0511
+帶筆記本
+把平面的時程記到notion上
+詢問平面狀況
+新增團隊
+在網頁上說明放鄭</li></ul><ul id="c601965f-fc2d-4ee4-8b70-54410d55e973" class="block-color-gray_background bulleted-list"><li>2020-0512
+這裡都沒有人
+這些房子都很孤單</li></ul><ul id="ad6a04b3-6cca-4b8a-9b4a-cc9e369e17df" class="block-color-gray_background bulleted-list"><li>2020-0512
+9-1130 補助思考 國美延伸 跟 符號延伸
+1130-1200 收尾
+1230 聯絡 雅雯跟鄭
+
+請問會影響的部分是開幕還是包含展期
+
+聲音部分再麻煩協助確認，我這邊讓聲音製作協助現場的確認，請問方便給他你的臉書聯絡嗎
+095890----
+陳小姐
+
+瓦數
+喇叭高度
+喇叭固定方式
+30公分</li></ul><ul id="3270b6b1-147a-483b-903c-8916a176e353" class="block-color-gray_background bulleted-list"><li>2020-0512
+建立一個取代自己的系統</li></ul><ul id="76bba20c-06c8-47d0-bc67-0a20203aeee1" class="block-color-gray_background bulleted-list"><li>2020-0513
+什麼是原則</li></ul><ul id="b68f347e-32ac-4903-a790-39b19bfa3a4a" class="block-color-gray_background bulleted-list"><li>2020-0513
+*懂得原則的人可以選擇適合自己的成功方式，而試了許多方法，卻忽略原則的人，一定會有麻煩</li></ul><ul id="07a1d0cb-669a-4b21-a9a5-85375c2e884b" class="block-color-gray_background bulleted-list"><li>2020-0513
+50塊 公司</li></ul><ul id="cebd996d-3027-4a19-9e5f-6b4aa5a85c7b" class="block-color-gray_background bulleted-list"><li>2020-0514
+當你身體混亂迷失方向
+要先傾聽你的心</li></ul><ul id="4fbbccbb-7f76-4a4c-af06-8082379ae5b4" class="block-color-gray_background bulleted-list"><li>2020-0518
+Refik anadol</li></ul><ul id="353699ff-7770-4892-9938-beffa7aa59f6" class="block-color-gray_background bulleted-list"><li>2020-0519
+訂出週目標
+連結週目標與週目標
+去達成預期進度</li></ul><ul id="91d5c895-74c5-49ac-abb1-c5ce2c4e6fd5" class="block-color-gray_background bulleted-list"><li>2020-0519
+更佳完整了我</li></ul><ul id="0df45b6b-25ed-4e08-94f2-b1fc2c0079b8" class="block-color-gray_background bulleted-list"><li>2020-0519
+互動作品
+
+多為喜歡前
+快互動
+當一個舒服的人
+不要當一個隨便的互動
+
+多為喜歡後
+
+慢互動
+花多一點的時間來深厚你們之間的關係</li></ul><ul id="e027d9b1-cffb-4da6-b445-cd61d3f46fea" class="block-color-gray_background bulleted-list"><li>2020-0519
+一篇一篇的打日記
+是因為知道有一天我會死</li></ul><ul id="e7220e32-2d47-4666-839d-2455cc972376" class="block-color-gray_background bulleted-list"><li>2020-0519
+排日記的習慣
+可以看出我們又差了這麼多</li></ul><ul id="c769aecc-498e-4f49-bfe0-23b76d3e62c6" class="block-color-gray_background bulleted-list"><li>2020-0519
+留下的痕跡都在與某個時間對話</li></ul><ul id="60dbb078-dea6-4b59-bc0a-96ba93a9f620" class="block-color-gray_background bulleted-list"><li>2020-0519
+你就好像一個陌生的人
+我也無法接上我預期的情感
+也許這就稱作遺憾</li></ul><ul id="4467fe46-b869-4984-b082-760a46494f5b" class="block-color-gray_background bulleted-list"><li>2020-0519
+明天問25可否完成硬體確認進行場堪
+寫筆記 客端TeamViewer安裝
+//給小匹 牆面尺寸 +1440
+
+能不能錄現在的影
+買的asset能不能正常錄製
+錄聲音
+
+合併聲音和影像</li></ul><ul id="79b90169-5826-4d4b-b9ec-16bb605ebd6a" class="block-color-gray_background bulleted-list"><li>2020-0520
+哇這張圖好清楚
+我應該紀錄下它
+但如果沒有立即有幫助
+我也不應該增加隱形成本
+
+結論
+如果在調查什麼
+就應該立即寫下小筆記
+才能讓好的資料被立即完善的整理待人使用</li></ul><ul id="d71ae481-36a9-45bc-b4cb-e72263454169" class="block-color-gray_background bulleted-list"><li>2020-0520
+我把部分的自己寄託在作品之中
+當我迷惘時
+它們會在耳邊提醒我
+我是一個自由的人
+試著在每件事中找到自己</li></ul><ul id="cb817a9e-ff7c-4866-b4f0-390d2dabec4b" class="block-color-gray_background bulleted-list"><li>2020-0520
+7點到公司</li></ul><ul id="7c1a0b1e-2cef-47c1-b837-37e984740f94" class="block-color-gray_background bulleted-list"><li>2020-0520
+現在就是最接近我活過的這一天</li></ul><ul id="9cfd5bdc-aa17-43c3-a377-27778b584ca5" class="block-color-gray_background bulleted-list"><li>2020-0520
+Fileser 登不進去
+幫別人開權限
+96
+97
+98
+問Robert
+注意水箱</li></ul><ul id="b07c7e34-cf4b-4872-9a68-0696ad7548e5" class="block-color-gray_background bulleted-list"><li>2020-0521
+努力過頭就會皺眉頭</li></ul><ul id="1baa5dda-cac9-4974-8cf1-9b7b79b33a97" class="block-color-gray_background bulleted-list"><li>2020-0522
+那裡的小孩被稱作尼巴度</li></ul><ul id="5f974542-d061-4c2e-a2ab-f7218aafc242" class="block-color-gray_background bulleted-list"><li>2020-0522
+傳達的同時
+廣度
+被記錄</li></ul><ul id="2b6d77ba-1513-46c5-b3a2-fb3a35138420" class="block-color-gray_background bulleted-list"><li>2020-0522
+*既然不會放棄…那便把握住它吧，生與死，強者與弱者，便是從此刻開始選擇</li></ul><ul id="0bb8ecad-4fc2-473a-af76-84b966f2d888" class="block-color-gray_background bulleted-list"><li>2020-0522
+眼睛是用來和人交流的
+而不是看手機的</li></ul><ul id="e3ed21da-6d06-4f2d-872c-a98793a60afb" class="block-color-gray_background bulleted-list"><li>2020-0523
+好想要躺著就能在夢裡體驗好多事情</li></ul><ul id="0acbdd1b-2651-4e39-8222-fbb8e415dd95" class="block-color-gray_background bulleted-list"><li>2020-0524
+哪些情緒該寄託於作品取決於當下的心境</li></ul><ul id="46eb5ee9-fe96-4acc-933e-02c1c22c75a8" class="block-color-gray_background bulleted-list"><li>2020-0524
+在面對浩瀚的概念時
+我們的心自然會安靜</li></ul><ul id="418ccf16-9ad5-4f2f-80cf-697a7e7ba71b" class="block-color-gray_background bulleted-list"><li>2020-0524
+吸收</li></ul><ul id="14d7b761-c5ba-4bc7-a04b-ff1fff3df9da" class="block-color-gray_background bulleted-list"><li>2020-0524
+寫一些信給愛你的人</li></ul><ul id="22939b2c-b96e-4d9d-a97f-ca650126c89d" class="block-color-gray_background bulleted-list"><li>2020-0524
+自己做箱子
+<a href="https://m.gamer.com.tw/home/creationDetail.php?sn=3843574">https://m.gamer.com.tw/home/creationDetail.php?sn=3843574</a><a href="http://www.chicstar.com.tw/front/bin/ptlist.phtml?Category=225713">http://www.chicstar.com.tw/front/bin/ptlist.phtml?Category=225713</a>
+友元 壓克力</li></ul><ul id="e82db48b-cf5d-4699-b283-0b8d0cdc8f04" class="block-color-gray_background bulleted-list"><li>2020-0525
+寄測試檔案給國美
+測試檔案能播再去下次
+看牙時間
+要房租發票</li></ul><ul id="2f7e7fa7-30ec-4194-a1b8-d6e2a7431f7e" class="block-color-gray_background bulleted-list"><li>2020-0526
+成長的四速度跟不上前輩離職的速度</li></ul><ul id="1d3d02f7-02a4-4d0d-be31-5484d3a8c199" class="block-color-gray_background bulleted-list"><li>2020-0526
+跟陽明壓螢幕一樣掛投影雞</li></ul><ul id="12126d4a-7d94-411a-8f8b-9f0c48b9f17d" class="block-color-gray_background bulleted-list"><li>2020-0526
+Dear all,
+Robert</li></ul><ul id="8a6d8c41-f0f8-45ec-8c8c-66c13a0acdb6" class="block-color-gray_background bulleted-list"><li>2020-0526
+工具開發期</li></ul><ul id="2003f787-84ff-438c-ad6d-2ec2326aebf2" class="block-color-gray_background bulleted-list"><li>2020-0527
+保持開心</li></ul><ul id="ff8f9d16-420f-4a2b-88ce-54f96344ffe9" class="block-color-gray_background bulleted-list"><li>2020-0527
+1.了解需求
+地點
+使用對象
+情境
+我們有多少時間
+2.可能有什麼方法
+3.需求的優先度-方法評分
+最優先一定是時間
+準確度
+穩定性：耗損週期，壓力測試或過去經驗
+維護成本：維護執行時間，可維護性等級
+製造成本：
+=預期分析分數
+
+設計方法檢驗-設計工具開發
+驗證準確度評分： 怎麼樣算準？
+怎麼樣算穩定：
+時間安排
+實際分析分數
+癥結點
+
+可能會遇到的問題是
+我的原則/疑問是
+這麼做的優點是
+已過去經驗上可能遇到的問題</li></ul><ul id="76c86f14-77db-406e-aeda-6c434cc28731" class="block-color-gray_background bulleted-list"><li>2020-0528
+讓我有參與的項目
+都沒有後顧之憂的討論如何和人建立關係</li></ul><ul id="dca57d0c-ac5c-4653-a47e-2806fce8f57f" class="block-color-gray_background bulleted-list"><li>2020-0529
+申請需求通報
+申請時程規劃
+硬體架構
+使用流程</li></ul><ul id="29cee94e-8b60-44f4-aaf5-7f9248f4978c" class="block-color-gray_background bulleted-list"><li>2020-0529
+Pc sleep lan
+黃偉</li></ul><ul id="ecd32a52-59e7-4ed9-b626-12bdf384d39b" class="block-color-gray_background bulleted-list"><li>2020-0529
+不是每個人都會以個人的身份去經歷所有事情</li></ul><ul id="8cbf212a-1d27-45e6-9f4e-de36cfed07ef" class="block-color-gray_background bulleted-list"><li>2020-0529
+我把大山放在這邊
+願它祝福所有經過的人</li></ul><ul id="feef810e-913b-4773-90b4-7673194cdca3" class="block-color-gray_background bulleted-list"><li>2020-0530
+白目跟反思的分界</li></ul><ul id="61028b21-1fc8-4754-8757-1bccdb640473" class="block-color-gray_background bulleted-list"><li>2020-0530
+原則是
+1.讓我們有計畫可以去討論 藉由討論去衡量和完善
+2.不越級規劃/未計畫安插 任務給執行人員
+3.只要照著這份文件走 我們就可以不用為難他人也能全心為了更好的成果努力
+4.方法由執行成員提供，需求由規劃人員提供
+
+進場需求書
+負責PM
+進場規劃
+現場窗口
+驗收日期
+
+現場配電時間
+可進場期程
+驗收項目名稱
+驗收內容
+主機開關電源需求：定時：時間/按鈕
+簽核 pm 進場 老闆
+_
+進場計畫書
+預計進場期程day~day
+進場人數需求
+進場時程表
+時間
+每個人要完成啥
+每個人要使用什麼方法：執行動作要指示明確
+簽核 進場 pm 老闆
+_
+流程至少需要為兩個報告天
+進場執行規劃
+專案部門交流
+-了解現場配置
+-設計系統架構
+-硬體採購 規劃
+
+進場部門內部
+-規劃硬體設定
+-分配執行硬體設定
+流程：
+項目要做啥
+項目的系統架構會長這樣
+項目的硬體要買啥
+項目的硬體要怎麼安裝/走線
+項目的哪些部分需要開發/測試
+項目的硬體要做哪些初始設定
+項目的硬體時程要規劃多久
+項目的硬體進場計畫書</li></ul><ul id="bb664765-9c57-4f6e-b716-3cf8d834104e" class="block-color-gray_background bulleted-list"><li>2020-0530
+我預估調整vfx是比較實際的做法
+但實際執行後發現我能操作的範圍有限
+在調整vfx這件事上
+無論是工具還是能力都不是我立即能解決問題的辦法</li></ul><ul id="c77c0c91-85cc-4838-bac5-72755575f898" class="block-color-gray_background bulleted-list"><li>2020-0601
+面對這些人
+我只能做好自己
+我不是來影響誰
+誰都無法影響我</li></ul><ul id="4806a121-0ab9-47e6-9c3c-7d02ba656713" class="block-color-gray_background bulleted-list"><li>2020-0601
+有人回應是人緣好並不需要多少道理
+事情提出對錯只是發表自己的價值觀
+討厭一件事情只是認知自己的缺點和不了解</li></ul><ul id="dccfe67c-0951-48d7-b5c2-cfe16538203d" class="block-color-gray_background bulleted-list"><li>2020-0601
+我也很希望自己能夠融入團體</li></ul><ul id="ca4d07b1-db90-4717-adad-34e0b1425f91" class="block-color-gray_background bulleted-list"><li>2020-0601
+如果對方將一生都奉獻在這件事上
+而你討厭這件事
+是否就足以否定對方的一生</li></ul><ul id="f1983549-b287-4abe-af87-0daf863fa6fc" class="block-color-gray_background bulleted-list"><li>2020-0601
+蹲著蹲著就忘記跳的人</li></ul><ul id="867c7eb1-47f1-45c8-9b31-5c7eb265c045" class="block-color-gray_background bulleted-list"><li>2020-0601
+感覺到被人家討厭我仍然會緊張
+我明明以為對自己很有自信的
+而且對自己有自信是我個性中需要的
+我並不是生來就有自信
+也不是少去了自信就不是自己</li></ul><ul id="5c9f909f-473d-4377-ada5-acd2aeede4b9" class="block-color-gray_background bulleted-list"><li>2020-0601
+少去了個性中的某個特徵我還是自己嗎</li></ul><ul id="e3d0c274-b3f5-48a5-8cde-27a8b8760385" class="block-color-gray_background bulleted-list"><li>2020-0601
+尋找一個適合我的環境並為了它努力</li></ul><ul id="7255da0a-cc7e-4118-93ce-81d43e42fb56" class="block-color-gray_background bulleted-list"><li>2020-0602
+用圖片錄比較卡，不知道影片串成後聲音合時效果</li></ul><ul id="f83ec70b-3902-429e-9447-300ea62b37b5" class="block-color-gray_background bulleted-list"><li>2020-0603
+遮蔽次要感官加速感受進展</li></ul><ul id="16bad28b-2fc5-47ca-ae8f-61527a506649" class="block-color-gray_background bulleted-list"><li>2020-0603
+社交英雄傳
+碰碰足球</li></ul><ul id="dbf74f85-0613-435e-a942-b28039e1b5d8" class="block-color-gray_background bulleted-list"><li>2020-0603
+確定自己想做的是什麼
+把其他地方空出來讓其他人去填補</li></ul><ul id="6391dd76-3170-4251-843b-523055a81ef2" class="block-color-gray_background bulleted-list"><li>2020-0603
+祝你肚子快樂</li></ul><ul id="d30fe14c-6624-4ca3-a69b-00c0f7a9a1b7" class="block-color-gray_background bulleted-list"><li>2020-0604
+這次的作品好像還是真的很不成熟
+但它幫我找回了某個重要的自己</li></ul><ul id="fb3fe4ef-eee1-4e54-ab8a-96970bfe4cd2" class="block-color-gray_background bulleted-list"><li>2020-0604
+和之前只抓大美感的我不同
+我想更精準的去嘗試自己想說的是什麼
+要怎麼做
+會怎麼紀錄
+和過程中怎麼形成討論</li></ul><ul id="41d94640-8236-4def-a70d-eb1af6550414" class="block-color-gray_background bulleted-list"><li>2020-0605
+你最後抽到的那一秒
+就是第六十秒</li></ul><ul id="48f2688e-7688-45de-98ce-083ca1cc95f7" class="block-color-gray_background bulleted-list"><li>2020-0605
+在臺北就會有很多希望</li></ul><ul id="3182ff38-1278-44a2-915d-203bc2fa7803" class="block-color-gray_background bulleted-list"><li>2020-0605
+都市裡的某一種人渴望著什麼機會</li></ul><ul id="a0bd5fdb-43c9-4019-a249-5524b7f0fa92" class="block-color-gray_background bulleted-list"><li>2020-0606
+不是每件事情都有獎勵
+每件事情都有它的獎勵</li></ul><ul id="208343ea-7677-436b-814f-95bf1414a3f4" class="block-color-gray_background bulleted-list"><li>2020-0606
+想要濃縮我的人生
+要先知道我有什麼</li></ul><ul id="ac4340fc-d6bf-45d3-a44f-7735ffa2cebe" class="block-color-gray_background bulleted-list"><li>2020-0606
+上網查不到自己經歷過的事</li></ul><ul id="58bd987e-0465-4865-82aa-a983e44b10be" class="block-color-gray_background bulleted-list"><li>2020-0607
+心受傷的程度決定妝的濃度</li></ul><ul id="1189c4a3-792e-4be5-90f2-86d72fda943d" class="block-color-gray_background bulleted-list"><li>2020-0607
+Xavia chen</li></ul><ul id="53e4caa2-2829-4a87-8f49-95db09b28b62" class="block-color-gray_background bulleted-list"><li>2020-0608
+敲打前
+敲打時會跳位 可能是沒接好檔案
+衝刺繞圈的刺激聲可以給視覺
+衝刺後面還有一段 有點空長</li></ul><ul id="8318b983-93c9-4528-81cc-48cee4c629b7" class="block-color-gray_background bulleted-list"><li>2020-0609
+友元
+會送出一個特殊融解的
+Geobox
+Pagedown 進入解說 等很久之後可以開始遊戲</li></ul><ul id="494981db-6d5f-46a8-8212-1d58b6b592aa" class="block-color-gray_background bulleted-list"><li>2020-0610
+如何在社會中生活又飽有熱情
+
+如何尋找適合的環境
+如何保護自己的熱情
+
+如果你可以擺爛
+不要為了不重要的事生氣</li></ul><ul id="7a8b9077-1375-49b8-b799-55545bcdcfff" class="block-color-gray_background bulleted-list"><li>2020-0610
+電視要我們自己鎖</li></ul><ul id="53666afc-18d5-416e-95cc-176270f5dc00" class="block-color-gray_background bulleted-list"><li>2020-0610
+測試15軌 2.3.轉錄效果
+Resize 影片
+合成影片聲音
+
+轉檔影片就好
+下載下來明天帶去</li></ul><ul id="77a877d6-3ac4-46b1-a9d4-b586a1d5680f" class="block-color-gray_background bulleted-list"><li>2020-0611
+鋼琴是all嗎
+
+最後繞的會有影子 也許可以多一點
+Slayer
+33時間軸
+14
+24
+15軌之三要更新
+
+把force gpu flush選項打勾
+Support texture recreate 勾
+把camera Texure 調回1000
+8x
+Second elapsed
+24 frame rate
+
+取消reseed on play 有機會分開錄製</li></ul><ul id="c3797de6-6a4e-48e8-9e97-b79eeb89969d" class="block-color-gray_background bulleted-list"><li>2020-0612
+只有舒服了
+心才會想繼續跟你生活
+愛著自己的心
+隨時都可以尋找你們的相處方式</li></ul><ul id="8971179d-e0dc-4786-a893-76b10acac27b" class="block-color-gray_background bulleted-list"><li>2020-0612
+你就像一稍好急的船</li></ul><ul id="f07166fc-3a42-4db4-83f9-17d124281321" class="block-color-gray_background bulleted-list"><li>2020-0612
+遊戲最好玩的時候就是剛開始瞎忙
+年輕也差不多是這樣</li></ul><ul id="11ed4aef-82ff-4e12-92fc-80c499bdb3fd" class="block-color-gray_background bulleted-list"><li>2020-0612
+花時間慢慢遇上問題
+再花時間慢慢與問題相處
+再花時間慢慢尋找舒服
+三花</li></ul><ul id="598b7b06-39e8-4c6e-9030-48515e986eab" class="block-color-gray_background bulleted-list"><li>2020-0612
+不是所有人都有熱情，不是所有人都想創作</li></ul><ul id="7033b565-53e2-4cef-a8ab-16f62c02237c" class="block-color-gray_background bulleted-list"><li>2020-0612
+對小孩子來說
+想這些還是太沉重了</li></ul><ul id="74dc7721-8fc9-4585-8d2b-7a58031008b0" class="block-color-gray_background bulleted-list"><li>2020-0612
+年輕人在想什麼的時候
+我會知道我自己是怎麼想的</li></ul><ul id="14a7e7c8-1124-4012-9e81-92ea7cca5731" class="block-color-gray_background bulleted-list"><li>2020-0613
+310</li></ul><ul id="cb6ce3b9-593b-4769-b9d1-fa444cfc1d7e" class="block-color-gray_background bulleted-list"><li>2020-0613
+公開自己的錯誤</li></ul><ul id="0f2db4e8-aaf0-4d24-9a23-99722524487b" class="block-color-gray_background bulleted-list"><li>2020-0613
+110肉丸me
+190 140 3 me 30p
+400 450 p50
+35 核廢料
+50 蔥蛋泡菜半月燒
+50 臭豆腐
+小匹 肉丸 55
+小匹 飲料 209-30
+小匹 買書 125-50
+小匹 半月燒 25
+小匹 臭豆腐 25
+= 359
+小匹 飯店 1035</li></ul><ul id="92fa0d1f-d0c0-46b4-9deb-3f914e2e9ec2" class="block-color-gray_background bulleted-list"><li>2020-0613
+今天做了好多事喔
+明天早上就開始做檔案然後小姐一直幫我再做檔案然後做到9點50的火車我們做到9點9點半吧8點才出門喔</li></ul><ul id="24cc5779-5c8a-4d7c-9338-21690a04165e" class="block-color-gray_background bulleted-list"><li>2020-0614
+回鄭</li></ul><ul id="22747a67-615a-40dc-9b14-945c462cfe7a" class="block-color-gray_background bulleted-list"><li>2020-0616
+得到了機會卻不敢深入的世代</li></ul><ul id="02bfe7f4-266c-4a6a-b907-5bf2c7ef2424" class="block-color-gray_background bulleted-list"><li>2020-0616
+把罪行視作獎勵</li></ul><ul id="f05d58f7-46fa-4d0b-9550-4804fced21ca" class="block-color-gray_background bulleted-list"><li>2020-0616
+十字平移的心</li></ul><ul id="a36c6700-3e81-4252-b7fc-290c7615791b" class="block-color-gray_background bulleted-list"><li>2020-0617
+熱縮套管</li></ul><ul id="5168583f-7068-47e5-9ee7-87c27a2cf39e" class="block-color-gray_background bulleted-list"><li>2020-0619
+整理文學器材單
+和maxray確認買螺絲每月一千和切壓克力和研發
+給小黃新的程式
+和修改程式</li></ul><ul id="42f25f08-016d-45b0-9632-ff6c421a567e" class="block-color-gray_background bulleted-list"><li>2020-0619
+六
+早上看牙醫
+晚上跟阿嬤吃飯
+日
+跟家人吃早餐
+跟弱水去台東</li></ul><ul id="a47b7312-bc2a-4f93-bc14-97a25d4d2d64" class="block-color-gray_background bulleted-list"><li>2020-0620
+寫程式給小黃
+改讀線上data
+十分鐘內一直loop
+十分鐘更新一次後繼續loop</li></ul><ul id="b8b65b91-b640-4a88-9ef0-0455890ef7a2" class="block-color-gray_background bulleted-list"><li>2020-0622
+要好好的面對每一個問題
+每一個問題都該被好好的處理</li></ul><ul id="8ec48972-f854-4aa8-8af8-58b216bc3c62" class="block-color-gray_background bulleted-list"><li>2020-0622
+什麼事都不想做又會想不知道要幹嘛</li></ul><ul id="a0fa98af-bc30-4382-9a89-891bf2564d34" class="block-color-gray_background bulleted-list"><li>2020-0624
+當你覺得自己真的是對的時候
+可能已經太多人在說這個故事了</li></ul><ul id="fa851b3b-2f3f-435b-a3be-b82619dd2cfe" class="block-color-gray_background bulleted-list"><li>2020-0624
+Ibon當天刷高鐵票十分內一定訂的到</li></ul><ul id="92add888-b4dd-42ca-9d47-3a0509252df8" class="block-color-gray_background bulleted-list"><li>2020-0625
+只有在不適合的時候做奇怪的事才能讓我理解為什麽要做這件事</li></ul><ul id="b8d83dbb-e95e-44c0-981a-d17292daa209" class="block-color-gray_background bulleted-list"><li>2020-0625
+調薪的最基本原則，一定是基於貢獻的增加，工作績效的提升，且歷經一段時間觀察，明確知道績效有穩定提升，並確定未來不會有所變動，才會決定調薪。
+
+如何評估績效
+可以挑案到都接的過程</li></ul><ul id="259dad09-94bc-42eb-bf10-5f55a38b96e6" class="block-color-gray_background bulleted-list"><li>2020-0625
+了解薪資支付方式</li></ul><ul id="b2faf62f-759b-4194-9788-aec7d9c21f5c" class="block-color-gray_background bulleted-list"><li>2020-0625
+我生氣不是因為被打斷或是被打擾
+而是為什麼我要在這時候處理這個爛事情
+但其實我可以不處理的
+其實我可以更早處理的
+我可以在重要但不緊急的時候就先處理</li></ul><ul id="eaf099dd-778f-4691-8b74-45c6a68e69b9" class="block-color-gray_background bulleted-list"><li>2020-0625
+我還蠻好奇的</li></ul><ul id="05de338e-9c16-475a-9dfb-a695b6e9b8e8" class="block-color-gray_background bulleted-list"><li>2020-0625
+心血隨時都可以歸零
+但自己想要的是什麼
+要完成的是什麼</li></ul><ul id="0d9a6948-8920-4d97-9b08-abd0111a94cc" class="block-color-gray_background bulleted-list"><li>2020-0625
+為啥 跟 為什麼
+為啥有啥這樣的用法</li></ul><ul id="374621bc-4653-4b46-8164-0a43975d5aa5" class="block-color-gray_background bulleted-list"><li>2020-0626
+你們的笑像夏天的橘子
+夏天沒有橘子</li></ul><ul id="d75bb81f-f9e7-4a11-a1b5-b29cea30d407" class="block-color-gray_background bulleted-list"><li>2020-0627
+*只要不放棄夢想一定會有出口</li></ul><ul id="bf161246-21f9-4245-b533-6589f52718a4" class="block-color-gray_background bulleted-list"><li>2020-0629
+他們會經歷很多故事
+會有很多個性
+會愛過很多人
+挺過很多事
+說過很多慌
+迷茫很多時光
+有過熟悉的朋友
+喜歡過很多衣服</li></ul><ul id="efeea5bd-2a66-4634-83cc-9d722dcfa9bf" class="block-color-gray_background bulleted-list"><li>2020-0629
+33
+45</li></ul><ul id="efd69905-5c1c-41d5-b872-67f96f5f539c" class="block-color-gray_background bulleted-list"><li>2020-0630
+人力成本如何估算
+撤場回來的線材轉接頭器材要如何評估使用壽命
+公司的器材如何管理
+專案利潤如何拆分公司和員工
+公司如何推進專案</li></ul><ul id="43963def-18af-42d0-9b03-beffdb09516b" class="block-color-gray_background bulleted-list"><li>2020-0701
+你所拾起的一切 都將成為你的價值</li></ul><ul id="239dff4a-8bfc-48c9-b70a-46f9f1399fac" class="block-color-gray_background bulleted-list"><li>2020-0701
+關於表演
+目前的動機
+回應館方對於表演的期待
+完成國美館環形空間以來第一次的表演
+
+目前的阻力
+我對這件事疲倦 需要休息
+無法對這件事覺得好玩</li></ul><ul id="b3ffa3aa-6f77-47c0-be38-8ee9ab6e0493" class="block-color-gray_background bulleted-list"><li>2020-0702
+豪俠牛肉 路 cindy  雞 judy
+豪俠 羊頭
+補拉魚 keke
+海鮮總匯 ruby
+鮮菇 wanyu</li></ul><ul id="de9baaa4-e17e-477e-84d3-cd3df6e51084" class="block-color-gray_background bulleted-list"><li>2020-0705
+我在工作上的底線是</li></ul><ul id="6ea250b5-0fa9-4def-9d08-cce9077d5281" class="block-color-gray_background bulleted-list"><li>2020-0706
+你在不同的環境變成了如你的樣子
+但還是會是那麼的好</li></ul><ul id="7b34abe9-c9fe-4c48-97dd-5ecbc43d7772" class="block-color-gray_background bulleted-list"><li>2020-0707
+我喜歡有效大量的生產
+和整理生產的感覺</li></ul><ul id="81708dc7-4ca8-469f-9c80-7fd7cc32d86b" class="block-color-gray_background bulleted-list"><li>2020-0707
+儘量保持乾淨</li></ul><ul id="9e75aaed-2f6b-4c99-b14b-f706af1e5d3a" class="block-color-gray_background bulleted-list"><li>2020-0708
+20號要請假</li></ul><ul id="f1547477-c3d7-4742-a5c7-30d7eaf6a4d8" class="block-color-gray_background bulleted-list"><li>2020-0708
+商米之家</li></ul><ul id="56c5ace8-6723-4c01-ad80-b73e4ad0ad7a" class="block-color-gray_background bulleted-list"><li>2020-0709
+接arduino版那面不能焊接 會不平</li></ul><ul id="af3ab6c4-1a92-4836-aecf-de2ab67d5d06" class="block-color-gray_background bulleted-list"><li>2020-0710
+韓國昧</li></ul><ul id="3cd1f5c5-f314-4770-b082-63e5c61defff" class="block-color-gray_background bulleted-list"><li>2020-0710
+下妻物語</li></ul><ul id="3a9ff400-e415-4d4c-8766-44434fb4abc2" class="block-color-gray_background bulleted-list"><li>2020-0712
+如果我將畫面透過ndi傳到obs上錄製</li></ul><ul id="8bd41b57-27df-4ab9-b14b-c57181c597b5" class="block-color-gray_background bulleted-list"><li>2020-0712
+提升
+常在
+日進
+感謝
+散步 冥想 日記 呼吸
+願我能與我的家人 愛人一起以精神上的提升 伴隨幸福 健康 快樂
+願我與我的家人 愛人在何時 何處 都以心相連 彼此常在
+願我的散步 日記 冥想 呼吸為我每一天帶來正向舒服的能量
+感謝這一切回答我 幫助我的聲音與能量</li></ul><ul id="b9adbf0d-b49f-4f88-87d5-ad3d0ac1829e" class="block-color-gray_background bulleted-list"><li>2020-0713
+我是不是沒有替他人著想
+讓他人光是處理我的事就飽了</li></ul><ul id="b96c7f83-8270-42af-a28f-8dfdb95c9759" class="block-color-gray_background bulleted-list"><li>2020-0713
+好像有點難過但好像也還好</li></ul><ul id="5b0756be-fdcf-4b25-825c-0b88163d950d" class="block-color-gray_background bulleted-list"><li>2020-0714
+親子丼 ruby 100
+培根豬 羊 薛 火 90 90 90
+烤精魚 judy 140
+虱目魚 路 130
+640</li></ul><ul id="2bbd4564-60c8-45b4-9e44-17c1d5dc7599" class="block-color-gray_background bulleted-list"><li>2020-0714
+為什麼我要表演
+
+我不知道是我問題太多 造成大家困擾還是我沒有聽懂大家說的
+
+我覺得表演真的沒有那麼好
+值得這樣麻煩大家
+造成問題困擾大家
+
+在這麼短的時間內
+我也只是想找到最適合這個場地的表演方式
+
+也許對大家而言這些都太應該了
+是我該去做的事
+但不該跟大家有關</li></ul><ul id="a7c1f92c-8de3-4b8e-a930-6ef8cf85cab8" class="block-color-gray_background bulleted-list"><li>2020-0714
+有什麼話就打下來
+但我就想思考
+為什麼我還不放棄表演呢
+不管最後準備的怎麼樣我都可以表演阿
+所以沒有人管準備的怎麼樣嗎
+要準備的事有哪些</li></ul><ul id="fc19e3ea-4e90-4a78-b7fe-a56b36337c58" class="block-color-gray_background bulleted-list"><li>2020-0714
+什麼是順隨自然
+我該怎麼做</li></ul><ul id="7a0cc0b5-197a-4415-9f0e-595b6ee0a837" class="block-color-gray_background bulleted-list"><li>2020-0715
+要怎麼跟羊頭介紹你的不開心</li></ul><ul id="a3a44484-4577-4fb9-bbac-b9a03d4f8b99" class="block-color-gray_background bulleted-list"><li>2020-0715
+我是做過選擇而來的</li></ul><ul id="9641ed3b-ca98-4cb9-ad5c-82486aacccb8" class="block-color-gray_background bulleted-list"><li>2020-0716
+魯雞腿 ruby judy cindy
+糖醋排骨 keke
+炸雞腿 路 火雞</li></ul><ul id="5ce792a3-3bb0-4275-9aff-a487612ca713" class="block-color-gray_background bulleted-list"><li>2020-0716
+下來長寶寶</li></ul><ul id="0702918b-7a8f-4085-ac80-87b6b9386f45" class="block-color-gray_background bulleted-list"><li>2020-0716
+蠶寶寶</li></ul><ul id="6ce01d12-4591-4255-bee4-3bd139dea12d" class="block-color-gray_background bulleted-list"><li>2020-0718
+很喜歡逛全聯
+很餓
+什麼都看起來可以吃</li></ul><ul id="12ae4094-4824-4429-a682-5ded29b91cec" class="block-color-gray_background bulleted-list"><li>2020-0720
+如果我們的很多笑容來自於苦悶
+什麼是因為根本的事情而快樂</li></ul><ul id="5bd0748e-f39d-4c77-9f6b-f0f82bc2bbcd" class="block-color-gray_background bulleted-list"><li>2020-0721
+抽中就+2.5 然後繼續抽 直到沒中
+沒中就把它加總
+try=20000
+M=0
+N=0
+Tryed=0
+For i in try{
+f = random
+If f &gt;0.2{
+M+=N
+N=0
+Tryed=i
+Continue
+}
+N+=2.5
+}
+Result =M/tryed</li></ul><ul id="5a545e7c-e0b3-41a4-a76b-1db8a6511cc4" class="block-color-gray_background bulleted-list"><li>2020-0723
+主機板上九個孔很鬆</li></ul><ul id="b5f7179e-e40e-40db-a6e2-97cb29fe0b3a" class="block-color-gray_background bulleted-list"><li>2020-0725
+天外之音</li></ul><ul id="92eb5ba3-11e9-49f3-b04c-33421f301ae8" class="block-color-gray_background bulleted-list"><li>2020-0726
+我們希望能至館內測試
+
+能在108展覽室進行演出是非常難得的機會
+但這個機會同時也需要更完善的準備
+在開展後得知有這個機會能一起討論
+我們便積極籌備表演的計畫
+並討論時間內有機會完成演出呈現方式
+我們非常重視這樣的表演機會
+在各方面都提出許多的觀點進行討論
+也在各方面都有了該如何準備的眉目
+我們才能知道時間內該如何去規劃和執行
+
+我們關心的方向還包含了表演其他的面向
+我們也期望並擔心這個表演的穩定性還需要提升
+
+但我們也討論到演出除了現場融接需要測試磨合外</li></ul><ul id="a7da8499-3574-41cf-9a12-a1d8f1f4ef19" class="block-color-gray_background bulleted-list"><li>2020-0726
+我們很期待這件事也積極準備
+能在這個空間表演是很難得的機會
+也需要各方面充足的準備
+很遺憾這次的時間比較不容易
+我們也在調整心情
+並希望有了這次的經驗能幫助到更多的合作</li></ul><ul id="b0d7c411-17e8-4216-9223-8044e378dd42" class="block-color-gray_background bulleted-list"><li>2020-0728
+禮拜四下午</li></ul><ul id="620a0e98-8064-4daa-8b30-1610384dd27b" class="block-color-gray_background bulleted-list"><li>2020-0728
+問題其實不是錢
+而是物慾太被重視了</li></ul><ul id="59e471b3-daca-45c0-a43b-a9f93a3acbc1" class="block-color-gray_background bulleted-list"><li>2020-0728
+買漱口水
+加值電卡
+改送水時間
+借360攝影機 展期到8/9下週末 六點</li></ul><ul id="c0811fd1-4cf2-4d66-b761-e2310c981bbd" class="block-color-gray_background bulleted-list"><li>2020-0729
+準備預備金</li></ul><ul id="2d991285-ad2e-4ab6-aed5-d9cd3ebba917" class="block-color-gray_background bulleted-list"><li>2020-0730
+80681106</li></ul><ul id="d3348b6c-978e-425c-a2d5-2448e0c697e9" class="block-color-gray_background bulleted-list"><li>2020-0730
+我們的夢想
+一起老夫老妻
+一起開開心心</li></ul><ul id="2e0b92f1-93f4-498f-8e19-858249aa3d6a" class="block-color-gray_background bulleted-list"><li>2020-0730
+要學習知識才不會被社會淘汰</li></ul><ul id="74c0d8bb-7a99-416e-8f5b-2d52dc273a21" class="block-color-gray_background bulleted-list"><li>2020-0802
+環形投影劇場
+作品的尺寸為16000×1200
+作品的長度為13分11秒
+作品的互動方式為影像會隨著聲音改變，聲音會隨著影像位置環繞移動
+在影像的內容上這次希望讓人可以有休息的感覺</li></ul><ul id="e9236814-39f6-47e9-86b8-faa1d9cdcb19" class="block-color-gray_background bulleted-list"><li>2020-0802
+洗米
+米一杯半
+水1.75杯
+一小匙油醋 半圈鹽巴
+煎烤模式
+230度常溫水開蓋煮到滾
+轉110度蓋蓋子15分鐘
+轉80度悶十分鐘
+完成</li></ul><ul id="6fa53e64-1bd5-4f2d-8542-7d18cbe35b86" class="block-color-gray_background bulleted-list"><li>2020-0803
+海鮮總匯 ruby linv
+補拉魚 kekev
+豪俠牛 我 路v judyv
+特選牛 cindyv andyv
+豪蝦 羊頭v
+橄欖豬肉 ruby 張v</li></ul><ul id="26a8a93d-e4ef-41bf-9fbc-7aa2f8fed77d" class="block-color-gray_background bulleted-list"><li>2020-0804
+要全景紀錄
+要拍門口的樣子</li></ul><ul id="d84b0480-4d88-4672-926d-3acb2596f46e" class="block-color-gray_background bulleted-list"><li>2020-0807
+Unity應用領域
+設計模式</li></ul><ul id="5f7f77b7-ea57-474c-a880-710af83aa717" class="block-color-gray_background bulleted-list"><li>2020-0808
+Lg相機
+可達相機 2
+充電座
+白豆腐頭 3
+Usb 拼接軟體
+大卡2
+16g小卡
+L六角
+卷尺
+腳架</li></ul><ul id="f676e502-7ae0-4b93-8d36-0f0bf74f9922" class="block-color-gray_background bulleted-list"><li>2020-0808
+107</li></ul><ul id="85964219-0ef9-43ac-b509-e8a4fd3d2702" class="block-color-gray_background bulleted-list"><li>2020-0810
+Northernlight
+知道很多間互動廠商
+荷蘭有很多博物館
+看博物館的廠商</li></ul><ul id="02f061e3-228f-4b9b-bbe4-deae64a99d9a" class="block-color-gray_background bulleted-list"><li>2020-0810
+我們應該擁有適當的物慾及來往如同家人</li></ul><ul id="94cc7893-2685-410b-87d3-1a2ab90afe18" class="block-color-gray_background bulleted-list"><li>2020-0810
+為什麼只試圖扮演好從概化他人得到的角色社會規則就不會改變</li></ul><ul id="6e3ea8a3-c902-4ee0-a0d3-7da9dd8b67eb" class="block-color-gray_background bulleted-list"><li>2020-0811
+9：00 湖興站候車 1801
+9：10 移動至上灣仔 1801停駐站更改
+9：25 上灣仔上車
+9：51
+與現場 李勝寶先生 通知到達現場
+抵達現場三樓
+拍照紀錄現場狀況 （鐵箱內外）
+
+孔位不同 - 需攻新的孔 m4
+話筒深度不夠 - 需挖新的面板方洞 （鋼板兩層）
+原螺絲長度不夠 - 需準備更長的m4 平頭螺絲
+螺絲應該要對著電話攻
+才能對齊目前已有孔位，避免露出
+需協助挖洞留下鎖位可攻螺絲
+要準備螺帽m4</li></ul><ul id="079c7bb8-9b1d-4a40-ac8f-62ebcea29ecd" class="block-color-gray_background bulleted-list"><li>2020-0812
+加班 一小 犀牛</li></ul><ul id="39d4e579-4a80-471a-bc2d-14b3714e8103" class="block-color-gray_background bulleted-list"><li>2020-0812
+創作要做屬於自己的東西
+又要與人連結</li></ul><ul id="6daeaf02-a48b-49f1-89b4-0efd49ff7405" class="block-color-gray_background bulleted-list"><li>2020-0817
+星期
+一 寄平板
+二 看牙醫
+三 跳舞
+五 公司聚餐</li></ul><ul id="e0f18bfd-5672-4981-84de-8ac3edee5386" class="block-color-gray_background bulleted-list"><li>2020-0818
+擁有特別的事物或行為並非你的價值所在
+你本身就是特別的
+
+我並不會因為繪製符號而特別
+而是繪製符號是過程
+是我學習認知到自己是特別的的</li></ul><ul id="c50da159-6f05-4986-a4c7-cb271f597cb8" class="block-color-gray_background bulleted-list"><li>2020-0818
+簡先生
+冷氣清潔劑
+建號
+床角貼紙</li></ul><ul id="faa0787c-fa50-4cea-8952-ff3cb2f6c112" class="block-color-gray_background bulleted-list"><li>2020-0818
+人會許的願望太不完整了</li></ul><ul id="8cc795cf-9472-45db-995a-1b53a43810d6" class="block-color-gray_background bulleted-list"><li>2020-0818
+我不具備匹配我這年齡的智慧</li></ul><ul id="ac379192-adb9-4dfa-9bb5-94b8cc0cd10e" class="block-color-gray_background bulleted-list"><li>2020-0818
+七月報支少100塊 不知道是不是我為了湊3的倍數少報了</li></ul><ul id="28d35611-c515-4960-862a-3bc9b67bee77" class="block-color-gray_background bulleted-list"><li>2020-0818
+不是高玩也能設計出好遊戲嗎</li></ul><ul id="10ec414e-e473-4c4f-844c-b8935e971a38" class="block-color-gray_background bulleted-list"><li>2020-0819
+349
+279
+299
+249
+289
+289
+279
+299
+459
+135
+229
+229</li></ul><ul id="6cf24bf3-43b7-467f-b3f6-cdb7bfb42e8f" class="block-color-gray_background bulleted-list"><li>2020-0823
+工作建議
+開會定時</li></ul><ul id="34cc8250-0a86-4580-b12d-add8c1e0b7ac" class="block-color-gray_background bulleted-list"><li>2020-0824
+匯款 11000
+音療之力量
+中醫音樂 五音療法</li></ul><ul id="fa4861a1-d781-4f28-95b9-bad4ed7163f7" class="block-color-gray_background bulleted-list"><li>2020-0827
+繼電器</li></ul><ul id="2e8fa829-7803-49fe-8ff6-1e174dc5027b" class="block-color-gray_background bulleted-list"><li>2020-0827
+我最近在弄租屋補助</li></ul><ul id="54370794-c6d2-4cc3-9c29-f327db7e69db" class="block-color-gray_background bulleted-list"><li>2020-0827
+我最近想聽音樂</li></ul><ul id="52d1d0e8-abec-444f-b10d-4b9bc92f5776" class="block-color-gray_background bulleted-list"><li>2020-0827
+我最近想看怎麼做遊戲</li></ul><ul id="57fdd0bb-987a-486e-a3ce-16f77187d742" class="block-color-gray_background bulleted-list"><li>2020-0827
+檢查控制台 電源選項 開始快速啟動有關閉嗎
+檢查bios eup2013</li></ul><ul id="5ba09efe-fff1-4de9-9095-15aac0bfdc29" class="block-color-gray_background bulleted-list"><li>2020-0830
+花蓮景點和美食</li></ul><ul id="4ca8330d-ba01-40a8-b8ea-abe060855910" class="block-color-gray_background bulleted-list"><li>2020-0901
+都要感恩</li></ul><ul id="cc7940d6-6f32-4cff-80bb-76da3b3c956b" class="block-color-gray_background bulleted-list"><li>2020-0902
+及品 水餃</li></ul><ul id="b09f7c0e-bd49-4b65-a2fe-2bb11ddded7d" class="block-color-gray_background bulleted-list"><li>2020-0904
+不要強制轉生 讓它成為一個機會</li></ul><ul id="af5b464d-8383-4cd7-851f-fc63c9ccc1ae" class="block-color-gray_background bulleted-list"><li>2020-0904
+如果你不能一輩子維持運動，不如找其他你能維持一輩子健康的方式</li></ul><ul id="e2ee2ba9-5118-4d3f-b5e5-405cb579117a" class="block-color-gray_background bulleted-list"><li>2020-0907
+勞健保轉出單
+離職證明</li></ul><ul id="bd5b2405-02ef-443a-8fba-68a15f888961" class="block-color-gray_background bulleted-list"><li>2020-0907
+會經歷一條很長的隧道
+直到開心難過的事都忘掉</li></ul><ul id="3165c4c2-d0a8-4887-926a-899bdd651eb8" class="block-color-gray_background bulleted-list"><li>2020-0908
+沒有人使用/有人使用時皆會閃爍
+融接盒重開會回覆正常
+可能兩三個禮拜會開始有問題
+重看</li></ul><ul id="b407d900-d2ee-4730-a77e-338854cd1d10" class="block-color-gray_background bulleted-list"><li>2020-0909
+269
+345
+299</li></ul><ul id="1bd1a61a-53ce-4c6f-b65d-39edc53265af" class="block-color-gray_background bulleted-list"><li>2020-0910
+這只是其中一個比較穩定的世界
+如果你不曾探索</li></ul><ul id="52b3799e-984a-45d3-80e9-48f6d10c9541" class="block-color-gray_background bulleted-list"><li>2020-0910
+No space for new messages</li></ul><ul id="4a7fc6f4-0736-4ffe-9e7c-b7c63a794a97" class="block-color-gray_background bulleted-list"><li>2020-0910
+分一些時間給過去
+分一些時間給未來</li></ul><ul id="f3fd2a7c-c69b-440a-aa73-6705f008d378" class="block-color-gray_background bulleted-list"><li>2020-0911
+什麼都是有可能的
+以你的能力</li></ul><ul id="4ade748b-987d-4215-a9c1-6f8071dd642a" class="block-color-gray_background bulleted-list"><li>2020-09102
+明天要坐幾點的車
+Hi maxray
+想請問薪資保留差額發放及薪資調整的日期
+謝謝</li></ul><ul id="1ea5a379-bb80-4ad7-a960-627869873d90" class="block-color-gray_background bulleted-list"><li>2020-0913
+六個月的應急金
+120000</li></ul><ul id="e25576ad-fa71-4622-a9cb-bbba13967aeb" class="block-color-gray_background bulleted-list"><li>2020-0915
+全身放鬆
+說翁</li></ul><ul id="83977d2a-6bbb-4f09-b2ac-25af7e2bb76d" class="block-color-gray_background bulleted-list"><li>2020-0915
+Fences</li></ul><ul id="5d5a5f1d-0810-4ea3-b8d2-9bb386b62604" class="block-color-gray_background bulleted-list"><li>2020-0916
+今天andy跟我說
+今年業績這樣 年底蠻可能會砍的
+可能選項：
+準備面試機會
+整理工作經歷
+思考未來方向</li></ul><ul id="4e9c405d-d306-415f-a939-1ea580e79f5f" class="block-color-gray_background bulleted-list"><li>2020-0917
+Bts333 foodpanda</li></ul><ul id="ea531397-7a33-480f-8e33-1c68d8408397" class="block-color-gray_background bulleted-list"><li>2020-0920
+夢到自己在debug還在做筆記</li></ul><ul id="9308d246-f08a-4ec3-849a-70761597d80e" class="block-color-gray_background bulleted-list"><li>2020-0920
+以長支長的重點是
+你有長期的需求
+就需有長期的準備
+才會有能長期穩定動用的來源</li></ul><ul id="04a96893-b62e-46a6-8b9f-e436dd60ca58" class="block-color-gray_background bulleted-list"><li>2020-0920
+我在貪心上是不擅長的
+我不適合自己一個人貪心 容易好高騖遠
+我的專長是保守緩慢的打地基</li></ul><ul id="f56c5e43-0c39-4d16-b061-fcf4b59c088b" class="block-color-gray_background bulleted-list"><li>2020-0921
+儲值電卡
+口罩175</li></ul><ul id="646f2b4b-ed64-41e8-9e0a-f9dfd86995e7" class="block-color-gray_background bulleted-list"><li>2020-0922
+44.5</li></ul><ul id="6c1d6abd-aa01-4323-9165-a1c7aeb5c27b" class="block-color-gray_background bulleted-list"><li>2020-0925
+Jan kounen
+Other world</li></ul><ul id="2898abbd-09c0-4d5f-a6c6-77bfc8afb06b" class="block-color-gray_background bulleted-list"><li>2020-0929
+Tip120
+220電阻</li></ul><ul id="675a4767-fe3b-43b1-a014-5f33b6ddf417" class="block-color-gray_background bulleted-list"><li>2020-1001
+比一口氣長
+你才有機會碰到成功的時候
+成功才能累積出自信
+有自信才開始成長</li></ul><ul id="866bb916-00dd-4645-8fcd-6a29fcd6a6ed" class="block-color-gray_background bulleted-list"><li>2020-1002
+我見你對溝通很有自己的詮釋
+剛好我也是</li></ul><ul id="5113a2a8-21c6-430d-b096-1cbf2628f913" class="block-color-gray_background bulleted-list"><li>2020-1004
+一開始先照顏色分類
+抽到八張之後就要開始調陣
+把手上能出不能出的就先整理起來
+然後把剩下的看是單張還是聽牌的整理起來
+八張之後的手牌是用整理後的來玩
+能整理三張完整能直接出去的是你不用抽牌的空間
+儘量在這個扣打內儘量打出單張和聽牌</li></ul><ul id="6fa59d21-4fb7-4139-9409-90b160bf29a8" class="block-color-gray_background bulleted-list"><li>2020-1005
+有一種相依為命的感覺</li></ul><ul id="36b00a35-0af7-49fb-a18f-09d040208434" class="block-color-gray_background bulleted-list"><li>2020-1005
+不論前往還是返回
+我一個人搭車的時候都會哭</li></ul><ul id="231ec97b-a3b9-4f3f-86f8-9ad5022b47ef" class="block-color-gray_background bulleted-list"><li>2020-1005
+確認牙醫橡皮筋
+確認出差時間會不會撞到牙醫</li></ul><ul id="be38440c-72c4-4089-8ef7-4efc39f6bbfd" class="block-color-gray_background bulleted-list"><li>2020-1005
+你可能身在任何地方
+而沒意識到自己在哪</li></ul><ul id="33f3e782-df76-409d-b264-e3080ef844eb" class="block-color-gray_background bulleted-list"><li>2020-1009
+希望你是一個快樂的蛋</li></ul><ul id="71440b06-71f5-4238-ba97-364a44bcb007" class="block-color-gray_background bulleted-list"><li>2020-1009
+我擔心花時間在很累又沒有成就感的事上會為我帶來更多這樣的事
+也許我需要目標 才能感受到逐步的成就感
+我想要在過程就能感受到進步和快樂</li></ul><ul id="019ec6ff-20d8-41f6-9a46-f8e68270a5b7" class="block-color-gray_background bulleted-list"><li>2020-1009
+小啾啾喜歡花
+花也喜歡小啾啾
+小啾啾離開的時候
+花也會和它一起走
+然後小啾啾會留下一封信給你
+
+但我不想要摘花
+
+那小啾啾就陪花
+花離開的時候
+小啾啾會充滿感謝的留下一段文字</li></ul><ul id="651435bd-241b-40c8-96ed-cf1d48b6f636" class="block-color-gray_background bulleted-list"><li>2020-1011
+Welcome to the Poetry Portal</li></ul><ul id="2b7db8c3-bdb5-427c-80f9-654d55f5dafb" class="block-color-gray_background bulleted-list"><li>2020-1012
+他始終都在為天下開闢著新的道路。
+他始終有勇氣承擔這份責任。
+他從不避諱去領導別人。</li></ul><ul id="1b84d2b6-adb4-4959-8484-609917fc6f6a" class="block-color-gray_background bulleted-list"><li>2020-1013
+愛情小坦克，誰撞誰休克</li></ul><ul id="c353822f-657b-42a3-b42d-e2ab64b66291" class="block-color-gray_background bulleted-list"><li>2020-1017
+我有一劍，借予天下劍修共參之</li></ul><ul id="3e47e943-af0f-47fe-8835-5a1895056e1a" class="block-color-gray_background bulleted-list"><li>2020-1017
+錄音
+你 吃 等 你 等 你 等 你 等 你</li></ul><ul id="80499677-32c6-4e94-ac1e-e0c4ed45cfab" class="block-color-gray_background bulleted-list"><li>2020-1018
+多人走路閒晃遊戲
+
+裝備 技能啥的在一開始就都有了
+只是如何拼湊這些東西
+讓你能走到很多很遠很特殊的地方</li></ul><ul id="1cdde109-b6b3-472b-a7dd-3b18a08a1f11" class="block-color-gray_background bulleted-list"><li>2020-1020
+光華
+電話線 先不用
+綠色杜邦線各買
+電話頭 給下麵
+開機按鈕
+Tip120。 24個 我買15個
+散熱片
+電木版 6個
+5050燈條
+220電阻
+焊接的電源座 小14×6=84
+大6</li></ul><ul id="6fcaa000-ade0-4863-b6be-f5e10939f260" class="block-color-gray_background bulleted-list"><li>2020-1020
+我是葉子
+我的屁股連接著莖
+是我來自的地方
+我的身體是葉
+我是獨特的葉子
+我的葉脈分成兩條
+畫出兩道葉子重疊在一起
+但我是一片葉子
+我由著葉柄倒掉在莖上</li></ul><ul id="a7e5fc3a-7ad6-4675-8a49-e100da462efa" class="block-color-gray_background bulleted-list"><li>2020-1021
+借車
+現場維修環控網路</li></ul><ul id="143af5bb-cfdb-48c9-8e00-2fec814991cd" class="block-color-gray_background bulleted-list"><li>2020-1021
+超越實業</li></ul><ul id="64ee0298-0a50-42db-b835-cf481699b236" class="block-color-gray_background bulleted-list"><li>2020-1021
+我覺得我畫了好多圖
+就被說沒畫沒有根據
+好沮喪
+我改了六次</li></ul><ul id="dd946f92-c7a5-4226-a5aa-f4c1a91f3167" class="block-color-gray_background bulleted-list"><li>2020-1022
+哪裡來的葉子</li></ul><ul id="071ddd53-0cce-4f6c-bc39-440617583655" class="block-color-gray_background bulleted-list"><li>2020-1023
+若是以大人使用肌肉的經驗去揮舞嬰兒的手臂</li></ul><ul id="d494c68c-0824-40fa-a874-8677cd3023fd" class="block-color-gray_background bulleted-list"><li>2020-1026
+我擔心我變成其他人
+我只想當我</li></ul><ul id="99ebc915-b587-4b41-bd5d-7060a297dc24" class="block-color-gray_background bulleted-list"><li>2020-1027
+選擇套裝電腦的好處
+比較好延伸開機電源鍵</li></ul><ul id="fd096155-4a9e-480b-b2cd-ee9b8191f694" class="block-color-gray_background bulleted-list"><li>2020-1027
+測試按鈕都正常
+裝hpram 開機電源
+機械手臂
+買電話線</li></ul><ul id="91f6c31d-6197-42a9-8b18-022586d30409" class="block-color-gray_background bulleted-list"><li>2020-1028
+準備一組我們測試可以使用的線材
+才能確認各項目是否正常
+大象系譜
+DP2HDMI轉接頭<em>1
+DVI2HDMI轉接頭</em>1 (DVI-D (24+1))
+USB延長線<em>1 (延伸 5米以上應使用供電式延伸)
+HDMI</em>3
+電話線 長度? (開關主機電源使用)
+菜寮AR大象
+HDMI<em>1
+USB延長線</em>2 (延伸 5米以上應使用供電式延伸)
+電話線 長度? (開關主機電源使用)
+澎湖水道
+DP2HDMI轉接頭<em>1
+USB延長線</em>1 (延伸 5米以上應使用供電式延伸)
+HDMI*1
+電話線 長度? (開關主機電源使用)
+Usb延伸 (鍵盤使用)</li></ul><ul id="db8350ba-2c74-4dd5-852e-7fdb4f3265a5" class="block-color-gray_background bulleted-list"><li>2020-1029
+我覺得你之前講話讓人很不舒服
+尤其是當別人已經努力在某件事上
+但感覺只爭取到你的批評
+而且我沒辦法在那份批評中得到有幫助的建議
+我只覺得你是來評判及無法提供幫助
+這很消磨我的熱情
+也許是一種磨練心智的辦法吧
+只有這裡可以這樣磨練嗎？
+這樣不舒服的磨練是我應該習慣的嗎？
+這裡磨練有哪些誘因？</li></ul><ul id="e66c6345-14f8-4496-926c-5d5830902c4d" class="block-color-gray_background bulleted-list"><li>2020-1029
+我經歷的訓練都是為了讓我能成為獨當一面的團隊成員</li></ul><ul id="a21854da-d27c-4e87-b9f7-79e582b74154" class="block-color-gray_background bulleted-list"><li>2020-1029
+拿七十%的心思來思考如何過得更幸福</li></ul><ul id="f98af612-4ab2-4c83-b364-2c25a6c33ab7" class="block-color-gray_background bulleted-list"><li>2020-1029
+交換相機/kinect
+螢幕轉成直立
+開軟體</li></ul><ul id="c6792e09-27d2-4851-9c37-8c226ef378fc" class="block-color-gray_background bulleted-list"><li>2020-1031
+我夢到弟弟他們養了兩隻貓</li></ul><ul id="ce7c838c-7b20-403b-9acc-82617518f05f" class="block-color-gray_background bulleted-list"><li>2020-1031
+如果我死了
+我會希望你在我家養一條狗
+然後還是會來花蓮看狗</li></ul><ul id="f2052b97-5c2b-4843-a0aa-2df187aef020" class="block-color-gray_background bulleted-list"><li>2020-1101
+我覺得我家人讓我覺得累
+是由無數個連續嚇到我的胡椒罐事件構成
+好多的聲音和打擾
+我喜歡安靜 單純  可以休息 沒有那麼多反應的</li></ul><ul id="5dd84a0d-2fff-4511-8de8-457719b8abd3" class="block-color-gray_background bulleted-list"><li>2020-1102
+最喜歡聞聞你的味道
+最喜歡舔舔你
+最喜歡你施展魔法
+最喜歡你幫我杯子飛飛
+最喜歡你對我嗷嗷叫
+最喜歡跟你一起嗷嗷叫
+最喜歡你牽著我的手
+最喜歡跟你一起睡覺
+最喜歡跟你還有小鱷魚一翔小河馬待在一起
+最喜歡看你跟小植物說話
+最喜歡看你煮飯
+最喜歡你坐在我旁邊
+最喜歡你彈吉他
+最喜歡你跳舞
+最喜歡你唱你自己做的歌
+最喜歡你抱抱我
+最喜歡跟你一起放屁
+最喜歡跟你分享大便
+最喜歡你帶我去吃素食
+最喜歡接你下班
+最喜歡一起散步上班
+最喜歡講電話的時候跟你說愛你
+最喜歡跟你說我愛你
+最喜歡對你喵喵喵
+最喜歡你下班回來
+最喜歡你對我哭哭說心事
+最喜歡你總是大方又很體諒我
+最喜歡你找我一起出去玩
+最喜歡你幫我開門
+最喜歡跟你一起洗澡
+最喜歡跟你看動畫和挖礦
+最喜歡跟你一起畫畫
+最喜歡你的字母人和啾啾畫畫
+最喜歡你摸摸我的肚子
+最喜歡你躺在我的身上
+最喜歡你抱著我的手睡覺
+最喜歡你叫我小雞
+最喜歡你走在我旁邊
+最喜歡看你看動畫
+最喜歡你和我眼神交流
+最喜歡你安慰我保護我
+最喜歡和你一起騎腳踏車
+最喜歡和你去吃好吃的
+最喜歡和你一起回家
+最喜歡跟你聊天
+最喜歡你煮好吃的
+最喜歡你做早餐
+最喜歡和你一起回花蓮
+最喜歡你畫畫給我看
+最喜歡和你一起體驗每個季節
+最喜歡和你聊工作的心情
+最喜歡和你一起去洗衣服
+最喜歡和你一起跳奇怪的舞
+最喜歡和你一起回家洗手</li></ul><ul id="2a50ec70-9987-474b-9797-89bf1ebaebed" class="block-color-gray_background bulleted-list"><li>2020-1103
+11/2 星期一
+11/3 星期二
+11/5 星期四
+11/7星期六
+11/10星期二
+11/2
+今日內部還在調整代辦事項，以清楚說明ggd及我方需完成之工作內容
+Ggd於今日反應電工進度落後，詢問是否改為週四再進場
+我方根據上週數位審查之場堪觀察現場仍會有電可以使用，判斷可以與電工同步進場
+並告知線材等尚未買齊
+大象系譜的電視可能會做替換，ggd告知原因為無法送電開
+周三電工會進場但現場並無ggd之負責人員會在現場（上北確認電氣玻璃）
+目前現場僅有大象系譜的部分格子照片，並無說明如何安裝按鈕
+
+現場先執行需要討論溝通之任務
+“現場項目交接”
+確認每一項目的安裝方式及機房電源位置
+拍攝紀錄現場狀況
+清點現場器材項目
+：確認自己有這些資料之後我能不能裝的起來這個項目，若有缺少的確認補齊的方法及時程
+
+機房沒有電的話能做的就是大象系譜的安裝及走線
+若是原插座可以使用的話可以用來開機先做檔案及軟體設定
+考古問答也可以先做軟體設定及開關機設定
+
+我方有多帶轉接頭及一條hdmi線測試
+若之後還需要進行走線則以現場線材測試優先，測試完成後進行編號及拍照
+
+電話線有至少兩種編排方式
+5v訊號走5米以上確定收不到 5米就有一點問題
+
+Unity 全螢幕修復
+Unity被開始工具列擋住
+請Trekkie去民宿拿發票
+大象系譜的三螢幕翻轉還沒設定回來
+建議澎湖水道需修復硬體</li></ul><ul id="6844ec70-bd1b-4b1c-9628-f98b03849a77" class="block-color-gray_background bulleted-list"><li>2020-1105
+如果我還有35年到60歲
+我會想做些什麼</li></ul><ul id="cf1f67d0-8701-448b-915f-fecddd10d922" class="block-color-gray_background bulleted-list"><li>2020-1106
+我的心是安靜的
+這是一個很遠的地方</li></ul><ul id="3c06b3d0-af7a-4570-9639-b6c399b264a9" class="block-color-gray_background bulleted-list"><li>2020-1107
+經營一個國家
+每個人負責不同的內政</li></ul><ul id="6da5694d-2f13-4b0e-813a-799129e9a876" class="block-color-gray_background bulleted-list"><li>2020-1108
+我夢到我接手一間舊咖啡丁
+有人在用訊息抱怨接手的過程
+有人有進店來問我一本我寫的書
+叫做 她 Her
+她們想看
+我想好像是我今年寄去哪裡參加活動的
+我很開心有人想看我的文字</li></ul><ul id="a396d624-cb48-4f97-9b31-a30147236e20" class="block-color-gray_background bulleted-list"><li>2020-1108
+我想
+我是喜歡把我的思考過程紀錄起來的</li></ul><ul id="3661c3df-521c-4ecb-b22f-e564abba61af" class="block-color-gray_background bulleted-list"><li>2020-1110
+12/14
+11/中旬 技術會議</li></ul><ul id="f7e5fca9-04af-42a4-b43f-3a3c179ebd36" class="block-color-gray_background bulleted-list"><li>2020-1111
+我喜歡準時下班陪小匹</li></ul><ul id="2438f061-3ae1-4fde-b326-39ee6004f37f" class="block-color-gray_background bulleted-list"><li>2020-1113
+我夢到爸蓋了一間好大的房子給我
+我好開心
+然後我們一起在花蓮接案子來做</li></ul><ul id="6784e9c3-e2c4-48e6-81aa-78d0caf852f1" class="block-color-gray_background bulleted-list"><li>2020-1113
+要怎麼在生病的時候保持神智清醒
+或是我可以在生病的時候學會什麼更多思考的東西
+我沒有清醒</li></ul><ul id="6d60fc64-a75e-4b26-8e1d-83fd6f2810c8" class="block-color-gray_background bulleted-list"><li>2020-1116
+面對現實 極度透明 可信度加權
+1.制定明確的目標
+2.找出妨礙實現目標的問題，不要容忍問題
+3.準確的診斷問題，查明問題根源
+4.設計解決方案
+5.徹底執行
+
+在設定目標時，只要設定目標，不要考慮如何達成，或是出錯了怎麼辦。
+在診斷問題時，不要思考如何解決，只需要診斷問題。
+步驟模糊不清容易導致結果不盡理想，因為這會妨礙你發現真正的問題，認真執行每個步驟，會提供你繼續下個步驟需要的訊息，幫助你把下個步驟做好。</li></ul><ul id="1a583f96-6808-469f-8e32-82ba1ddbaa48" class="block-color-gray_background bulleted-list"><li>2020-1116
+6150</li></ul><ul id="d7012589-c035-4365-8778-9666a250e4d7" class="block-color-gray_background bulleted-list"><li>2020-1117
+早起一個小時大概看20頁</li></ul><ul id="2cec3b28-0592-4f2b-999b-01384590c092" class="block-color-gray_background bulleted-list"><li>2020-1118
+如何了解盲點</li></ul><ul id="e3d6f9ae-c594-4c2c-9b2a-7eebbe0b030f" class="block-color-gray_background bulleted-list"><li>2020-1118
+黑色單心線
+網路頭
+杜邦頭線 紅黑
+焊槍頭
+、Dc公母頭
+建立採購清單</li></ul><ul id="00e9e020-c6ec-42f7-965e-e271322b385d" class="block-color-gray_background bulleted-list"><li>2020-1118
+小狗正在享用牠最快樂的時光</li></ul><ul id="0a24947d-95e8-458c-bb20-48fb8fe6bc26" class="block-color-gray_background bulleted-list"><li>2020-1119
+黃金秤
+高委員</li></ul><ul id="98f1ef07-5574-4c5b-a51a-1206aec67a67" class="block-color-gray_background bulleted-list"><li>2020-1120
+紙膠帶
+捲尺
+雷射水平儀</li></ul><ul id="5a966d2e-420b-4f9d-bbe6-80e2671dcd3d" class="block-color-gray_background bulleted-list"><li>2020-1120
+目前覺得他比工具書好看的點是讀起來更像自述使用各種工具的經驗</li></ul><ul id="94a77dfb-a923-416e-9d6d-538153b06c8f" class="block-color-gray_background bulleted-list"><li>2020-1120
+蠻適合出社會讀的
+很多這時期出現在心裡的一些課題都會得到一些回饋</li></ul><ul id="625710f7-13d6-4cc0-914a-88569aff60b2" class="block-color-gray_background bulleted-list"><li>2020-1121
+我的痘痘像是腦袋在通知我這時候面對的課題</li></ul><ul id="e7c63c07-ed52-44d3-9082-6766fe7e3bbb" class="block-color-gray_background bulleted-list"><li>2020-1122
+做不做都無所謂</li></ul><ul id="d511cca9-26e6-4a38-8fd4-062035c2a9a2" class="block-color-gray_background bulleted-list"><li>2020-1124
+不要忽略問題 ar模型</li></ul><ul id="70938885-c02f-4631-98f9-e5c29110342c" class="block-color-gray_background bulleted-list"><li>2020-1124
+你想要直接紀錄結果
+是因為過程中解決問題需要很多靈感和稍縱即逝的念頭
+有太多你覺得可能但不確定的事
+所以你覺得願意紀錄過程會耽誤你解決問題和忘記自己正在做什麼
+弄清楚哪些想法是有效的和為什麼你要採取行動是一樣重要的
+紀錄這個過程和結果對你提升自己的處事是有幫助的</li></ul><ul id="a766f41b-3de2-4362-8b88-9a94bea29527" class="block-color-gray_background bulleted-list"><li>2020-1125
+少說話 多做事</li></ul><ul id="53d38668-d092-4683-b9d6-cc0767c02731" class="block-color-gray_background bulleted-list"><li>2020-1125
+案子評分 三、四個階段
+維修方案 可有效率重複執行的
+（沒有明確維修方案的案子續約保固的評分就很低）
+畫電路圖
+電腦備份usb</li></ul><ul id="711770f4-5350-4995-b1bb-1d9717b2dd69" class="block-color-gray_background bulleted-list"><li>2020-1125
+看到荔枝樹了</li></ul><ul id="4c40ae9c-9f76-47bb-8250-d6a12b03a568" class="block-color-gray_background bulleted-list"><li>2020-1126
+我們能不能透過寫程式的思考和邏輯分擔pm的工作量</li></ul><ul id="47274470-b9e9-429d-9a81-127adfb4c6f9" class="block-color-gray_background bulleted-list"><li>2020-1126
+燙大陸妹
+豆干海帶</li></ul><ul id="f70558b2-d3ef-4f4b-bc97-147ee5011a18" class="block-color-gray_background bulleted-list"><li>2020-1127
+畢業典禮
+黃勝文
+大家都很友善
+我用手機接vr玩劍三
+跟恩多說現在手機技術好扯 遊戲裡寶物變多
+跟ㄇㄕㄐㄑ一起打副本
+ㄇㄕ是RL
+學校小教室
+蘇巧三頒獎給maxray
+班上的座位是我們同事的在座位站起來拍手
+Maxray會唸感謝
+還有給每個同事的想法及建議
+我偷喵到他給我的話是充滿建議和建設性的
+是我很期待聽到的
+還一直開手機錄音就怕錯過
+但在夢裡他並沒有發表感言時提到我的這篇</li></ul><ul id="06a98c90-947b-4db5-bff9-412f3cc01997" class="block-color-gray_background bulleted-list"><li>2020-1127
+肋骨中間下面分開處按下去會有痛痛的
+下腹會有點滿滿的有大便的感覺
+喝水的時候會有水流過胃的傷口的感覺</li></ul><ul id="14acd64a-58ce-42eb-ae70-59684b2dcd81" class="block-color-gray_background bulleted-list"><li>2020-1127
+好想又去學新的東西
+還有好多東西之前開的坑還沒完成
+作品分享
+作品製作過程回憶
+Godot遊戲和筆記
+又想去學做3d和touchdesigner</li></ul><ul id="f3b50eb1-27ca-46f9-9ef3-babd163dd1eb" class="block-color-gray_background bulleted-list"><li>2020-1128
+請Trekkie帶螢幕</li></ul><ul id="cc955ada-9c68-4449-9558-f2ff4f0c53bf" class="block-color-gray_background bulleted-list"><li>2020-1128
+製作白馬的prototype的要求跟後續支持的技術本身並無關係
+
+決策應該以證據為基礎去辦理
+但支持這項決策的證據並不是後續技術的基礎
+所以這項決策在技術上並沒有以證據為基礎去辦理
+要求提出攝影機架設的解決方案</li></ul><ul id="299057aa-8732-453c-8c77-c71072cfbc96" class="block-color-gray_background bulleted-list"><li>2020-1128
+向上管理</li></ul><ul id="daf5b169-6393-4344-8320-f96bc33114ca" class="block-color-gray_background bulleted-list"><li>2020-1128
+透過大家一起和你相處的經驗
+討論你最可信任的領域並向你請益</li></ul><ul id="0f6ecef3-205a-410e-87a6-02604a672c37" class="block-color-gray_background bulleted-list"><li>2020-1128
+年底大會
+大家一起聊今年經歷的案子
+並先不讓maxray參與
+聖誕節在來看播出</li></ul><ul id="77a9ea3b-e537-41bc-bd94-89fea1314940" class="block-color-gray_background bulleted-list"><li>2020-1129
+最好的狀況會像開放原始碼
+最好的構想會自由流動、存活、消亡，並憑著本身優劣而演進</li></ul><ul id="ae723241-6694-4f93-b504-eb84a13c8a0b" class="block-color-gray_background bulleted-list"><li>2020-1201
+工作是
+和傑出的人在有趣的事中建立有意義的關係</li></ul><ul id="bd418271-87f1-497b-b500-8b9d6167bc8f" class="block-color-gray_background bulleted-list"><li>2020-1202
+請sam現場測試code避免閃玻璃</li></ul><ul id="6e53222c-e75d-43a0-8a67-522fa89b04d3" class="block-color-gray_background bulleted-list"><li>2020-1203
+505055</li></ul><ul id="64435430-21d2-41f8-9d5b-7baedddc0af0" class="block-color-gray_background bulleted-list"><li>2020-1203
+墨西哥鐵樹</li></ul><ul id="b9021439-761b-48f8-9c67-90e17e9d5a74" class="block-color-gray_background bulleted-list"><li>2020-1204
+眼前的問題不會是大事
+重點是事情會經過的規則
+只要了解事情會經過的規則就不會有大事</li></ul><ul id="a4a4583b-32eb-45e7-a006-562e6881d681" class="block-color-gray_background bulleted-list"><li>2020-1204
+出差通勤是否可以算在上班或加班時間</li></ul><ul id="2d298989-d379-4e9e-94d1-72b5921693a2" class="block-color-gray_background bulleted-list"><li>2020-1204
+公司的文化會決定公司內的人文</li></ul><ul id="f2001376-1859-4783-9de1-0d13974e9044" class="block-color-gray_background bulleted-list"><li>2020-1204
+出色夥伴的主要考驗不在於彼此是否意見不合，而是在於他們能不能把歧見端上檯面好好說個分明</li></ul><ul id="6e98dfa1-fed5-492b-a8b8-7780e627854a" class="block-color-gray_background bulleted-list"><li>2020-1204
+蒐集你想要的樣子，將之視為有趣的事，和出色的夥伴一起達成</li></ul><ul id="a90f33c1-c797-45a0-81dd-c054436a2cc3" class="block-color-gray_background bulleted-list"><li>2020-1204
+如果我們不公開討論議題，並尋找解決路徑，我們就找不到能集體承擔結果的夥伴</li></ul><ul id="1c45e673-08f8-4270-887a-3351e4b72bd0" class="block-color-gray_background bulleted-list"><li>2020-1204
+與其花三十天完成，不如花三分之二的時間研究如何用三分之一的時間完成的工具或方法</li></ul><ul id="344892b0-8840-4da6-b901-a8539182f122" class="block-color-gray_background bulleted-list"><li>2020-1204
+如果我們能夠交換彼此的工作
+那就代表
+我們能清楚自己的能力
+清楚自己需要完成的事情
+我們能換位思考
+我們能清楚的溝通
+我們能把工作整理成未熟悉者也能執行的步驟
+我們可以將之整理成計畫去優化
+我們能將各個步驟拆開個別優化
+
+要以和不同職位的同事交換工作這樣的念頭去整理自己的工作紀錄和流程</li></ul><ul id="c7d8fc3f-a21d-4109-96ea-ae0731b498e3" class="block-color-gray_background bulleted-list"><li>2020-1204
+下次交代事情要壓時間
+壓時間的考量點是至少要往前間隔交代這個任務工作量的時間
+這樣對方如果有問題，還能轉交給其他人用允許的時間完成</li></ul><ul id="9c683d79-80e7-4fa4-bbaf-395521f96075" class="block-color-gray_background bulleted-list"><li>2020-1205
+問題的根源主要有兩種
+起因於簡單的誤會和源自根本的歧見</li></ul><ul id="a373e3fc-7ed1-41b8-80cf-10174d201a06" class="block-color-gray_background bulleted-list"><li>2020-1206
+是否延後
+週六時現場木作進度 電工進度
+入口攝影機位置的配套（位置會調整至哪跟安裝上去後還需要兩個工作天去做軟體對位修正）
+週三木工才會進場 這是指電氣玻璃的部分還是目前犀牛都還沒做
+
+請確認電氣玻璃的安裝是現場裝上去就能測試還是裝上後還要等電工再來拉線才能測試
+如果是後者電工的時程能否於同一天拉完請廠商準備測試運作正常再離開</li></ul><ul id="a433bba1-40b4-4d1a-bfd2-6e4036816613" class="block-color-gray_background bulleted-list"><li>2020-1206
+我跟你提醒過最晚週五前要讓我知道，但直到週日中午都沒人讓執行人員知道週一取消進場
+我被強迫週末加班，週末還要處理可以提早準備的突發事件，週四晚上開會後，隔天我就有問昨晚有新的事情需要我先處理的嗎？如果我週日沒問maxray沒人通知我和sam不要進場
+你在週日說我認為你和ggd的溝通是無效的，說我不信任你和Trekkie，我認為我的工作並不是讓你扣帽子，我們可以檢驗專案的執行過程看看是誰的疏忽，和該怎麼做更好，但沒有把事情講清楚，而是先指出，也讓我覺得不舒服
+你如果有難處，</li></ul><ul id="f10feb6b-b568-42c3-8345-b9866513889d" class="block-color-gray_background bulleted-list"><li>2020-1207
+收線材
+延長線
+測試聲音線</li></ul><ul id="cf08165c-1a2e-464f-b8fb-dbcc03053e40" class="block-color-gray_background bulleted-list"><li>2020-1210
+夢到提摩西問我去他那工作
+我們移到偏鄉去生活
+鄉下有不少小混混
+我們散步遇到一個木作的工作室
+我們去偏鄉後合作買彩券很容易中獎金
+然後我們在vr遊戲裡合體</li></ul><ul id="feccef3a-6d9b-43c0-a4d7-d801646c3a16" class="block-color-gray_background bulleted-list"><li>2020-1211
+我可以保持靜坐半小時
+精神 肌肉
+心靈 投資</li></ul><ul id="a061e57a-4349-44c5-b993-bfc5cff0d094" class="block-color-gray_background bulleted-list"><li>2020-1212
+螺絲從後面鎖流程上會與鎖在牆壁上衝突
+
+雷達的螺絲要從底座與鐵件只鎖兩顆螺絲
+牆壁若不平整需要在鐵件與雷達之間加墊片調整
+鐵件鎖上牆壁後才能測試雷達有沒有平整
+鐵件鎖上牆壁後無法拆卸下來調整墊片
+
+Maxray:
+牆壁很平整不需要調整
+活動座容易鬆脫
+不美觀
+你看外面展場有誰這樣用</li></ul><ul id="1f60ec8a-d0ba-4af1-b3a0-3179b7236aeb" class="block-color-gray_background bulleted-list"><li>2020-1214
+帶內褲 紅衣服 襪子 牙刷
+穿內衣 內褲 長褲 藍衣 外套 鞋子 襪子 口罩</li></ul><ul id="0932d174-5da5-4b38-9e87-8c7ed5c0c29d" class="block-color-gray_background bulleted-list"><li>2020-1215
+8：30送電
+8：50開機
+17：00關機
+17：30斷電
+
+Ac max 42
+Ac min 24
+
+需要評估接下來能完工多少？
+是什麼意思</li></ul><ul id="3fdd8904-b17d-47d9-9c79-c1a172cee03c" class="block-color-gray_background bulleted-list"><li>2020-1216
+180 105 投影位置
+
+右側140 中180 左側 300
+窗框160 距地177
+中間寬200
+210 110
+跨時空
+-完成製作投影拼接變形圖
+-完成標示兩台投影機於現場的位置
+-今天電氣玻璃壓力測試使用3分鐘影片，目前保持正常運作cue表
+-最快應該是星期二休館安排 燈具安裝
+-需要再進行13組現場燈具壓力測試及
+-主機版水銀電池需要更新
+-電池沒電Bios會重新設定
+-維修門的右側會架設木層板放主機和電控系統
+一日古生物
+-昨日測試觸控邊框周圍觸控會有偏移，我們會使用到的觸控範圍按鈕可正常運作，但選取衣服時會有觸控感應問題（像是偏移加連點）
+-昨日大圖輸出貼時螢幕又有重落下需要注意日後螢幕使用狀況
+-此項今日並無開啟測試
+備註
+下週會開放遊客</li></ul><ul id="f5714d93-570b-4f41-9f3c-408f619d32a7" class="block-color-gray_background bulleted-list"><li>2020-1216
+Trekkie10 30</li></ul><ul id="e3004a19-6dd1-498e-9bec-87406e731ca8" class="block-color-gray_background bulleted-list"><li>2020-1219
+藝奇</li></ul><ul id="261bdeba-d3f9-433c-9bcc-4acd96561d61" class="block-color-gray_background bulleted-list"><li>2020-1223
+自光體
+束帶
+快速夾頭
+剝線鉗
+M3螺絲</li></ul><ul id="2b86619d-cc2d-48b4-bd8d-0e6871be3e3f" class="block-color-gray_background bulleted-list"><li>2020-1223
+1/2 0.5
+1/3 0.3_ 0.3_=1/4+1/12
+1/4 0.25
+1/5 0.2
+1/6 0.16_ 0.16_=1/2×1/3 0.16_=0.5×0.3_
+1/7 0.<em>142857
+</em>1/49 0.020406081632
+1/12 0.083_
+
+1 2 4 8 16 32 64 128
+1.5 3 6 12 24 48
+
+100/7=14...2
+200/7=28...4
+400/7=56...8
+800/7=112...16
+1600/7=224...32
+
+36 72
+54
+
+1 2
+1.5</li></ul><ul id="98f33257-8b0b-475d-b297-69e4b5b37e9e" class="block-color-gray_background bulleted-list"><li>2020-1223
+來讀數學跟物理好了</li></ul><ul id="e543bb12-a309-4834-bf74-388645487b47" class="block-color-gray_background bulleted-list"><li>2020-1223
+訂餐 統編 披薩要切</li></ul><ul id="7253e796-9680-4a77-95b8-83150e6bccc1" class="block-color-gray_background bulleted-list"><li>2020-1224
+鮪魚蛋餅 中冰紅</li></ul><ul id="cfa960f5-bb6e-469a-9b03-5158b0fc9af7" class="block-color-gray_background bulleted-list"><li>2020-1226
+牙醫 孫東寶
+眼科 健檢
+換工作</li></ul><ul id="53b6a78d-04f5-4605-a20f-603e66f92574" class="block-color-gray_background bulleted-list"><li>2020-1227
+只要好好傾聽就好了</li></ul><ul id="0aa7407f-3411-48a9-8806-859e7265fb84" class="block-color-gray_background bulleted-list"><li>2020-1227
+其實每個人都很棒了 都需要被鼓勵</li></ul><ul id="db114fd9-4470-400a-9a79-85053e58663b" class="block-color-gray_background bulleted-list"><li>2020-1227
+今天聽到有一個人看牙醫 牙醫都會說他很棒
+他就想到只有他媽媽會說他很棒</li></ul><ul id="7854d52d-2f4d-4a75-8545-141523be5207" class="block-color-gray_background bulleted-list"><li>2020-1228
+眼壓 眼底 視野</li></ul><ul id="d50af1e0-01a6-4343-928e-d574702164de" class="block-color-gray_background bulleted-list"><li>2020-1230
+看電影
+藝文券
+公司藝文補助
+711領錢抽獎</li></ul><ul id="7902f4f5-4d64-47e6-befc-70f894fececa" class="block-color-gray_background bulleted-list"><li>2020-1231
+如果我一直做同一個夢
+現實又失憶而斷斷續續的
+那會不會夢才是現實</li></ul><ul id="78a24cb4-9cad-40bf-9681-41913a2e6151" class="block-color-gray_background bulleted-list"><li>2020-1231
+我夢到吳宗憲他們玩平衡棋盤塔的遊戲
+上面的棋格都是我畫的符號</li></ul><ul id="6f08d5a9-5e36-4db2-82cc-73fc93f61ab7" class="block-color-gray_background bulleted-list"><li>2020-1231
+擅長的事就是一條道
+人的視野眼界就是一種本身的境界
+不同的道幫助每個境界的成長速度不同
+若是只握著同一條道成長會很穩固但也緩慢
+甚至有可能無法成長
+不是所有的道都在每個境界有成長的路
+不是每條道路都能在適合的境界被觀察到
+你可能需要提前發現便一直相信自己 就算認為不合理
+你可能要過了適合的境界才開始顯現道路 然後回頭走你重視的路
+
+若是決定了 請鍾愛 珍惜 重視 謹記自己的道</li></ul><ul id="cc904c8f-665f-4d94-879d-c4b4f8845a2f" class="block-color-gray_background bulleted-list"><li>2020-1231
+到了新的階段會有更多你能做的事
+每個階段都要收斂
+你沒有真的那麼想
+真的那摸想的事就會去做</li></ul><ul id="87148146-bc21-4c14-86b3-d4861ac68682" class="block-color-gray_background bulleted-list"><li>2020-1231
+我在假裝自己很認真又很開心的畫畫</li></ul><figure id="3a1c9354-8462-462f-985d-f6506d791f97" class="link-to-page"><a href="%E5%A4%A2%E8%88%87%E9%86%92%202020%20f0c618fec38c455d89a65dc93c94a77c/ARCHIEVE%203a1c93548462462f985df6506d791f97.html">ARCHIEVE</a></figure></div></article></body></html>

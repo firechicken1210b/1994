@@ -1,0 +1,629 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>2</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="fb5dde2e-d87a-47c8-811c-64498da7a7ca" class="page sans"><header><h1 class="page-title">2</h1></header><div class="page-body"><p id="d8adc1b6-d704-464e-9791-a279cf69b18c" class="">
+</p><p id="b93de277-839e-4c2c-9814-6189372103af" class="">2015-0104</p><p id="688302f7-4036-4bd6-88fe-66b598c98d0b" class="">.....而我們的靈魂是像路過誘惑將殞落的星暫時受到這個階段的引力</p><p id="d51308c3-4e79-4a20-9152-4513b717747b" class="">而這經過的單位也遠大於用經歷來形容了</p><p id="68678d5c-6492-4f07-b051-dd0c5ed34e98" class="">所以才會有人說天上的星星都是我們 (中篇)</p><p id="ee64c475-842b-4915-8f22-8897f5f0660c" class="">2015-0112</p><p id="58a6f095-c636-4ee0-8a12-f72e8965be71" class="">我們便是未來當我們在追尋過去</p><p id="0d888456-a08e-4929-9cce-dcb6dced39b2" class="">所謂的借鏡只是一個過程</p><p id="099c0ad7-31a2-4226-b9f4-d70c8403a564" class="">過度的描述是徒勞的</p><p id="12800418-30a7-4eb6-9400-88ebcd0fdc28" class="">有天意雕塑我們的命運</p><p id="59260acf-05cd-4c76-82f0-d0212353dfbe" class="">無論我們如何去雕塑</p><p id="5a5fd8be-2b3f-42ed-9dc4-17fb68160137" class="">2015-0112</p><p id="d2cc30a0-b66f-4bb3-9993-7942c621f47c" class="">反正什麼也不能帶走</p><p id="40941aa1-f40c-4fbd-bfbf-a07bd3432118" class="">反正也沒什麼能帶走</p><p id="131ed0cf-2c36-4388-97b9-09f6aecbaa39" class="">反正也沒能帶走什麼</p><p id="2f6ff586-30b6-4b02-81d7-a65cfa2d724a" class="">2015-0129</p><p id="b2054d44-de03-4b73-9ebb-7f0eb1508510" class="">夢裡的人和我約好了明天要去遛狗</p><p id="44fb2b90-2caa-4c6c-92c2-cb748303076b" class="">2015-0201</p><p id="062cd247-9da5-44ed-9697-5820c056752f" class="">辛帝活很久</p><p id="b5d3ba67-d4ac-41f9-bfe2-8cdad2ed1fbf" class="">漫長的身體累積了疾病</p><p id="f56a02f8-154c-4361-aec3-9bdb55341ff7" class="">疾病困擾著他</p><p id="f22fc1fe-cc56-4391-9921-26f11966ac5b" class="">2015-0203</p><p id="dfc50e81-24ca-40d2-917a-10978578a97b" class="">一個能清楚看出好的作品</p><p id="782542f4-d875-4ee3-be1d-03432dc996a9" class="">那壞的一面也會淺而易見</p><p id="a3c93282-7578-4a92-80d8-8969c0c5619d" class="">一個內斂的作品你會思考他的好壞</p><p id="8ac89143-d4ba-49b4-9717-61dea19dbc9c" class="">2015-020415</p><p id="2a83a4f1-8a11-4cc0-b952-d64de038111d" class="">我們的靈魂是一個點</p><p id="8dc55ff1-94ee-4f97-951f-101236761eb6" class="">與時間環上的我們連結</p><p id="44b53d66-31e7-45fc-a48b-55dfccc0d249" class="">每一刻的我們都是同時存在的</p><p id="24b8ada4-68b9-4053-bca2-beb370c55be9" class="">我們的存在都是不能被複製的</p><p id="576c59f1-82cb-4088-bf5c-d26e573db9ce" class="">拿我們有限的視角去看生命只能得到有限的答案</p><p id="a3b46aae-bb66-4da4-827e-400584030696" class="">我們的價值都是一樣的</p><p id="bac33755-b281-4909-ae60-991a53d85f4c" class="">我們全部都是一樣的</p><p id="fc0adff9-2b92-457b-bfb8-9e8ffdd45779" class="">我曾擔心我們走都是走過的路</p><p id="794f5261-b9dc-490a-80f0-d1fe57ff9d8e" class="">但我們只是延伸中的一環</p><p id="95bbf128-1613-46bc-bd86-fa3b59a63c4e" class="">用無限的思考去誠實的了解我們</p><p id="c1e79c08-9102-4e04-adc8-cf55abffea83" class="">很不人性</p><p id="4910ccbe-5750-461f-8260-75b0e58b77cf" class="">2015-0209</p><p id="b933fa8b-c5ce-496a-a572-420abd0a5279" class="">給人家看只有自己看的懂的東西又不解釋很不尊重人</p><p id="547cd94a-673a-4412-8430-56ae5fd3f66b" class="">2015-0216</p><p id="fca946a7-00da-4c4c-af2d-a9f035c15d25" class="">也許藝術是為了反對價值</p><p id="a590d62d-bb23-414e-859a-db79b9a954db" class="">也許藝術是為了反對存在</p><p id="cc8b8f03-ff1d-467b-a045-815bbe9246c0" class="">也許藝術是為了反對目的</p><p id="71500607-b3a1-46b1-831c-0641415afae9" class="">2015-0226</p><p id="e69f97ef-7530-41d2-b988-f5256f6b523f" class="">對於在黑暗中迷路的人</p><p id="45fcb60e-3454-43c6-8a55-c28c6e852136" class="">你只要給他一點火光</p><p id="58c20e4b-44fc-4887-b7dd-f37a2fb9fcf6" class="">他就能把你當作燈塔</p><p id="fae5757d-32f9-4c61-857b-fbd744d57992" class="">2015-0304</p><p id="60d6c612-65d0-43e8-9ad6-22cc4c9f23ed" class="">就像我把從牆上掉到桌子上的黃色便條紙背上方貼上雙面膠</p><p id="cbb9c9ea-54e5-46e1-b717-ff95883da3f7" class="">就像我把從左邊牆上掉到桌子上的黃色便條紙背上方貼上揀來的雙面膠</p><p id="50284488-e99d-4621-a3fe-e5f56d8ceab2" class="">有的時候堅持是不需要理由的</p><p id="bb956605-e8a6-429d-8b63-23f1cf75c614" class="">2015-0308</p><p id="81233529-89cd-464b-bdca-c62a6c238727" class="">不遲到綿羊</p><p id="cdd648a5-de94-4645-8171-0c0a1afdc88a" class="">在睡覺前數就能準時起床</p><p id="d0059861-3d4f-4399-85f0-aef62b5bdae9" class="">2015-0313</p><p id="cc30f452-62d9-4cb6-bcff-96bf09b7f4bc" class="">進食有時候變的好虛擬,我只剩下計算這是多少的貨幣,我開始想像不到食物,我有的時候會害怕厭食,怕是不是會要開始了, 進食的感覺變成了好過程的感覺,我像是能用想像的代表我已經完成了,但我的精神還是難過,好難過,我所做的每個東西都是為了我發不出聲音的人, 衣物好寬鬆</p><p id="5848015d-8662-4644-89f4-007d9d08aca0" class="">2015-0315</p><p id="65a8b3d0-fbcb-4a4c-868a-973f99d01965" class="">影子交換人</p><p id="fe2d2d98-2d39-4303-a129-0ecace8e1607" class="">2015-0328</p><p id="69e703c4-3bc6-4666-b0d3-6a09fc2e74b7" class="">我們的時間和記憶</p><p id="32380c3e-19d3-488f-b516-cc5a5478f21c" class="">都不斷地被更改</p><p id="0c53661f-8fc7-44d5-8a9e-073d72976db3" class="">都不斷地被還原</p><p id="20e9603c-e913-4b41-bf10-771bf20906b1" class="">而那些痕跡那些本來應該發生的</p><p id="a207e038-e614-4166-a374-7463c2767dfc" class="">本來約定好的,本來失去的</p><p id="7e575c45-ee1d-49cc-affe-f8d68f6841cc" class="">都</p><p id="aa18c917-3fee-49a8-8185-f5ebad273e74" class="">成</p><p id="28eb2b13-0aa4-4b39-b3a3-70ad74c4b0ab" class="">為</p><p id="d96ef53c-8af7-4f95-b975-ebbab6204be1" class="">了</p><p id="e61f11e2-e279-4843-a418-a197bcac0da1" class="">夢</p><p id="8a74d1cd-5b8e-4ccb-9cd0-89ca89c6daf0" class="">2015-0403</p><p id="8d7ecf66-0714-455c-94bc-f074494fd2a8" class="">有的時候我不打開收音機也聽的到收音機的聲音</p><p id="3a1607c3-00b6-4b3f-8d7e-66c9928a2e96" class="">2015-0422</p><p id="9663a769-7078-42e6-a4f4-65239a433fdf" class="">一個人死是場悲劇</p><p id="1d9a5342-8cf0-41c9-8cd9-faa7defa8aa0" class="">ㄧ百萬人死就是場統計</p><p id="46dface2-4720-4a73-8602-f5148ded164e" class="">2015-0426</p><p id="27bc608f-d2d8-46bb-a58e-ba562eab1b30" class="">逢林莫入！窮寇莫追！</p><p id="c963a338-5c5b-4147-b8d4-d8118cbd124b" class="">2015-0429</p><p id="405ede32-505b-4e35-8ce9-e17a90b77c22" class="">人死了就像代表著會有很多飲料可以喝</p><p id="1029ad9a-0f7a-4123-bff8-840365791f44" class="">2015-0506</p><p id="db83765b-d12c-4849-b072-e3aba36ae996" class="">能不能不要讓任何事情沾染我的痕跡</p><p id="aa8deedd-878c-46b6-8126-fa148807c77c" class="">讓我的成就歸屬於我自己的名字</p><p id="f2b9db17-c8ae-4dd6-b77c-e5a3d10a2945" class="">讓我的名字不再被提起</p><p id="e7b00de1-d46a-449c-bef4-66647c2dd585" class="">2015-0508</p><p id="1cd400d8-c3d6-426d-a6fb-c383910cbb7e" class="">江湖輩有能人出</p><p id="79408bab-22a5-4ab7-b38e-5475df5d4f9a" class="">2015-0510</p><p id="834c30b3-1d07-4def-8f72-f261c32fb6d8" class="">最後的你</p><p id="ad2da1b0-7dfe-4198-bdbc-daaaa8cf54d1" class="">最後的你</p><p id="653082f2-d12b-4388-b3db-f6592b624a0e" class="">最後的你</p><p id="0e3439e2-3dd4-427a-9dfa-c2b0468b6e07" class="">2015-0517</p><p id="4eff21b1-3565-4eb2-b06b-24924e2332de" class="">如果人們都是這樣在愛的大生大死之間來回</p><p id="3d95edcc-f237-476c-89c0-6346ffbbc866" class="">你就好好體驗</p><p id="14d5ffae-8256-4f99-b102-eda905c63957" class="">如果天氣特別好就試著畫一副畫送我</p><p id="497c5dbc-902d-40f4-9ee6-b33e90a87a56" class="">如果我死了就跟我聊聊什麼是愛</p><p id="eb7867b5-4aaa-4373-9767-169661cd7dcb" class="">2015-0519</p><p id="d73d4748-e1ea-4a77-a0a5-d3fa95544fcf" class="">有的時候你會把所有線的頭尾都連起來避免有人找不到回家的路</p><p id="57dc52b3-e4f9-428e-b750-eda41aa63346" class="">2015-0520</p><p id="bead736a-c167-459e-9ff4-6e3b6f6bfe5b" class="">我們都是表演者也都是觀眾看著自己和別人對抗著世界然後將焦點放在精彩的人身上</p><p id="d7c9fc6c-f5d2-489d-8548-fc9939a63355" class="">2015-0520</p><p id="4f9c019e-1af4-48ee-a63b-152e2e231faa" class="">直到大家都漸行漸遠你仍獨自出現深怕有人有天迴返卻獨自一人</p><p id="311b4848-2779-40fc-838a-f67381b859fc" class="">我知道那種孤單真的很難受所以我才會一直在這裡</p><p id="e2c92fa6-3418-4983-b851-f782cb7a5c06" class="">2015-0528</p><p id="bf79463d-b88b-4bce-ac28-53d0bb064cc8" class="">你得到一個靈感卻沒有文字形容他一個靈魂沒有身體承載他</p><p id="49360b61-cbad-4418-86e0-a7c5b8cf7dce" class="">我以為這個世界很自由</p><p id="97b7ec18-e1d2-4efb-822b-01f1be9ef9b9" class="">2015-0530</p><p id="908b7a31-be09-49c8-af8c-bfb1d705e8b4" class="">一個人思考問題的時間</p><p id="2cf8eca7-e87a-453b-b230-4d073daed0e9" class="">並不是全然在思考</p><p id="9fc5fa27-66a1-489a-8890-5575af6f6a55" class="">而是在緩衝得到答案這件事</p><p id="5112c991-bacc-421b-ab07-fe869de5e94d" class="">倘若沒有這份緩衝</p><p id="5c6d9757-31b5-4ad8-b482-ffb617870646" class="">我們的精神要如何承載所有問題的答案</p><p id="c7f2862f-5c2c-4582-9d3d-0457886c3249" class="">2015-0530</p><p id="97e45784-d491-4ac7-92f0-9e55910a523e" class="">如果我們夠資格得到所有問題的答案</p><p id="0062965d-f406-4fb9-9f53-3c63f4051470" class="">那我們努力的方向會是什麼</p><p id="e9dc1ed1-cff0-411d-8f56-972358743ba9" class="">2015-0531</p><p id="6efa6573-0fb9-442c-9c39-c75085c14f36" class="">也許科學的進步就像人與世界談的一場戀愛</p><p id="43b73a04-33a1-4e6b-9a6d-f4f0a5f01827" class="">他給了你信任你卻把他賣給了全世界</p><p id="f0948d6e-6bf5-47b7-85b3-5788af528466" class="">但他還是會一直相信愛情啦~</p><p id="08f9061d-c76f-4996-865c-0f53336a12eb" class="">這代表什麼呢</p><p id="49dd2b14-14fc-4b95-965d-5a4c7594430b" class="">你的底蘊只要夠深厚而且懂得付出的進退</p><p id="75697c0e-9cc4-424d-82a0-8f603f47c96a" class="">你就能有機會去遇到一個真心的人</p><p id="3a16005d-2b04-497c-b0e5-55c0ec358bf7" class="">世界就像一個壽命長一點的人一直在等他的真心人</p><p id="929e7152-529d-45e5-9fb5-74bde573b007" class="">但戀愛啊就像這麼ㄧ回事</p><p id="ef9eceff-84db-4f79-94f0-118aaff3d5ac" class="">兩個向量奔出去交錯的瞬間之後就再也不會見面</p><p id="d983ffb2-c30b-476f-9ef6-7d24bdd6c7b5" class="">初戀啊初戀</p><p id="2d40d58e-8640-4c00-8bf2-b50d82f20429" class="">2015-0531</p><p id="59a0a211-e5a9-4c2c-83f1-f0d58a933dca" class="">我有沒有做過才是重要的事</p><p id="d6605b45-5979-4905-9cf3-cf67fdc918a3" class="">人家有做過又怎樣</p><p id="143564b9-1941-4fba-8868-bf498d8f2d04" class="">2015-0613</p><p id="d571a8f2-71d7-4f8a-9a31-6761b7feb664" class="">辛蒂在講的是在同ㄧ段時間擁有兩個人生的故事，講的是分散的故事，講的是一個生命結束了另一個還得繼續的故事</p><p id="a6ac2d15-7cf2-41c9-89f9-b86f23099497" class="">2015-0613</p><p id="c28fd3c5-0c10-40a6-9dcc-7ce400d95fad" class="">純粹的自大,我是他最忠實的僕人,你不知道我多嚮往天使,我是他反面的意思,常常有人覺得我把別人當白痴,那是真的,我真的覺得你們都是白痴,不過我也僅嘲笑於此,我那忠實的僕人全身上下都讓我感到噁心,難道我都已經對你感到噁心你還只能表現如此,我最痛恨的人是我自己,如果你能知道我的回答,關於我有多滿意我自己</p><p id="70a3e35f-6281-4951-b274-d0cd09bfd19e" class="">那你便遇到我了</p><p id="328e4803-b02d-444c-8beb-492b6e1c2c2d" class="">2015-0622</p><p id="5404ba56-e421-4a58-90de-4d8bf897c9d0" class="">若你能看見自大的我幾分</p><p id="78043542-9a87-491c-a375-b87bda0a40b0" class="">那就有幾分自卑的我</p><p id="2c481fcb-c5fb-44f5-b671-cdd704b23e2d" class="">但我只能有一個</p><p id="9a226277-ebb5-4764-a571-773bab6c8a3c" class="">你能想像這之間的徘徊</p><p id="24142958-f7a1-48cd-acf7-edacce44c705" class="">被打斷平衡的感覺嗎</p><p id="7d1aed42-d228-4579-ab3e-9b96ab93d658" class="">2015-0624</p><p id="b747d08c-280a-4a10-aa72-7568e959d900" class="">有的時候我們都已經跨越時間了</p><p id="7fd0fe92-b235-4184-804c-d841f3aa42ef" class="">卻跨不過距離</p><p id="06e6308b-347b-45e8-bd24-f5c17358a462" class="">當我們跨過距離了</p><p id="0acdc0d6-12cb-471c-ae57-d1158508e227" class="">卻跨不過時間</p><p id="60776ab9-e125-445a-b623-19f2bef4c301" class="">2015-0629</p><p id="e6297417-d134-47e8-822f-b7139d0dc160" class="">美只出自於我們的不了解</p><p id="b9e41956-c4d2-406b-9fd2-8585d60c4af0" class="">就像你承認了自己的懦弱</p><p id="a620bf6f-8b33-4bf7-9a5d-10405a6e3c55" class="">現實給你的甜頭</p><p id="5a743de1-f909-4221-b46e-73bcbaf5028b" class="">有能力追到太陽的人最後只會把自己燒死</p><p id="efb8d072-68a7-4aef-b151-92ab33f52323" class="">2015-0629</p><p id="596e3a90-71aa-41d2-96db-25d9e7a8c3b0" class="">為什麼這座城堡一開始就在這裡</p><p id="f1203efb-ffd7-433b-a480-b1c9f07c7851" class="">2015-0703</p><p id="04a29002-5c28-45ad-a34c-d404c78afe6f" class="">美個選擇都蠻自私的</p><p id="7d7df9dd-8095-4877-a989-17d0becd8d92" class="">2015-0717</p><p id="63b56c6c-c2bb-44fb-883a-61eb35c4dd68" class="">每次在路上看到挖土機我就想</p><p id="c62e62d5-b73d-417b-8ff6-502b859812a0" class="">『他們回去哪裡？』</p><p id="173e4bba-7404-4c06-8113-cf67dbbd6d78" class="">2015-0719</p><p id="977a930e-6b7d-4bc8-bc26-b6bc9b0e43d6" class="">在給與名字就是施與魔法</p><p id="69ec7372-5b1a-48ed-a5ce-fdf7ddc4575f" class="">2015-0829</p><p id="06efed5b-d8c4-4ed5-9327-0968b0b3b9b1" class="">看看</p><p id="3891ac9e-d029-4689-885f-201a5956e6f2" class="">自由讓人想死</p><p id="36e21b70-d905-4218-9bc7-7656aa60e26a" class="">2015-0917</p><p id="c6de8704-fc67-47ae-96e3-06763dc3874e" class="">想找個仁依起畫畫</p><p id="ffd50c8f-79b8-433a-8409-511cf8dc0a4b" class="">所以每一筆之間都在找朋友</p><p id="6ea9c067-9824-4385-be65-469912ed05c3" class="">都在培養關係</p><p id="638d6247-4616-4e15-ba35-04e1af80e3ca" class="">他們都很不孤單</p><p id="a200b6ac-b9dd-48f8-94bd-9cd39146a144" class="">有時候我會把他們頭尾連起來</p><p id="eaf76fd7-c66c-4538-b649-2b953013d97d" class="">這樣誰都找的到回家的路</p><p id="e24ab625-e690-445d-87de-133d94687718" class="">2015-0919</p><p id="5ce205bc-34a2-4b90-bcd9-da599780688d" class="">我覺得你一定可以做出很不錯的東西</p><p id="ab59d447-823d-494c-843b-52e4b05cfb4f" class="">2015-0920</p><p id="47e55ee5-5a9e-44de-be62-663c447f0cd2" class="">我在這裡會是哲學 會是愛情 會是思想 會是電影</p><p id="237f7476-ece8-4be0-b198-ffa6e7d78da1" class="">2015-1001</p><p id="48d5c0be-4d68-4d15-b5b7-46a6464d665b" class="">一之眼睛是相信</p><p id="26ceb787-a96d-466e-8a5d-0ede5393d329" class="">一之眼睛是懷疑</p><p id="6a9f8881-ab4a-43ac-8e8e-9c6ca8767a18" class="">2015-1005</p><p id="daccbb06-1db2-441d-a40f-3b28a744baed" class="">寶藏的鑰匙不一定在寶藏身上</p><p id="22e9fb85-159d-449d-b3a6-d887c6ffd075" class="">2015-1014</p><p id="6be8119e-2065-4de3-8318-efc48724d46c" class="">成功的人從問題看到機會</p><p id="6f174311-7ae0-469d-9728-3890ce3733af" class="">2015-1020</p><p id="df1620cd-7b0f-42ee-b2ff-0eaf9a113905" class="">而遺忘是遭到當下逐漸淘汰</p><p id="da064c37-e459-4fbc-a0cb-e267e95ebb89" class="">自由是很孤單的</p><p id="0167a332-71bd-41fc-83c8-9406c979f6f9" class="">當我們擁有了遵守規則與否的權利便離失了他人</p><p id="4dddd8aa-26e7-43cf-87e4-b81f75a27bfb" class="">像在空無一物的房間裡沒有日常作息,對自身的了解不足以達到形塑的能力結果就是支離破碎了</p><p id="639d820b-2bc2-4844-a8df-d31d91f4019a" class="">2015-1025</p><p id="f71e6b86-f813-41de-98ae-fa60155622ef" class="">有很多難過的事情</p><p id="a8da4812-e043-47e2-82ef-7874591a8102" class="">就像魯味想要多一點蔥</p><p id="a3dd78f7-a824-4a5b-83ef-c3a72cb790f5" class="">麻醬面想要多一點醬 也許是之於對生活的平淡而不是什麼空缺，之於熱情則否了</p><p id="45e6e1c1-8eec-4eb9-bfc8-5d6cf8978f67" class="">2015-1027</p><p id="e8620ac5-74ba-42f7-bc3f-7f52e171795d" class="">看的到寶藏的人拿不到寶藏</p><p id="91543571-3a11-479e-814d-b7579700d3f0" class="">拿的到寶藏的人用不到寶藏</p><p id="114aefd4-dd38-41b6-8644-f7d1b1eb740b" class="">用的到寶藏的人看不到寶藏</p><p id="9664e9b4-1adc-4b38-80b8-052f0a6a1db1" class="">2015-1028</p><p id="34722fe8-8cb1-4a69-8578-b489e034ef71" class="">我撿了4個袋子</p><p id="699b01cd-bd99-430b-a8e4-d3b3745a8537" class="">但是手上只有兩個</p><p id="2e35b7f0-13cb-4da9-a7de-1bf38d6fe3e0" class="">2015-1104</p><p id="5239fca2-44d6-4249-ba03-75278475bcf9" class="">我一直犯錯而且不知足</p><p id="ecd34022-3843-45cc-b7db-824fc80e584a" class="">2015-1111</p><p id="7eeb869c-77cf-425f-9a77-e005090bd0a9" class="">你一定知道我如果想你一定是很想很想那種</p><p id="6b3d8d4d-9d91-44ee-aac7-1d6bff6d85b6" class="">所以我連一點想你都不會露出</p><p id="0f8fa23f-4bc8-48d7-8e9b-34360c716f87" class="">要是我沒過的更好一定會想你</p><p id="cc550494-00fe-4cb1-944c-096cc6ed17af" class="">2015-1113</p><p id="f2c3a1a0-18ad-4b5c-b297-1c617a428a33" class="">我沒辦法用一張圖告訴你全部</p><p id="ac81e4d5-80b7-4bd4-ae8f-803757d02b60" class="">所以我們需要相處</p><p id="5ba95565-bc97-43e9-bd8d-7e910fb361e2" class="">2015-1113</p><p id="a194a415-0c05-4cde-8637-35cae674d658" class="">看到期待著就會難過</p><p id="8442680d-a3b4-4900-8bfb-d6e8227d6a29" class="">2015-1118</p><p id="1d0e7605-4efa-4244-ad9d-af1a833501dd" class="">如果你追求美</p><p id="7a25ce49-920b-4299-baee-13ece09212d1" class="">那很殘忍</p><p id="9d18691a-f354-4c8e-bb3b-8b1790c62f6f" class="">你不是你</p><p id="02566cfc-f6b6-4170-8a84-0091a23aa3dc" class="">他不是他</p><p id="7a5a5f95-4e34-4fa8-ba48-3d8d79858a1e" class="">2015-1124</p><p id="80bbc646-dddd-4877-86d4-949764219cd0" class="">我很自大</p><p id="dbc4e131-328b-444d-9ccf-df809d430b6c" class="">我不認為我可以被淘汰</p><p id="2ffb6481-b1f8-4975-a436-318db92e026e" class="">但我也很膽小</p><p id="40919e78-1e14-4333-ab52-6c78ee14577e" class="">有幾分自大就有幾分膽小</p><p id="5f9ff615-5b88-4b67-b455-3e3cd954d5f0" class="">我也不認為自己能跟生命正面衝突</p><p id="c1c27ebf-512b-4279-91a2-cb65bd1fbeff" class="">我像四處逃竄的到處留下痕跡</p><p id="359553cf-e4ec-4e36-8002-05f2a1e14780" class="">把自己的碎片散丟在到處的草地</p><p id="2c6e5c72-0cfc-4a35-93ed-1f38c06222a1" class="">哪怕只要他漏過一個我都可能有再來的証明</p><p id="85432a0e-f4f6-493c-bf92-bb711c9d8cb1" class="">消失了就什麼都沒了</p><p id="baee38ad-c09d-49dc-8a25-92af58315f39" class="">我不害怕失去</p><p id="4a9b29a4-111f-4ea9-8d5d-b71da78b01c9" class="">但我怕還有我沒遇到的機會</p><p id="435bebaf-f74c-422b-ba65-a78564b5acfe" class="">我不知道機會永遠不會重複</p><p id="31efb6ba-5d51-4582-ba89-09548b4c4b81" class="">2015-1203</p><p id="c075ed3f-f0ad-4aa6-aac5-a16e0df94334" class="">之後我們就能在反轉反轉 反轉軸 扭軸</p><p id="b4ef5c1d-d600-42bc-b654-2cde7bc9404b" class="">突破自己的次元就有能力在次元之間穿梭</p><p id="f3b5397f-7ead-4e0c-9071-0ca5c0694d99" class="">2015-1203</p><p id="cfda2ef2-122e-49fc-934d-e4472f278b82" class="">今天我出生在他們之後就有2件事是幸運的:我能學習那些他們發現的事情,讓他們花了很多時間研究嘗試的知識,透過學習和模仿,我能花相對來說很短的時間將他們內變成我的;二來,時間會讓我超越他們,我會踩著那些我學到的事情看得更遠,而且,你覺得學習他們是一件容易的事嗎?</p><p id="69cb6fb3-62b1-4f3e-9d67-cea1b7b29532" class="">2015-1207</p><p id="074e3c10-3f4e-4456-a36b-0dcfb2c85047" class="">表現的就像一個不能接受挫折的空地2015-你問他怎麼惹,他說他想到一個很難過的事,你可以告訴我嗎,他不能,他不知道你是誰,你知道你會再來一次,我想告訴誰,但我知道沒人在意,這些人不是為我而來,後來我才知道那是晚上,我們就再也見不到了,應該發生也許就也無關好壞了,甚麼算應該,我們有辦法幻想應該的事嗎,那很殘忍,你不是你,他不是他,而且看到臍帶者就會難過,所以我們需要相處,我沒辦法用一張圖告訴你全部她是孤獨的,所以一定會想你</p><p id="dae7819b-5287-40d4-83a4-5e281402b918" class="">&lt;孤獨的夢蛋&gt; ein</p><p id="146d91e9-3890-4885-bf5c-9b588de60c31" class="">2015-1208</p><p id="78c5c2ec-4c93-41c0-bdb0-2d5b0ecb2aea" class="">我是22565 ...(中篇)</p><p id="eecd8ac2-8199-4bfa-929b-ac8160322900" class="">2015-1208</p><p id="4391e1fe-22af-416e-a39f-5404f47b70b8" class="">我找不到人 你們能幫我找到嗎</p><p id="a6bd2d3d-ac6e-4ccf-92c6-4b7d55e72da7" class="">2015-1209</p><p id="d9435d62-2cc0-419e-8d5f-fc3f8a04477c" class="">我沒的大腦把回憶整理的很簡單但實際上只要一不小心就會深現其中</p><p id="63bd3d8c-2e9e-4f94-9da8-7018651e4140" class="">2015-1211</p><p id="6077bc2a-2e61-4cea-879f-560b78b07192" class="">你以後如果問我大二在幹嘛我會說不知道，全忘了</p><p id="c2825390-3c65-4fc9-8b91-cb53062ef881" class="">2015-1213</p><p id="576580b2-7c80-4dc4-b983-e832bd328048" class="">沒有終點的旅程</p><p id="da973221-ef45-4b67-ba43-59f542cdd4b4" class="">2015-1217</p><p id="073efbd7-c886-42e0-bb5e-6236f861ff42" class="">相對於虛擬實境 雜訊的世界可能是地獄 相對之下更現實的存在</p><p id="e6c0529e-1de0-4208-a759-f08e8e636a9b" class="">2015-1218</p><p id="3bfe41d0-38c0-4900-8365-adbaf48b6e01" class="">但我們卻能幻想那些我們沒有選擇的事情導致的不存在未來</p><p id="a9e1c5ff-c9d4-47b8-b066-2ad1c4a694d2" class="">所謂的不存在就是這條時間上的過去和現在都沒有發生</p><p id="10b986e1-056a-420e-a057-b1c25cfb1626" class="">2015-1218</p><p id="ed77f3a2-46de-4eb7-ae03-9e528cf0fcf6" class="">精神不是物理 ...(中篇)</p><p id="8b25b47f-f215-4c0f-9468-09e4cf50b5ea" class="">2015-1218</p><p id="fd7898b2-109c-408c-82a6-593a97a1f04a" class="">探險者為人們探路排除路途的不確定性</p><p id="fe597dc3-a25a-47f8-9f58-fafe5e0cfe0a" class="">路燈為人們展示道路排除路途的不確定性</p><p id="2c63aa39-18c2-430b-8f26-a1ed39870134" class="">最好的路燈和最壞的探險者不能比較</p><p id="90446ed4-741c-4cda-98b5-3e0743259486" class="">2015-1219</p><p id="ac4b8b0c-84a5-4889-aa35-c5084bd1fce6" class="">人的表面積大約是一百個手掌的面積</p><p id="9aa0c59e-40ca-4d4d-bc12-c61ec20a3749" class="">2015-1228</p><p id="da3da9e2-9457-45b2-b73e-a553781222b6" class="">我喜歡的人又這樣被時間帶走了</p><p id="ec0cf718-618a-42e2-8c0c-069365535856" class="">2015-1231</p><p id="646cc7b0-3ba1-4c00-bf3d-3fbc71057b8f" class="">我只祈禱一件事 她不在乎也不知道我難過</p><p id="cc1d5a8a-7e2c-4485-b684-52586d3b47d1" class="">2015-1231</p><p id="70b19714-30d2-42d6-96d9-b4f89d337841" class="">沒事的時候我還是會想你</p><p id="75fc34f3-1e9f-4be4-a5d0-3470795d1792" class="">想在你旁邊浪費時間</p><p id="d26954ad-94f0-4984-b931-205021f6da2a" class="">
+</p></div></article></body></html>

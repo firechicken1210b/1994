@@ -1,0 +1,740 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>原石 vol.02</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="44d98537-b32b-44a1-ace6-177db74ce1c5" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">🐧</span></div><h1 class="page-title">原石 vol.02</h1></header><div class="page-body"><h3 id="65c5dde9-0994-424b-bb8e-c8676da91efd" class="">1.</h3><pre id="fade88be-ee10-42f3-bc17-b91f8c71780b" class="code"><code>如果有雲那一定很好相處
+這裡沒有鏡子
+這裡沒有空隙
+這裡沒有昨天
+這裡沒有看到過海
+但海生拍近
+海圍繞著你
+你看到海
+因為你看到自己
+但是你不能圍繞著海
+因為海沒看到你
+等到天黑了
+是海會開始牽著你
+所以等吧
+山的一邊等吧</code></pre><hr id="f88fbc83-7206-4e99-8109-eb43dda772da"/><h3 id="bf0279aa-c45b-4ab7-8859-bf7718d9e281" class="">2.</h3><pre id="b55c0f7a-d029-4986-887b-210b53c2e889" class="code"><code>我可以夢到一隻貓
+我可以作夢
+我可以感受
+如果夢是假的
+那感受也不是真的
+對我而言
+夢就是感受
+
+夢到一隻貓的感覺很不一樣
+像在有誰將自己託付給你了
+但夢裡的人不會這樣
+我看到的是誰
+
+又是誰?
+還少了誰呢
+是所有嗎
+而 真有意識 真沒有意識的 假有意識 假沒有意識
+統稱
+是包含著所有 真有意識 真沒有意識的 假有意識 假沒有意識
+誰</code></pre><hr id="03243c23-6d19-4c02-a6dc-a0a49f8dc91a"/><h3 id="63b28363-d641-497e-9e04-6afa4cf59a9e" class="">3.</h3><pre id="313c1130-a2db-46e0-a904-6b7eaeb8a2a1" class="code"><code>大自然醒</code></pre><hr id="ace12d91-d62a-4a9b-bd9d-d66570db958f"/><h3 id="971e2410-a66e-4f8f-91df-a15b08bedd7c" class="">4.</h3><pre id="25f6771f-4226-45e5-9a0f-4302fb910a8a" class="code"><code>我會替有些人想太多
+像是她就像過客
+所以不能喜歡她
+她的生命中有太多人喜歡她
+但沒有人看到她
+所以她身邊站著人但沒有人陪著她
+但她很漂亮
+也許大家都是這樣想的
+在沒有看到的時候想不起來漂亮是什麼意思
+然後看到你的時候又會覺得熟悉
+妳身上的漂亮離不開親切
+也許妳會說哪有人可以被剝離背景的去討論
+但要怎麼認識妳
+我想知道我想認識的是誰也許更勝於認識妳</code></pre><hr id="ba58c3b3-8ae9-48f5-881a-8f1b5afe6353"/><h3 id="80ad1e9d-4336-4bd0-a531-2eba77b1abad" class="">5.</h3><pre id="fe56fa21-466c-45e6-9118-0ae7bc5da2e5" class="code"><code>我也許比較屬於前者
+我不在意過去存在失敗
+雖然很不甘心但我生命中充滿妥協
+我沒有態度
+只希望自己的態度能適合每個環境
+我適合遺忘
+因為我全部都放不下
+而遺忘不是那麼能主觀決定的
+你跨得過你的心魔嗎
+會不會其實我就是懦弱
+我以為我是漸漸在了解自己是適合妥協的人
+但其實我只是不敢面對現實
+價值觀是什麼
+但我還是愛自己</code></pre><hr id="27c3dee5-8cdf-443f-9c4d-d72988b34f95"/><h3 id="e04d56f7-13d4-49c0-8596-55e5a5f0c035" class="">6.</h3><pre id="d1a96c08-ff52-4424-9ab4-0d2744ab2671" class="code"><code>智慧應該被傳承嗎
+什麼是智慧
+每個世代對於問題都有不一樣的解釋
+時代更易的速度越來越快
+社會制度跟不上實際人們的需求
+父母教導給我的東西無法繼續沿用
+我們在未來該以什麼樣的方式生存及累積</code></pre><hr id="cb8c2f32-7ed9-43d6-93d9-b6f7fbbd36be"/><h3 id="93fbef51-65b1-4273-82b9-ece2fe86348a" class="">7.</h3><pre id="24b2ccc8-d412-4ec3-8271-14acfd14114f" class="code"><code>想不起來但沒有忘記所以好放棄明天
+明天是雨是明天是雨
+被認為是指定的是
+好無辜
+卻沒人辯解
+又被誤解
+誰想知道一個人的自言自語不懂得體諒
+
+可不可以像是現在的時間一樣永遠回不去
+
+我看我自己
+你的目光在看誰
+是在哪時候的他
+四目香蕉
+自動換行的香蕉會比過一夜的相處
+像是時間會帶上闔眼
+所以他會願意離開
+不是誰的原因
+
+誰會知道漩渦裡不是我想知道的去向
+
+我沒有跟誰有互動
+我是不知道我是誰的誰
+你是不是開心呢
+有些事情像是雨中的冰塊
+泡在雨裡的人泡在時間</code></pre><hr id="e9715c83-a318-4baa-b9a1-ef9575b87eaa"/><h3 id="78d7cef0-c217-43ba-9310-366c472dfe27" class="">8.</h3><pre id="bc69a1cc-ec97-40a1-9e6e-91bd9ae1be11" class="code"><code>我是他的使命
+他深深的相信他是過去某個人的使命
+
+你是他嗎
+我不是
+我是
+可是他不是希望做出下一個他嗎
+那是他的使命
+那是我</code></pre><hr id="85c9e847-0c75-4c9e-8770-bde79d9edcd3"/><h3 id="45631aa4-6d75-4fdd-9124-672b971ef36b" class="">9.</h3><pre id="d21686a5-edf7-4a40-a905-ad9a12c75f40" class="code"><code>回憶過去的事情
+回憶一種事件的重現
+記憶將事件後來的重現視為當時的事件
+我們越是努力回憶
+回憶越是模糊不清</code></pre><hr id="56ffcf35-c16d-45d9-bdc2-d46a9fd03016"/><p id="142ae119-765c-4d6c-b790-4d8d44c83f78" class="">
+</p><p id="313e2996-90f2-49ac-af3f-bc973450fe0b" class="">
+</p><p id="73ae600e-cebc-4b4d-a156-9f7fe1830639" class="">
+</p><p id="80ae8fd9-6867-42a4-9b0c-71cbb5457ee8" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mi>e</mi><mi>s</mi><mi>c</mi><mi>r</mi><mi>i</mi><mi>b</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Described</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">Descr</span><span class="mord mathnormal">ib</span><span class="mord mathnormal">e</span><span class="mord mathnormal">d</span></span></span></span></span><span>﻿</span></span><div class="indented"><p id="e9f9a5b0-1729-4a86-b307-a35202493b8f" class="">
+</p><p id="ae8afd70-044a-42de-8215-1252d40f79d9" class=""><em><span style="border-bottom:0.05em solid">原石vol.02</span></em> is writen in 2017 and contains a total of 9 poems.
+First and only edition print for few friends.</p></div></p><p id="e147301f-30f0-4fa1-b1b8-4763ac744d24" class="">
+</p><p id="ed29fc93-7ff3-430e-8e38-20650851f23e" class="">
+</p><p id="dc6139f4-16ec-4e34-ad51-8fee3ebbf831" class="">
+</p><p id="4d09e297-724e-4c12-a6b9-172a31d2b88c" class="">
+</p><p id="0bcf15cc-3dfa-405f-892c-1550c940109d" class="">
+</p><p id="2ea56bfb-1c94-45db-9e47-601508685824" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi></mrow><annotation encoding="application/x-tex">Preview</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord mathnormal">re</span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mord mathnormal">i</span><span class="mord mathnormal">e</span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span></span></span></span></span><span>﻿</span></span></p><p id="0793c2ac-5c2b-4734-a5eb-cd430f06d479" class="">
+</p><figure id="6fed2e6b-12d0-42a1-8a48-4aec4f640040" class="image"><a href="%E5%8E%9F%E7%9F%B3%20vol%2002%2044d98537b32b44a1ace6177db74ce1c5/Untitled.png"><img style="width:192px" src="%E5%8E%9F%E7%9F%B3%20vol%2002%2044d98537b32b44a1ace6177db74ce1c5/Untitled.png"/></a></figure><figure id="80f90ddb-5782-454a-ac34-a130f26f64aa" class="image"><a href="%E5%8E%9F%E7%9F%B3%20vol%2002%2044d98537b32b44a1ace6177db74ce1c5/Untitled%201.png"><img style="width:192px" src="%E5%8E%9F%E7%9F%B3%20vol%2002%2044d98537b32b44a1ace6177db74ce1c5/Untitled%201.png"/></a></figure></div></article></body></html>

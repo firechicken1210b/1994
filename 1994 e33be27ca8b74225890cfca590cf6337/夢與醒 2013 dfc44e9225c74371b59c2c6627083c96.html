@@ -1,0 +1,976 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>夢與醒:2013</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="dfc44e92-25c7-4371-b59c-2c6627083c96" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">🎴</span></div><h1 class="page-title">夢與醒:2013</h1></header><div class="page-body"><p id="6934a5cd-1552-4d7b-ba09-78b6fe2f3141" class="">
+</p><ul id="8a5ce697-c9ff-4545-b8cb-e62c915bb520" class="block-color-gray_background bulleted-list"><li>2013-0102 00:05
+振點
+在發呆的瞬間擦過醒來的瞬間的振點小鎮晃擴增空間 打開更大的空間</li></ul><ul id="add9233f-10ce-4bcb-b8bd-fcd1b8076409" class="block-color-gray_background bulleted-list"><li>2013-0107 00:24
+但不是今天晚上
+因為還不夠悲傷</li></ul><ul id="fdb75e01-7c39-45ad-a3ae-7aa66ec5d422" class="block-color-gray_background bulleted-list"><li>2013-0109 09:47
+台中人
+瓶中人被丟進陌生的人海,少了闢戶要怎麼生存</li></ul><ul id="2c2743ab-b75d-4952-8ec3-f5c9e1b7db2a" class="block-color-gray_background bulleted-list"><li>2013-0109 10:17
+別忘了
+明天的雨是為了符合我的雨聲才發生,還是
+如果手機首播未來的聲音和未來同時發生,那手機裡的聲音可能就不是未來了
+那未來不等於未來是不是能有其他改變
+可能不是未來的不影響未來
+手機裡錄的明天的雨不是科技造假,未來不會變,明天本來就會下雨
+手機裡錄了一段明天的雨,五金車後剛好一分鐘會有一台摩托車經過,你猜我撿起的是未來的手機,還是我回來過去
+未來能被創造?</li></ul><ul id="5f8a9db6-0723-479a-a265-a6dec36a3cef" class="block-color-gray_background bulleted-list"><li>2013-0109 10:17
+未命名紀事</li></ul><ul id="0cd30237-1178-415d-b946-acaac64de96b" class="block-color-gray_background bulleted-list"><li>2013-0112 23:17
+你
+她媽知道我也當你不知道
+就算你知道我她媽還是要提醒你知道</li></ul><ul id="bd07b568-ea5d-44c3-aaf2-24c59a142714" class="block-color-gray_background bulleted-list"><li>2013-0114 15:03
+我們常常活在自己嚇自己的緊繃裡
+,所以部會生病</li></ul><ul id="510d51d2-ecd9-4a8f-8994-86434d81d7e8" class="block-color-gray_background bulleted-list"><li>2013-0114 23:35
+心情能不能一直很平靜</li></ul><ul id="186141e9-5533-43bb-8adf-3faa827e896b" class="block-color-gray_background bulleted-list"><li>2013-0115 23:58
+好
+向全世界都長大了
+只留勝我一個人在這裡</li></ul><ul id="c359f335-606a-4e8f-b517-52e8cb74441c" class="block-color-gray_background bulleted-list"><li>2013-0116 19:05
+喜歡看爛片
+因為容易找到驚喜</li></ul><ul id="2a63e9ac-77a7-4e09-b611-3f9f5809e0aa" class="block-color-gray_background bulleted-list"><li>2013-0124 10:52
+你
+都在罵她了
+她還在為了你好</li></ul><ul id="4a69115a-087d-4dba-b191-da5132df691a" class="block-color-gray_background bulleted-list"><li>2013-0219 00:52
+I
+因為想睡覺才難過</li></ul><ul id="53e73507-988e-4b84-9c3d-2514cc16d120" class="block-color-gray_background bulleted-list"><li>2013-0219 00:53
+ㄠ
+熬夜的優越
+感</li></ul><ul id="59dd62c1-4ab0-4225-ae4d-c85a25ea986d" class="block-color-gray_background bulleted-list"><li>2013-03022 11:22
+不是什麼改變了是我不知不覺
+那些事情慢悄悄的接近,你又怎能要求我一的叛逆去阻止,它們太小孩子氣,去堤防那些心機過早過早,我只能任由他們慢慢接近於我後腦勺下方,築巢穿孔</li></ul><ul id="06c9bd1a-b428-4e3e-a57d-7a87a6b3b0b1" class="block-color-gray_background bulleted-list"><li>2013-03021 03:06
+去詮釋想法太過孤獨
+是願意貶低想法還是抬高詮釋
+仍去模擬揣測
+是因為我怕有人也瞎於那個孤獨
+好自戀只有自己是顆爛草莓
+又想脫誰下水</li></ul><ul id="5749c5b0-5ba9-461b-abfd-3696c99ca206" class="block-color-gray_background bulleted-list"><li>2013-0302 18:14
+我以為有人等我回來
+所以我才這麼努力</li></ul><ul id="cee3c25f-d2be-4638-bb45-adcbef6c7902" class="block-color-gray_background bulleted-list"><li>2013-0311 10:49
+明明有
+這麼多話還沒說
+為什麼為什麼你急著離開</li></ul><ul id="72fdaed0-d0b3-4bec-a285-10cce190b3c7" class="block-color-gray_background bulleted-list"><li>2013-0315 15:45
+我們會看路上的行車路過的行人
+那是我們不願意低就
+不願意高攀</li></ul><ul id="4278fa03-bf2e-4686-a053-d75f26680972" class="block-color-gray_background bulleted-list"><li>2013-0316 21:05
+全力展現你的缺點</li></ul><ul id="91e3ebf1-d2c2-48f7-a8a0-ffa255d0c29b" class="block-color-gray_background bulleted-list"><li>2013-0331 21:11
+ㄍ
+要救誤會吧
+那都是活下來的人的權利
+給我所敬愛的每個你
+誰能相信十年能被你這麼縮短</li></ul><ul id="598be761-30f1-4ebe-b055-fff67d7eae90" class="block-color-gray_background bulleted-list"><li>2013-0402 23:17
+ㄑㄉ
+我不怕跌倒或是失敗
+因為我知道我的終點一直是成功
+這便是簡單的一個道理
+天才不需要理論</li></ul><ul id="3a83f72e-3a6b-421d-8d57-479177519f35" class="block-color-gray_background bulleted-list"><li>2013-0412 00:35
+會
+不會有多怪聲音都趁你挖耳朵的時候出現</li></ul><ul id="bd17a5a7-c3a6-4348-8edc-96a457bc5a6b" class="block-color-gray_background bulleted-list"><li>2013-0412 15:48
+再來淺談一下
+我叫周嘉偉今年18歲
+我是左撇子
+他是左手大拇哥剛好跟我同年
+而他是右手大拇指可以凹
+我的爸爸媽媽都很愛我
+也支持我選實踐
+我也剛好是我弟弟的親哥哥
+家聽關係真的是非常健康</li></ul><ul id="04fb9768-2258-4a9d-929c-d83be6479874" class="block-color-gray_background bulleted-list"><li>2013-0412 15:56
+媽
+媽說喜歡我的畫
+雜意
+感覺他很難過
+就喜歡這種氣氛但
+不知道為什麼
+期待
+感覺他也很難過但看他的
+眼神好像在等待什麼東西</li></ul><ul id="913ce18a-b208-423f-b793-6a1203ca7a29" class="block-color-gray_background bulleted-list"><li>2013-0413 13:16
+背濕
+
+七樓
+背濕
+醬油
+
+書包好重休息室食物
+看作品 紙掉 嚇
+看座位嚇人
+偷瞪 結果都在手機</li></ul><ul id="bada85f6-4c27-46c8-9784-345861d93a41" class="block-color-gray_background bulleted-list"><li>2013-0502 09:02
+我
+我們會因為以為自己善於整理而自以為自己有天份
+努力去專精
+若是幸運
+我們終於為努力脫俗而嘗試瘋狂
+可是我們冒險瘋狂
+冒險變化
+真的不能遺忘初衷</li></ul><ul id="458ece5b-6f11-40d8-8d5c-fde6a61fbed4" class="block-color-gray_background bulleted-list"><li>2013-0510 11:51
+沃
+我沒自己想的那麼聰明
+那麼幸運
+那麼有魅力
+我們遭魅力襲擊
+我們很願意放下防備
+活這短短幾年
+能被迷惑有多好
+我們一直在尋找自以為的同類</li></ul><ul id="576e1e14-19af-4785-a869-6ab2fa2244b7" class="block-color-gray_background bulleted-list"><li>2013-0525 22:23
+收集
+改波伊斯
+人們,犧牲自己,使我們得以成為我們
+我們來到這個世界上,然後死亡,但是,在生與死之間,我們靠動力給無目的的生存賦予意義(培根)
+如果沒人聽,這個傳達者就變得無意義 波伊 斯</li></ul><ul id="351defa8-4e5e-46ea-97da-e250f3d6f57f" class="block-color-gray_background bulleted-list"><li>2013-0529 19:00
+ㄕㄕ
+和她的第一次約會,我可是等了一輩子</li></ul><ul id="c1eddf12-6837-4127-bb87-51893d14f601" class="block-color-gray_background bulleted-list"><li>2013-0530 23:36
+紀錄
+5/23 11:56 摩擦哭聲
+5/30 11:36</li></ul><ul id="cdfae5c8-9bb0-4a08-bf49-8a9e0ab7842d" class="block-color-gray_background bulleted-list"><li>2013-0602 13:47
+假設基於一個誠實的角度去討論</li></ul><ul id="af59b330-9402-4adf-8fba-5071423625a5" class="block-color-gray_background bulleted-list"><li>2013-0606 23:22
+lost in time</li></ul><ul id="5c207c10-02ab-4592-951a-c0a9212f599e" class="block-color-gray_background bulleted-list"><li>2013-0609 21:08
+一輩子每個相遇
+都是一次重逢</li></ul><ul id="94a5040c-ef97-400a-a7ba-34294781ab3e" class="block-color-gray_background bulleted-list"><li>2013-0614 12:27
+我能體會生死的分離
+卻又離奇的相遇
+不回首過去所以部會傷心貪心
+能接受一切的轉換
+無心接待每一個未來的無限夢</li></ul><ul id="a68741b1-26ac-4e02-824b-0d04d2cc56f1" class="block-color-gray_background bulleted-list"><li>2013-0614 12:37
+盡情去蒐集你所愛的世界
+人會笑你的不切實際
+但夢會無償滿竹你
+就算失去分享的喜悅
+但得到快樂卻遠大於此
+他們在現實付出200分的努力以求80分的回報
+你在現實付出80分的努力卻可以得到200分得滿足
+你的自私為自己的愛而圓滿</li></ul><ul id="1b7c2bf4-0d15-4db3-870c-cebc048feae0" class="block-color-gray_background bulleted-list"><li>2013-0630 16:28
+圖6</li></ul><ul id="ad784e53-a8c3-49df-bc94-3b2daf90ad3a" class="block-color-gray_background bulleted-list"><li>2013-0630 16:31
+圖5</li></ul><ul id="10aef4b6-cc07-48ce-b0ca-16ce2825983a" class="block-color-gray_background bulleted-list"><li>2013-0702 00:07
+雖然你煮ㄉ菜ㄅ太好ㄘ,但u一種特別ㄉ味道</li></ul><ul id="b53f2a5f-1c31-4820-930c-ef87c645ab5d" class="block-color-gray_background bulleted-list"><li>2013-0714 01:15
+我想告訴誰,但我知道沒人在意,這些人不是為我而來的</li></ul><ul id="69df46f1-875d-4117-88c1-447e8349393a" class="block-color-gray_background bulleted-list"><li>2013-0714 21:38
+要讓人家說出真正的想法就是不要問</li></ul><ul id="fee5c5a5-07c3-4996-b446-1bfe35841e30" class="block-color-gray_background bulleted-list"><li>2013-0714 22:43
+如果下雨天在巴士站碰到一個渾身溼透的妖怪,請把雨傘借給他,他是進入森林的護照,如果你能遇見她,幸福將降臨你身上</li></ul><ul id="8a342116-2388-4680-8dc8-61914e7c52b7" class="block-color-gray_background bulleted-list"><li>2013-0715 12:19
+你不能以為自己身在一個團體,你會以為自己有超過一個人的力量</li></ul><ul id="e39b1014-c80a-46d2-8896-30992ddd3296" class="block-color-gray_background bulleted-list"><li>2013-0722 01:59
+有的信耶穌有的信媽祖
+各有各心中的神</li></ul><ul id="3ce0af75-2af8-40d9-9c48-a4866b621e25" class="block-color-gray_background bulleted-list"><li>2013-0722 02:01
+房子蓋在海上
+所以
+只有一生漂泊了</li></ul><ul id="d4d50fdf-74ff-416a-8c00-05f0b25ff280" class="block-color-gray_background bulleted-list"><li>2013-0723 02:51
+我們要如何把蒜處理得很兇很
+把它搗成泥
+因為蒜泥狠</li></ul><ul id="2b702599-b0b0-47c5-be2b-6848737ac33e" class="block-color-gray_background bulleted-list"><li>2013-0724 21:53
+練的是意志力鞥鞥
+撐過去94ㄋㄉ</li></ul><ul id="124a3b29-a9a9-4598-a596-1e2e353f45f4" class="block-color-gray_background bulleted-list"><li>2013-0724 22:23
+今天如果你要付一個結論於他人
+先想自己有沒有本事施予
+在想自己有沒有本事承受
+在想他人有沒有本事接受</li></ul><ul id="9e9a76a4-a8c4-4d1a-a231-b329b3c4efcc" class="block-color-gray_background bulleted-list"><li>2013-0801 03:14
+三點
+
+設計,預設我知道使用者立場
+就像商業的目的性
+他試圖串改 渲染 感動 人心
+他是不同靈魂的橋樑
+他是武器
+他是惡魔
+是為了愛的人能過得更好
+藝術,他沒有使用者
+他更偏向自私
+他更遠離分享 體諒
+他有點像是紀錄
+像是只有一個人(靈魂)活在一個地方
+一個地方的地平線上只有一個人(靈魂)</li></ul><ul id="032fc666-fb1e-40e6-918b-b2c0fd413e16" class="block-color-gray_background bulleted-list"><li>2013-0827 12:52
+圖4</li></ul><ul id="5fefb7cd-1c69-4f63-8d7d-ab3932c1e77a" class="block-color-gray_background bulleted-list"><li>2013-0830 18:22
+玩電腦腳扭到</li></ul><ul id="24e14d2d-d6e6-4aa1-a000-b174821e35c0" class="block-color-gray_background bulleted-list"><li>2013-0909 13:25
+.
+(自傳)</li></ul><ul id="c79f24ab-3fb6-4c23-be77-05383feaad1b" class="block-color-gray_background bulleted-list"><li>2013-0909 19:15
+用</li></ul><ul id="0b393fd6-ee15-489f-bdb8-90381d865b9a" class="block-color-gray_background bulleted-list"><li>2013-0909 19:19
+食</li></ul><ul id="6a353431-d8ee-4226-9506-e74e47779060" class="block-color-gray_background bulleted-list"><li>2013-0915 12:42
+死定惹</li></ul><ul id="75ff1c77-4bfd-41b1-b5d1-ea39e0bb57be" class="block-color-gray_background bulleted-list"><li>2013-0915 16:05
+35+30+70
+50+50+50</li></ul><ul id="c1ee9174-bd28-45f3-a5e4-ee8c829c5b9e" class="block-color-gray_background bulleted-list"><li>2013-0916 12:12
+看
+到一些很曖昧的句子
+會好像想到某人
+但就一剎那閃過而已
+也不知道是誰</li></ul><ul id="1156f4bd-2742-4272-a61d-ba3a1b604790" class="block-color-gray_background bulleted-list"><li>2013-0916 12:32
+談戀愛就跟鞋帶一樣
+有些就是綁得又勞又久
+有的就是每天都散
+像我左腳
+我都乾脆塞進去就好</li></ul><ul id="60c016ea-e4b9-401a-8755-992bce0b60c9" class="block-color-gray_background bulleted-list"><li>2013-0916 16:14
+我可以為了你而死
+但我不能為了你而活</li></ul><ul id="318e198c-3845-457b-9930-a20f212c6546" class="block-color-gray_background bulleted-list"><li>2013-0916 16:54
+看不懂
+的人不是笨 只是忙</li></ul><ul id="7dc27632-9634-4207-bee0-9a16368369a1" class="block-color-gray_background bulleted-list"><li>2013-0916 17:42
+we r all alone
+我們會被潛移默化
+但把握能調整的</li></ul><ul id="80f1edac-d284-4f3f-88df-f710f64043b1" class="block-color-gray_background bulleted-list"><li>2013-0918 11:36
+我
+是來這個世界學東西的
+如果想當天才或稱王救回我的世界就好惹
+沒人喜歡天才</li></ul><ul id="0de3e4df-6684-4de5-b39e-a6f2cb110662" class="block-color-gray_background bulleted-list"><li>2013-0920 21:02
+差
+了20分鐘
+而已嗎</li></ul><ul id="15ba31d5-d95b-4ddc-a94e-16fe50624bee" class="block-color-gray_background bulleted-list"><li>2013-0922 01:03
+有
+些懷念別人是希望某天也被懷念</li></ul><ul id="881b5813-e2b1-4c63-ad99-34cbcb79adb3" class="block-color-gray_background bulleted-list"><li>2013-0922 10:55
+我忘了我的屌是誰</li></ul><ul id="04683655-7c6b-46ab-be04-3ae6524783a4" class="block-color-gray_background bulleted-list"><li>2013-0922 11:14
+拿
+掉地平線你就好高
+因為天空太高了 你不知道自己多矮</li></ul><ul id="e374a2d2-4cf7-4448-8b71-7d2ef1e3d6d1" class="block-color-gray_background bulleted-list"><li>2013-0922 11:39
+ㄕ
+愛你像愛自己</li></ul><ul id="23422473-6866-4756-bff1-e56bac862a05" class="block-color-gray_background bulleted-list"><li>2013-0928 09:58
+也
+許我腦子以後會不停有想法
+我以我應該趁現在享受安
+寧</li></ul><ul id="2b45a8a1-7ad3-4462-8286-c3c118206569" class="block-color-gray_background bulleted-list"><li>2013-0928 09:59
+原來
+引擎聲也可以想家</li></ul><ul id="e7205269-88ba-4c7c-8b0a-1342d2dc51e5" class="block-color-gray_background bulleted-list"><li>2013-0928 10:02
+願意
+等你的人
+總是都在等你</li></ul><ul id="02b77c31-d5b1-4aaa-a7c1-1d5d507ad8db" class="block-color-gray_background bulleted-list"><li>2013-0928 10:06
+想睡覺的
+時候感覺很難過
+很難過的時候就裝想睡覺</li></ul><ul id="4e086665-d023-478a-ba05-9bc2f8bb59e2" class="block-color-gray_background bulleted-list"><li>2013-0928 10:20
+我
+有一個朋友跟我說
+小時後的眼淚比較鹹
+之後的眼淚比較苦</li></ul><ul id="2073dce0-5175-4bb6-824a-c3c9ee05fdf1" class="block-color-gray_background bulleted-list"><li>2013-0929 14:05
+在人前
+流的眼淚
+是用難過
+換取安慰
+然後你有安慰
+但你就沒有難過了</li></ul><ul id="591a0be5-6001-45a9-878a-421287d527a2" class="block-color-gray_background bulleted-list"><li>2013-1006 19:38
+相信你是我的令一個天堂</li></ul><ul id="0fe55b63-f926-4931-be61-f7b0ccbe75b7" class="block-color-gray_background bulleted-list"><li>2013-1006 20:16
+1
+個人ㄘ沒參語的喜酒剩下的剩菜</li></ul><ul id="8c559b8d-3e25-4233-b07f-3e3256239deb" class="block-color-gray_background bulleted-list"><li>2013-1008 13:20
+我
+這輩子無法完成的
+希望你們都能完成</li></ul><ul id="a5535c42-85b9-4ab0-acc1-f6484b161b32" class="block-color-gray_background bulleted-list"><li>2013-1009 23:05
+圖3</li></ul><ul id="8d7a9134-7297-4761-aadd-8795ea76bc7c" class="block-color-gray_background bulleted-list"><li>2013-1012 01:55
+現在可以公開的情報:
+台北的人兒跟慢速的機車可能是源於同類速度種祖先</li></ul><ul id="d19b9a84-db08-4fe9-ba88-8d1ff8730c84" class="block-color-gray_background bulleted-list"><li>2013-1012 01:55
+騙人
+不習慣家的床
+好緊張</li></ul><ul id="aa0b1a7e-1d81-424b-8509-3156b9ce5df0" class="block-color-gray_background bulleted-list"><li>2013-1012 02:01
+摁
+我:在家真好
+媽:在家什麼都好</li></ul><ul id="917ea778-df12-461a-ad6d-626d48e5738a" class="block-color-gray_background bulleted-list"><li>2013-1012 11:36
+在
+夢理能不能學習或認識</li></ul><ul id="b682adc1-55bf-43eb-8fd0-5858aec7831c" class="block-color-gray_background bulleted-list"><li>2013-1012 11:36
+害怕跟
+你們一樣弱小</li></ul><ul id="8629a31d-01f6-4a4a-8b28-e16e8c5fc5c9" class="block-color-gray_background bulleted-list"><li>2013-1012 19:30
+圖2</li></ul><ul id="71b2fa1f-12e0-440f-a6cc-d07476ab16cf" class="block-color-gray_background bulleted-list"><li>2013-1015 13:57
+對於一些用眼睛無法看到的東西,或是被忽略的事物予以關懷</li></ul><ul id="a3651d4f-159f-427a-a555-bfc781117865" class="block-color-gray_background bulleted-list"><li>2013-1021 22:10
+我
+覺得他們都會很喜歡我</li></ul><ul id="94256e3f-c4d0-43bf-98a3-e826df797a92" class="block-color-gray_background bulleted-list"><li>2013-1104 12:28
+ㄨ
+ㄛˇ表現的就像一個不能接受挫折的空地</li></ul><ul id="97787bb8-e879-4481-839b-0041be141540" class="block-color-gray_background bulleted-list"><li>2013-1104 12:42
+旋轉拉屎秀</li></ul><ul id="b9ab0b00-0326-4e30-903f-698fb20c47cc" class="block-color-gray_background bulleted-list"><li>2013-1104 12:42
+海嘯麵</li></ul><ul id="3840f015-71dd-470c-a6d2-cc1984652186" class="block-color-gray_background bulleted-list"><li>2013-1104 15:32
+他開始大哭
+你問他怎麼惹
+他說他想到一個很難過的事
+你可以告訴我嗎/
+他不能
+他不知道你是誰</li></ul><ul id="4b360eb4-de26-41f2-8a36-c7297ea3cfaf" class="block-color-gray_background bulleted-list"><li>2013-11081912
+心理都是你忘了我是誰</li></ul><ul id="2b8d315e-1dbf-4727-a439-720924fc918e" class="block-color-gray_background bulleted-list"><li>2013-1111 08:48
+難過到了極點</li></ul><ul id="adc18bfa-5547-41aa-a75d-51cdc70e35f4" class="block-color-gray_background bulleted-list"><li>2013-1111 09:39
+你就想
+你買了一支好大把的水槍
+單手拿起來真是超帥ㄉ
+但被人家借去玩
+給你一支塑膠透明小水槍代替
+回家的時候
+還發現打氣的壓管被人玩壞了
+他們都互相推卸責任
+為什抹你們要這樣對我</li></ul><ul id="c2c14934-244b-4005-9520-891e86f37351" class="block-color-gray_background bulleted-list"><li>2013-1113 12:25
+人
+生來破壞而已
+破壞後的東西
+才能讓人猜測他的不凡</li></ul><ul id="e7f14041-ae2c-4958-9bf4-b20ab8be31ff" class="block-color-gray_background bulleted-list"><li>2013-1114 21:47
+愛情特快車</li></ul><ul id="3a9712c3-8286-4d0e-a605-df91a9bec473" class="block-color-gray_background bulleted-list"><li>2013-1120 10:59
+我們是出走的小孩
+比誰跑的遠</li></ul><ul id="8c4389bb-f64c-4982-9848-839c6ebaa66d" class="block-color-gray_background bulleted-list"><li>2013-1120 11:01
+遲早都要回家</li></ul><ul id="c09aad57-920c-4bc8-a451-05bafdb62da8" class="block-color-gray_background bulleted-list"><li>2013-1120 11:33
+Fevil
+Conster</li></ul><ul id="2638e494-f06d-4cae-88b9-97e3104e41e7" class="block-color-gray_background bulleted-list"><li>2013-1121 00:52
+我是湯牧</li></ul><ul id="24961c7e-580c-4374-9318-a3c4a7116721" class="block-color-gray_background bulleted-list"><li>2013-1121 10:54
+就把他當作一場夢好了
+有些夢醒來就忘了
+有些夢你只剩下片段
+大部分的夢你記也記不久
+現在我醒了
+什麼夢會記得</li></ul><ul id="0885d8fe-5167-4d9f-addc-dbf70b349232" class="block-color-gray_background bulleted-list"><li>2013-1121 11:02
+現在幾點了
+另一個念頭大喊
+別看
+結果打開手機就看到了
+記路這段話</li></ul><ul id="6b2faa9a-425f-4f16-9661-ba75d0df6b2f" class="block-color-gray_background bulleted-list"><li>2013-1121 11:11
+一目瞭然一目了然</li></ul><ul id="c64675d8-0acc-405a-9c77-5cee946db280" class="block-color-gray_background bulleted-list"><li>2013-1122 14:57
+000=x
+x01=y
+y</li></ul><ul id="b7283093-2845-4e7f-84fb-2bc2a6e6ac04" class="block-color-gray_background bulleted-list"><li>2013-1123 20:54
+我是尼克歐</li></ul><ul id="018ffdc2-1857-4602-8d4a-cfcd8259e2ff" class="block-color-gray_background bulleted-list"><li>2013-1123 20:55
+我討厭
+以為自己比我偉大的人</li></ul><ul id="7d0da939-db32-4f22-ae39-0a0fd541cc6e" class="block-color-gray_background bulleted-list"><li>2013-1207
+他什麼東西</li></ul><ul id="3301220e-d660-401b-a8d7-419447532855" class="block-color-gray_background bulleted-list"><li>2013-1207
+他每天都來ㄘ</li></ul><ul id="cb698b7a-41a2-42c3-b604-6a59d5970885" class="block-color-gray_background bulleted-list"><li>2013-1212
+你知道你會在來ㄧ次
+在夢裡</li></ul><ul id="6f53b378-2328-47d7-805b-933e201803d8" class="block-color-gray_background bulleted-list"><li>2013-1213
+海上有三ㄧ個亮點啦
+32個
+有綠點是殺小
+還有紅的</li></ul><ul id="0d33bb9e-ac21-4b46-a6b0-fe6331ff821a" class="block-color-gray_background bulleted-list"><li>2013-1214
+我們十ㄧ點起來,他說這首超好聽,現在輪到luckyman,他也一直在唱,沒ㄧ句唱對,他拉我棉被,幹琳拉阿,然後是wonderwall,我把他切掉,其實也沒想切
+下首爛死了</li></ul><ul id="94888dad-f0e1-4267-acad-b1a4bd2a2dbb" class="block-color-gray_background bulleted-list"><li>2013-1215
+他死了
+就聞不到他的味道了</li></ul><ul id="963573ce-f6d4-4f04-8e6a-902afb4f304b" class="block-color-gray_background bulleted-list"><li>2013-1217
+你壓碎了我的十字枷</li></ul><ul id="eded0de0-a4ba-4319-a9c0-c123f950f067" class="block-color-gray_background bulleted-list"><li>2013-1218
+中國古人認為，人死變鬼，鬼死變?。人有影子，影子也有影子——影子的影子叫魍魎。人怕鬼，就像鬼怕?一樣，這個在蒲松齡的《聊齋誌異·章阿端》中有過記載</li></ul><ul id="4b9891c6-868e-43a4-9e71-ddc197975b64" class="block-color-gray_background bulleted-list"><li>2013-1218
+最大的風險不是失敗
+而是過得太安逸了</li></ul><ul id="3a53adbe-1845-4960-853b-b28fabae7236" class="block-color-gray_background bulleted-list"><li>2013-1219
+精靈住在棉被裡</li></ul><ul id="c4228162-1cbd-419f-a05f-3a3c7bc7b074" class="block-color-gray_background bulleted-list"><li>2013-1220
+當你跟他一起工作
+你總覺得自己不是凡夫俗子</li></ul><ul id="fe56446e-40d4-4a76-823b-54b24f6c0514" class="block-color-gray_background bulleted-list"><li>2013-1220
+只有舞蹈</li></ul><ul id="4bab2d7d-47c1-46c3-b209-d7f284450f39" class="block-color-gray_background bulleted-list"><li>2013-1221
+好像要失去不少秘密
+才能解放思想</li></ul><ul id="1c53fb08-5e87-4547-93c3-ec87efa5e0d9" class="block-color-gray_background bulleted-list"><li>2013-1221
+羊肉爐69
+麵63
+豆皮30
+肉100
+金針菇28
+菜18</li></ul><ul id="2e3684e6-0bdc-4a3b-af67-b8ca69059ce0" class="block-color-gray_background bulleted-list"><li>2013-1222
+狩獵
+捏造出自由的精靈來飼養
+然後命名設計</li></ul><ul id="9125343b-ca23-435b-8a56-e12e1e195fa5" class="block-color-gray_background bulleted-list"><li>2013-12221457
+全部都變了
+全部都變了
+而且你吧能難過
+因為沒人知道
+我要死了
+還有好多事沒做
+好多人沒愛
+好多人在等我</li></ul><ul id="cde0d7ca-7304-4418-ad5e-362413959cc5" class="block-color-gray_background bulleted-list"><li>2013-1223
+你給我ㄧ頓飯
+我就能給你ㄧ天</li></ul></div></article></body></html>

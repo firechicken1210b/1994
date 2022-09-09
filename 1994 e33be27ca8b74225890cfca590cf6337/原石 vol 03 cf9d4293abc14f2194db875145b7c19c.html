@@ -1,0 +1,1027 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>原石 vol.03</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="cf9d4293-abc1-4f21-94db-875145b7c19c" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">🐧</span></div><h1 class="page-title">原石 vol.03</h1></header><div class="page-body"><h3 id="5f5eba12-6d4c-4917-96b5-6c091752f39b" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mi>n</mi><mi>t</mi><mi>r</mi><mi>o</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">Intro.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord mathnormal">n</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord">.</span></span></span></span></span><span>﻿</span></span></h3><hr id="3c9415dc-3ccb-4d42-be9a-278c7682b8d1"/><pre id="6ca8df88-ed13-435c-b809-0698c1d8ee7c" class="code"><code>我踏實的遊走
+我緩慢的動
+清醒的感受
+思考是一隻石
+打破水平靜的漣漪
+近近的看著自己
+就像不負責任一樣乾淨
+在疲倦的時候睡去
+飽滿的在水中醒來
+如果誠實也需要追逐
+那我就是隻快樂的狗</code></pre><p id="9a0f068f-f689-49c3-8591-9f13da8b2aac" class="">
+</p><p id="648fb18e-1728-4926-9994-3a2a0b362413" class="">
+</p><p id="f64b8ea3-ed9f-4e59-9991-15860ac94a3f" class="">
+</p><h3 id="92273056-deeb-493e-8f3c-b9d67c9f277f" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mn>1.</mn></mrow><annotation encoding="application/x-tex">P1.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord">1.</span></span></span></span></span><span>﻿</span></span></h3><hr id="aaafc917-1132-4fd1-bb9b-0058922cbed8"/><h3 id="cf6c5da1-5f14-4329-8c3c-bb681dbdb696" class="">1.</h3><pre id="35dd79fd-10bd-499c-ad45-0069fd62b4da" class="code"><code>不是每段連續時間都能湊成能被感受
+不必要去整理自己讓它被接受
+沒有機會曾經被錯過
+需要去把握的都是奢求
+過量會引起頭痛
+如果不小心需要去整理
+那些堆疊又不分先後
+它是你的起點
+不要誤會贏
+不要結束誤會
+我是隨便
+我是很煩
+我在描述的大家早知道
+起的早知道
+也只可能只能這樣
+對我而言等於詩</code></pre><hr id="4d29eaa9-6d18-448e-9335-dc530f7e54bc"/><h3 id="9a1aade3-a046-4fcf-8c95-ea464a8adc3a" class="">2.</h3><pre id="9a24ab0e-5029-49a3-8cd5-5fc21de64ebc" class="code"><code>毫無感受
+看著影在火堆周圍抖動
+它們像夢
+應而映著我的不同
+不同引誘著自我
+逐漸將自我殆盡往火堆中
+為什麼開心呢
+為什麼微笑
+左邊的心事出現在右邊
+心理的蚊子出現在身體每個有毛的地方
+若有似無的跟隨
+我始終在夜裡鎖起房子的門
+直到沒有人跟我講話</code></pre><hr id="14c2345d-bf5f-4c5b-afaa-e5214f051b4f"/><h3 id="53734de3-d4f4-4df9-9067-1e07496afd48" class="">3.</h3><pre id="76a33b11-3e61-485a-9084-0c8a23f88fc6" class="code"><code>因為我的虛無
+在這一刻
+我什麼都不是
+不該說任何一句話</code></pre><hr id="e91c6056-47c5-408c-8c7c-dbdde60145f7"/><h3 id="e7240be2-7a06-4aec-b6cb-971fa92a206a" class="">4.</h3><pre id="1e609c19-ed89-476b-b46b-04f8263e3ce7" class="code"><code>但我知道這是沒有改變的
+我以為自己是過去看到的其他角色
+但並不是
+我從來沒有學會一個能力叫做變成其他人
+不同的事物在磨蹭著我的質地
+我們不能共享
+但是看著對方享受像模仿著鏡子一樣
+感受到我們的相同
+我無法在同一個世界裡找到相同的迷宮</code></pre><hr id="1416fe0a-0c8d-4930-ad29-4866bbd183ee"/><h3 id="63d2af15-88d9-4b70-8a88-238c3251df35" class="">5.</h3><pre id="bd8fa770-92e7-4cad-b09f-322c737440b0" class="code"><code>有時候我會回想到一些未來
+那些無處可循又觸手可及的痕跡
+我讀過這句話
+我嘗過這個形狀的想法
+但它的細節是什麼
+是什麼讓它可以視得真實
+讓它可以被愛
+我闡述過一個行為
+像是堆疊又不分先後的
+又根據感官而非順流的變化
+我只能理解它單純的被觀察而在
+我能感受到我的改變</code></pre><hr id="63afe353-a637-4095-8a74-361546a28f1b"/><h3 id="15210a41-7f93-45bc-8769-a6273e4a2f77" class="">6.</h3><pre id="46b62216-0d0d-438e-ba4e-46feabd3c337" class="code"><code>我會聽到船鳴聲
+從
+在我獨自決定的時刻
+在這之外我都曾忘記
+船鳴聲與我的行為互相映照著
+它填補著它讓它填補
+盤子中的一切都無法重現
+它如滴著湯
+我回想到孟里的旅社
+它的重要性被認為是只有在今天會被想起
+它的壁紙
+旅社和湯還有壁紙和船鳴都牽動著
+我沒有特別提到
+但如果不是如此
+我怎麼會依然行動著
+盤子李端著
+日常的盤子裡端著
+逃避著睡醒之後又換一個口味了
+卻也僅剩誠實的包容著</code></pre><hr id="7dff4ada-6068-406a-a689-3ca11df52efd"/><h3 id="8ba540ff-25fb-41ac-bdf5-102d51aae55b" class="">7.</h3><pre id="57e2f921-c1cd-416b-9859-76c5caa6c9c0" class="code"><code>它帶著我留下會帶著我走
+創作嗎
+我在哪裡
+我在東邊的海岸
+躺在一顆椰子上
+它依然誠實與緊湊又不自在
+在這裡我只能相信月亮
+它從這裡開始接續
+如果有的話在上一個開頭補上預告</code></pre><hr id="95558daa-a4b5-4743-8d96-89ca697efc89"/><h3 id="5615043b-74c9-483a-a4e3-eba71cc704bb" class="">8.</h3><pre id="33171fde-5df8-4d91-8b12-6e9f26131598" class="code"><code>在到來的剛開始還會計算著第幾天
+第幾天我就會離開這裡
+然後一週前我來到
+一週前一週前我來到
+一週前一週前一週前我來到
+現在一點都不像過去
+它一點都不像會出現在過去的照片裡
+它還未被述說,所以它被以跑啊,舞啊,喘息的方式進行
+我把它當作語言,所以它被以畫啊,寫啊,雕刻的方式紀錄
+海邊靠著我
+好似這一切將永遠沒有進展
+好似任何事情永遠得不到興趣
+我有看過三個人影
+我能不能將它形成一場夢
+我籌備過卻沒有送出的
+主觀是不是開始凝聚了
+我的偏執不會在一天之內改向
+我到來了多久
+它帶著越來越大的聲響開始敲門
+又不是第一次的呼喊著
+大門又打開了</code></pre><hr id="e867d631-fe06-4f1f-a444-38af71a13e0f"/><h3 id="b8770dfa-a08e-4928-a57c-5c24269c8a2c" class="">9.</h3><pre id="f988111d-4472-4ce9-b5fb-b3baae143e71" class="code"><code>我不是想睡
+只是時間到了才睡
+我必須珍惜這幾秒
+它是確實精彩又在等待事情發生
+越晚睡就要越用力
+保持這個樣子
+不小心就會唱出來
+如果不放心上
+又怎麼能對話
+我觀察的影子
+就會看到它和影子
+向回憶說不清
+不能提問題
+水回到這裡
+一切像是巧合
+所以代點哲理</code></pre><hr id="5474e8bc-4a77-410e-9308-9c9ec6b40c3a"/><h3 id="26ba33ff-20c6-4d54-839f-ba893a04cb37" class="">10.</h3><pre id="85b4110d-e4b4-47a0-8304-a1a26a1b7676" class="code"><code>不找地方躲
+因為沒人找
+隔著一道牆摸你
+只要跟著就能走出聲音
+疲倦的燙
+講著反抗的人後來都去哪
+也許江離去
+講到就離去
+太陽大量的流出
+雖然只在眼裡
+太陽相信影子
+也相信徬盪的產出
+聲音越大走的越脹</code></pre><hr id="e60714f7-6751-4503-8734-11f8acf04e58"/><h3 id="ccd0a032-002b-49f6-9afd-c29f6aa4d321" class="">11.</h3><pre id="7a1de299-d2c4-4063-b3c8-42d70cd07fb2" class="code"><code>所有的事情都只有一種結果
+結果精采的讓我產生閒暇
+我可以在那種樹乘涼
+吃樹上的果實
+不是多高級的思想
+都是歪理
+想買單不一定能買單
+不論多少的精采都是活在我的矩框
+也別只想著來
+但不用想著要去哪
+真的又已經逃
+別急著拿照片比對風景
+講的像看到的
+想講沒看到的
+自己加一個規矩</code></pre><hr id="8e2d01fa-9cf6-408d-8850-0b638df1a4a3"/><h3 id="7de63903-e90f-40a5-a6ee-fa7befc37ef1" class="">12.</h3><pre id="88e49694-5ddb-459f-b5d4-4bc6716ca605" class="code"><code>為什麼創作需要壓到最低限度
+沒有它我活不下去
+無論如何都要觀察
+事情只剩這樣了
+安全才是最快的航路
+包含被讀到這裡
+到處都將是罪名
+也許不始料未及的被提及
+我孤援無力的是未來的此刻
+未來的進行式
+無法處理的地方埋著處理
+我都忘了這裡
+會不會不想離去
+希望離去的方式是去了哪裡
+我在腳踝上綁上鈴鐺
+有乎應我就走近</code></pre><hr id="c3f82768-dcd9-4186-baf7-2f441c674f88"/><h3 id="39b160a5-1eec-43e4-b863-a56d4ec849ab" class="">13.</h3><pre id="cb703011-dd31-4d2c-a952-0286d90badde" class="code"><code>我思考的是我自己的事嗎</code></pre><hr id="8e3a389c-2364-4808-9c40-bd2ef91afb18"/><h3 id="e1d5ee1f-fdcb-4080-886c-1c79c0eb0136" class="">14.</h3><pre id="2e5f154d-db64-48b7-8f88-afc741ca8791" class="code"><code>疲憊是不是能像憤怒一樣乎解
+生理不能隨便
+時間帶著沉重的人緩慢
+不要留在原地
+在讀膩之前離開
+方向被誰拿走
+鏡子的燈有
+貓像風扇著一樣
+該出生的卻安靜
+第一次聽到跳舞會帶來失重</code></pre><hr id="67ea1186-29b6-497e-bea6-f60565327442"/><h3 id="bc22a3f0-b515-450e-b88a-c7c3dcfa221a" class="">15.</h3><pre id="3215677d-3b04-480a-910a-0556cd054e0c" class="code"><code>混亂還有冷跟不確定
+身體像是膨脹著
+保持著禮貌
+一樣不知道自己是誰
+錯覺是更接近現在
+我不敢回頭
+也無力向前
+笑著懸著相信著
+僵硬的翅膀
+浸水的靈魂
+是什麼維持著形狀
+手好冷
+每一步都好小心
+是不是擁抱上就崩解
+為什麼在夏天這麼冷
+拉著火
+我能接觸什麼</code></pre><hr id="e7ab4b8b-6b15-43cb-9f91-5044f25ef57f"/><h3 id="c0f71eac-dae1-49eb-a63b-53a06ad375f7" class="">16.</h3><pre id="74950dab-0993-44eb-97c4-57b6ad5a2e38" class="code"><code>誠實的人只說著誠實的話
+只聽得懂誠實的語言
+那些遲疑的遲疑
+都是蒙特洛的歸去</code></pre><hr id="a37a91cb-798d-4353-b7dd-b0c40da77867"/><p id="23d17d78-6861-42ff-b91e-7fa5963ef209" class="">
+</p><p id="aef329a4-cda2-458e-97b9-78bebed251b2" class="">
+</p><p id="d1f00a48-311d-41c8-8f53-a1f42143f3bb" class="">
+</p><h3 id="c4ba71e6-f665-4a89-98e3-940d082975b2" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mn>2.</mn></mrow><annotation encoding="application/x-tex">P2.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord">2.</span></span></span></span></span><span>﻿</span></span></h3><hr id="df2b78ce-34d4-42b8-898e-0d964b05f31a"/><h3 id="5e67efe6-32d3-4843-9be0-347e93328e12" class="">1.</h3><pre id="e00aa828-9fc4-4f25-8098-cc4c890a5679" class="code"><code>句子之所以美麗
+都是因為她的背影
+光鮮亮麗都只是碰巧</code></pre><hr id="06760cdc-4982-4da9-873a-70eb6b5d0a9f"/><h3 id="6f32a15a-5c56-4cf8-b619-3a29d91e0ea3" class="">2.</h3><pre id="40a99470-4b5f-495c-a533-0f3a5fc79477" class="code"><code>我昨天都忘記為什麼我選擇忘記
+為什麼我要忘記
+好像是因為難過
+我怎麼還記得
+我不是聽到雷聲所以想起來
+要下雨了
+沒有事情是有相連的
+我所經歷到的順序
+順序中參與的事物
+正如同所看到的
+不是島的一邊那麼遙
+也不是那麼不可不在意
+沒有太特別的例子
+我說幸運的都是謙虛
+那與我無關
+我只在現在出現
+我所參與的一切
+我只在遊走的時候遊走
+沒有辦法跟人比較
+比較是真的
+韻能代替我
+我去不去改變
+每天還是都存在</code></pre><hr id="b27b6208-a1cb-4fd6-8bb9-01aaa858ba72"/><h3 id="bca26c0c-98d7-4a65-b51f-a16e3ee09c71" class="">3.</h3><pre id="05432587-a017-4ef6-91fd-85394970a6ed" class="code"><code>以誇張為習以為常
+聽過的腳印不在復頌
+不計較的差不多
+計較的吃水餃
+到飯店是checkin 水用完是缺ink
+了不起的給隻筆
+透漏著來同情我
+不同的味道隨便挑一個紀錄著
+只是紀錄也會不記錄著
+特別的是第一次見面
+瞭解而替代
+在如此遙獨的角落也有角度在你的認同</code></pre><hr id="9dfc6a91-9ef1-4d38-98b3-8570e8a17368"/><h3 id="31133b00-212c-4605-ae7c-5223e574544c" class="">4.</h3><pre id="8959f7eb-f58f-40af-bc96-1f9c99e2a8e0" class="code"><code>不同的事情
+又剛好可以
+事情很寬容
+像以後的天氣
+所以會逐漸虛弱
+不要太長有所指
+那裏會死
+一個人卻很大聲
+不想由時間經歷
+就讓時間輪流
+所以才會堆疊
+和不分先後
+感到肚子餓</code></pre><hr id="7867f677-f185-46c7-924b-79c144354ef2"/><h3 id="710865e3-a9a3-48a0-834f-ed6ff4b20044" class="">5.</h3><pre id="bb64ed97-8ac6-4485-9bf6-284757aacc4e" class="code"><code>我睡了
+我離開了
+第二次十二歲
+之後也會有一個夜晚
+我看過的
+會再來或是回去
+我是珍惜我是存在的
+我是不是霸佔了而自由的
+我本來就是雨
+和前一滴下兩滴沒有聯繫
+那些印著我過去和未來的影子
+我已經沒有遇到
+我因為開始觀察而開始靠近
+但一起進行的
+我的左手是模糊
+右手是誤會
+有鏡子誰都可以跟我握手
+旁邊都可以看著
+周圍已經只有黑
+有些時候特別冷
+冷的時候我會開一下燈
+開燈才看的到溫度
+我走不遠的
+走久的都成過湖了
+不要跟暫時對話
+那要等地太久了</code></pre><hr id="a3f5d29a-10a1-4a31-b6ba-999b8c3e42b4"/><h3 id="a9089be1-3955-4335-be35-02758976bfca" class="">6.</h3><pre id="39c82aff-bab7-4bad-a580-f3bf35331d64" class="code"><code>要如何與壓力相處
+壓力是我眼前逼迫的問題
+不對
+這時壓力不來自於我
+只是有人莫名渲染
+我只能體諒難過
+那是也許因為我心情好才能體諒
+體諒只是給我個機會接受心情不好
+再把分享的難過放大就違背合理的逃避
+我要怎麼與我的憤怒相處
+我摸不著情緒
+如果不想沾染
+那就燒了吧
+我遇見我的冷漠
+憑什麼只留我一個人在這
+或是憑什麼我能一臉不在乎
+我在乎我嗎
+我因為誰沾染情緒嗎
+我需要嗎
+我在散漫嗎
+我要求別人嗎
+我能挽回嗎
+我知道嗎
+我不能阻止分享
+我不要覺得累
+我說這是可以選擇的
+但誤解不可以</code></pre><hr id="3b336f7f-8dd6-4fbb-aa7e-25c36c67a5c1"/><h3 id="41ec626d-3b08-4bbc-b567-6310c9dd4593" class="">7.</h3><pre id="19a168aa-d3b3-45ba-9b22-a9c84f968134" class="code"><code>四八四八
+聽著別人的音裳
+碰碰拍坯
+你學會語言是為了什麼
+遺失語言之後我會找到新的替代
+也許可以用其他方式去形容現在的我
+每一種感覺都會被眷戀
+眷戀都會被代替
+不去追求了
+在這之中追求</code></pre><hr id="2eee6ab3-9d7b-45a6-be18-ac36f17aef24"/><h3 id="1678abd0-c19f-4ff3-bc9f-107008b0749b" class="">8.</h3><pre id="65895a4d-49aa-433b-8704-ebabd5ea2546" class="code"><code>是不是能永遠都這樣
+是不是只要這樣想就能脫離現況
+狐狸拖上沙
+魚回過頭
+一杯子的時柳
+一杯果酒
+陪梨弄上鐘
+弄瓜與權杖
+碰碰杯
+酒酒不見
+怡果是這樣
+那蕉這樣芭
+斗內斗內打抗</code></pre><hr id="aecf7b53-70ac-4f2c-b64f-6327967d6487"/><h3 id="f1577d87-c426-4c00-a788-7a0544929421" class="">9.</h3><pre id="84895841-fd15-4487-9f12-0efcc1c19611" class="code"><code>我沒能有同感
+感受到身邊站有一個遙遠的思想
+卻碰巧在這的感受
+我們一起回來
+其中的也許是無助
+我有很多的機會去比對
+對時間的直覺是多少抽象
+每一個旅程都是奇遇
+只要我回到現實
+就沒有我努力過的感覺
+我什麼都不知道
+才能合理的趨向
+我的一切經歷像是沒有經歷
+我不等任何人
+巧的只是我是人
+在某個地方連人都當不好
+因為我是泥巴做的泥巴人
+時間不是黏糊糊的
+時間是時間的</code></pre><hr id="96552cd3-4d33-426b-a975-ebd7eefff15b"/><h3 id="75996c5c-06b0-4d3a-b6d7-b0ae249c3044" class="">10.</h3><pre id="4bf669fa-c58c-4056-b4c1-5895aef253ea" class="code"><code>累積錯誤的事
+過多的體驗
+不知道停止的方式
+所以追逐
+清楚的目標也不過是名目
+誰能否認體驗
+其實不必感覺到疲倦
+我的追逐裡面還是有好的
+充滿善意能被接受的
+我快要拚出所有線索了
+如果能得到成就
+付出過的都不算我付出的
+有人會快樂
+傷人是不是真的
+不是真的是傷人
+沒有一整天都想著同一件事
+在自由裡面說吧</code></pre><hr id="9c80d4cc-b4bd-45e8-9092-66a718bee041"/><h3 id="56cc0c19-f46c-44df-b646-9fd88fd7db83" class="">11.</h3><pre id="28c6b459-1272-48b3-801b-fa74c93371e9" class="code"><code>該如何避免腐敗
+該如何接受腐敗
+這也是必然的海浪
+浪飄在海上
+曾經有趣的
+剩下的每天都是等待
+可能的形狀不同的填裝
+沒有一罐糖果裝著同一顆
+卻沒有任何一罐糖果有著區別
+我能不能用更細膩的角度
+去學會品嘗這些質地
+不然我好無聊
+我不能接受那些我當時沒看到的
+有什麼好說服的呢
+不就都是感受
+我聽到敲門聲與臥倒</code></pre><hr id="5386f277-a9de-4a5f-8e7c-aa4bbc1a2cb0"/><h3 id="90549436-79e2-4d72-9911-e25ff57ed81a" class="">12.</h3><pre id="03d32822-2ae4-4389-b197-597ec3f0be55" class="code"><code>我逐漸死去
+在我追求的中
+我不再畏懼
+並不是因為我自己
+哪裡是我的倔強
+我不在乎我的名字
+不在乎我的故事
+直到我真的不在被提起
+我看到了很多的誤會
+沒有人會關心的
+還有人關心嗎
+還有人在等待嗎
+如果有的話
+請為我敲響鐘鳴</code></pre><hr id="2d7761fb-da5a-4e72-9d80-8f8ce4ef924f"/><h3 id="36079f7d-3f0f-4800-8e47-31c568d7f6db" class="">13.</h3><pre id="cb26c43e-6849-447d-b66b-b97a3f25abb2" class="code"><code>想是誰的選項之一嗎
+謝謝你是不解S
+陷阱也有結構
+溫熱的氣吻以及探討
+先後跳恢恢著節奏
+我看到我沒看到S
+陪著茄子被誰烏賊
+不是特別的事
+也不在意特別的事
+卡在指縫的指縫
+也在算著換過來是多少
+每一次都不公平
+抖一抖自然會出來
+出來自然到斗六來</code></pre><hr id="93dd9a83-bd0e-4eb6-a3a3-405c69b2d92f"/><p id="c0705df0-4972-446f-802b-ea3e71c514c7" class="">
+</p><p id="ce81255f-1548-4ea3-b1e1-a3bac677d969" class="">
+</p><p id="e203e66b-331f-405c-81e2-7a166bd978ba" class="">
+</p><p id="4b54749b-0cf8-4694-8e83-3543d68d995f" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mi>e</mi><mi>s</mi><mi>c</mi><mi>r</mi><mi>i</mi><mi>b</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Described</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">Descr</span><span class="mord mathnormal">ib</span><span class="mord mathnormal">e</span><span class="mord mathnormal">d</span></span></span></span></span><span>﻿</span></span><div class="indented"><p id="aecbc43d-eb72-4a5c-b77e-a15d5089833c" class="">
+</p><p id="a4aadbe3-22bc-436a-81b6-f31482d24fe7" class=""><em><span style="border-bottom:0.05em solid">原石vol.03</span></em> is writen in 2018 and contains a total of 30 poems(1+16+13).
+First and only edition in <span style="border-bottom:0.05em solid"><em>2018小誌交換 Zinexchange VOL.2</em></span><em> </em>.</p></div></p><p id="ddc076ec-3f8d-4d43-9880-d8c9d83bbc95" class="">
+</p><p id="510df52b-75d7-467e-95c3-6a3fa0b0e821" class="">
+</p><p id="39a74b07-0d4a-4a66-a5b7-2a93fa974416" class="">
+</p><p id="046c73cf-52fe-4423-ade6-2a8aca1e8963" class="">
+</p><p id="4eae063e-48ca-4a28-9ca9-fb43c8f3d110" class="">
+</p><p id="e363600a-bd23-4852-b303-e0dd3070fc1a" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi></mrow><annotation encoding="application/x-tex">Preview</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord mathnormal">re</span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mord mathnormal">i</span><span class="mord mathnormal">e</span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span></span></span></span></span><span>﻿</span></span></p><p id="0f83d2c0-fed5-4189-9a4a-315d68a10eee" class="">
+</p><figure id="433c6163-2fd0-442d-9e1f-c8b071351070" class="image"><a href="%E5%8E%9F%E7%9F%B3%20vol%2003%20cf9d4293abc14f2194db875145b7c19c/Untitled.png"><img style="width:192px" src="%E5%8E%9F%E7%9F%B3%20vol%2003%20cf9d4293abc14f2194db875145b7c19c/Untitled.png"/></a></figure><figure id="36c3f8d4-7e4b-41e2-8642-2032f3e7ada4" class="image"><a href="%E5%8E%9F%E7%9F%B3%20vol%2003%20cf9d4293abc14f2194db875145b7c19c/Untitled%201.png"><img style="width:192px" src="%E5%8E%9F%E7%9F%B3%20vol%2003%20cf9d4293abc14f2194db875145b7c19c/Untitled%201.png"/></a></figure><figure id="f02cd4f3-ad18-4428-9204-0519adf6b060" class="image"><a href="%E5%8E%9F%E7%9F%B3%20vol%2003%20cf9d4293abc14f2194db875145b7c19c/Untitled%202.png"><img style="width:192px" src="%E5%8E%9F%E7%9F%B3%20vol%2003%20cf9d4293abc14f2194db875145b7c19c/Untitled%202.png"/></a></figure></div></article></body></html>

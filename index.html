@@ -1,0 +1,630 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>1994</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="e33be27c-a8b7-4225-890c-fca590cf6337" class="page sans"><header><h1 class="page-title">1994</h1></header><div class="page-body"><div id="abb7ecc8-afdb-4236-8fb8-530272be5478" class="column-list"><div id="f15fa54c-49a3-4845-8844-843ce169fe25" style="width:50%" class="column"><p id="faf63c32-26c2-4b5f-af96-316c91d5c318" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mi>t</mi><mi>o</mi><mi>n</mi><mi>e</mi></mrow><annotation encoding="application/x-tex">Stone</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">St</span><span class="mord mathnormal">o</span><span class="mord mathnormal">n</span><span class="mord mathnormal">e</span></span></span></span></span><span>﻿</span></span></p><figure id="cf9d4293-abc1-4f21-94db-875145b7c19c" class="link-to-page"><a href="1994%20e33be27ca8b74225890cfca590cf6337/%E5%8E%9F%E7%9F%B3%20vol%2003%20cf9d4293abc14f2194db875145b7c19c.html"><span class="icon">🐧</span>原石 vol.03</a></figure><figure id="44d98537-b32b-44a1-ace6-177db74ce1c5" class="link-to-page"><a href="1994%20e33be27ca8b74225890cfca590cf6337/%E5%8E%9F%E7%9F%B3%20vol%2002%2044d98537b32b44a1ace6177db74ce1c5.html"><span class="icon">🐧</span>原石 vol.02</a></figure><figure id="fe36bd2e-0fce-4226-98c0-e0346df736f0" class="link-to-page"><a href="1994%20e33be27ca8b74225890cfca590cf6337/%E5%8E%9F%E7%9F%B3%20vol%2001%20fe36bd2e0fce422698c0e0346df736f0.html"><span class="icon">🐧</span>原石 vol.01</a></figure><p id="602f9d37-ff54-410f-94f9-40a31fe2ee4b" class="">
+</p></div><div id="769dfc8e-4f9b-43ee-aeb6-d2af9d033447" style="width:50%" class="column"><p id="0f458370-0219-4f1c-88bd-a108d7f7518c" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mi>i</mi><mi>a</mi><mi>r</mi><mi>y</mi></mrow><annotation encoding="application/x-tex">Diary</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mord mathnormal">ia</span><span class="mord mathnormal" style="margin-right:0.03588em;">ry</span></span></span></span></span><span>﻿</span></span></p><figure id="f0c618fe-c38c-455d-89a6-5dc93c94a77c" class="link-to-page"><a href="1994%20e33be27ca8b74225890cfca590cf6337/%E5%A4%A2%E8%88%87%E9%86%92%202020%20f0c618fec38c455d89a65dc93c94a77c.html"><span class="icon">🎴</span>夢與醒:2020</a></figure><figure id="d81fce26-20ea-40d9-bd88-130f3cde1e31" class="link-to-page"><a href="1994%20e33be27ca8b74225890cfca590cf6337/%E5%A4%A2%E8%88%87%E9%86%92%202019%20d81fce2620ea40d9bd88130f3cde1e31.html"><span class="icon">🎴</span>夢與醒:2019</a></figure><figure id="7242b2f9-9dff-4192-b4d5-2c042a2d0d2f" class="link-to-page"><a href="1994%20e33be27ca8b74225890cfca590cf6337/%E5%A4%A2%E8%88%87%E9%86%92%202018%207242b2f99dff4192b4d52c042a2d0d2f.html"><span class="icon">🎴</span>夢與醒:2018</a></figure><figure id="ee285453-836d-4803-9269-9ba59a01e81a" class="link-to-page"><a href="1994%20e33be27ca8b74225890cfca590cf6337/%E5%A4%A2%E8%88%87%E9%86%92%202017%20ee285453836d480392699ba59a01e81a.html"><span class="icon">🎴</span>夢與醒:2017</a></figure><figure id="b14df45a-f0f4-45c7-8a30-9e49f3d79c4c" class="link-to-page"><a href="1994%20e33be27ca8b74225890cfca590cf6337/%E5%A4%A2%E8%88%87%E9%86%92%202016%20b14df45af0f445c78a309e49f3d79c4c.html"><span class="icon">🎴</span>夢與醒:2016</a></figure><figure id="71f74ae9-5ed9-4bf8-bb1f-18bc182f9584" class="link-to-page"><a href="1994%20e33be27ca8b74225890cfca590cf6337/%E5%A4%A2%E8%88%87%E9%86%92%202015%2071f74ae95ed94bf8bb1f18bc182f9584.html"><span class="icon">🎴</span>夢與醒:2015</a></figure><figure id="cb2d14c1-2ef1-4b76-ab94-870f8dd7f64f" class="link-to-page"><a href="1994%20e33be27ca8b74225890cfca590cf6337/%E5%A4%A2%E8%88%87%E9%86%92%202014%20cb2d14c12ef14b76ab94870f8dd7f64f.html"><span class="icon">🎴</span>夢與醒:2014</a></figure><figure id="dfc44e92-25c7-4371-b59c-2c6627083c96" class="link-to-page"><a href="1994%20e33be27ca8b74225890cfca590cf6337/%E5%A4%A2%E8%88%87%E9%86%92%202013%20dfc44e9225c74371b59c2c6627083c96.html"><span class="icon">🎴</span>夢與醒:2013</a></figure><figure id="6eca5fd0-f39f-452e-811b-93a55f576ca9" class="link-to-page"><a href="1994%20e33be27ca8b74225890cfca590cf6337/%E5%A4%A2%E8%88%87%E9%86%92%202012%206eca5fd0f39f452e811b93a55f576ca9.html"><span class="icon">🎴</span>夢與醒:2012</a></figure><figure id="e4b7ffe0-5a13-4867-9b38-b4249ce56559" class="link-to-page"><a href="1994%20e33be27ca8b74225890cfca590cf6337/%E5%A4%A2%E8%88%87%E9%86%92%202011%20e4b7ffe05a1348679b38b4249ce56559.html"><span class="icon">🎴</span>夢與醒:2011</a></figure></div></div><div id="1d421fad-92d5-45a4-88ac-b4ca9c5da934" class="column-list"><div id="f83f47d0-ec78-492b-9974-1e9e733aec65" style="width:50%" class="column"><p id="3fa6f405-5731-40cb-ada6-1b4b0d42b02c" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mi>t</mi><mi>h</mi><mi>e</mi><mi>r</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">Others</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">Ot</span><span class="mord mathnormal">h</span><span class="mord mathnormal">ers</span></span></span></span></span><span>﻿</span></span></p><figure id="0ba1b577-004d-4a9f-b6a5-b962236867d7" class="link-to-page"><a href="1994%20e33be27ca8b74225890cfca590cf6337/2500%200ba1b577004d4a9fb6a5b962236867d7.html"><span class="icon">💉</span>2500</a></figure></div><div id="8fb79531-c393-430b-8853-63ce0cbd16bc" style="width:50%" class="column"><p id="36674d15-7790-4c13-9aba-1b5cb7a49a38" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mi>i</mi></mrow><annotation encoding="application/x-tex">Hi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="mord mathnormal">i</span></span></span></span></span><span>﻿</span></span>,</p><figure id="d094fbfe-dcb5-4a74-80ec-0f192ba08d73" class="link-to-page"><a href="1994%20e33be27ca8b74225890cfca590cf6337/%E6%88%91%E6%98%AF%E5%B0%BC%E5%85%8B%E6%AD%90%20d094fbfedcb54a7480ec0f192ba08d73.html"><span class="icon">👨🏾‍🚒</span>我是尼克歐</a></figure><figure id="68d44cc9-50c6-4030-8f19-8bb8bff86fe6" class="link-to-page"><a href="1994%20e33be27ca8b74225890cfca590cf6337/%E6%88%91%E6%98%AF%E6%B9%AF%E6%B2%90%2068d44cc950c640308f198bb8bff86fe6.html"><span class="icon">🦹🏻</span>我是湯沐</a></figure><figure id="1a8d0318-8d28-42c8-aaa8-81b04a0f96bb" class="link-to-page"><a href="1994%20e33be27ca8b74225890cfca590cf6337/%E6%88%91%E6%98%AF%E9%98%BF%E6%8B%89%E4%B8%81%201a8d03188d2842c8aaa881b04a0f96bb.html"><span class="icon">🧞</span>我是阿拉丁</a></figure><figure id="ef84457e-8044-4f9e-8c92-2dec29089f07" class="link-to-page"><a href="1994%20e33be27ca8b74225890cfca590cf6337/%E6%88%91%E6%98%AF%E8%BE%9B%E8%92%82%20ef84457e80444f9e8c922dec29089f07.html"><span class="icon">👵🏼</span>我是辛蒂</a></figure><figure id="76e48f78-e996-4111-a3b6-1b8993d8adc0" class="link-to-page"><a href="1994%20e33be27ca8b74225890cfca590cf6337/%E6%88%91%E5%8F%AB%E4%BC%AF%E5%88%A9%2076e48f78e9964111a3b61b8993d8adc0.html"><span class="icon">👨🏽‍🔬</span>我叫伯利</a></figure><figure id="ec0c4217-61eb-474f-98ef-01b321743ca5" class="link-to-page"><a href="1994%20e33be27ca8b74225890cfca590cf6337/%E6%88%91%E5%8F%AB%E7%81%AB%E6%A9%9F%20ec0c421761eb474f98ef01b321743ca5.html"><span class="icon">👦🏻</span>我叫火機</a></figure><figure id="623990d9-0800-4bfc-a124-026229c95542" class="link-to-page"><a href="1994%20e33be27ca8b74225890cfca590cf6337/%E6%88%91%E6%98%AF22565%20623990d908004bfca124026229c95542.html"><span class="icon">🕵🏻</span>我是22565</a></figure><figure id="afe2fe1b-eeb9-47e9-a569-c3dca4278dc3" class="link-to-page"><a href="1994%20e33be27ca8b74225890cfca590cf6337/%E6%88%91%E6%98%AF%E8%8A%AC%20afe2fe1beeb947e9a569c3dca4278dc3.html"><span class="icon">🧝🏼</span>我是芬</a></figure><figure id="08f409e3-1525-4b75-a494-ba0ab57a44a3" class="link-to-page"><a href="1994%20e33be27ca8b74225890cfca590cf6337/%E6%88%91%E6%98%AF%E7%AC%AC172%E6%AC%A1%E6%89%87%E5%BD%A2%E8%BB%8A%E5%BA%AB%2008f409e315254b75a494ba0ab57a44a3.html"><span class="icon">🧘🏻</span>我是第172次扇形車庫</a></figure><figure id="9800e028-a900-4335-a040-2f7b66c3954a" class="link-to-page"><a href="1994%20e33be27ca8b74225890cfca590cf6337/%E6%88%91%E6%98%AF%E4%BB%96%E6%9C%80%E5%BF%A0%E5%AF%A6%E7%9A%84%E5%83%95%E4%BA%BA%209800e028a9004335a0402f7b66c3954a.html"><span class="icon">🕴🏿</span>我是他最忠實的僕人</a></figure><figure id="1403efd3-ebef-47c1-8e2e-7f027021ad40" class="link-to-page"><a href="1994%20e33be27ca8b74225890cfca590cf6337/%E6%88%91%E6%98%AF%E5%82%91%E5%85%8B%E5%AD%AB%201403efd3ebef47c18e2e7f027021ad40.html"><span class="icon">👨🏼‍⚕️</span>我是傑克孫</a></figure><figure id="2f0e5f72-9497-4aa7-b69e-88a4e821ea03" class="link-to-page"><a href="1994%20e33be27ca8b74225890cfca590cf6337/%E6%88%91%E6%98%AF%E7%8B%84%E5%98%89%202f0e5f7294974aa7b69e88a4e821ea03.html"><span class="icon">🧟‍♀️</span>我是狄嘉</a></figure><figure id="b5516ac9-84ce-4f48-9f37-dbed950de484" class="link-to-page"><a href="1994%20e33be27ca8b74225890cfca590cf6337/%E6%88%91%E6%98%AF%E7%BC%BA%E9%BB%9E%20b5516ac984ce4f489f37dbed950de484.html"><span class="icon">💁🏿</span>我是缺點</a></figure><figure id="c3b24c9d-c644-47f2-833f-7a4caf7211dd" class="link-to-page"><a href="1994%20e33be27ca8b74225890cfca590cf6337/%E6%88%91%E6%98%AF%E7%A7%8B%E5%A4%A9%E6%89%8D%20c3b24c9dc64447f2833f7a4caf7211dd.html"><span class="icon">👩🏻‍🎨</span>我是秋天才</a></figure><figure id="512c246d-f39a-48b9-a57c-2a691a7faba2" class="link-to-page"><a href="1994%20e33be27ca8b74225890cfca590cf6337/%E6%88%91%E6%98%AF%E7%BE%85%E7%BE%85%20512c246df39a48b9a57c2a691a7faba2.html"><span class="icon">🙇🏼‍♂️</span>我是羅羅</a></figure></div></div><div id="11142cb4-2fa2-4ef1-93ee-ee34d2b14966" class="column-list"><div id="efe96eb8-7675-452f-9926-21eeff10b3ab" style="width:50%" class="column"><p id="87668f81-e203-4e05-8f73-a27024895601" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mi>e</mi><mi>c</mi><mi>e</mi><mi>n</mi><mi>t</mi><mi>l</mi><mi>y</mi></mrow><annotation encoding="application/x-tex">Recently</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mord mathnormal">ece</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.01968em;">tl</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span></span><span>﻿</span></span></p><figure id="427306af-b7ec-4632-9b28-e86cff0c1dcb" class="link-to-page"><a href="1994%20e33be27ca8b74225890cfca590cf6337/%E9%96%8B%E5%BF%83%E7%9A%84%E7%86%9F%20%E8%AC%9B%E8%A9%B1%E8%AC%9B%E6%B8%85%E6%A5%9A%20%E6%88%91%E6%98%AF%E9%98%BF%E6%B0%B4%20427306afb7ec46329b28e86cff0c1dcb.html">開心的熟 / 講話講清楚 / 我是阿水</a></figure><figure id="871c06e2-fb19-47a3-b49b-1c5f786e3d86" class="link-to-page"><a href="1994%20e33be27ca8b74225890cfca590cf6337/%E9%9B%86%E4%B8%AD%E7%9A%84%E9%9B%A8%20%E8%A8%98%E7%AD%86%E4%B8%8B%E6%B5%81%20%E5%BA%8A%E5%89%8D%E6%B0%B4%20871c06e2fb1947a3b49b1c5f786e3d86.html">集中的雨 / 記筆下流 / 床前水</a></figure><figure id="34a752a4-2a10-47d1-b339-467ed13834cb" class="link-to-page"><a href="1994%20e33be27ca8b74225890cfca590cf6337/%E9%AD%AF%E8%AA%8D%E7%9C%9F%2034a752a42a1047d1b339467ed13834cb.html">魯認真</a></figure><figure id="975baa7d-7ec6-4494-88d1-0917ecc36484" class="link-to-page"><a href="1994%20e33be27ca8b74225890cfca590cf6337/%E7%A9%BA%E6%88%BF%20%E8%BE%A3%E7%9F%B3%E9%A0%AD%20%E4%BF%9D%E5%81%A5%E5%AE%A4%20%E5%81%A5%E8%A1%8C%20%E6%B0%B4%E6%A1%B6%20975baa7d7ec6449488d10917ecc36484.html">空房 / 辣石頭 / 保健室 / 健行 / 水桶</a></figure><figure id="5a4fdceb-3bdb-40d7-8fc6-a0b9f8821ae1" class="link-to-page"><a href="1994%20e33be27ca8b74225890cfca590cf6337/%E8%87%AA%E4%BF%AE%E5%AE%A4%205a4fdceb3bdb40d78fc6a0b9f8821ae1.html">自修室</a></figure><figure id="0d09b482-a30e-4381-9a53-e0be9c21c71d" class="link-to-page"><a href="1994%20e33be27ca8b74225890cfca590cf6337/%E9%82%8A%E8%B5%B0%E9%82%8A%E8%81%BD%20%E4%BB%A5%E7%89%A9%E6%98%93%E7%89%A9%200d09b482a30e43819a53e0be9c21c71d.html">邊走邊聽 / 以物易物</a></figure></div><div id="580552ea-d5c0-436c-82c8-dc0e4ecfd78e" style="width:50%" class="column"><p id="622b7b94-7b02-49d4-b915-8fea62eee89c" class="">.</p></div></div><p id="a9be7f37-3a73-4561-ad20-537eea84632a" class="">
+</p><p id="6865c608-6762-4362-be6a-56a76480d3f0" class="">Writen by <span style="border-bottom:0.05em solid">firechicken1210b</span>.</p><p id="22058e0a-d290-4940-a0a3-af48f233f994" class="">
+</p></div></article></body></html>

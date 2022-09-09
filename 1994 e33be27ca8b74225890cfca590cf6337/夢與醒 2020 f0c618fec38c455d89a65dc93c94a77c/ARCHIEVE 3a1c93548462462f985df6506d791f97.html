@@ -1,0 +1,1480 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>ARCHIEVE</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="3a1c9354-8462-462f-985d-f6506d791f97" class="page sans"><header><h1 class="page-title">ARCHIEVE</h1></header><div class="page-body"><p id="e22f8c26-10a0-4d27-b8f2-c8f5f4ba95ac" class="">2020-0102</p><p id="1976473e-649b-42d7-9a4c-60ddd05b15ac" class="">在電腦中找不到我的歸屬</p><p id="1bce5f0a-f7fd-42a9-9541-425d8762a4e2" class="">2020-0102</p><p id="6c021f9f-048d-4778-99d9-ff0cc3c39306" class="">自圓其說的小世界</p><p id="ed87a29e-b33b-44a3-a644-3a88f5060406" class="">2020-0102</p><p id="a72fcbd7-42be-46d6-ba5f-687c3739d551" class="">想要火焰的溫暖
+而倒在火焰之中</p><p id="7bf41a9d-cf34-445e-a762-fa379388f59a" class="">2020-0106</p><p id="794e50ee-b305-4402-998f-c8a4ba3f4878" class="">Arduino dfu
+Atmel flip
+Dropbox 程式相關 hex
+上傳之後再燒靭體</p><p id="636660e3-f9bf-4107-8fa3-14f849756ca8" class="">2020-0108</p><p id="a5c934b8-804a-4fa8-916e-899665fddc6a" class="">Win7 vm
+Ym
+Play.bat</p><p id="7c6785e6-e27d-47b6-ad8e-a73759679d4e" class="">2020-0111</p><p id="cdd06619-77d1-48d7-8aeb-cbc4c52f7653" class="">買過年禮品</p><p id="e663584d-dcf1-4d29-8fb8-3a56fb271128" class="">2020-0112</p><p id="7f5f701c-e171-4da8-b3c5-ad0e5c884f6d" class="">小匹生快樂
+去年的這天我一起去吃出一張嘴，然後散步到附近的公園，</p><p id="7284bebd-7add-46ce-be54-99eeb67d1db3" class="">2020-0113</p><p id="f044bf2e-a7c6-4549-acaf-959f739bdabb" class="">不被大局所迷惑</p><p id="fba7dc01-4475-4222-ba5d-264563f0a330" class="">2020-0115</p><p id="e7166145-297d-44e7-85b1-e721f98a5bcc" class="">終點起點出現離開</p><p id="2d281cad-e6d0-4d42-a359-cf7a8d7675cf" class="">2020-0116</p><p id="18a9a7e9-dcf5-4c57-b9c3-57aeed3b70ad" class="">Panda 樹梅派
+跑影片1080</p><p id="793201d4-0544-4da9-810c-6c731d458093" class="">2020-0122</p><p id="4a14ab7f-acc2-4717-b8b0-1a4dc0bfe2e7" class="">世界上最美好的地方不是曾經出現過的各種美好
+而是一個人能供給的就會有一個人需要</p><p id="97b5dd10-7fb4-45e7-9355-1ac0d25c69f3" class="">2020-0122</p><p id="ed553d68-b7ac-43b3-a889-547809950451" class="">穿襪子 鞋子 手錶
+書 包包 牙套橡皮筋 護膚液
+指甲刀 刮鬍刀 鼻毛刀
+電腦</p><p id="1b2ed64a-f9ff-440a-b27a-d153bb6751ec" class="">2020-0124</p><p id="7d5fa8a6-43d7-4be4-85ba-adea17a81c13" class="">我逐漸變成老人
+不在總是充滿活力
+想唱情歌
+卻已不認識任何歌詞
+會不會沒什麼魅力</p><p id="5b98c4ea-eeba-49d0-8702-6d325c3d39b3" class="">2020-0124</p><p id="4f004dc7-9c39-4678-9ae9-3795b9beb29a" class="">祝媽新年快樂身體健康 和爸永遠是一對神仙眷屬</p><p id="71ccbccc-f214-4cd7-83ec-c9589c93636a" class="">祝爸今年每一天都開心鼠了</p><p id="2ac2eb39-ed2e-4e04-ba30-d6c63595a39c" class="">2020-0125</p><p id="7620e26e-cea2-4bdc-9c1a-073aeb2947df" class="">我現在就正處於我最美好的回憶中
+所以我才這麼感動</p><p id="c5359659-3c0a-42c3-94ee-9c7190c15f94" class="">2020-0125</p><p id="368386da-d185-4e20-b714-4f365cb9f95d" class="">能和妳一起活著好開心</p><p id="feaad999-1be4-43b1-b936-d3abc04dd555" class="">2020-0126</p><p id="cbea3e5b-2e8f-4209-9884-91d8435ddd61" class="">在作品中必須帶有符號
+我才能也發表符號相關的作品</p><p id="b501df9e-5d86-45e9-83a3-5a1c9e7609f1" class="">符號房間 在房間的格局中符號無法一眼收盡 你必須不斷變化視角來觀賞符號 而眼到之處皆為符號無法重複的組合</p><p id="dd7fad11-d207-49e7-a1ae-44a2d74765b4" class="">光房
+Netflix 抽象設計第二季第一集
+只打黃光就看不到黃色的符號
+紅光就看不到紅色的</p><p id="4e302705-8216-40f8-bbd5-e6dd430c85e3" class="">2020-0126</p><p id="5e1aaca3-8c04-4c19-87b8-99a5c8ae94e0" class="">2
+10
+20
+40
+80</p><p id="41e8edeb-7de4-4e8d-98d7-3673b51a2b81" class="">2020-0127</p><p id="f154442d-5eb4-47e3-b91d-e12fdf2e59f7" class="">你一定會老去，但這些逝去的時間能帶你到哪裡</p><p id="ebd68117-7e51-4665-8cc1-d3ec53e27355" class="">2020-0127</p><p id="586ee485-e4a2-4fd3-9d22-5fe9dc1571fc" class="">雲端處理跟網路爬蟲
+學生創基</p><p id="4016fc85-b001-4e55-b827-934bf1f6c223" class="">2020-0128</p><p id="f9413213-f4bb-4d97-baae-213303444126" class="">睡前決定一議題
+睡醒紀錄</p><p id="27e2e42e-43af-4edf-89eb-076c1bafb708" class="">睡醒第一件事是紀錄睡前決定思考的議題</p><p id="73ef02fe-6ef0-427c-9455-0815bbf3b364" class="">2020-0128</p><p id="827402bd-7d79-48ae-a068-bf4725eaedd1" class="">我把創作視為理所當然</p><p id="1860d106-53cf-44d3-900d-05e6a60e0a8e" class="">2020-0128</p><p id="b50edd50-24f9-4f52-93fa-72756e589dca" class="">和我愛的人一起變得更健康和有錢</p><p id="23482d32-805f-4e0e-b857-2bd03509fe16" class="">2020-0128</p><p id="76c91807-391e-4a4f-ad7f-4ddc65cedf71" class="">我想做的事太多了</p><p id="150d6c8b-ebb6-42d0-9c16-3135488f0686" class="">2020-0128</p><p id="2bfd5548-970a-494c-adb6-3ac15c06b848" class="">Etoro.trade
+<a href="http://etoro.tw/">Etoro.tw</a></p><p id="bcc61707-139c-41c3-965e-73857e30c1b7" class="">2020-0129</p><p id="aa1808e9-330c-4d93-9c9a-6611d4dbaed2" class="">捍衛生死線</p><p id="8170be34-8828-49da-9c38-43fb91d6b74e" class="">2020-0129</p><p id="76502628-9e17-4bdc-a577-c666eadca63c" class="">時間的</p><p id="20854a51-d6d5-4324-9366-4a22670efb19" class="">2020-0129</p><p id="de486367-6a4c-48c3-907c-cc3ce254ff45" class="">時間的掌握
+我常常想珍惜和愛人能相處的任何時刻
+並把所有愛人在我身邊的時間都拿來相處</p><p id="a7ccc893-0508-4515-b5fa-62a30b6fde13" class="">我很感謝她也注意到需要自己的時間
+代表她也注意到我們總是把所有時間拿來相處</p><p id="3071c44e-4ef6-4d10-9bfc-6b9278a36d3e" class="">我很感謝她明確的說出動機 縱使是不明確的目的
+也讓我開始思考自己是不是也有一樣的問題
+我可以開始思考自己為什麼要賺錢
+為什麼要變得更好
+要怎麼樣去達成這些事</p><p id="75848f2c-9553-4423-bce9-39e06ab65a95" class="">我沒有明確去講出自己手上及腦中有哪些事情
+我沒有在睡醒時去紀錄睡前思考的問題
+我沒有確實去紀錄自己的時間還有金錢的流向</p><p id="f03602d7-57d0-4b7f-bb5b-88a95c8ef617" class="">我要明確去講出自己手上及腦中有哪些事情
+我要在睡醒時紀錄睡前思考的問題
+我要確實去紀錄自己的時間還有金錢的流向</p><p id="50164be7-6371-4db0-867d-41290f1e33c1" class="">2020-0130</p><p id="6ba7f1fa-adc0-416a-b217-bd906e4fa134" class="">630-700 刷牙
+拉頭 頭部《》伸展
+肩膀伸展 深呼吸
+伸展腰頭 向上 深呼吸
+伸展腰 拉左右下</p><p id="4e00e3d2-edad-4e50-937e-0793238efde3" class="">抱頭下彎</p><p id="77e9838f-7c3a-41e7-b8b9-0f5ace2ea4ae" class="">拉肩 肩膀伸展
+手臂畫半圓
+拉背 手臂向後拉住手掌 左右
+拉臂 手臂比七 左右
+弓箭步</p><p id="a202992f-6b02-4091-9619-d0af24f09c83" class="">深蹲</p><p id="cf5c44af-90e4-45a3-b76a-43d2ea8acafb" class="">2020-0131</p><p id="926bd2b6-0ad4-4be7-af29-1e2de88a3da2" class="">52 10</p><p id="f803342d-5334-4553-bf44-0f1fce3daa2a" class="">2020-0204</p><p id="69b890b9-2f45-458f-a75f-cfeaaa920b46" class="">堅持不全然是對意志力的考驗</p><p id="74ae533b-c151-49de-bbfe-c9dc6f1d0791" class="">2020-0204</p><p id="5010893a-5ad3-4838-bf9b-547c3316db03" class="">不說話之旅
+靜默</p><p id="e9b5b130-758a-46ab-a7cc-77165acf3987" class="">2020-0205</p><p id="3dcfd765-63ea-43fb-868b-ca2f5df20644" class="">薪水沒發： 我認為我需要知道
+為何兩個月後通知
+為何七月發放
+28000是所得還是什麼方式給
+我要如何知道我能收到
+我要如何得知金流改善</p><p id="21ddb096-2b49-41bf-95fe-1c880b2f2b23" class="">2020-0205</p><p id="567a3436-e1d6-43fb-afac-8a251b69ad45" class="">在&#x27;15 至 &#x27;17 年間從事參與現場的影像及執行 , 主要對象是獨立樂團美秀的現場 VJ 及實驗 Au-
+dio/Visual 團體無物 , 支援內容多為現場非樂器類器材整合及影像聲音的程式互動  , 擅長工具為圖像語言 Processing, 經驗多累積在產生性藝術及
+聲音分析上。</p><p id="1f62fd21-4a67-4ca1-a481-0521cacd18b8" class="">2020-0206</p><p id="8136f8f2-8cbf-4bae-bd27-af53af99348b" class="">今天出去公車費+材料費</p><p id="855b5520-f417-4690-ae40-522a98afe4ad" class="">2020-0206</p><p id="f58a92b0-22e8-42b1-8aef-b34157057576" class="">我喜歡紀錄自己，喜歡符號，善於忘記事情</p><p id="b8c84dc4-12d3-4ea0-aaac-fee1cb6a5d9d" class="">2020-0210</p><p id="d4f8de5a-915e-4aa8-a9f7-2dde5f90e201" class="">樂於成為你能成為的</p><p id="5693c0f7-eb08-4e1d-b262-a017b282acc9" class="">2020-0213</p><p id="f513ff16-6099-47b5-85c2-507663213dc8" class="">12號去科教館</p><p id="912d7641-b947-4132-89f3-99529492a9c8" class="">2020-0214</p><p id="c5f63d6f-aaa9-40dd-b5b9-6a50e1634ac0" class="">8672 軟體的udp</p><p id="3b0a9684-83d6-46db-996e-13f043d57ab2" class="">1392 環控</p><p id="2ae6796d-686a-4599-9570-76354d904271" class="">管子4公分
+半邊16公分</p><p id="0bec1128-edc9-4736-882d-b928fc6b6a45" class="">寬6高5</p><p id="7ffaad62-abfc-42c3-b75e-ce51ef0342d3" class="">主機長寬高40/17/37</p><p id="3ba64ff3-d728-49ec-8dc1-4594e5e7859c" class="">側門 寬50高60</p><p id="1bea96f5-cfdb-45a4-92b9-b500642363c8" class="">Ip 101/102
+Ctrl+d. Debug</p><p id="1b39b4ed-e257-4ecc-801e-821bda77fff9" class="">2020-0221</p><p id="8caede68-06fe-4d52-806a-19077e9f09fc" class="">煎烤
+最高溫 15分
+10分</p><p id="1a99d8d2-4bbf-4f0d-bfeb-aa89f68c888d" class="">2020-0224</p><p id="6ee39624-db6e-400d-9a78-71b321232f73" class="">原
+33.5
+15.5
+今日電費加值</p><p id="8aca5730-ba0e-443a-bded-684612de9acb" class="">2020-0227</p><p id="8b892967-ede4-44eb-9caf-da0f118b5ffb" class="">一個吝嗇的人也不願接受他人的幫助</p><p id="d67aaad3-4c62-443c-af96-ca149ec03ccb" class="">2020-0227</p><p id="742b7975-7dbe-49b1-9ddc-6859e27a25cd" class="">定期思考何時何地如何創作</p><p id="35db224b-d84c-44d3-84ed-aae3bdf4e939" class="">定期思考創作該如何組成</p><p id="1ee6924e-4f87-4cfb-a49e-cc44f41f6d52" class="">2020-0229</p><p id="17802d5a-4521-4bb5-b8e8-88fbfe5e484b" class="">鮪魚 210
+罐頭 52 #2
+香菇 138 #2
+米 109 10餐澱粉
+麵條 84
+泡麵 318 5餐 __911
+玉米 44 #2</p><p id="6cec07e4-8d56-421d-8742-93b2e0c7496d" class="">2020-0301</p><p id="e420e0b0-236d-4e27-8ff2-a14547c0ea14" class="">喉嚨
+吞嚥有時候不順
+喝水的時候喉嚨深處會養養的
+胸悶
+容易喘</p><p id="55191a7e-75e3-403a-9f55-761182c76262" class="">心臟
+小動作心跳就容易快</p><p id="7038dbf8-411b-47a5-aa89-0cbf4d86e92f" class="">2020-0302</p><p id="b318016c-3e13-471e-b179-246dd911f69d" class="">寬 27.5</p><p id="cebd3884-3f8c-406d-adb8-17b1efd23432" class="">Hdmi
+Dp
+Dp
+Vga</p><p id="d657f856-e9fe-4797-b39a-522077db105e" class="">2020-0305</p><p id="925d82a1-b8d3-4e04-8e70-56a8dcd60cd2" class="">+105</p><p id="ebe3b8b4-37fe-4514-8644-cad6ef84fac9" class="">2020-0306</p><p id="031b3e48-5510-4b5b-8765-3afb8d5643b9" class="">我是某些人以前的樣子
+某些人以後能看到我的影子</p><p id="434ff454-5de2-42df-b0fe-ca7fd650babe" class="">2020-0306</p><p id="d127dc52-d133-48e8-adf6-6aba7563e948" class="">你知道你正在如何使用你的生命嗎</p><p id="b7e863a9-8740-422a-8dbb-ff51e639ded8" class="">2020-0307</p><p id="f72928aa-7ea6-42e8-b5ea-9187f7de7c3b" class="">找教學看
+慢慢整理vfx</p><p id="11cee3b1-1140-4f69-adc3-98610f08a34f" class="">2020-0308</p><p id="a21d6292-9559-4fc3-b0bd-229310d5a05c" class="">清醒的每一天與夢的每一天
+是一樣匱乏的
+有夢與醒的每一天
+是我追求的</p><p id="f03f48aa-9a45-4b4a-8ac2-2e4a42e615fe" class="">2020-0308</p><p id="94cd73c9-f2ac-4e2d-a066-80f838c24b2b" class="">我過去曾經試過當各種的人</p><p id="d66e3f60-1c2a-4f57-b2d1-f1872bc4a66e" class="">2020-0308</p><p id="16e89770-880a-4616-aaf4-3f2122d1ab9d" class="">我覺得沒有被尊重時
+我問自己
+我如何給予尊重</p><p id="855b8779-2433-40e7-8750-7c2531c287a5" class="">2020-0309</p><p id="9d6381cc-4a35-4a84-994f-2e705f994399" class="">Pixeline</p><p id="20574ffc-76dd-41e9-9f18-07972f4799f2" class="">2020-0309</p><p id="83ecc5ff-b264-4a1e-aceb-f531a850645b" class="">可以詢問關於這個行業的職業規劃</p><p id="ca80be58-fad3-4f66-963d-9c3c21d393ec" class="">2020-0311</p><p id="f3ea5a4f-91ec-4e1e-bb54-16fa92b8efc9" class="">前情
+描述問題
+問題影響
+限期改善</p><p id="b7006fa6-f528-4328-b028-d05fd39ef74f" class="">簡先生您好，
+日前與您提及房間樓上會長時間有似擲筊的聲音，再持續了快一個禮拜的時間後與簡先生在2/27第一次提及，提及後雖有改善，但已造成了實際影響，與我同居的女性租戶因此造成身體上的不適，也影響到了工作。
+謝謝簡先生有向我們說明情況，並協助我們與該房客調解，但近日仍有此情況發生，今日3/11也發生於早上六點持續到八點，已再度影響到我們的健康及工作，我們尊重其他房客的自由，並也希望互相尊重，希望簡先生能為其調解，感謝</p><p id="97cd53b5-3e9b-4b5c-ae44-b9a534c33309" class="">2020-0311</p><p id="a00c5bde-ba04-407e-9dfa-1f8bbea5d1d3" class="">手機鑰匙錢包口罩</p><p id="7a2d4f1f-574c-461e-a70c-2aa444b33412" class="">2020-0311</p><p id="00aeac56-7326-4489-89b8-81f5eb90b4eb" class="">Diegesis
+Diegetic</p><p id="871a7a15-fd97-4a9b-a2c4-4a334dd19268" class="">敘事音樂
+畫內音 畫外音</p><p id="c08daaa1-dc8e-484e-a0ee-7beb79b3d395" class="">參考鏡頭語言</p><p id="8feabc9e-5d99-42f9-a97d-9a2111a4ad26" class="">好萊烏之聲</p><p id="b0ff4c87-1b9a-4c2a-b77a-542ed1a8c1db" class="">2020-0312</p><p id="ff6dd154-efc9-46f2-b1fd-1fb94e63d111" class="">線材連接
+更新檔案</p><p id="03494ed0-03fe-49a0-93a5-4df9a02d44be" class="">設定解析度
+設定ip
+設定com arduino
+Serial沒有連接上</p><p id="d1b054ba-eda1-4093-a430-a3804aeea8f1" class="">左上一列數字是
+12進出34晝夜</p><p id="4650f567-9692-46c1-9114-0dc8e38b4f62" class="">Zx轉彎 v歸零</p><p id="e0534f68-27bf-40c7-bb2f-36c45d2d9b4e" class="">右側數字是油門</p><p id="880d90b8-f259-49b1-b0e0-127b8129197a" class="">2020-0314</p><p id="3d2b6299-b2c3-4652-bbc9-67db4a7f3f81" class="">從你口中說出一樣感動的話</p><p id="58520de8-4c4b-48d4-8e35-d0f06ef1a385" class="">2020-0316</p><p id="4aa44fe4-6ecb-49ce-bb28-79a396077d9d" class="">如果和笨蛋爭論，那笨蛋就會變成兩個</p><p id="55a1a5be-026e-4cb4-b92b-d87f2ab9f147" class="">2020-0317</p><p id="9b74459e-5317-407e-b929-3d0914cfa947" class="">裝水的時候想到我剛來愛迪斯打破了以前在黑山你給我的杯子</p><p id="bdb541e1-92a9-4974-b596-a66e5dbb367e" class="">2020-0317</p><p id="04ed1806-c2f5-439d-a1ab-3fa902f6bd81" class="">透過現場的音樂讓路過的參與者藉由聆聽，與台電的太陽能發電數據連結，隨著數據更新每十分鐘一次，聆聽現場的聲音就能知道當時的太陽能發電狀況，讓太陽能的數據可以結合人們的一天中不同時間的體驗帶入生活之中
+隨著早上發電量還在上升而舒緩的聲音（田園交響曲...），中午發電量最高如同烈日的音樂（夏 四季協奏曲...），到傍晚逐漸下降步入休息的聲音（蕭邦夜曲...），太陽能反應著人們的作息，也反應著天氣的狀況，在烈日特別高掛的日子，太陽能發電總量特別高時，人們也會一起聽見烈陽高照的聲音
+作品會隨著太陽能發電數據的變化，以及時間去挑選適時的音樂（適合持續十分鐘的古典樂）</p><p id="8ef1bca6-d9ec-461e-af7c-b5f5882466ad" class="">我想結合的小trick
+在有沒帶口罩的人走過這個廊道時，音樂會慢慢轉換成海頓的驚愕交響曲或是貝多芬的命運交響曲，希望能提醒大家進出公開場合要記得配戴口罩
+為了因應疫情，現在在百貨公司和像電幻一號所這樣的公開藝術環境都會需要配合量體溫噴酒精及帶口罩，齊心謹慎面對的同時也是緊張的社會壓力，我希望防疫帶來緊張的同時也能透過一些輕鬆風趣但不隨便的方式一起執行</p><p id="3fe5bfa8-3bc4-421f-8eae-67b4c6633498" class="">//太陽能受到太陽的影響，發電量也同時反應著當天不同時間的太陽角度//</p><p id="129edebc-af5d-4a00-bf88-ac7f607072eb" class="">2020-0318</p><p id="f880dfb7-ce8d-417d-b117-6e13269c33cd" class="">米 189
+條例包 312  26#12
+麵 96</p><p id="5c435f03-4756-40d6-8e8f-7ed9613a556e" class="">2020-0318</p><p id="bd4f039f-b8d7-42d4-aef3-0cfdc80e6df5" class="">安全而且負擔得起</p><p id="19f23b58-597f-45b4-b302-fd240289d9d6" class="">2020-0320</p><p id="e17fb32b-9975-45d2-badd-cd621d111b22" class="">當你能熱愛自己所害怕的蔬菜，生命將開始產生巨大的改變</p><p id="49545eee-0422-4af6-b0a5-99ac773017e3" class="">2020-0320</p><p id="7e8197d7-3da5-4ff4-9f71-6c602438eb12" class="">電卡37
+0320</p><p id="4d74f7aa-da2b-4176-a6ef-5ec3501a71a1" class="">372截止今天</p><p id="ff93a9c2-e7eb-4e47-a084-532d29d8a131" class="">189</p><p id="49b846c1-ea74-4b43-b6bf-1b046e682def" class="">2020-0321</p><p id="e64f4904-204a-4a56-9188-17ae02769e5a" class="">拉麵店</p><p id="9e1b2e88-dbbb-4c26-b726-e08a1ec2bb1c" class="">2020-0324</p><p id="e0977f68-c434-413f-9afa-51f61d33e3e9" class="">我需要規則去感覺我存在</p><p id="69742263-17cb-4b98-9025-302e6a17e1a7" class="">2020-0328</p><p id="c3c06d72-a7ca-4167-b4c8-aff2c9a38c5c" class="">心裡覺得悶悶的
+有點浪費時間
+下雨了
+想你了</p><p id="71b9312b-f164-48ce-9f61-1e23687a1668" class="">2020-0329</p><p id="02ee325e-2768-4c7d-91a8-1336a2c0fcf3" class="">昨天爸爸和我們聊舊家要依照阿嬤的遺囑過戶給叔叔，談到我們家以後也是留下這棟勝安這棟房子，以前在仁里的家也是阿嬤幫忙出頭期款，希望我和弟以後不要太計較，誰繼承了房子，也要幫對方出頭期款，談到爸如果過世了唯一的需求就是幫忙好好照顧媽媽，談到我們家都還是比較過勞，阿公阿嬤大概都是五十快六十就離開了，談到不要播佛經，播些他喜歡的流行歌，不要蓋死人被，但可以蓋他喜歡的厚棉被，看天氣再決定要穿啥，如果要拜水果不用忌諱芭樂，如果拜芭樂記得拜硬一點的</p><p id="e78a5980-0eec-40ac-8c6f-d2633fe32735" class="">2020-0329</p><p id="b0ac11f3-8895-4551-a1aa-1a06f9d1d042" class="">三個檔案以上就有奇怪錯誤</p><p id="5dedf166-327e-4fde-9f42-b08218125d96" class="">2020-0329</p><p id="5001d43c-e041-4e33-b522-6df2713a1d67" class="">我把自己散落在各個地方
+就像我會不斷的找回它</p><p id="8cff15b8-22bc-4205-8293-cb9298538dc8" class="">2020-0329</p><p id="426353b5-a4b0-4755-b9c6-4682270d3044" class="">任何人都可以是我
+我可以是任何人</p><p id="f5f0a3c6-4141-4e15-9666-489b9edf9d34" class="">2020-0329</p><p id="af28a088-96e5-49aa-a84b-c3c16ebb3150" class="">像雨中的馬
+像跟風走的孩子</p><p id="bccd127a-26d1-4f6f-9bf7-5af30212e532" class="">2020-0329</p><p id="103034f9-8205-4c08-bdec-1f130c6bdcf2" class="">為什麼你要保持自己
+如果你在忘掉又再記得之間
+對於同樣的問題
+你給了更多的機會
+生命太唯一了
+為什麼你只給自己一次生到死的機會</p><p id="c3bf5f8b-b0c7-4f6f-8983-20be54ffb582" class="">2020-0329</p><p id="9c5a6ebc-7a7e-45a9-aceb-c6794b70cbfd" class="">為什麼當你問了我是誰就必須承認是孤單的
+為什麼當你問了我在哪就必須承認我是存在的</p><p id="25c191ed-2905-493d-bc22-98a50b038e7f" class="">2020-0329</p><p id="dcc427a4-ff26-4c67-954d-70ffc2f0372a" class="">自己配不上自己的靈魂</p><p id="354631a4-0f39-4ded-9abe-1e824557c3d5" class="">2020-0330</p><p id="4b0844a1-9d79-4d85-94e4-edb92d7908e6" class="">不太知道要做什麼，但是要很酷</p><p id="8be250d1-5c99-4764-8913-cfaa194b7841" class="">2020-0331</p><p id="51084652-e797-4b34-b0ce-7399bb334ef8" class="">下午寫作品介紹
+測試出目前我的操作方式送不出array 猜是spawn那的設計 但我確實還不懂vfx的用法</p><p id="af7c618a-ba2f-495d-afc1-b00f484c1b71" class="">中午與道元討論聲音
+五點再討論一次</p><p id="8dc6d89c-0450-4cf5-855d-da342a235fcf" class="">今天上午 測試keijiro的vfx用法
+了解到如何讓聲音loopback回去unity</p><p id="4229d262-cce6-4c93-8bdf-bc4e2c25b1c0" class="">中午和道元開會 調整時間圖表製作</p><p id="ce781452-85fd-40e3-bef0-92d064266838" class="">製作聲音移動方式及錄音
+大概3點製作完成</p><p id="13282216-3097-4e9c-8f32-e058f3f17f25" class="">4：30斷線 之前開始製作樂譜</p><p id="ab8108ac-d2ec-4a13-b2da-65ca3500a9fe" class="">重新連回
+上傳目前unity檔案</p><p id="91034de5-17d0-47a4-8656-d42f6d668735" class="">11點討論後半段的圖表細節</p><p id="e16f9098-2702-4fa0-b692-d0a9ef84e88f" class="">2020-0331</p><p id="c5f577c2-29b2-4d5d-a04f-ff9a067fc2ec" class="">如果還有下次
+準備兩台主機</p><p id="14a411a8-f506-4769-9904-2c1d032f9601" class="">2020-0401</p><p id="bde2c2d6-6814-43ab-bd60-081f7977df75" class="">學習擁抱傷痛的方式不好嗎</p><p id="850f7328-c08d-43b0-9ce1-9ceedc7f3531" class="">2020-0401</p><p id="23780699-ad56-489d-88e4-45509a582c0f" class="">上午在填樂譜 中午轉錄第一版
+兩點討論第一版
+發現audacity第一軌會是stereo 需在轉錄的同時做分割 不然會空著
+3點半送出第二版 修正時間
+音量透過距離修正為24調整大聲</p><p id="de091b5c-bd3d-4664-b0bc-d2ce65ee2cb4" class="">5點前完成一次開會
+目前將要根據現在的動作和聲音來想視覺</p><p id="768b70c3-4cf3-4cc0-a079-fef4e32434e3" class="">六點先想了一些視覺
+先做再說</p><p id="9ac4a529-52cb-461d-baff-c81a56f7c2db" class="">2020-0402</p><p id="bc53adc2-b289-4683-8ba1-fbe35cfac92b" class="">杏美齒摸</p><p id="9a86acf5-5f94-4ed0-a080-f5ab27edef88" class="">2020-0402</p><p id="b6d9d88e-ad46-4e5f-aad2-eedd8fea2204" class="">5+8
+照三餐</p><p id="429b7ead-73f2-4368-aecf-4a5bedfa6a48" class="">吃完早睡</p><p id="360bbb14-a20a-4eba-ae1c-6e6fbd15f2ae" class="">3：30拿下棉花 一小時</p><p id="5b748659-41a9-46db-9090-3c32eab5632b" class="">東西放涼吃不吃辣
+不用漱口水</p><p id="e2e6db22-4132-48e7-855b-82f2a238f035" class="">2020-0403</p><p id="10046387-acac-45ba-9f92-2c6633568fb0" class="">4/3
+130-210更新樂譜
+與鄭小確認</p><p id="83a3227e-044e-420d-a4b9-b324d5e92173" class="">4/2
+製作了約3個vfx set
+看到</p><p id="06b27a32-12ef-450d-827b-2f8d50f98d73" class="">2020-0404</p><p id="7e0191e8-490f-4b7e-b4ba-e6c1e066327e" class="">我過去看到引領著自己的惡魔就是我</p><p id="f60fba56-851c-491e-97ec-2dc849bb9499" class="">2020-0404</p><p id="be5eb62a-317e-4bf6-86aa-2a7676c06613" class="">少了那種乾淨優雅的感覺</p><p id="d453b0c7-d0dc-42b7-bff9-81c171b4559c" class="">2020-0405</p><p id="9875dfde-ddda-4070-b9c2-0b93905d1c3d" class="">複雜而武斷
+單一而多元</p><p id="7aef06e5-3b9b-448b-b87b-01e8968ad0ba" class="">2020-0406</p><p id="08ec4ae1-c16c-496d-9966-661263f6821e" class="">小匹今天自稱老婆
+我很開心</p><p id="84a4d986-1f07-4bdb-99e4-d1dcbaf1bee2" class="">2020-0407</p><p id="3d296330-4d8f-4d7e-b0e5-259dd623c3c8" class="">單檔4g 4個檔
+其中一個合成聲音上去
+1940/1980/2020/2060</p><p id="dcb8a647-1adb-4e0b-afd6-05cc2f49766c" class="">2020-0407</p><p id="eee3525a-df9b-4def-9431-1461a08aac45" class="">2020-0409</p><p id="21c8ce3d-b84d-421a-8e6f-dc4781cf912e" class="">在工作中其實會遇到很多不合理之處
+或是我會想怎麼做
+或是意會到自己有很多沒想清楚之處</p><p id="c78319f2-ce17-4652-b831-bb93f2d65bcc" class="">2020-0410</p><p id="db4d2b5d-15ce-4d16-8c11-27713070640f" class="">如果我看不懂大家說的
+那也將沒人看的懂我說的</p><p id="0c72774f-1e7c-4b4b-96be-e62bf4b7e935" class="">2020-0412</p><p id="f26e91ff-85a8-4b56-baa1-7b6eccad61b3" class="">溝通只是工具 人與人連結的是情緒</p><p id="47cb5f5b-28ff-40ae-b8f3-2f9ed54d7a72" class="">2020-0413</p><p id="f78e2b3e-7492-4b9a-8208-fec4f82dd330" class="">Ipad mini
+Ipad air</p><p id="79f1adfd-aa73-4a83-8f22-6d46dc07734c" class="">2020-0414</p><p id="d61171d3-26dc-48e0-a320-413b23c711b8" class="">看到世界上有這麼多優秀的人
+那為什麼我還要努力</p><p id="2fef4d7c-3fa2-4250-9104-7dd855cad0f9" class="">2020-0414</p><p id="bf860fa3-34cd-4208-bd4c-402236ab19c9" class="">我好想跟誰分享</p><p id="f839e635-4131-4206-a5b4-8953ebc29b63" class="">2020-0416</p><p id="5433b4c0-c9a8-4281-9d79-c7b871fa470b" class="">用過去完成事情的經驗創造收入
+去資助下一趟旅程的開始</p><p id="c40015b1-7840-405c-8fe2-2d9cc5986773" class="">2020-0416</p><p id="70d14a8a-48fd-42ca-ae98-1a19fdfefc53" class="">收斂是開始減少問題
+開始解決
+開始選擇剩下哪些問題</p><p id="3ef9c7c0-521e-4c3a-b4c7-d1e7ff3e8830" class="">2020-0419</p><p id="cd75cf83-5a09-4f19-84e7-f44cf18fdf4c" class="">我被日蝕擊落</p><p id="3608f1e8-2629-4d9a-8a46-4870f774e89c" class="">2020-0420</p><p id="c8875af2-3bf2-41c8-89ca-f2db210d5e33" class="">這些都是壓力
+為什麼不把你的壓力說出來呢</p><p id="5882eee7-560b-4349-95c0-662e0ed6598e" class="">成長的壓力
+工作的壓力
+休息的壓力
+交際的壓力</p><p id="78592fba-2a0e-450b-95bd-d18ddb35ecd8" class="">2020-0422</p><p id="903700bf-1689-485b-8ccb-e9fb81087fb7" class="">忙碌只是偷懶的一種形式 96</p><p id="767f6268-05b5-4311-8880-b24d30122cdf" class="">如果沒有確認哪些是攸關的工作，也沒有定下緊湊的工作開始與結束時間，瑣碎的小事就會顯得很重要 99</p><p id="176f0565-139a-4043-a14b-90a051eae4d5" class="">我在虛構要做的事情，好躲避重要的事嗎 102</p><p id="78609cf4-796b-49d4-b9e4-a5b2d91c2b52" class="">豐富的資訊創造貧乏的注意力 109</p><p id="74ad1c48-b073-4b4b-b773-651b690da5f0" class="">保持思考，不要直接接受閱讀的內容 109</p><p id="1757e6db-45b3-41ab-bd4d-c03556b9b2b0" class="">想知道如何估算最近的新產品市場規模，請上本書的官方網站 194</p><p id="f478b84f-7577-4428-bb71-ea1762e2aad0" class="">想了解授權人與被授權人的個案研究實例，請連上
+<a href="http://www.fourhourblog.com/">www.fourhourblog.com</a>
+並附有實際金額的完整契約 200</p><p id="985658cd-439a-4592-af4e-eb4a589a4d32" class="">2020-0423</p><p id="c9682ba3-e784-4eea-b6a6-7a66f46b120b" class="">下雨就好不想出門上班
+的情緒很直接
+和哪些點子連接在一起一定會賺錢</p><p id="d9076be9-96bc-42f8-a22b-3a92b85f9ddc" class="">2020-0423</p><p id="a60596ef-d44f-4478-8e39-9991b79f8f3e" class="">寄我於過去的平靜</p><p id="e4c5a6ce-f538-4321-aaef-22505317f701" class="">2020-0424</p><p id="7f880764-58fb-48f7-a8af-ea972b48b4ac" class="">Camera field
+Camera filter pack blur
+Hk
+Blur boom shader</p><p id="dc8e8214-f603-46fd-9e3f-683b679e6032" class="">2020-0427</p><p id="626103da-ed90-4cff-bcf0-442e696d207f" class="">聲音在同半邊亂跳 找不到源頭</p><p id="11f0bede-af09-473f-9593-350535399d40" class="">2020-0428</p><p id="29a44dca-0c33-4489-9b4d-2979459e0c52" class="">提到自己平凡的人其實都期待自己不凡
+就像宣稱自己富有的人其實都期待自己貧窮</p><p id="68a7f778-c137-4161-a90e-67eb1690c066" class="">2020-0428</p><p id="810f8ccb-3982-4659-93a1-f8d4b39be263" class="">蚵仔在跑</p><p id="a3a6356e-c8ea-4455-8c1f-12bd6e413953" class="">2020-0429</p><p id="d2a6d5d5-d6e3-4333-a78d-078dfcac9190" class="">聯絡投影廠商 採購投幣機</p><p id="64a21c04-385a-4680-80b2-dfc72dd78c14" class="">2020-0429</p><p id="fd313bde-31ca-4996-b30c-91e37f816794" class="">我們今天看太多動畫了</p><p id="5a91dbed-34ba-41fc-a24e-eb72c541494c" class="">2020-0430</p><p id="561901b1-e2b5-46ed-b5f7-c81055796ba4" class="">螢幕usb未街
+開機無反應
+1110
+電源未插上</p><p id="e15360fd-bf3f-4abc-8113-3bf03aa71f96" class="">2020-0430</p><p id="3bc27aa2-2ad9-471d-9ca1-23628ffa5977" class="">專心在自己的旅程</p><p id="6a44e676-d5d7-4fa0-b183-3a02baf70672" class="">2020-0430</p><p id="d7266079-db4b-4eaf-ab03-8b1cd5f530d5" class="">我有很迷惑嗎</p><p id="8de2d293-a6d2-4dd3-85b5-cce22b868227" class="">2020-0430</p><p id="46c77361-7fab-43d8-a2ed-f424ca7c7a38" class="">你會使用的工時</p><p id="248cb506-8598-4476-9e56-eea456e88430" class="">2020-0501</p><p id="f613c639-686c-4540-806f-ae2c380bdcb0" class="">9點 整理雲端資料夾
+10 閱讀 鄭的檔案更新</p><p id="4fa8a3da-4b4e-4e11-8d70-6b499ce1790a" class="">2020-0504</p><p id="b989b700-7c06-4ff9-aa0d-be642378a80d" class="">Overthinking
+思考超速</p><p id="75d8ef98-b1cd-4847-80f5-9d6fa30b8d79" class="">2020-0504</p><p id="fbce8a4b-ef5e-47d7-898d-d1bf580c9988" class="">努力的本質是不是一種壓迫
+甚至是裝忙</p><p id="23f4dfd0-1148-4106-bcb3-3d8617f88d2f" class="">2020-0504</p><p id="616caee0-b5f7-460d-84f3-21fc8155bba9" class="">我的冥想
+在冥想的時候放鬆
+提醒自己關注腦袋中的流動
+提醒自己放鬆
+感受腦袋中的事情一件一件流過
+看著它們像看著水流過
+提醒自己用鼻子呼吸
+耳朵去聽各個周圍的聲音
+直到聽到最遠的地方發出的聲音
+這個最遠的地方就在我的心裡
+向外一看便是我自己
+保持呼吸
+各式各樣的聲音在我的頭一圈環繞
+身體各處有時候會是養的
+提醒自己那只是噪音
+不要把意念都集中在那一點
+也不需要去行動
+保持分散的自己
+呼吸
+提醒自己腦袋越是安靜
+越不要去思考事情
+就能得到越多平靜</p><p id="83566da4-74fa-4d26-82ca-0b5eb5357bea" class="">2020-0505</p><p id="0a713730-152f-4491-8d14-3b0b1af3ee02" class="">比起壓抑 提醒
+我想尋求更基源的平靜及努力
+發自內心 自然而然的</p><p id="567228d4-353f-4548-b577-4c7e883d5e9f" class="">過去的樣貌不是我的敵人
+我要追求的只是平靜的心 平靜的努力</p><p id="8c4f63ce-8ab6-4203-b9ee-e194678e35f2" class="">2020-0505</p><p id="8f28d54d-cb85-48a3-969c-5db1ebf50577" class="">我的夢想是什麼</p><p id="efcd4235-a5f5-46aa-9be4-c3ed92bc5ab5" class="">2020-0505</p><p id="25c7e757-3e21-43c7-9b47-6618e1e8b39d" class="">完成檢查聲音表及給出reply</p><p id="42915c14-8fb7-4b3f-8791-af8d4037cce8" class="">2020-0506</p><p id="89455313-956c-44dc-8cdc-9ade677d3ce6" class="">生活本身就是不斷的發散了
+那我們能做的不就只剩收斂</p><p id="656b610c-8c38-409f-bb28-f2d722355beb" class="">2020-0506</p><p id="d3b13726-00b2-49c5-b4fb-08de4e750850" class="">如果我們不去觀察
+就不會覺得生命是發散的</p><p id="590bbbbc-792e-48c5-a9fc-5d653dca4c44" class="">2020-0506</p><p id="f40ec690-3a5f-4f5c-a5cf-0fa5aab460a3" class="">Summer56
+Happy56
+Share56
+Save56
+Thanks56
+Ice56</p><p id="bf906740-dd37-44f2-bebd-d93ef0900734" class="">Use56
+Red56
+Sky56
+Buy56
+Big56
+Bus56
+Hot
+Wow
+Cow
+You56</p><p id="65a1d4db-ec06-44d1-92fd-c1884045ff7c" class="">2020-0506</p><p id="a918ecfc-9392-4536-bbfe-767f29bebe38" class="">主機正常
+視訊沒畫面
+插頭開機正常無火花
+Hdmi於內顯上</p><p id="a064b497-feae-4119-84ea-266e03f5ef35" class="">2020-0507</p><p id="dbcc3d36-2746-4838-a990-b8b32b68d23d" class="">我們的浮躁及壓抑都是年輕的夢</p><p id="8eecf213-b9ee-49bc-b931-d3f956a8eee8" class="">荷爾蒙個性
+靈魂個性</p><p id="d8707545-0459-4507-8822-cdbd68c5b608" class="">身體個性 你做什麼樣的事 行為特徵
+靈魂個性 你是什麼樣的人</p><p id="4297a01f-989f-4a52-b7db-a85c81836909" class="">2020-0507</p><p id="ad8a75a8-c6cc-43cb-bd48-f48ab854f590" class="">如果你願意記得我所有的優點
+那我也會帶走我剩下的缺點</p><p id="d4a8a3e6-9971-4e9b-87db-e632f3eb9d6b" class="">2020-0507</p><p id="1580be95-7d0d-4cc8-99f8-af1a67bb0ec2" class="">對自己不需要的東西即沒有意義</p><p id="208c5ec0-abef-4622-ba41-6850ea0f0899" class="">對我沒有意義即我不需要</p><p id="d9f1c26b-8212-4be7-a35b-f8318650b31a" class="">2020-0508</p><p id="416cd874-6aca-46ac-ab2e-dca310e4b82a" class="">開文學電腦</p><p id="dfe57563-2496-4d10-8b18-b2253a5a7761" class="">2020-0509</p><p id="5e8160c7-8aa7-40de-b788-ba83cfe423ff" class="">感興趣 已知的事情連結</p><p id="3da7163d-f6f4-4434-bad5-89903364f935" class="">2020-0509</p><p id="e4cd9a2a-46b0-4356-a14b-d33e7fa88cf7" class="">這世界這麼美好
+而我們卻只能將世界轉換成一些食物消化然後產生一坨屎</p><p id="e4c24190-a91c-43e0-a696-54d31a37c627" class="">2020-0509</p><p id="68aa0b07-7c1e-4adc-90d4-025cdc2beb50" class="">我們的存在宛如過去的影子</p><p id="015ad4e3-19f8-4c86-9012-aabef330d60b" class="">2020-0510</p><p id="8217e3c0-cdf3-42d6-831f-add4e1e2082e" class="">現在我會接收那是另一個故事
+你是書裡的主人翁，講著我沒看過也不可能了解的經歷也很精彩</p><p id="5f382960-4b83-4c1a-add1-9e223374cc2e" class="">2020-0511</p><p id="0f2417ad-5f8c-4095-8311-75e46e873fe2" class="">在我睡夢之中
+她藉我能力正在遨遊</p><p id="231da0eb-dc2a-4c0c-a314-e0e26c5d141c" class="">今天星期一</p><p id="fa54f661-ae40-41e9-97c4-bfc1ff8fe9d9" class="">Material s,佔據我的心</p><p id="ed02431a-9f44-4480-85d4-412cc662ba1d" class="">Steam反過來是materials</p><p id="68e0fb58-d3f5-40ea-a93b-4ff369b4e5ac" class="">2020-0511</p><p id="f3ba2bea-fe26-40f4-b4ea-8d82fca86c8d" class="">借恩多300</p><p id="013aa372-91e3-4309-a0c0-d8c74e06b5bf" class="">2020-0511</p><p id="169a31bc-b5ae-425f-8807-0164e3fadf6b" class="">Immerse display pro</p><p id="16be6aed-5cc9-4459-9d80-f8f9bd2124e8" class="">2020-0511</p><p id="871c41dd-2d85-4ff3-801d-f1fba2c1e92e" class="">我已經沒有什麼東西想創造了</p><p id="060b6576-e4a3-4d16-ad39-7b7b62d17f99" class="">2020-0511</p><p id="c7c6fe12-a36a-436b-b704-569f9f318a2b" class="">帶筆記本
+把平面的時程記到notion上
+詢問平面狀況
+新增團隊
+在網頁上說明放鄭</p><p id="4eff70bd-3ee6-4b97-981b-8b633bf6de04" class="">2020-0512</p><p id="77e14b18-5787-4b6d-86f6-6631ed7ed7f3" class="">這裡都沒有人
+這些房子都很孤單</p><p id="1c433871-f0e5-4f93-98c0-2e439439527e" class="">2020-0512</p><p id="b7db36f0-e8d6-4282-8789-dfb45f083c9d" class="">9-1130 補助思考 國美延伸 跟 符號延伸
+1130-1200 收尾
+1230 聯絡 雅雯跟鄭</p><p id="da10e156-065c-4c2d-954d-1c6cf23f33ab" class="">請問會影響的部分是開幕還是包含展期</p><p id="10e763bc-5dab-479d-a240-8f2ef346ed30" class="">聲音部分再麻煩協助確認，我這邊讓聲音製作協助現場的確認，請問方便給他你的臉書聯絡嗎</p><p id="36684d01-51f6-4e65-9034-0566f50e2afb" class="">0958904606
+陳小姐</p><p id="0dc2cad3-6680-4cdd-b2b5-fb949d0e0638" class="">瓦數
+喇叭高度
+喇叭固定方式</p><p id="520d5ce4-59ea-48a7-ab40-276392fc0957" class="">30公分</p><p id="c49adf91-b5bb-4bc8-80d9-d115578f05ca" class="">2020-0512</p><p id="5e0f1ca0-13f2-40fb-acaa-4250914a4c5c" class="">建立一個取代自己的系統</p><p id="4fbbaa50-8a23-44a7-a893-8fd4f8a01480" class="">2020-0513</p><p id="815a133f-bc80-4e3c-bb27-efc591add3a0" class="">什麼是原則</p><p id="12d606d1-a7bd-4783-b0cd-bc9380d5fa4b" class="">2020-0513</p><ul id="108fc2cf-fdee-4181-8f55-539df5cfde43" class="bulleted-list"><li>懂得原則的人可以選擇適合自己的成功方式，而試了許多方法，卻忽略原則的人，一定會有麻煩</li></ul><p id="c3705e19-f7e1-42ec-aabc-05d4ba478d7c" class="">2020-0513</p><p id="ce6ce19e-0b10-4d47-881d-8908d10ba0e1" class="">50塊 公司</p><p id="4482aa01-5f3f-4508-beb3-bb3241155da0" class="">2020-0514</p><p id="e3245489-0b50-43cd-aba5-3ad2fb6ff437" class="">當你身體混亂迷失方向
+要先傾聽你的心</p><p id="910d5d21-c863-45f5-a99b-eeec0d610003" class="">2020-0518</p><p id="6514724e-3723-4684-ba75-698190459207" class="">Refik anadol</p><p id="8cf62224-17f1-499f-a439-88e4a82174c5" class="">2020-0519</p><p id="9972a488-ae7b-4194-87d0-7f18116ebb25" class="">訂出週目標
+連結週目標與週目標
+去達成預期進度</p><p id="49e0549a-08b8-43fe-8071-9a250d1e3c7d" class="">2020-0519</p><p id="d6f4aaea-8950-4186-97a0-b94934853c91" class="">更佳完整了我</p><p id="f46cd649-7c4a-4523-96ab-1c7142b96505" class="">2020-0519</p><p id="61178d9d-5f96-4013-97dd-169fdbdbf8ad" class="">互動作品</p><p id="6a0c6863-769c-4c07-bb7d-771c14f3532f" class="">多為喜歡前
+快互動
+當一個舒服的人
+不要當一個隨便的互動</p><p id="efe6e796-76fb-4b5e-ab55-1d16996c7449" class="">多為喜歡後</p><p id="22ab78ae-acc7-41b8-b862-0de9c29dc7bc" class="">慢互動
+花多一點的時間來深厚你們之間的關係</p><p id="9e10bcf3-e91e-4f42-b18f-8a63f678274f" class="">2020-0519</p><p id="20ed0f70-9671-4273-8c9a-0f8c582c2a94" class="">一篇一篇的打日記
+是因為知道有一天我會死</p><p id="74bd4e92-11d8-4d46-bfe6-76e351b324aa" class="">2020-0519</p><p id="75405c40-3d24-436c-a36b-96490ee0f99e" class="">排日記的習慣
+可以看出我們又差了這麼多</p><p id="04dae062-fc3e-45cf-8aed-5265c7039249" class="">2020-0519</p><p id="2b841cf8-ad55-48c7-bae9-361f11711eeb" class="">留下的痕跡都在與某個時間對話</p><p id="f29e3e72-b528-4a32-a777-ae4314e77d03" class="">2020-0519</p><p id="34b2f39b-0e51-470f-a8fc-b62980c87d3b" class="">你就好像一個陌生的人
+我也無法接上我預期的情感
+也許這就稱作遺憾</p><p id="adb1e95a-7850-4870-84c3-1597c709b7b1" class="">2020-0519</p><p id="c37d2e44-7551-48a9-84a5-063bb4b3b176" class="">明天問25可否完成硬體確認進行場堪
+寫筆記 客端TeamViewer安裝
+//給小匹 牆面尺寸 +1440</p><p id="4807dbef-536b-49d6-a4d1-631f515584a4" class="">能不能錄現在的影
+買的asset能不能正常錄製
+錄聲音</p><p id="893a8bff-4c0e-464e-88cd-159ce24d2517" class="">合併聲音和影像</p><p id="708ae370-f9b8-460e-be2e-40c4f053c4dc" class="">2020-0520</p><p id="c560c140-1b61-4f81-9954-647b9adf5df3" class="">哇這張圖好清楚
+我應該紀錄下它
+但如果沒有立即有幫助
+我也不應該增加隱形成本</p><p id="cbaaead5-d83d-458e-97e7-5897a6ee46ca" class="">結論
+如果在調查什麼
+就應該立即寫下小筆記
+才能讓好的資料被立即完善的整理待人使用</p><p id="5179edaa-e595-429a-89ed-b78050312430" class="">2020-0520</p><p id="6f54691a-0176-443b-b6f2-c31df06d17fc" class="">我把部分的自己寄託在作品之中
+當我迷惘時
+它們會在耳邊提醒我
+我是一個自由的人
+試著在每件事中找到自己</p><p id="1c5b697d-1f08-4a04-ab68-2e486f4ed5b6" class="">2020-0520</p><p id="892f4c8d-0f16-4725-afe8-a2a8689701c7" class="">7點到公司</p><p id="f0707619-bf06-4d3a-93ff-32382511728e" class="">2020-0520</p><p id="4e5698b7-fdb5-439a-a2ac-e7be7015e5ba" class="">現在就是最接近我活過的這一天</p><p id="8cc44d46-2619-4654-b982-5f0afe7c5bb7" class="">2020-0520</p><p id="e166e0f8-f267-4d8c-9fab-542d850a4bb7" class="">Fileser 登不進去
+幫別人開權限
+96
+97
+98
+問Robert</p><p id="0fb406d8-239b-4598-b02b-b7bc74352313" class="">注意水箱</p><p id="6426cc3f-7a94-44ba-9c9e-25498bf57bd1" class="">2020-0521</p><p id="4e671cbd-2d66-4743-91fb-f789d87ed053" class="">努力過頭就會皺眉頭</p><p id="1181283c-c633-4936-9bfb-fb52c3f7a683" class="">2020-0522</p><p id="0ba7c10a-0b92-45e1-ab10-c9b574f7701b" class="">那裡的小孩被稱作尼巴度</p><p id="30826072-a62e-42f6-b80e-fe1320e7869b" class="">2020-0522</p><p id="b0fbb923-01ed-41b1-860a-169404bd69e5" class="">傳達的同時
+廣度
+被記錄</p><p id="3de0c7cc-79dd-49fe-b5a4-18d220cd8ff1" class="">2020-0522</p><ul id="1743b221-4838-4228-a71d-404810bf10bc" class="bulleted-list"><li>既然不會放棄…那便把握住它吧，生與死，強者與弱者，便是從此刻開始選擇</li></ul><p id="3b1c2c17-3200-493f-8008-3564d90fa4a5" class="">2020-0522</p><p id="fa1385c6-f245-41f4-a3ba-719f70c7fad4" class="">眼睛是用來和人交流的
+而不是看手機的</p><p id="6ba7e183-5f34-4cff-b4df-ab4452135917" class="">2020-0523</p><p id="8d226848-27bd-401b-8598-0608302b9ac9" class="">好想要躺著就能在夢裡體驗好多事情</p><p id="b006b938-0071-4123-bef5-4c41937883bd" class="">2020-0524</p><p id="76fc5f26-12eb-4514-b106-cd3c856151c2" class="">哪些情緒該寄託於作品取決於當下的心境</p><p id="a2b4f0e1-a8a6-45b8-9467-a40f0a076097" class="">2020-0524</p><p id="47ca0159-65a8-4fe6-a42c-293992d0e111" class="">在面對浩瀚的概念時
+我們的心自然會安靜</p><p id="77d741e9-9dbb-43d9-9116-9f74b4b59db7" class="">2020-0524</p><p id="7b88e96e-aa3e-422e-97bd-a0a215f2ff86" class="">吸收</p><p id="9036e1d5-6e6e-4fd5-ace9-a4432236a6a0" class="">2020-0524</p><p id="2be17e13-c45b-485d-84a3-ce8d93c72946" class="">寫一些信給愛你的人</p><p id="951444eb-ea24-4c38-be07-f6fb93d80201" class="">2020-0524</p><p id="a1ecc987-174a-4e19-be8d-4aaaf2a7c04f" class="">自己做箱子
+<a href="https://m.gamer.com.tw/home/creationDetail.php?sn=3843574">https://m.gamer.com.tw/home/creationDetail.php?sn=3843574</a></p><p id="bb05e6bd-ea14-4d66-b78d-1777faf00922" class=""><a href="http://www.chicstar.com.tw/front/bin/ptlist.phtml?Category=225713">http://www.chicstar.com.tw/front/bin/ptlist.phtml?Category=225713</a></p><p id="d6e4e77d-dbe7-47d5-934b-86c796672b14" class="">友元 壓克力</p><p id="9fcaa83a-bfa4-493c-b316-afb5e2e0b9c9" class="">2020-0525</p><p id="9e5b34ba-ca18-42fb-80db-09ad3307bc3c" class="">寄測試檔案給國美
+測試檔案能播再去下次</p><p id="c30f2247-c09f-4616-9633-ef0b586c50f9" class="">看牙時間</p><p id="d9c35c78-207f-4af8-aef0-11c22d14247f" class="">要房租發票</p><p id="e1da60bd-49a2-4b78-aaab-09b291f8ec4e" class="">2020-0526</p><p id="f01f4910-dfaf-4847-90f8-ad24e9781ce6" class="">成長的四速度跟不上前輩離職的速度</p><p id="da0b127a-70a9-49e9-b7f0-585ed93f6e93" class="">2020-0526</p><p id="14337e33-0bca-45cb-b74d-cac261985df5" class="">跟陽明壓螢幕一樣掛投影雞</p><p id="4e8bfbec-e1eb-40bc-b17b-b7ea331f2730" class="">2020-0526</p><p id="ac5d1ef9-e126-452e-a011-9f27ee6841ef" class="">Dear all,
+Robert</p><p id="6d8062a9-e4e9-4e0c-b2ac-5e680d688c0c" class="">2020-0526</p><p id="1d155176-b333-4217-81c1-e692beac11d2" class="">工具開發期</p><p id="f6468465-0413-46b3-a2f9-74d486f13eb9" class="">2020-0527</p><p id="61b9c791-35ec-4271-a210-cf72144c9fcd" class="">保持開心</p><p id="4b506fe9-02cc-47d0-b3ba-3bbb718277e4" class="">2020-0527</p><p id="c970c866-43ec-48c4-b7ed-7f8272191774" class="">1.了解需求
+地點</p><p id="60b1ccef-cfdf-4fd2-a52b-fec566f9f0c3" class="">使用對象
+情境
+我們有多少時間</p><p id="b85be069-bded-4fff-b7a7-eceedc20441c" class="">2.可能有什麼方法</p><p id="a35c6b0c-7b14-4693-b9be-4c3530dcfa9f" class="">3.需求的優先度-方法評分
+最優先一定是時間
+準確度
+穩定性：耗損週期，壓力測試或過去經驗
+維護成本：維護執行時間，可維護性等級
+製造成本：
+=預期分析分數</p><p id="3be9a7b5-5bb9-4f5f-b8e0-77926c6cf05f" class="">設計方法檢驗-設計工具開發
+驗證準確度評分： 怎麼樣算準？
+怎麼樣算穩定：</p><p id="d994f123-5db2-41cc-bb6b-6d80bb5c01c2" class="">時間安排</p><p id="f0700414-b71a-40b1-9dfb-747a469214fe" class="">實際分析分數</p><p id="6205a9b2-2e22-47b5-8cd7-9356cf99b800" class="">癥結點</p><p id="3745132c-edf3-41c4-a4f0-b8c367650141" class="">可能會遇到的問題是
+我的原則/疑問是
+這麼做的優點是
+已過去經驗上可能遇到的問題</p><p id="561f2426-c4f7-4d63-b32d-a1102a09354f" class="">2020-0528</p><p id="8f840cd6-442c-474e-b1b1-a45ba47d10b2" class="">讓我有參與的項目
+都沒有後顧之憂的討論如何和人建立關係</p><p id="b529dec5-669f-4200-83af-3356a1c6cc91" class="">2020-0529</p><p id="0cff8170-94c3-424f-8c11-182e4dcddb49" class="">申請需求通報</p><p id="49dc4309-7c36-4404-9fc6-628ec2ea8d15" class="">申請時程規劃
+硬體架構
+使用流程</p><p id="07ce96a0-47d1-4f26-9160-09fcae8280da" class="">2020-0529</p><p id="c430c539-3d3d-406b-81f6-84a0f6c8ef0e" class="">Pc sleep lan
+採訪黃偉</p><p id="dc4a805a-0b12-4eb8-91be-25f308d621dd" class="">2020-0529</p><p id="75904a44-64d0-4860-8061-f912f0470bed" class="">不是每個人都會以個人的身份去經歷所有事情</p><p id="15d926b5-e9a8-4819-95de-f44b48b7e5db" class="">2020-0529</p><p id="ecf72809-01a9-4f13-a1a9-ed5c264aabeb" class="">我把大山放在這邊
+願它祝福所有經過的人</p><p id="9bdf4753-de67-45c1-87cf-470285565584" class="">2020-0530</p><p id="e823969b-a81d-4223-8241-b7ac87efa0e7" class="">白目跟反思的分界</p><p id="4fd0407f-001d-4d5d-8018-c3572b924ef0" class="">2020-0530</p><p id="e5b980e2-49ee-4335-9dfa-abf2571cf16a" class="">原則是
+1.讓我們有計畫可以去討論 藉由討論去衡量和完善
+2.不越級規劃/未計畫安插 任務給執行人員
+3.只要照著這份文件走 我們就可以不用為難他人也能全心為了更好的成果努力
+4.方法由執行成員提供，需求由規劃人員提供</p><p id="0d46eae0-6383-4cb1-ad0f-d5a0c7ab06e4" class="">進場需求書
+負責PM
+進場規劃
+現場窗口
+驗收日期</p><p id="ed46dca9-4a08-444a-ae71-5e86af8718aa" class="">現場配電時間
+可進場期程
+驗收項目名稱
+驗收內容</p><p id="c8a7fce7-b98d-4c12-b38c-966da7d8a6cc" class="">主機開關電源需求：定時：時間/按鈕</p><p id="28fea4d3-7951-4483-82b7-d315d81f13f6" class="">簽核 pm 進場 老闆
+_</p><p id="2b5018a7-15d3-42f6-8f3a-e4921dd2f30d" class="">_
+進場計畫書
+預計進場期程day~day
+進場人數需求</p><p id="1be241b0-3e4d-4c4f-9e6b-cb4ebfed557a" class="">進場時程表
+時間
+每個人要完成啥
+每個人要使用什麼方法：執行動作要指示明確</p><p id="6427e831-ac3f-4d9b-8882-de6609716f2b" class="">簽核 進場 pm 老闆
+_</p><p id="f312b9d5-aba6-4046-a323-d91560d3bbf5" class="">流程至少需要為兩個報告天
+進場執行規劃</p><p id="7384a044-2bff-43ca-b732-82feec102896" class="">專案部門交流
+-了解現場配置
+-設計系統架構</p><h2 id="c507cb6d-9b24-4f6f-99fc-785c68d27ef1" class="">硬體採購 規劃</h2><p id="b87cfca3-df6a-49ca-a580-6472de05ec05" class="">進場部門內部
+-規劃硬體設定
+-分配執行硬體設定</p><p id="7140dd8f-6ac5-436e-8cee-51776e7b351c" class="">流程：
+項目要做啥
+項目的系統架構會長這樣
+項目的硬體要買啥
+項目的硬體要怎麼安裝/走線
+項目的哪些部分需要開發/測試
+項目的硬體要做哪些初始設定
+項目的硬體時程要規劃多久
+項目的硬體進場計畫書</p><p id="d787b39a-3810-4851-ad49-664314db0e39" class="">2020-0530</p><p id="8dedd718-35f7-4554-8edf-aad6ef413522" class="">我預估調整vfx是比較實際的做法
+但實際執行後發現我能操作的範圍有限
+在調整vfx這件事上
+無論是工具還是能力都不是我立即能解決問題的辦法</p><p id="58844bcc-f78a-432d-a1f0-27aaf36481d3" class="">
+</p><p id="25043e50-63fc-4211-ae0d-c0f2646f6cac" class="">2020-0601</p><p id="d2abc422-9852-46b7-a6fb-4143fc54ba23" class="">面對這些人
+我只能做好自己
+我不是來影響誰
+誰都無法影響我</p><p id="41221946-4a23-46f0-9732-13863e162548" class="">2020-0601</p><p id="0ea70a9f-6194-4342-a89a-6a0b72726e59" class="">有人回應是人緣好並不需要多少道理
+事情提出對錯只是發表自己的價值觀
+討厭一件事情只是認知自己的缺點和不了解</p><p id="f2bb6ff7-41f3-49d1-a769-5c34d3876eba" class="">2020-0601</p><p id="d8f0f88e-4d6c-46f8-8203-78114e3165c2" class="">我也很希望自己能夠融入團體</p><p id="1585885e-4c37-41c0-8ee8-9b1a7176cdcf" class="">2020-0601</p><p id="7449e1a7-3091-4ebe-b8e7-7a13341baa8b" class="">如果對方將一生都奉獻在這件事上
+而你討厭這件事
+是否就足以否定對方的一生</p><p id="461b2949-a998-4e1c-9e1a-c16b42336a02" class="">2020-0601</p><p id="7ef2808e-35fb-4e40-a6a6-83a1d6974b78" class="">蹲著蹲著就忘記跳的人</p><p id="53577c56-65a9-45a7-9201-847cae5c9cfe" class="">2020-0601</p><p id="d7451f52-64f9-43dc-8726-4f8d4ea2e579" class="">感覺到被人家討厭我仍然會緊張
+我明明以為對自己很有自信的
+而且對自己有自信是我個性中需要的
+我並不是生來就有自信
+也不是少去了自信就不是自己</p><p id="8c0923ca-3cf6-448c-8585-78d4f91e625f" class="">2020-0601</p><p id="4c3d6643-f56a-441a-bd5b-f4e2bff3b0bf" class="">少去了個性中的某個特徵我還是自己嗎</p><p id="99fc5492-40fc-4d0c-94af-27a9ab37196d" class="">2020-0601</p><p id="d1002c88-7bb1-4ae7-8cef-c577126ff784" class="">尋找一個適合我的環境並為了它努力</p><p id="efd7d746-ad1c-4f23-945d-2077749db06a" class="">2020-0602</p><p id="80b18757-0066-4508-beb5-6d01d163619f" class="">用圖片錄比較卡，不知道影片串成後聲音合時效果</p><p id="bded35b6-c146-4adc-a5ae-19a5733d68df" class="">2020-0603</p><p id="4c067176-cb5f-4962-8260-1d82301177c4" class="">遮蔽次要感官加速感受進展</p><p id="8411aadf-1a1c-4648-b54b-44f1256dcdfe" class="">2020-0603</p><p id="976d7153-e253-4a03-841a-5256d296690c" class="">社交英雄傳</p><p id="e53f4bc2-64ab-4737-9821-d6d59bb30923" class="">碰碰足球</p><p id="718b5e23-b343-4af5-a377-68c77f5625a1" class="">2020-0603</p><p id="7544c346-1378-44f0-814c-0f422d1b7a9e" class="">確定自己想做的是什麼
+把其他地方空出來讓其他人去填補</p><p id="d3bba121-3bb6-4663-8773-8894deee64a0" class="">2020-0603</p><p id="2141eadd-ef8e-426a-9952-2db5d980e882" class="">祝你肚子快樂</p><p id="83f1267d-bb5f-45a1-b537-cff20b233638" class="">2020-0604</p><p id="3b44dd20-3b89-47bc-8554-640faf5d10b6" class="">這次的作品好像還是真的很不成熟
+但它幫我找回了某個重要的自己</p><p id="e13f3d9c-ddc7-445d-aee5-e5ab94235862" class="">2020-0604</p><p id="41e44410-f1a2-4fd1-be2c-e12b5e1745a2" class="">和之前只抓大美感的我不同
+我想更精準的去嘗試自己想說的是什麼
+要怎麼做
+會怎麼紀錄
+和過程中怎麼形成討論</p><p id="e23a3939-547b-4ee7-b061-2fb3f7c0e505" class="">2020-0605</p><p id="b23867b8-9643-49e7-ada5-f19406cd7068" class="">你最後抽到的那一秒
+就是第六十秒</p><p id="b287f37a-33a3-4bec-bae0-57bd0a77dfbf" class="">2020-0605</p><p id="a4d577f5-f95e-4114-b4d3-ecc135a78ccb" class="">在臺北就會有很多希望</p><p id="61d53376-d900-4912-9088-12a875765e7c" class="">2020-0605</p><p id="4330936a-2a8a-4665-a3ab-0f6d6ca6cf45" class="">都市裡的某一種人渴望著什麼機會</p><p id="5698be59-879d-4b12-8496-49acc2a398db" class="">2020-0606</p><p id="86f5797d-de6a-4bdc-ad32-bd85e57e6c69" class="">不是每件事情都有獎勵
+每件事情都有它的獎勵</p><p id="188defe0-8e2e-4918-b06b-aaaed5061e78" class="">2020-0606</p><p id="952d1e85-4f31-4aa9-94bd-a3d0d77ddee2" class="">想要濃縮我的人生
+要先知道我有什麼</p><p id="68e5a28c-e9df-4535-b96d-90ccb0c48fdc" class="">2020-0606</p><p id="a910a162-cd70-41c2-a171-bb516af78e73" class="">上網查不到自己經歷過的事</p><p id="4f6438f6-80db-4988-b9f0-379f5e091c57" class="">2020-0607</p><p id="c6745f45-fc13-43ff-8da0-b2fb1735686b" class="">心受傷的程度決定妝的濃度</p><p id="286158de-1f99-4b33-ba26-0119ff68a527" class="">2020-0607</p><p id="f7025b17-a6e0-484e-8885-e40164dd0111" class="">Xavia chen</p><p id="f85e14b1-e523-4d86-a2c4-9c2ca2304e1a" class="">2020-0608</p><p id="caed458c-be36-4c7b-93bb-0f65aa052e49" class="">敲打前</p><p id="28ce9e6d-63d5-489a-9fd6-ae3b80cd1e9f" class="">敲打時會跳位 可能是沒接好檔案</p><p id="6bbe5959-f2f7-4ace-8161-522d8dfcffac" class="">衝刺繞圈的刺激聲可以給視覺</p><p id="7940b3f2-0a23-4071-809d-5a5236fea532" class="">衝刺後面還有一段 有點空長</p><p id="4ebff0aa-5ddd-4c2d-8b9b-8056b8e122af" class="">2020-0609</p><p id="59df4edc-bc36-4a54-ba92-ae7ef0ee7a91" class="">友元</p><p id="f962c1d9-bb1c-4084-b12f-a0581fdbce4d" class="">會送出一個特殊融解的</p><p id="d5b0645e-4dd9-487a-8675-40005977a611" class="">Geobox
+Pagedown 進入解說 等很久之後可以開始遊戲</p><p id="1331c031-1237-4cb8-bfa5-f066e1f63a7b" class="">2020-0610</p><p id="33ed1839-02ca-430b-8b62-62c77b752b7d" class="">如何在社會中生活又飽有熱情</p><p id="2fadb672-9fa1-4d14-a955-7aeae0ef58d8" class="">如何尋找適合的環境
+如何保護自己的熱情</p><p id="e1690490-db5b-4312-bcf4-ca9cd995ca60" class="">如果你可以擺爛
+不要為了不重要的事生氣</p><p id="23752a8c-4b4b-4adb-8c4a-eddb506fe25b" class="">2020-0610</p><p id="4d46cdc4-8127-42d2-8bc9-48f3ab40f3f9" class="">電視要我們自己鎖</p><p id="6dfe5bf2-ab08-4656-817e-8061aba5cab3" class="">2020-0610</p><p id="5a713fb1-5264-41f5-9c2e-6d1ed4902d17" class="">測試15軌 2.3.轉錄效果
+Resize 影片
+合成影片聲音</p><p id="58dd90cb-aba2-4608-a711-ec1825738481" class="">轉檔影片就好
+下載下來明天帶去</p><p id="cb17b2a5-73d7-4926-ac34-1b6d94c40efa" class="">2020-0611</p><p id="2d8e037b-c369-41dd-8b3d-910c6a2c3fda" class="">鋼琴是all嗎</p><p id="05588f83-e2e5-41cc-8afe-46d02531c989" class="">最後繞的會有影子 也許可以多一點</p><p id="b24f171e-3b86-408d-895a-c5355c598114" class="">Slayer</p><p id="de924632-0d1e-4b3c-a8bc-8c889ba56396" class="">33時間軸
+14
+24</p><p id="1dea010a-b9b7-4d46-9a52-94e6b47ebb06" class="">15軌之三要更新</p><p id="e8702ae7-4ff7-4894-b579-774a0aee423e" class="">把force gpu flush選項打勾
+Support texture recreate 勾
+把camera Texure 調回1000
+8x
+Second elapsed
+24 frame rate</p><p id="82c3c030-76f4-46ed-a4ae-b6b8a6020c03" class="">取消reseed on play 有機會分開錄製</p><p id="e337c498-d815-4e81-8057-cb2cd1d11657" class="">2020-0612</p><p id="da237539-0c0c-4ada-b67d-c762aaca9dff" class="">只有舒服了
+心才會想繼續跟你生活
+愛著自己的心
+隨時都可以尋找你們的相處方式</p><p id="ae3929e4-07c5-4c82-b5c1-242650ea8478" class="">2020-0612</p><p id="4e6ef3ae-a517-4cfa-b6d8-2417c1f7241a" class="">你就像一稍好急的船</p><p id="2ea2a480-31c7-4e22-a25f-b8ca5241fc86" class="">2020-0612</p><p id="e336f3a9-9760-4b58-8334-de4d7a507611" class="">遊戲最好玩的時候就是剛開始瞎忙
+年輕也差不多是這樣</p><p id="a5c35a3a-51f4-46ff-8fec-23ecf1b8c4f0" class="">2020-0612</p><p id="aab9e955-6923-43ba-8d11-64fc141442af" class="">花時間慢慢遇上問題
+再花時間慢慢與問題相處
+再花時間慢慢尋找舒服</p><p id="4d73fc22-7c04-47b8-aef2-004278876319" class="">三花</p><p id="6a071a46-0e35-4484-8aeb-3ce0bfe4a790" class="">2020-0612</p><p id="82d8b20e-f6b6-4611-864a-f17476070197" class="">不是所有人都有熱情，不是所有人都想創作</p><p id="45e2ecdc-00f6-42b2-ba91-55b1d4529b0c" class="">2020-0612</p><p id="6cecf468-4706-4ca4-b6a6-8350ea42968b" class="">對小孩子來說
+想這些還是太沉重了</p><p id="ee99b961-3df3-4f68-9ff3-555ae6996e37" class="">2020-0612</p><p id="c180ceda-bf4c-47c0-b054-180c727ee6bb" class="">年輕人在想什麼的時候
+我會知道我自己是怎麼想的</p><p id="aa31ddcd-654d-4db0-b5a6-205e7e04ad10" class="">2020-0613</p><p id="e16219c3-e480-45c0-a956-d7a740cbe546" class="">310</p><p id="135e9da4-4a96-4b05-b055-47dfb630dea3" class="">2020-0613</p><p id="8d1b8a51-b849-4840-a527-40d8481b6280" class="">公開自己的錯誤</p><p id="5a5ab564-5578-4105-87b9-1893eb033342" class="">2020-0613</p><p id="15055793-2533-439f-86aa-2ac4309b7c8d" class="">110肉丸me
+190 140 3 me 30p
+400 450 p50
+35 核廢料
+50 蔥蛋泡菜半月燒
+50 臭豆腐</p><p id="d7fbf0c9-6535-4cdb-9b3f-2939466870e1" class="">小匹 肉丸 55
+小匹 飲料 209-30
+小匹 買書 125-50
+小匹 半月燒 25
+小匹 臭豆腐 25
+= 359
+小匹 飯店 1035</p><p id="1681c04e-dcb1-4136-a65d-dcb1fda76c35" class="">2020-0613</p><p id="c39c8554-8ca7-4002-8008-7ece7558e080" class="">今天做了好多事喔</p><p id="8ae81ea7-3010-4a79-bab7-0c502bec1643" class="">明天早上就開始做檔案然後小姐一直幫我再做檔案然後做到9點50的火車我們做到9點9點半吧8點才出門喔</p><p id="fcaf1806-c57e-4617-b43a-391f3f2b11f4" class="">2020-0614</p><p id="0876d6e4-e40b-44f3-9edf-704cf9325808" class="">回鄭</p><p id="24824171-378c-4db8-8011-b4850bc22b30" class="">2020-0616</p><p id="16ce6be9-7505-4305-b69d-241aba8fd55e" class="">得到了機會卻不敢深入的世代</p><p id="a75c6d6f-a1e0-41b9-b556-a67f29874acf" class="">2020-0616</p><p id="07c78004-9142-46d8-a084-a054fd786860" class="">把罪行視作獎勵</p><p id="3d96494c-6072-4065-8c77-cf28e8a53ddf" class="">2020-0616</p><p id="09b97e42-eb1d-4d23-9918-26104df8b129" class="">十字平移的心</p><p id="1faa6500-b8fc-430e-9d98-c08a376932a6" class="">2020-0617</p><p id="95416313-213a-406e-87bc-914ed9452b97" class="">熱縮套管</p><p id="bd765247-7a58-4e89-a905-6c569dd5b96f" class="">2020-0619</p><p id="8d3f2634-b126-43e0-bb04-cda98361e2d9" class="">整理文學器材單
+和maxray確認買螺絲每月一千和切壓克力和研發
+給小黃新的程式
+和修改程式</p><p id="40b8ee40-98c4-4215-b585-d45e4f335959" class="">2020-0619</p><p id="c65fa636-d1c9-4594-a150-bb930c1cfb36" class="">六
+早上看牙醫
+晚上跟阿嬤吃飯</p><p id="2abf6312-cf58-48cb-a36f-73b91c56628e" class="">日
+跟家人吃早餐
+跟弱水去台東</p><p id="d79f2ddc-51b3-44fa-86a0-775883c40558" class="">2020-0620</p><p id="7b347d5e-afaf-4185-855e-f8b0155f1598" class="">寫程式給小黃</p><p id="32e93ff5-2d11-4dd2-b651-3344ec46b65b" class="">改讀線上data
+十分鐘內一直loop
+十分鐘更新一次後繼續loop</p><p id="bed58add-a411-4949-9d27-9b8bc8ca73db" class="">2020-0622</p><p id="e0867373-12dc-4f55-83e6-6ccad79b763d" class="">要好好的面對每一個問題
+每一個問題都該被好好的處理</p><p id="cd7fb104-1c34-466a-a2aa-5e4270da72f6" class="">2020-0622</p><p id="a6dd3633-5ef4-4d41-9776-38ebc78f3ce9" class="">什麼事都不想做又會想不知道要幹嘛</p><p id="a3d56d55-08d7-4b4c-b9be-1722c767e243" class="">2020-0624</p><p id="50641796-5179-45a3-8999-01c908531bf2" class="">當你覺得自己真的是對的時候
+可能已經太多人在說這個故事了</p><p id="e29f3b2c-2d95-43af-bc46-fcf3f0ad2e9f" class="">2020-0624</p><p id="ff245d50-a6dd-437b-bafd-7fc6a21fef95" class="">Ibon當天刷高鐵票十分內一定訂的到</p><p id="1518482e-58de-4a24-8dc5-f093d21c31d3" class="">2020-0625</p><p id="e843f86e-caf1-404f-9e5f-ce992b4a3132" class="">只有在不適合的時候做奇怪的事才能讓我理解為什麽要做這件事</p><p id="9132cfb9-1603-4371-a5ae-c443c65b259a" class="">2020-0625</p><p id="73dbcdc1-a816-47ef-b342-9183d7df0009" class="">調薪的最基本原則，一定是基於貢獻的增加，工作績效的提升，且歷經一段時間觀察，明確知道績效有穩定提升，並確定未來不會有所變動，才會決定調薪。</p><p id="79bdf569-e211-4112-9c0b-dd05a8dcd1fd" class="">如何評估績效
+可以挑案到都接的過程</p><p id="d7735393-eced-4a1e-8fab-d0e0f9a68aa0" class="">2020-0625</p><p id="10bb3a8a-e936-4fb7-8a85-0e99642449eb" class="">了解薪資支付方式</p><p id="41f8be4a-0f59-4aa5-b79c-163cf14baf3a" class="">2020-0625</p><p id="6ed3d498-dc76-4a75-a2dd-0bd85da40ce9" class="">我生氣不是因為被打斷或是被打擾
+而是為什麼我要在這時候處理這個爛事情
+但其實我可以不處理的
+其實我可以更早處理的
+我可以在重要但不緊急的時候就先處理</p><p id="04760944-de8d-4c31-abaf-574f696283be" class="">2020-0625</p><p id="2b8a7b8a-4f56-41ff-99c4-37bbaa9b44eb" class="">我還蠻好奇的</p><p id="f7e11b12-f6cc-49f5-8c5d-5dc113fdcfb8" class="">2020-0625</p><p id="578dc554-3d69-4011-88fe-840bf6f5e397" class="">心血隨時都可以歸零
+但自己想要的是什麼
+要完成的是什麼</p><p id="5fbc8afd-142f-4aed-a0cf-309f885a4919" class="">2020-0625</p><p id="1b24f04f-995b-4862-9bf0-ec620a6f3c3c" class="">為啥 跟 為什麼
+為啥有啥這樣的用法</p><p id="b2ddfb29-c986-407e-ac8e-48a639f77693" class="">2020-0626</p><p id="14a3a3ee-3bc2-4591-ad0a-790609959dd8" class="">你們的笑像夏天的橘子
+夏天沒有橘子</p><p id="0525d708-61fc-4a35-ba0f-305024459bf2" class="">2020-0627</p><ul id="bf5666f1-4715-4e07-9b28-950a3edd839e" class="bulleted-list"><li>只要不放棄夢想一定會有出口</li></ul><p id="0b869cd9-fdf9-431d-9a71-a806867b9a71" class="">2020-0629</p><p id="6a4025e1-b822-4eba-b5e4-a4a43ee38e27" class="">他們會經歷很多故事
+會有很多個性
+會愛過很多人
+挺過很多事
+說過很多慌
+迷茫很多時光
+有過熟悉的朋友
+喜歡過很多衣服</p><p id="26dd6a4a-7035-4719-a578-caf117f95900" class="">2020-0629</p><p id="5d37c021-59d0-41a5-864f-13f4c83acd16" class="">33
+45</p><p id="6190afc0-20fd-4d8b-8545-e0913b6f0c6d" class="">2020-0630</p><p id="199a48b6-85e6-4467-b0c1-1640feaa6142" class="">人力成本如何估算
+撤場回來的線材轉接頭器材要如何評估使用壽命
+公司的器材如何管理
+專案利潤如何拆分公司和員工
+公司如何推進專案</p><p id="a1690543-ffdf-4846-856d-df494cffcf05" class="">調薪的最基本原則，一定是基於貢獻的增加，工作績效的提升，且歷經一段時間觀察，明確知道績效有穩定提升，並確定未來不會有所變動，才會決定調薪。</p><p id="3f0e441c-f19d-4149-8654-eb5a2b466a42" class="">如何評估績效
+可以挑案到都接的過程</p><p id="8d8a1680-b190-4e84-832d-aa80b69cbda4" class="">2020-0701</p><p id="549a40b6-604c-4670-a2f6-720173a038c6" class="">你所拾起的一切 都將成為你的價值</p><p id="b872e262-1304-4f46-b39b-8f1c2d4aeb2d" class="">2020-0701</p><p id="e1d948cb-c47a-4d70-95d4-ea4816a5a4de" class="">關於表演
+目前的動機
+回應館方對於表演的期待
+完成國美館環形空間以來第一次的表演</p><p id="21262a64-797f-4abc-be95-5faf7eadc066" class="">目前的阻力
+我對這件事疲倦 需要休息
+無法對這件事覺得好玩</p><p id="e8fd760a-1d96-4922-8805-616e94dd0ab9" class="">2020-0702</p><p id="98a33c45-cafe-49a7-91a2-201c55c67fd3" class="">豪俠牛肉 路 cindy  雞 judy
+豪俠 羊頭
+補拉魚 keke
+海鮮總匯 ruby
+鮮菇 wanyu</p><p id="529f5b26-6f78-4865-803a-ff27b5208fbc" class="">2020-0705</p><p id="687bd54b-6069-4309-b831-057044b702fe" class="">我在工作上的底線是</p><p id="85286960-5f42-4cc2-81a7-2930b7759dfb" class="">2020-0706</p><p id="ef68f376-3ce4-4f8b-973b-17b3655bf8e5" class="">你在不同的環境變成了如你的樣子
+但還是會是那麼的好</p><p id="511076bf-823c-48a1-994f-9e5cd82c89e1" class="">2020-0707</p><p id="9670f562-b14b-4f81-8f66-ef788b3283ec" class="">我喜歡有效大量的生產
+和整理生產的感覺</p><p id="022ee51a-7625-4d98-9793-fe20aaca92b4" class="">2020-0707</p><p id="29e24f91-3a48-4d7a-8048-68116fb20da3" class="">儘量保持乾淨</p><p id="50904e26-a1d5-456e-975f-22d231a17f6d" class="">2020-0708</p><p id="9656c167-e3b7-4182-a010-aecd46778205" class="">20號要請假</p><p id="ac2865e7-0c45-4c7e-beb0-773af4507459" class="">2020-0708</p><p id="c68d767c-b3fb-433e-b6da-ebf53169dfda" class="">商米之家</p><p id="550bf366-5060-43ca-9270-fbfb28af2a41" class="">2020-0709</p><p id="b5c148a0-3a3e-44dd-9cc0-ca597b057a8d" class="">接arduino版那面不能焊接 會不平</p><p id="b0c49709-895f-4b2b-b76e-f7d7dc48bccf" class="">2020-0710</p><p id="639ab455-b45a-4bba-ace2-6c95f4225ed2" class="">韓國昧</p><p id="271494d8-79f2-4381-8ffe-213cb1a21a92" class="">2020-0710</p><p id="85bff754-b01c-4ed4-b3aa-7a66ccfe3e65" class="">下妻物語</p><p id="8c2faf32-2933-4775-a984-4bf5383172a5" class="">2020-0712</p><p id="d5fcbab2-411f-411c-a802-eea0a85b18fe" class="">如果我將畫面透過ndi傳到obs上錄製</p><p id="53e00ddb-9f18-4f3a-8edb-452fd9cd6285" class="">2020-0712</p><p id="2afe2b43-7755-4e56-aada-f738ce1b0246" class="">提升
+常在
+日進
+感謝</p><p id="bf68318e-0f2a-4f64-869e-df2aa06b01b9" class="">散步 冥想 日記 呼吸</p><p id="40f00dfb-79b8-4305-8785-ae07918e8873" class="">願我能與我的家人 愛人一起以精神上的提升 伴隨幸福 健康 快樂
+願我與我的家人 愛人在何時 何處 都以心相連 彼此常在
+願我的散步 日記 冥想 呼吸為我每一天帶來正向舒服的能量
+感謝這一切回答我 幫助我的聲音與能量</p><p id="2b1c85a7-3e5d-46cc-9579-6c6cd564b375" class="">2020-0713</p><p id="439f6f78-aae9-430f-b1d5-3d1fc46da1a5" class="">我是不是沒有替他人著想
+讓他人光是處理我的事就飽了</p><p id="a4d8a18e-11c8-40a6-b8d9-209107fa1dd9" class="">2020-0713</p><p id="61c9841a-b98c-4d94-9bed-4285b2b713bd" class="">好像有點難過但好像也還好</p><p id="8a557098-a3e6-4739-8485-ac18c617dc73" class="">2020-0714</p><p id="363e96db-5bd1-479a-8b6e-5be58432069e" class="">親子丼 ruby 100
+培根豬 羊 薛 火 90 90 90
+烤精魚 judy 140
+虱目魚 路 130
+640</p><p id="218e6c85-27ce-41bc-9a0f-6db8a528a1e0" class="">2020-0714</p><p id="bd51a5ea-f112-48dc-9d72-bbc025eb882b" class="">為什麼我要表演</p><p id="acdcf3e5-0747-4469-aca1-d545f1062eae" class="">我不知道是我問題太多 造成大家困擾
+還是我沒有聽懂大家說的</p><p id="9ca74b91-c653-4aec-9b07-89d212aa9551" class="">我覺得表演真的沒有那麼好
+值得這樣麻煩大家
+造成問題困擾大家</p><p id="9de4651b-a778-4490-a089-7d80327b4b43" class="">在這麼短的時間內
+我也只是想找到最適合這個場地的表演方式</p><p id="31332f83-2c96-40b1-ad21-e9e5722c1cb1" class="">也許對大家而言這些都太應該了
+是我該去做的事
+但不該跟大家有關</p><p id="b7de6a2f-632a-4e12-9c85-5d85fe7bea19" class="">2020-0714</p><p id="b69b90b1-3042-4619-b970-5daf92946d79" class="">有什麼話就打下來
+但我就想思考
+為什麼我還不放棄表演呢
+不管最後準備的怎麼樣我都可以表演阿
+所以沒有人管準備的怎麼樣嗎
+要準備的事有哪些</p><p id="b83fa784-66b6-4374-9b9d-c25c8bdb344d" class="">2020-0714</p><p id="a8d0b666-008d-46ad-9ff6-1ffa4993cf77" class="">什麼是順隨自然
+我該怎麼做</p><p id="1b88e8cf-a76e-4c74-bcfb-8c6a748faef3" class="">2020-0715</p><p id="c61a29da-0700-430c-8de8-ca841e139b88" class="">要怎麼跟羊頭介紹你的不開心</p><p id="332b8b68-5202-4640-a1ac-a58b714c21ba" class="">2020-0715</p><p id="a27a8ffe-9bd8-447e-88b1-abcebfa91d82" class="">我是做過選擇而來的</p><p id="a0e19ca5-9413-4009-9b3c-b62cbd21dd3c" class="">2020-0716</p><p id="2f6c1a0f-5e5a-4900-9a6c-cb7a50280bc8" class="">魯雞腿 ruby judy cindy
+糖醋排骨 keke
+炸雞腿 路 火雞</p><p id="e787ac66-cd20-46bb-825d-e4f0e9ef0ccd" class="">2020-0716</p><p id="e4a8abb3-8cc4-45af-88f5-27c750d0c9c7" class="">下來長寶寶</p><p id="ccb58c0f-adaa-4237-ac51-53040b4d30b6" class="">2020-0716</p><p id="5e02f9b8-4a22-4b99-8c51-1796fd0f9e45" class="">蠶寶寶</p><p id="4c194b56-8763-4cc9-a886-f55311a3b7a6" class="">2020-0718</p><p id="b4266562-485e-4ab7-91f5-12c89a9be266" class="">很喜歡逛全聯
+很餓
+什麼都看起來可以吃</p><p id="6a9a4321-18a1-43c6-991b-46c30a3ce765" class="">2020-0720</p><p id="0690ede0-27b3-4cbd-b3b9-f789912719f9" class="">如果我們的很多笑容來自於苦悶
+什麼是因為根本的事情而快樂</p><p id="7ee6c844-a96f-4762-af65-6d084daa5aa4" class="">2020-0721</p><p id="6ce8c8ad-74d2-48e7-9143-a2f1f67a6c7e" class="">抽中就+2.5 然後繼續抽 直到沒中
+沒中就把它加總</p><p id="273b803e-84f2-4d91-b5e1-17b910c323b9" class="">try=20000
+M=0
+N=0
+Tryed=0
+For i in try{
+f = random
+If f &gt;0.2{
+M+=N
+N=0
+Tryed=i
+Continue
+}
+N+=2.5
+}
+Result =M/tryed</p><p id="49649625-4e8b-4c53-8fe3-f5101fb6ce4c" class="">2020-0723</p><p id="11e3e188-efce-4aaf-9caa-0c96c45a23ef" class="">主機板上九個孔很鬆</p><p id="c91b6e0f-0e9b-4611-b83d-3859062cf13b" class="">2020-0725</p><p id="c4c1bcfa-5760-4354-866d-c7395387afd3" class="">天外之音</p><p id="ca14a2ba-6d7a-4861-ba89-df7f63a9200c" class="">2020-0726</p><p id="8162e4e3-4ba8-4c3a-8d6f-ec83dfc8f611" class="">我們希望能至館內測試</p><p id="3385d013-0006-4ce5-adcc-8ebecf090ae5" class="">能在108展覽室進行演出是非常難得的機會
+但這個機會同時也需要更完善的準備
+在開展後得知有這個機會能一起討論
+我們便積極籌備表演的計畫
+並討論時間內有機會完成演出呈現方式
+我們非常重視這樣的表演機會
+在各方面都提出許多的觀點進行討論
+也在各方面都有了該如何準備的眉目
+我們才能知道時間內該如何去規劃和執行</p><p id="833f5f80-0303-4211-bf0d-97bef52f018e" class="">我們關心的方向還包含了表演其他的面向
+我們也期望並擔心這個表演的穩定性還需要提升</p><p id="21f56f83-50d7-458a-b60e-07b9dc912c01" class="">但我們也討論到演出除了現場融接需要測試磨合外</p><p id="542cdafa-9085-4692-8f8e-2b5b16618e36" class="">2020-0726</p><p id="220ce9e3-1d40-4f8d-8214-038de1e608da" class="">我們很期待這件事也積極準備
+能在這個空間表演是很難得的機會
+也需要各方面充足的準備
+很遺憾這次的時間比較不容易
+我們也在調整心情
+並希望有了這次的經驗能幫助到更多的合作</p><p id="68722c39-c5af-4124-9f2b-2b15d00291b0" class="">2020-0728</p><p id="1dccb7bf-07b6-49b0-ad99-5bf431748fb1" class="">禮拜四下午</p><p id="7e47210e-1ee0-4394-a55f-6224e60b8475" class="">2020-0728</p><p id="74e06cb2-0bf5-4a2b-8a4d-b78ad6475572" class="">今天抽舒跑和fin</p><p id="86681f19-5a5b-4f20-a385-70b896fb5a39" class="">舒跑2020-10才開獎
+<a href="https://www.vitalonsp.com.tw/supau-all-202005/index.php?openExternalBrowser=1">https://www.vitalonsp.com.tw/supau-all-202005/index.php?openExternalBrowser=1</a></p><p id="c408e674-e721-46dc-a489-2d1cd5b15a0e" class="">Fin每週都抽 要留瓶蓋</p><p id="a5a6e6b7-b23e-4afe-880b-edc9026b4841" class=""><a href="https://campaign.heysong.com.tw/2020Q3?utm_source=product&amp;utm_campaign=fin580&amp;utm_medium=QRcode&amp;utm_content=2020Q3SP">https://campaign.heysong.com.tw/2020Q3?utm_source=product&amp;utm_campaign=fin580&amp;utm_medium=QRcode&amp;utm_content=2020Q3SP</a></p><p id="c06e8fc0-fdfd-4ef7-9faa-c9adc5ad8cb6" class="">2020-0728</p><p id="4cfc8454-bbd4-43a6-a58c-201da6e49d06" class="">問題其實不是錢
+而是物慾太被重視了</p><p id="eb9c2fd0-87f7-4304-a5fc-b727f2016e7b" class="">2020-0728</p><p id="d3c99ceb-ca71-47f5-a6b1-48693f654e34" class="">買漱口水
+加值電卡
+改送水時間
+借360攝影機 展期到8/9下週末 六點</p><p id="8748fb74-562c-400c-8709-6f459dd4c591" class="">2020-0729</p><p id="d3222430-b0b1-409d-a07f-4be4e8d8e818" class="">準備預備金</p><p id="a49ac69c-d3b1-470d-b60e-f86256d681bc" class="">2020-0730</p><p id="80ef51f6-790b-4424-a714-9b8b0ac01dba" class="">80681106</p><p id="cfd3ce15-39a3-4493-9150-9bf96f17f665" class="">2020-0730</p><p id="e5b1189d-c14e-414b-9256-dd3ab0c9de5c" class="">我們的夢想
+一起老夫老妻
+一起開開心心</p><p id="0d6bd0cb-6149-4864-8de2-e42ef2c34379" class="">2020-0730</p><p id="dbf3a2f7-f0c0-409f-a8d7-8daf968b811c" class="">要學習知識才不會被社會淘汰</p><p id="82d4445b-870d-46cc-862b-1467f106689a" class="">2020-0802</p><p id="48c16acb-c3c7-4ab3-b6a5-66bccdfc496c" class="">環形投影劇場
+作品的尺寸為16000×1200
+作品的長度為13分11秒
+作品的互動方式為影像會隨著聲音改變，聲音會隨著影像位置環繞移動
+在影像的內容上這次希望讓人可以有休息的感覺</p><p id="16a7f5cd-bb30-4a9c-bed4-b87f4eb883ac" class="">2020-0802</p><p id="642699f7-8902-44cc-9e71-669449202da8" class="">洗米
+米一杯半
+水1.75杯
+一小匙油醋 半圈鹽巴
+煎烤模式
+230度常溫水開蓋煮到滾
+轉110度蓋蓋子15分鐘
+轉80度悶十分鐘
+完成</p><p id="7a669e58-d7e6-4991-aa06-edcbcfefcf9e" class="">2020-0803</p><p id="f758dd94-9807-4d2f-b278-5b066ff6e078" class="">海鮮總匯 ruby linv
+補拉魚 kekev
+豪俠牛 我 路v judyv
+特選牛 cindyv andyv
+豪蝦 羊頭v
+橄欖豬肉 ruby 張v</p><p id="873ac1b5-9c77-458f-8275-64e606aebb6f" class="">2020-0804</p><p id="eace25ab-37f5-44c7-8ef3-c1da08f2c910" class="">要全景紀錄
+要拍門口的樣子</p><p id="2330d4ec-b037-4366-980c-22961b7b9cf1" class="">2020-0807</p><p id="97cb56b1-ab2b-4433-a8fa-72325a030f6d" class="">Unity應用領域</p><p id="d248882a-ac9c-46e5-8905-afcf82bf3f70" class="">設計模式</p><p id="0da1452c-6f68-4579-887c-1fc3a6a22884" class="">2020-0808</p><p id="09558bea-f198-4264-92fb-c06ade0eb632" class="">Lg相機
+可達相機 2
+充電座
+白豆腐頭 3
+Usb 拼接軟體
+大卡2
+16g小卡</p><p id="78e5a823-ccce-4f59-8283-5e7fad4d4527" class="">L六角
+卷尺</p><p id="9dbced98-4fe4-4fea-9d41-5fd24b3b3fda" class="">腳架</p><p id="ff9449b4-25cd-4cae-a4b3-a4820df8971e" class="">2020-0808</p><p id="a8e19eb7-41a4-4773-8eaf-469af21e6765" class="">107</p><p id="0a936fb2-5df9-4f78-985c-46c0d4b9e289" class="">2020-0810</p><p id="7b99106d-d4e0-4483-8db8-e929b278d10e" class="">Northernlight
+知道很多間互動廠商
+荷蘭有很多博物館
+看博物館的廠商</p><p id="3488f39d-7cd6-46f0-85d7-25840dcfab19" class="">2020-0810</p><p id="b7d7cacb-c20f-409e-82d9-4c7f4bda0131" class="">我們應該擁有適當的物慾及來往如同家人</p><p id="67f9a184-25a8-40a4-b6b1-49c42a96aab7" class="">2020-0810</p><p id="c55125bc-56d5-4e4b-a5a0-103102d871e2" class="">為什麼只試圖扮演好從概化他人得到的角色社會規則就不會改變</p><p id="a7101e25-a9c8-4b5d-93ef-add0ce0c220d" class="">2020-0811</p><p id="835afdb5-1662-41e5-b121-2728ba4af01a" class="">9：00 湖興站候車 1801
+9：10 移動至上灣仔 1801停駐站更改
+9：25 上灣仔上車
+9：51
+與現場 李勝寶先生 通知到達現場
+抵達現場三樓
+拍照紀錄現場狀況 （鐵箱內外）</p><p id="aff2957c-dbde-45de-af26-72a28e2a6cc8" class="">孔位不同 - 需攻新的孔 m4
+話筒深度不夠 - 需挖新的面板方洞 （鋼板兩層）
+原螺絲長度不夠 - 需準備更長的m4 平頭螺絲</p><p id="44be7e86-0d8d-4d06-a752-c75e1ba8897b" class="">螺絲應該要對著電話攻
+才能對齊目前已有孔位，避免露出</p><p id="21507637-58d9-47c5-866b-15e2f01bf8d9" class="">需協助挖洞留下鎖位可攻螺絲</p><p id="689f927b-3300-49ce-bf1e-215b618192e5" class="">要準備螺帽m4</p><p id="7f4c0cb8-5745-468c-95ac-b7b1c6e47e89" class="">2020-0812</p><p id="5d240b97-ea48-4728-8bf2-41527bdd4947" class="">加班 一小 犀牛</p><p id="9df84d79-10fb-4e73-a042-8c091f831686" class="">2020-0812</p><p id="a6d3ae71-1fb8-441a-be1e-dd3d35bde4fc" class="">創作要做屬於自己的東西
+又要與人連結</p><p id="ff4f7fa0-fe64-40d3-9b3c-25fe11a72e83" class="">2020-0817</p><p id="8a76e485-6f04-4004-b0f3-30c525b2c2ce" class="">星期
+一 寄平板
+二 看牙醫
+三 跳舞</p><p id="33877180-9b7c-4be5-8bc8-add605e6e821" class="">五 公司聚餐</p><p id="dacce415-39eb-4389-815e-bdfb8044d016" class="">2020-0818</p><p id="8b7938c7-b033-41d0-8815-e3be40c45f50" class="">擁有特別的事物或行為並非你的價值所在
+你本身就是特別的</p><p id="c4eea2f8-4efc-427a-94b2-c342501af5d0" class="">我並不會因為繪製符號而特別
+而是繪製符號是過程
+是我學習認知到自己是特別的的</p><p id="99f848c6-8d5c-4c35-8350-b528f626139a" class="">2020-0818</p><p id="d47d89e8-11ed-46a6-ab43-c3452a36441e" class="">簡先生
+冷氣清潔劑
+建號</p><p id="4c2643ec-f35b-4344-883e-d9b20bc74428" class="">床角貼紙</p><p id="09f0224e-9648-49e5-a087-6aa44fef6108" class="">2020-0818</p><p id="7a7571c0-2e81-4d79-824c-8334a3127c30" class="">人會許的願望太不完整了</p><p id="51007d9b-2e34-4710-80fd-cd857893e73c" class="">2020-0818</p><p id="6770c2be-1dcc-4685-9bba-a8e22ad3aa91" class="">我不具備匹配我這年齡的智慧</p><p id="84637cd9-d7b0-4e0f-874a-3cd99359829c" class="">2020-0818</p><p id="a7667da6-efa5-4419-a9f2-64379f6dbd42" class="">七月報支少100塊 不知道是不是我為了湊3的倍數少報了</p><p id="cf47d699-b547-444c-85c3-2b6e08ac6852" class="">2020-0818</p><p id="cb50fe19-dde2-4eae-a2cd-c9ae3205f834" class="">不是高玩也能設計出好遊戲嗎</p><p id="78505afc-3a33-4256-b6a6-b2cd2a0583cb" class="">2020-0819</p><p id="ee7f787f-385d-4786-bf21-b7ca8edfa786" class="">349
+279
+299
+249
+289
+289
+279
+299
+459
+135
+229
+229</p><p id="f6ac9e89-5c8a-4bdf-b440-11c52e7143ab" class="">2020-0821</p><p id="e8d18a9d-9d61-44a9-b146-e34e35a5255c" class=""><a href="https://liff.line.me/1654205315-EVrVJ1lJ">https://liff.line.me/1654205315-EVrVJ1lJhttps://liff.line.me/1654205315-EVrVJ1lJ</a></p><p id="69f1e486-bade-4b23-aef3-2771ba8a8f4c" class=""><a href="https://liff.line.me/1654205315-EVrVJ1lJ">https://liff.line.me/1654205315-EVrVJ1lJhttps://liff.line.me/1654205315-EVrVJ1lJhttps://liff.line.me/1654205315-EVrVJ1lJ</a></p><p id="da5b0709-f071-4108-b2b3-3838c0d6b284" class=""><a href="https://liff.line.me/1654205315-EVrVJ1lJ">https://liff.line.me/1654205315-EVrVJ1lJ</a></p><p id="d5a22221-576f-4b90-9b45-5fa20d8eb570" class="">2020-0821</p><p id="9acedefe-613f-4c0b-89bc-6b584a9fa776" class=""><a href="https://liff.line.me/1654205315-EVrVJ1lJ/5b12a4bb8f2454a224515b9d8b0fb629">https://liff.line.me/1654205315-EVrVJ1lJ/5b12a4bb8f2454a224515b9d8b0fb629</a></p><p id="d9365f75-6d75-4e2b-9092-bb59a55dc6f4" class=""><a href="https://liff.line.me/1654205315-EVrVJ1lJ/9530328dead2c13063a3dfe85dcb5c37">https://liff.line.me/1654205315-EVrVJ1lJ/9530328dead2c13063a3dfe85dcb5c37</a></p><p id="4c767dc6-d864-4223-bbf0-2cd52c17c59b" class="">2020-0823</p><p id="368fdecf-2679-447f-b007-2e316c686c26" class="">工作建議
+開會定時</p><p id="48b02a6d-34b5-4ccb-b629-226c311f7de7" class="">2020-0824</p><p id="b26eb95b-b375-4d34-a6c6-ed534abaff38" class="">匯款 11000</p><p id="6d3bd021-0881-4307-aee4-11dd2264d6af" class="">音療之力量</p><p id="cde10622-13e0-4ce8-a098-738806585b33" class="">中醫音樂 五音療法</p><p id="10b86f06-b34e-4580-8c42-b62a8331d0dc" class="">2020-0827</p><p id="6b5a4359-bfa6-4857-856f-404dbef32e25" class="">繼電器</p><p id="7e845e0a-7244-4303-972e-f84e7f20b79e" class="">2020-0827</p><p id="98128bfd-5c8f-4b9f-98bd-885e1a30b2a9" class="">我最近在弄租屋補助</p><p id="d0916962-6fc0-4421-82ca-a60d6e059ada" class="">2020-0827</p><p id="2a5fd3d7-5ad2-4d7b-8814-103fe6e9a95b" class="">我最近想聽音樂</p><p id="09a83598-29d7-433e-b06a-f112bcde5846" class="">2020-0827</p><p id="03dd0499-73b8-4ace-b377-63951b4c8d66" class="">我最近想看怎麼做遊戲</p><p id="841fa490-f5b8-408f-ae50-42fc859a6bf2" class="">2020-0827</p><p id="67f31bc1-dda3-49e7-abae-686b5ae81340" class="">檢查控制台 電源選項 開始快速啟動有關閉嗎
+檢查bios eup2013</p><p id="80b25c71-7418-4cb4-b69b-b9ec660bd73a" class="">2020-0830</p><p id="e38d7831-fa1d-4f01-b5e0-02f453ae9c37" class="">花蓮景點和美食</p><p id="3533f347-bfb7-4967-a3f5-c1515484ab4c" class="">2020-0901</p><p id="9a24315c-d768-412e-b106-3ade104b0b13" class="">都要感恩</p><p id="7c26d4f1-21bc-4b71-be08-f3ce5cf02105" class="">2020-0902</p><p id="4a34bf6e-fa0c-4a38-8114-9b2875bd2530" class="">及品 水餃</p><p id="8b3aad48-d204-4da7-8c45-fa7418011bc8" class="">2020-0904</p><p id="4088e7f0-1c34-47e4-a0af-b698a6bb3099" class="">不要強制轉生 讓它成為一個機會</p><p id="3a718af3-2cd8-45ab-ad92-e5a766a72670" class="">2020-0904</p><p id="19fcbea9-b852-42ab-ae48-505a4ba219c9" class="">如果你不能一輩子維持運動，不如找其他你能維持一輩子健康的方式</p><p id="5e367b27-2c3a-4358-b032-159869e58654" class="">2020-0907</p><p id="a4268132-9da6-4899-b437-c105facc48b9" class="">勞健保轉出單
+離職證明</p><p id="b8cfd82a-14fa-4f15-83f0-9bb13aac7fa9" class="">2020-0907</p><p id="3ea90c9b-b9fc-4664-9d48-ec2f5573a511" class="">會經歷一條很長的隧道
+直到開心難過的事都忘掉</p><p id="b39e7e9b-2c08-4222-96e5-25919b57544b" class="">2020-0908</p><p id="ad3bc6b7-65b5-4053-ba9f-03b602303ef2" class="">沒有人使用/有人使用時皆會閃爍
+融接盒重開會回覆正常
+可能兩三個禮拜會開始有問題
+重看</p><p id="82f41c83-00e8-4af0-80d0-fea361a909fd" class="">2020-0909</p><p id="14321e04-2b2c-4bc8-ac18-9fb05e450e7b" class="">269
+345
+299</p><p id="8e83fb62-3f69-4960-a902-c93c819aed85" class="">2020-0910</p><p id="f566828d-114e-4692-b14d-ddd5393512a3" class="">這只是其中一個比較穩定的世界
+如果你不曾探索</p><p id="70512068-3dd9-4a3a-a170-29118207275e" class="">2020-0910</p><p id="fe84f319-a3cc-408f-b3c9-2b88f1a277df" class="">No space for new messages</p><p id="2823e2c0-6d2d-44a6-bdeb-fbf3d98db5e0" class="">2020-0910</p><p id="a1569866-4ba8-44b6-bf4f-0ac382476e8f" class="">分一些時間給過去
+分一些時間給未來</p><p id="f559bbf0-04c2-45ae-995c-4b093b459a29" class="">2020-0911</p><p id="801e55a9-fcf5-4dad-aa0e-e67a2ffaf2b3" class="">什麼都是有可能的
+以你的能力</p><p id="dc9208d6-991f-4196-943f-ba91d013f6a9" class="">2020-09102</p><p id="e706bc87-576c-4a37-819e-c587be03929d" class="">明天要坐幾點的車</p><p id="69936d52-3a4b-4e8e-835c-47a59a43f9f2" class="">Hi maxray
+想請問薪資保留差額發放及薪資調整的日期</p><p id="1e43b9c9-9dc6-4ef7-b735-3c9f65db1d0a" class="">謝謝</p><p id="f27cc875-b573-4d92-abb5-8cc2b7449508" class="">2020-0913</p><p id="3934087b-984d-4d42-a03a-21a358c4043d" class="">六個月的應急金
+120000</p><p id="e80a6824-5a36-4a2c-b0f7-6b31bd514954" class="">2020-0915</p><p id="d795482d-4d52-44e0-b0fe-eee82180682b" class="">全身放鬆
+說翁</p><p id="ee30118d-38fb-4617-a78f-7fe50c5fb7e1" class="">2020-0915</p><p id="4c159ecd-ea34-4197-a50f-fe7eb4d54e94" class="">Fences</p><p id="4c0deb32-472b-42a8-88a3-44fcab4cefab" class="">2020-0916</p><p id="4f3fd5f2-9513-4d4d-bfdd-ac8a1fce93a6" class="">今天andy跟我說
+今年業績這樣 年底蠻可能會砍的</p><p id="5364e4c3-2245-451f-bdd0-71c9fd76e07b" class="">可能選項：
+準備面試機會
+整理工作經歷
+思考未來方向</p><p id="cca89cad-9d34-4218-aa85-d88442a9f48f" class="">2020-0917</p><p id="c90462f6-078e-4b57-8055-7855fec6b289" class="">Bts333 foodpanda</p><p id="80265774-2c2a-4765-91d0-948503aa7ea6" class="">2020-0920</p><p id="0076f995-c9b6-42d6-88cd-2c0cd3cf8015" class="">夢到自己在debug還在做筆記</p><p id="3db98ac7-9b3d-46a2-a312-90a6815843b5" class="">2020-0920</p><p id="0962a374-59bf-4e0b-b586-1c860dfbf8f7" class="">以長支長的重點是
+你有長期的需求
+就需有長期的準備
+才會有能長期穩定動用的來源</p><p id="3a42283b-e5b2-4675-9964-445c134013c0" class="">2020-0920</p><p id="dc909b17-dd3a-435f-aefb-aff081b28978" class="">我在貪心上是不擅長的
+我不適合自己一個人貪心 容易好高騖遠
+我的專長是保守緩慢的打地基</p><p id="4748d1f6-a7de-4310-ac03-4545724496a2" class="">2020-0921</p><p id="ed6eefc4-d2d8-45ae-a396-e36af6e5c473" class="">儲值電卡
+口罩175</p><p id="30d6037c-2a1c-4b53-9668-6a3d1ae87192" class="">2020-0922</p><p id="3bc3f8b3-4067-49e3-8a21-b710f86cb616" class="">44.5</p><p id="32b8670f-d744-4007-8993-c47ef985d758" class="">2020-0922</p><p id="c0d43aa3-9cda-4291-bf2e-61b20c6ec596" class="">2020-0925</p><p id="4b91d263-5662-4185-bc20-72d097df3acd" class="">Jan kounen
+Other world</p><p id="61146ad7-8f62-4e87-88ac-8f4f29a38fe9" class="">2020-0929</p><p id="28f2fad6-075c-4450-ac33-bfd7299fef69" class="">Tip120
+220電阻</p><p id="cdaef50e-1639-413c-a45a-c9d3ac71687d" class="">2020-1001</p><p id="c0667e6a-c788-4ebc-812b-1ad23ac6133b" class="">比一口氣長
+你才有機會碰到成功的時候
+成功才能累積出自信
+有自信才開始成長</p><p id="e5821815-2dd9-41b9-8421-403731ea13b7" class="">2020-1002</p><p id="a544702c-317a-473d-8be9-aca34958a560" class="">我見你對溝通很有自己的詮釋
+剛好我也是</p><p id="4720ec73-e9f9-428d-951b-7332392bb284" class="">2020-1004</p><p id="7f41eb50-ef3c-4777-8f28-9e041b5dca22" class="">一開始先照顏色分類
+抽到八張之後就要開始調陣
+把手上能出不能出的就先整理起來
+然後把剩下的看是單張還是聽牌的整理起來
+八張之後的手牌是用整理後的來玩
+能整理三張完整能直接出去的是你不用抽牌的空間
+儘量在這個扣打內儘量打出單張和聽牌</p><p id="8493143b-3eac-409d-bd03-0a71d1724991" class="">2020-1005</p><p id="72804924-5852-4428-af9d-06ebecc6a7c7" class="">有一種相依為命的感覺</p><p id="0e072f0d-1d45-4936-82d0-22e9638b018a" class="">2020-1005</p><p id="187e184a-d302-4f8f-8303-d99506ca51f9" class="">不論前往還是返回
+我一個人搭車的時候都會哭</p><p id="b36ceff0-a2df-47a1-86b1-aac73011bd0b" class="">2020-1005</p><p id="4d5d3b86-eb90-4e59-8034-5944ccdf798b" class="">確認牙醫橡皮筋
+確認出差時間會不會撞到牙醫</p><p id="431cab2a-92b6-44e7-a704-4e6980df5f04" class="">2020-1005</p><p id="abed2b45-992a-44c7-a4c5-7d063ba9419f" class="">你可能身在任何地方
+而沒意識到自己在哪</p><p id="80697e43-6155-4cd2-bd15-b371489524cd" class="">2020-1009</p><p id="2f23e575-cb59-4e57-b63e-c35bf18eea1f" class="">希望你是一個快樂的蛋</p><p id="123ce2b0-0ff7-4d74-b744-01597a6e2621" class="">2020-1009</p><p id="e9d52121-e1ff-40d5-8a68-eef4df6025e0" class="">我擔心花時間在很累又沒有成就感的事上會為我帶來更多這樣的事
+也許我需要目標 才能感受到逐步的成就感
+我想要在過程就能感受到進步和快樂</p><p id="7596f762-c0ff-4287-8f79-826110ebcdbc" class="">2020-1009</p><p id="31567a34-0c69-4aa3-8b00-ee37947c57ab" class="">小啾啾喜歡花
+花也喜歡小啾啾
+小啾啾離開的時候
+花也會和它一起走
+然後小啾啾會留下一封信給你</p><p id="e29e566c-aee6-427a-8cd1-45d3adf6963a" class="">但我不想要摘花</p><p id="caa70666-cbf0-4ab2-b1f9-8243ab59d572" class="">那小啾啾就陪花
+花離開的時候
+小啾啾會充滿感謝的留下一段文字</p><p id="41e9a9cb-43b1-486a-8e3f-768ddf10fbb4" class="">2020-1011</p><p id="db4c877b-5408-4700-94d4-9b4d8149fed7" class="">Welcome to the Poetry Portal</p><p id="e5d80d97-708d-4140-abde-ff561e0df5f6" class="">2020-1012</p><p id="a99e4a37-9a8d-4251-8b19-1534d1d54f6c" class="">他始終都在為天下開闢著新的道路。
+他始終有勇氣承擔這份責任。
+他從不避諱去領導別人。</p><p id="57b69d91-72d6-423f-8fbf-a1f1f1587a8b" class="">2020-1013</p><p id="87a3782f-2baf-45db-96a4-4118cca2ca27" class="">愛情小坦克，誰撞誰休克</p><p id="6f261db8-5cf4-4285-82e4-6fe77eff7cbc" class="">2020-1017</p><p id="e7880f9c-1324-4558-b281-94e8854cfddc" class="">我有一劍，借予天下劍修共參之</p><p id="4e9a9f9a-1e6c-4207-b235-2021508e2b27" class="">2020-1017</p><p id="3230f2c8-d02b-45e2-8f66-2e35dfba9fab" class="">錄音</p><p id="992b9dc7-85b0-41ee-8390-907ccf662320" class="">你 吃 等 你 等 你 等 你 等 你</p><p id="502b4f35-4344-46ef-ad69-e2d9ad2fb7b6" class="">2020-1018</p><p id="d5364865-9317-41c3-b435-a4b36263b545" class="">多人走路閒晃遊戲</p><p id="dcf67e85-b48c-47bd-9c4b-06971044896a" class="">裝備 技能啥的在一開始就都有了
+只是如何拼湊這些東西
+讓你能走到很多很遠很特殊的地方</p><p id="bd4ac328-bdd8-4203-bce7-09681657e847" class="">2020-1020</p><p id="b9dde070-ecd4-4688-96ec-6ea5bfa95c0e" class="">光華
+電話線 先不用
+綠色杜邦線各買</p><p id="775f8f77-0cdf-49fb-8c63-37601ffc7acf" class="">電話頭 給下麵
+開機按鈕
+Tip120。 24個 我買15個
+散熱片
+電木版 6個</p><p id="7d573fa0-144b-4ed8-9467-dfe4c4a00f31" class="">5050燈條
+220電阻</p><p id="b4642223-7a60-4255-b32b-1bce230ead63" class="">焊接的電源座 小14×6=84
+大6</p><p id="bb263128-8861-417f-928d-0a52998a6d4e" class="">2020-1020</p><p id="b6f502fc-4eca-4dc7-ab64-cc1f0b7484aa" class="">我是葉子
+我的屁股連接著莖
+是我來自的地方
+我的身體是葉
+我是獨特的葉子
+我的葉脈分成兩條
+畫出兩道葉子重疊在一起
+但我是一片葉子
+我由著葉柄倒掉在莖上</p><p id="51b35ce9-0f08-4359-b507-ee516f733c92" class="">2020-1021</p><p id="22541c58-4151-4b6e-9c4b-991da0a0754f" class="">借車</p><p id="527a30ed-e5f3-4cec-9eb5-48e4bb3ea4cd" class="">現場維修環控網路</p><p id="6976e4bd-a728-49b9-a3a4-b5db862945e4" class="">2020-1021</p><p id="14e16106-aa79-4f97-aece-a0d3276e05b6" class="">超越實業</p><p id="0fa32b08-107d-42f9-a4b0-94f1b105d6fd" class="">2020-1021</p><p id="870f7cd1-4b4b-4916-a086-77cdc21cc98c" class="">我覺得我畫了好多圖
+就被說沒畫沒有根據
+好沮喪
+我改了六次</p><p id="16f2227c-7cd2-4018-9b67-6790f69628a1" class="">2020-1022</p><p id="7f6a8d7d-1f46-45fd-9e91-a399da16ecd8" class="">哪裡來的葉子</p><p id="d5169f0c-351b-4bce-9b7b-f3d23b339899" class="">2020-1023</p><p id="b56d6316-c767-462a-96e7-32d00748f449" class="">若是以大人使用肌肉的經驗去揮舞嬰兒的手臂</p><p id="30043cf4-91d0-49b6-a17d-bec9443910e1" class="">2020-1026</p><p id="2886d97b-d76c-4409-941b-58421cf2438b" class="">我擔心我變成其他人
+我只想當我</p><p id="a57a9ace-7905-4354-bda4-d0a4a6c732ba" class="">2020-1027</p><p id="1ee6e925-3039-4274-9a85-e1b2dd6e7803" class="">選擇套裝電腦的好處
+比較好延伸開機電源鍵</p><p id="69adbb8e-5694-44fa-bc9e-f31175ace245" class="">2020-1027</p><p id="0c671d2a-24b7-409e-a9a2-3cd4189634d6" class="">測試按鈕都正常
+裝hpram 開機電源
+機械手臂</p><p id="399ef320-5657-4ca7-a44d-264a42cc0815" class="">買電話線</p><p id="7a0f3b0a-df6a-4db3-927b-19ec39629a24" class="">2020-1028</p><p id="21a2efdf-c19b-4a93-af8f-a6f621a702f8" class="">準備一組我們測試可以使用的線材
+才能確認各項目是否正常</p><p id="f1f6a39d-0af6-47ab-9e1b-9bf5f156d5cb" class="">大象系譜
+DP2HDMI轉接頭<em>1
+DVI2HDMI轉接頭</em>1 (DVI-D (24+1))
+USB延長線<em>1 (延伸 5米以上應使用供電式延伸)
+HDMI</em>3
+電話線 長度? (開關主機電源使用)</p><p id="22e43074-866e-4b4f-b1b6-fed25e77fc0e" class="">菜寮AR大象
+HDMI<em>1
+USB延長線</em>2 (延伸 5米以上應使用供電式延伸)
+電話線 長度? (開關主機電源使用)</p><p id="7fe3eeb8-4cb1-4180-855c-0ce555709a82" class="">澎湖水道
+DP2HDMI轉接頭<em>1
+USB延長線</em>1 (延伸 5米以上應使用供電式延伸)
+HDMI*1
+電話線 長度? (開關主機電源使用)
+Usb延伸 (鍵盤使用)</p><p id="9133ead7-f056-4a40-bb55-4989210cc96b" class="">2020-1029</p><p id="6018dd87-cc5b-4aab-af33-7bd1e3f7124e" class="">我覺得你之前講話讓人很不舒服
+尤其是當別人已經努力在某件事上
+但感覺只爭取到你的批評
+而且我沒辦法在那份批評中得到有幫助的建議
+我只覺得你是來評判及無法提供幫助
+這很消磨我的熱情
+也許是一種磨練心智的辦法吧
+只有這裡可以這樣磨練嗎？
+這樣不舒服的磨練是我應該習慣的嗎？
+這裡磨練有哪些誘因？</p><p id="4ccdaab9-7e03-4dff-8424-09452e31b8ab" class="">2020-1029</p><p id="6fff206c-d8ff-4c57-86e9-4b792f121c68" class="">我經歷的訓練都是為了讓我能成為獨當一面的團隊成員</p><p id="3f239654-b4f6-4519-8c56-f52d8bb528e8" class="">2020-1029</p><p id="9e1153f5-b084-4bef-8768-150122652c8c" class="">拿七十%的心思來思考如何過得更幸福</p><p id="89b85c46-421d-43fc-8130-9c08cf764647" class="">2020-1029</p><p id="08b9720c-c58b-4c42-aa81-a725ecfb80fe" class="">交換相機/kinect
+螢幕轉成直立
+開軟體</p><p id="24ed5ef1-6ec8-4421-b184-497931e3753c" class="">2020-1031</p><p id="8eb1de9c-460d-4ce2-a20b-d02061d3447c" class="">我夢到弟弟他們養了兩隻貓</p><p id="9a48b632-980e-442f-b799-8f197164633f" class="">2020-1031</p><p id="22951fcf-bd0d-4fa8-95f2-03fe9130a25a" class="">如果我死了
+我會希望你在我家養一條狗
+然後還是會來花蓮看狗</p><p id="54375ed1-39d5-43b2-b0e6-f0f78fd8bdf7" class="">2020-1101</p><p id="c4846fb1-29b4-4436-bc8b-5abdc9a8ac51" class="">我覺得我家人讓我覺得累
+是由無數個連續嚇到我的胡椒罐事件構成
+好多的聲音和打擾
+我喜歡安靜 單純  可以休息 沒有那麼多反應的</p><p id="5054d27e-65bd-4ec1-9379-99adcd599342" class="">2020-1102</p><p id="359ebfed-2e02-4fbc-9026-db6710f2faf1" class="">最喜歡聞聞你的味道
+最喜歡舔舔你
+最喜歡你施展魔法
+最喜歡你幫我杯子飛飛
+最喜歡你對我嗷嗷叫
+最喜歡跟你一起嗷嗷叫
+最喜歡你牽著我的手
+最喜歡跟你一起睡覺
+最喜歡跟你還有小鱷魚一翔小河馬待在一起
+最喜歡看你跟小植物說話
+最喜歡看你煮飯
+最喜歡你坐在我旁邊
+最喜歡你彈吉他
+最喜歡你跳舞
+最喜歡你唱你自己做的歌
+最喜歡你抱抱我
+最喜歡跟你一起放屁
+最喜歡跟你分享大便
+最喜歡你帶我去吃素食
+最喜歡接你下班
+最喜歡一起散步上班
+最喜歡講電話的時候跟你說愛你
+最喜歡跟你說我愛你
+最喜歡對你喵喵喵
+最喜歡你下班回來
+最喜歡你對我哭哭說心事
+最喜歡你總是大方又很體諒我
+最喜歡你找我一起出去玩
+最喜歡你幫我開門
+最喜歡跟你一起洗澡
+最喜歡跟你看動畫和挖礦
+最喜歡跟你一起畫畫
+最喜歡你的字母人和啾啾畫畫
+最喜歡你摸摸我的肚子
+最喜歡你躺在我的身上
+最喜歡你抱著我的手睡覺
+最喜歡你叫我小雞
+最喜歡你走在我旁邊
+最喜歡看你看動畫
+最喜歡你和我眼神交流
+最喜歡你安慰我保護我
+最喜歡和你一起騎腳踏車
+最喜歡和你去吃好吃的
+最喜歡和你一起回家
+最喜歡跟你聊天
+最喜歡你煮好吃的
+最喜歡你做早餐
+最喜歡和你一起回花蓮
+最喜歡你畫畫給我看
+最喜歡和你一起體驗每個季節
+最喜歡和你聊工作的心情
+最喜歡和你一起去洗衣服
+最喜歡和你一起跳奇怪的舞
+最喜歡和你一起回家洗手</p><p id="503bc970-403f-4611-8147-bcf2947e145e" class="">2020-1103</p><p id="7383544b-b9bb-4fda-a361-eeb8350de46e" class="">11/2 星期一
+11/3 星期二
+11/5 星期四
+11/7星期六
+11/10星期二</p><p id="7d3a0f13-f42e-46a9-a914-0acd07daf756" class="">11/2
+今日內部還在調整代辦事項，以清楚說明ggd及我方需完成之工作內容
+Ggd於今日反應電工進度落後，詢問是否改為週四再進場
+我方根據上週數位審查之場堪觀察現場仍會有電可以使用，判斷可以與電工同步進場
+並告知線材等尚未買齊
+大象系譜的電視可能會做替換，ggd告知原因為無法送電開
+周三電工會進場但現場並無ggd之負責人員會在現場（上北確認電氣玻璃）
+目前現場僅有大象系譜的部分格子照片，並無說明如何安裝按鈕</p><p id="46cec5f2-576c-4b6c-8091-61b8b5e77f77" class="">現場先執行需要討論溝通之任務</p><p id="5ec80d58-a74b-429a-968d-edb98ee183ec" class="">“現場項目交接”
+確認每一項目的安裝方式及機房電源位置
+拍攝紀錄現場狀況
+清點現場器材項目
+：確認自己有這些資料之後我能不能裝的起來這個項目，若有缺少的確認補齊的方法及時程</p><p id="7c138336-8a76-40f0-9780-0bfafd96a894" class="">機房沒有電的話能做的就是大象系譜的安裝及走線
+若是原插座可以使用的話可以用來開機先做檔案及軟體設定
+考古問答也可以先做軟體設定及開關機設定</p><p id="a9617f3a-58b3-4de1-953f-1809334d37b2" class="">我方有多帶轉接頭及一條hdmi線測試</p><p id="2593f25e-9ef7-4f43-b1c5-38de6f05f3f3" class="">若之後還需要進行走線則以現場線材測試優先，測試完成後進行編號及拍照</p><p id="cd4bbd4e-600f-496c-8e27-030a1c2193e7" class="">電話線有至少兩種編排方式
+5v訊號走5米以上確定收不到 5米就有一點問題</p><p id="27f6a0cf-cdb8-4b5a-b054-20010c8ee158" class="">Unity 全螢幕修復</p><p id="41642dbb-facc-46f6-80ad-b81caeafcfff" class="">Unity被開始工具列擋住
+請Trekkie去民宿拿發票
+大象系譜的三螢幕翻轉還沒設定回來
+建議澎湖水道需修復硬體</p><p id="06da920d-051b-480e-982a-873f901e2bd5" class="">2020-1105</p><p id="56dbaa4d-5a41-4e2e-8614-737381922eab" class="">如果我還有35年到60歲
+我會想做些什麼</p><p id="214d8bfb-363b-4161-bfe3-bd37426d10b5" class="">2020-1106</p><p id="e89bbfea-5a41-4f91-a5d8-b5de52f1a47b" class="">我的心是安靜的
+這是一個很遠的地方</p><p id="b69c2e12-41ad-448c-9ee4-1f9692f77343" class="">2020-1107</p><p id="0de90796-990b-436a-96a9-6e40b6a32136" class="">經營一個國家
+每個人負責不同的內政</p><p id="14d5564f-3b81-485c-b858-764d2a4222ec" class="">2020-1108</p><p id="8acdca4a-9c3f-4541-a0c2-5fc3534b9d2d" class="">我夢到我接手一間舊咖啡丁
+有人在用訊息抱怨接手的過程
+有人有進店來問我一本我寫的書
+叫做 她 Her
+她們想看
+我想好像是我今年寄去哪裡參加活動的
+我很開心有人想看我的文字</p><p id="a0b4b8c0-6f81-4ce3-92d4-c0fda7712d39" class="">2020-1108</p><p id="7a1d901e-dd2a-498e-9a52-10a1b2af3992" class="">我想
+我是喜歡把我的思考過程紀錄起來的</p><p id="64d489c0-5894-4daf-9e3a-5ef1ea14ce8e" class="">2020-1110</p><p id="ec0e1ea7-fcad-4266-98e1-f6e0b0570751" class="">12/14
+11/中旬 技術會議</p><p id="17b5f3cb-6d54-46ab-950d-a3dd1a345cb5" class="">2020-1111</p><p id="85cc89b3-c7df-4f5b-b2de-46de38e19d3f" class="">我喜歡準時下班陪小匹</p><p id="443550b6-7ec7-4da2-89d6-b3ddb51ad3eb" class="">2020-1112</p><p id="7c309942-d1b1-4d6f-ad07-814cb66ada04" class="">2020-1113</p><p id="b0022bac-033e-4d36-ba94-03e42221aec6" class="">我夢到爸蓋了一間好大的房子給我
+我好開心
+然後我們一起在花蓮接案子來做</p><p id="2721ece0-c07f-4f90-af3a-915103c73c5d" class="">2020-1113</p><p id="ab5e7dd3-48f1-416a-bb0c-7eff0e19dc46" class="">要怎麼在生病的時候保持神智清醒
+或是我可以在生病的時候學會什麼更多思考的東西</p><p id="8429f15b-0e8d-45dc-9a0c-c9b3e28d9fab" class="">我沒有清醒</p><p id="25980f98-a032-4ca3-a718-593056f25746" class="">2020-1116</p><p id="82df91ac-06c3-436e-ac0d-d571a34e1e5e" class="">面對現實 極度透明 可信度加權</p><p id="8a7afb03-682e-4642-9e77-fa91f519bb70" class="">1.制定明確的目標
+2.找出妨礙實現目標的問題，不要容忍問題
+3.準確的診斷問題，查明問題根源
+4.設計解決方案
+5.徹底執行</p><p id="3978733d-5f85-4887-afa4-b86bb9b2d89d" class="">在設定目標時，只要設定目標，不要考慮如何達成，或是出錯了怎麼辦。
+在診斷問題時，不要思考如何解決，只需要診斷問題。</p><p id="bbb9f35c-00c4-420c-9b03-88988b07235e" class="">步驟模糊不清容易導致結果不盡理想，因為這會妨礙你發現真正的問題，認真執行每個步驟，會提供你繼續下個步驟需要的訊息，幫助你把下個步驟做好。</p><p id="6847aaf6-4856-4a8d-99b1-a3fb1fa37946" class="">2020-1116</p><p id="19ec6c1c-e1bd-4c84-9615-f564f60687ef" class="">6150</p><p id="1b3968af-03d6-4beb-b8a1-fd06af4ea7b4" class="">2020-1117</p><p id="d91b74b7-00af-4e05-b24f-4fe1dee67b24" class="">早起一個小時大概看20頁</p><p id="0d3d3e11-7f15-4f2a-b5ff-66cda929b382" class="">2020-1118</p><p id="b61bcc21-06f3-4a1a-9fe4-53fd513cffb5" class="">如何了解盲點</p><p id="a7e7e3c7-d017-454c-8389-888efa6ab615" class="">2020-1118</p><p id="82d1c2cc-3c17-4f34-b78e-2392821ab1b1" class="">黑色單心線
+網路頭
+杜邦頭線 紅黑
+焊槍頭
+、Dc公母頭</p><p id="9da1c3ff-7e4f-4275-b4bf-d2fd3bdf298c" class="">建立採購清單</p><p id="7c60fed9-7b2c-4e9e-8305-db245ea2016f" class="">2020-1118</p><p id="8e6d844a-9f18-4491-b4ca-c8dd1f5cdd74" class="">小狗正在享用牠最快樂的時光</p><p id="94e5fb99-8db9-4c92-8abc-28745e3ae7ef" class="">2020-1119</p><p id="565d43e4-5aae-4bc4-84c9-ddb7575ce97f" class="">黃金秤
+高委員</p><p id="a1b75ff8-360e-4f59-a835-c184ae3a7f10" class="">2020-1120</p><p id="60dad10e-942f-4792-8739-14cf09a5736c" class="">紙膠帶
+捲尺
+雷射水平儀</p><p id="fddbb581-9970-4896-953f-5fb359a0591b" class="">2020-1120</p><p id="d16933c0-10df-49b7-96dd-467386af28cc" class="">目前覺得他比工具書好看的點是讀起來更像自述使用各種工具的經驗</p><p id="17a41cb8-32d0-4b6d-8a3a-2241ed503516" class="">2020-1120</p><p id="c0a8d53b-0c95-46fe-8359-21d4f396295b" class="">蠻適合出社會讀的
+很多這時期出現在心裡的一些課題都會得到一些回饋</p><p id="aa2045b2-1fde-4c4d-b308-78d0898f904a" class="">2020-1121</p><p id="8258e3fa-9ed8-437c-aec6-08c50f7dac8a" class="">我的痘痘像是腦袋在通知我這時候面對的課題</p><p id="f2205fb3-d670-4766-8198-f0fc675def94" class="">2020-1122</p><p id="e3de4c75-a232-4eec-9b6e-fbbeebe3328f" class="">做不做都無所謂</p><p id="44ec2265-9a49-4ae6-bf84-361d9731d172" class="">2020-1124</p><p id="8a389d56-b732-4ee9-bf3f-976d13cdcb85" class="">不要忽略問題 ar模型</p><p id="c219bdad-159e-4d79-8801-a84851135157" class="">2020-1124</p><p id="e4613d7c-06ac-4ba0-b82e-a342460fa553" class="">你想要直接紀錄結果
+是因為過程中解決問題需要很多靈感和稍縱即逝的念頭
+有太多你覺得可能但不確定的事
+所以你覺得願意紀錄過程會耽誤你解決問題和忘記自己正在做什麼
+弄清楚哪些想法是有效的和為什麼你要採取行動是一樣重要的
+紀錄這個過程和結果對你提升自己的處事是有幫助的</p><p id="6f65d031-149d-4135-9069-e7bfc250405e" class="">2020-1125</p><p id="29936c5a-b36c-4f27-b9e7-febfa42ceb37" class="">少說話 多做事</p><p id="ea87a48d-64b8-4be1-a37c-931abc38bbe8" class="">2020-1125</p><p id="d7f2b90b-12a3-4e75-aaea-e3f557d60aa0" class="">案子評分 三、四個階段</p><p id="53308a8c-c626-40e6-a8c3-516769675590" class="">維修方案 可有效率重複執行的
+（沒有明確維修方案的案子續約保固的評分就很低）
+畫電路圖
+電腦備份usb</p><p id="451b7313-d898-44e2-b863-2ce062c356bb" class="">2020-1125</p><p id="41796898-b0cd-4dcc-9b38-01380117bdc0" class="">看到荔枝樹了</p><p id="1d2e4c3e-bf38-4c12-930d-57f7758840a1" class="">2020-1126</p><p id="8a70677e-8719-4050-aacb-aa16f3f73158" class="">我們能不能透過寫程式的思考和邏輯分擔pm的工作量</p><p id="14fa8ab4-6da8-4f93-8246-4541bb55cac5" class="">2020-1126</p><p id="22cfd0bf-b957-416e-8448-8cfb4ed4ceb2" class="">燙大陸妹
+豆干海帶</p><p id="b2cc5c56-5e30-4557-8d97-adb5218f55d2" class="">2020-1127</p><p id="6aeb11f2-882b-4904-84ce-b773dccbd3b9" class="">畢業典禮
+黃勝文
+大家都很友善</p><p id="31e75149-ce1c-4cae-b961-9a7128b204c8" class="">我用手機接vr玩劍三
+跟恩多說現在手機技術好扯 遊戲裡寶物變多
+跟ㄇㄕㄐㄑ一起打副本
+ㄇㄕ是RL</p><p id="dc2ef35d-89a4-41b1-9746-70422b0b343a" class="">學校小教室
+蘇巧三頒獎給maxray
+班上的座位是我們同事的在座位站起來拍手
+Maxray會唸感謝
+還有給每個同事的想法及建議
+我偷喵到他給我的話是充滿建議和建設性的
+是我很期待聽到的
+還一直開手機錄音就怕錯過
+但在夢裡他並沒有發表感言時提到我的這篇</p><p id="9631eaa2-10a1-43be-aef4-574b83ad9bc2" class="">2020-1127</p><p id="1b81f146-8f99-43d8-b894-0a7f7ab72472" class="">肋骨中間下面分開處按下去會有痛痛的
+下腹會有點滿滿的有大便的感覺</p><p id="66ba91c6-468a-4b4f-a73a-3ac392bc64fd" class="">喝水的時候會有水流過胃的傷口的感覺</p><p id="280c34cf-94a1-48a6-aca1-45cd1d736f24" class="">2020-1127</p><p id="fb6d0c2f-5643-41f1-831b-046bdea0d38e" class="">好想又去學新的東西</p><p id="764e86d4-71bd-478d-b003-65319ceb0cd0" class="">還有好多東西之前開的坑還沒完成
+作品分享
+作品製作過程回憶
+Godot遊戲和筆記</p><p id="e4d0937d-012d-45de-8f80-5ca909c7f262" class="">又想去學做3d和touchdesigner</p><p id="7dacd574-18cd-4619-a299-e15345b63dff" class="">2020-1128</p><p id="d6f61bbb-67dd-46d1-bb19-99d3ee7feb71" class="">請Trekkie帶螢幕</p><p id="6540f4de-ee9f-42b0-80c5-b3f844e4784c" class="">2020-1128</p><p id="67525206-8e1d-40d6-a8a6-1ae0dc5ed6a9" class="">製作白馬的prototype的要求跟後續支持的技術本身並無關係</p><p id="aa3982ac-dacc-4321-99bb-0b9d27d4098a" class="">決策應該以證據為基礎去辦理
+但支持這項決策的證據並不是後續技術的基礎
+所以這項決策在技術上並沒有以證據為基礎去辦理</p><p id="b6ae2ad7-4011-4c5b-ab89-5b6797bd1668" class="">要求提出攝影機架設的解決方案</p><p id="355fc8fd-e928-400f-8000-f0816ab0ba4b" class="">2020-1128</p><p id="7c239d67-4af7-4086-b246-6365abcb71fa" class="">向上管理</p><p id="ef49f649-91bc-4c19-98fe-47aa1bedd05a" class="">2020-1128</p><p id="a110b0e2-79fb-4e16-a7ca-2eaae48d75ae" class="">透過大家一起和你相處的經驗
+討論你最可信任的領域並向你請益</p><p id="87a871f4-0f7d-4bad-8fd0-4af4d51cabd5" class="">2020-1128</p><p id="b978a8e3-af88-4850-8fc7-eb51eda91e8d" class="">年底大會</p><p id="31fb45a0-0abb-4bdb-97e0-7c01cf85471a" class="">大家一起聊今年經歷的案子
+並先不讓maxray參與
+聖誕節在來看播出</p><p id="04953955-9ace-4187-aa6e-ce8c90e0ca08" class="">2020-1129</p><p id="1843d02a-76b7-4900-b6ef-737a0f715d31" class="">最好的狀況會像開放原始碼
+最好的構想會自由流動、存活、消亡，並憑著本身優劣而演進</p><p id="69c133eb-a473-4aba-9af6-ad015041703b" class="">2020-1201</p><p id="6489da81-b32c-454e-a002-b9f6b57ecb4f" class="">工作是
+和傑出的人在有趣的事中建立有意義的關係</p><p id="de922071-4e62-4d36-9534-5c92139061f6" class="">2020-1202</p><p id="d4e41916-5d40-4a1f-87a9-ad348751135e" class="">請sam現場測試code避免閃玻璃</p><p id="36482d88-7ec2-4c52-a1bf-aabdd70f4ce4" class="">2020-1203</p><p id="0aff4e80-854e-4247-bb82-dc8f5266464d" class="">505055</p><p id="933a9adb-cc48-4243-be47-5ded38a5aa7b" class="">2020-1203</p><p id="c540c697-2cd0-46ba-adce-3a14c0904792" class="">墨西哥鐵樹</p><p id="438f217c-349e-4ae8-9aee-856a94795e51" class="">2020-1204</p><p id="f5c63138-aa34-43c5-b8fd-dc9214fd4ca4" class="">眼前的問題不會是大事
+重點是事情會經過的規則
+只要了解事情會經過的規則就不會有大事</p><p id="fd9cbb57-e146-4d87-abe7-934befbc64c2" class="">2020-1204</p><p id="c280fb36-53a9-4ab8-b449-61067f448274" class="">出差通勤是否可以算在上班或加班時間</p><p id="cf0ef281-90ec-4391-b23f-bf058fe6519d" class="">2020-1204</p><p id="4ce50901-876e-45d8-b5c4-b9ecc90a423d" class="">公司的文化會決定公司內的人文</p><p id="77a20b5c-471b-4ead-88ce-de59336f3f2c" class="">2020-1204</p><p id="3d30c1e3-5a7b-4dfb-a802-15526db53602" class="">出色夥伴的主要考驗不在於彼此是否意見不合，而是在於他們能不能把歧見端上檯面好好說個分明</p><p id="9cdf947e-9417-429d-baa3-c196d6fe6754" class="">2020-1204</p><p id="c49953d6-d2cf-4194-93d7-e7b9c8feca70" class="">蒐集你想要的樣子，將之視為有趣的事，和出色的夥伴一起達成</p><p id="809ba517-5eaf-459d-85f1-a019db1b6ce9" class="">2020-1204</p><p id="fca2fc18-4d91-4b2d-b8e4-596e8fccba14" class="">如果我們不公開討論議題，並尋找解決路徑，我們就找不到能集體承擔結果的夥伴</p><p id="a9310357-e809-43c9-bd64-a76d8cb6bf40" class="">2020-1204</p><p id="ed81e933-cc17-4575-9695-d448216151aa" class="">與其花三十天完成，不如花三分之二的時間研究如何用三分之一的時間完成的工具或方法</p><p id="8cb5406a-63e5-4266-934b-100ac939e6b0" class="">2020-1204</p><p id="03efa41a-6f4c-4f09-826b-97809e50bd38" class="">如果我們能夠交換彼此的工作
+那就代表
+我們能清楚自己的能力
+清楚自己需要完成的事情
+我們能換位思考
+我們能清楚的溝通
+我們能把工作整理成未熟悉者也能執行的步驟
+我們可以將之整理成計畫去優化
+我們能將各個步驟拆開個別優化</p><p id="318c038e-7fa0-4330-a0fe-4558a67b0d2d" class="">要以和不同職位的同事交換工作這樣的念頭去整理自己的工作紀錄和流程</p><p id="d15acfa5-b796-4b3a-b6a3-a0fd24492dec" class="">2020-1204</p><p id="23a8e049-080a-465a-9a88-fdb9fdf917e1" class="">下次交代事情要壓時間
+壓時間的考量點是至少要往前間隔交代這個任務工作量的時間
+這樣對方如果有問題，還能轉交給其他人用允許的時間完成</p><p id="e01374cf-6a4e-4734-bd00-47a86ae9cec6" class="">2020-1205</p><p id="e8b4a938-8ee3-4845-a56f-10b4a5baeda0" class="">問題的根源主要有兩種
+起因於簡單的誤會和源自根本的歧見</p><p id="83a5d45c-798a-4cb8-a778-b8be8bf2d7a6" class="">2020-1206</p><p id="a79a06c4-ea6f-4cbf-af9c-e3f288fdf065" class="">是否延後
+週六時現場木作進度 電工進度
+入口攝影機位置的配套（位置會調整至哪跟安裝上去後還需要兩個工作天去做軟體對位修正）
+週三木工才會進場 這是指電氣玻璃的部分還是目前犀牛都還沒做</p><p id="ab535563-b98f-487f-a24e-f478f88699f6" class="">請確認電氣玻璃的安裝是現場裝上去就能測試還是裝上後還要等電工再來拉線才能測試
+如果是後者電工的時程能否於同一天拉完請廠商準備測試運作正常再離開</p><p id="431e6cbb-b947-4c0c-ac82-c82c18cb0ea3" class="">2020-1206</p><p id="92e5646f-6548-468a-b5c2-82379a85a387" class="">我跟你提醒過最晚週五前要讓我知道，但直到週日中午都沒人讓執行人員知道週一取消進場</p><p id="71db3160-ec96-4dcd-9a4c-d6e35a3aca1a" class="">我被強迫週末加班，週末還要處理可以提早準備的突發事件，週四晚上開會後，隔天我就有問昨晚有新的事情需要我先處理的嗎？如果我週日沒問maxray沒人通知我和sam不要進場</p><p id="a817671c-9751-4a9e-9aec-37c3694d7aed" class="">你在週日說我認為你和ggd的溝通是無效的，說我不信任你和Trekkie，我認為我的工作並不是讓你扣帽子，我們可以檢驗專案的執行過程看看是誰的疏忽，和該怎麼做更好，但沒有把事情講清楚，而是先指出，也讓我覺得不舒服</p><p id="872c2b22-1af7-4ef4-b4c7-ea6a86ad9830" class="">你如果有難處，</p><p id="8b148b00-f34f-4a8e-8dc5-99b3fdc11c65" class="">2020-1207</p><p id="b1d7d85f-8d6e-4715-a796-cd93636c4785" class="">收線材
+延長線
+測試聲音線</p><p id="e8a44586-84de-4c55-8479-d229e285dbdc" class="">2020-1210</p><p id="6025e764-2814-4801-95ef-5e46fd52034f" class="">夢到提摩西問我去他那工作
+我們移到偏鄉去生活
+鄉下有不少小混混
+我們散步遇到一個木作的工作室
+我們去偏鄉後合作買彩券很容易中獎金
+然後我們在vr遊戲裡合體</p><p id="6ed00651-bcfa-4699-bcb3-244d440a1ad7" class="">2020-1211</p><p id="6329306c-dba9-43eb-bdb4-6925c5e5584f" class="">我可以保持靜坐半小時
+精神 肌肉
+心靈 投資</p><p id="9b040c9d-5ba3-4a9e-bb51-653504ea1313" class="">2020-1212</p><p id="e9f2fd6b-4fe2-44b6-913e-191de44ba508" class="">螺絲從後面鎖流程上會與鎖在牆壁上衝突</p><p id="a28a463d-2a9e-4bda-af3b-458fadfc5f4c" class="">雷達的螺絲要從底座與鐵件只鎖兩顆螺絲
+牆壁若不平整需要在鐵件與雷達之間加墊片調整
+鐵件鎖上牆壁後才能測試雷達有沒有平整
+鐵件鎖上牆壁後無法拆卸下來調整墊片</p><p id="8f2900c7-a144-4d02-9ce9-3801302a1807" class="">Maxray:
+牆壁很平整不需要調整
+活動座容易鬆脫
+不美觀
+你看外面展場有誰這樣用</p><p id="919ecbe8-721e-4fc5-95a3-dcd8b6d04563" class="">2020-1214</p><p id="f7fdd7da-5dad-4c96-b3f1-84d5a90e91be" class="">帶內褲 紅衣服 襪子 牙刷</p><p id="164ee2c7-2794-4031-b548-3b5d2101ae64" class="">穿內衣 內褲 長褲 藍衣 外套 鞋子 襪子 口罩</p><p id="d92dba7b-4a83-4f57-a7ab-01c4ad350a02" class="">2020-1215</p><p id="bd23f650-ba2a-4f39-b694-f09c7fa9a58b" class="">8：30送電
+8：50開機
+17：00關機
+17：30斷電</p><p id="fdfe39b9-23e4-47a6-8d71-dc82b33ad46c" class="">Ac max 42
+Ac min 24</p><p id="6ee8f964-83a1-4f3a-bba2-884ab57f8798" class="">需要評估接下來能完工多少？
+是什麼意思</p><p id="2e0d6ecf-eec9-4d4f-9ce3-362906e0df4a" class="">2020-1216</p><p id="cbff3abb-8e74-4f10-9250-ba1a53c0c26c" class="">180 105 投影位置</p><p id="44035238-128f-4b07-811e-d137748aaec7" class="">右側140 中180 左側 300</p><p id="1530e333-f4f1-47ba-bfff-5addcc030ca7" class="">窗框160 距地177</p><p id="60db3064-753a-40ac-abd3-481fa4d30bbe" class="">中間寬200</p><p id="d68f5ba6-f472-4ea0-a183-c02f4e7b9dd0" class="">210 110
+跨時空
+-完成製作投影拼接變形圖
+-完成標示兩台投影機於現場的位置
+-今天電氣玻璃壓力測試使用3分鐘影片，目前保持正常運作cue表
+-最快應該是星期二休館安排 燈具安裝
+-需要再進行13組現場燈具壓力測試及
+-主機版水銀電池需要更新
+-電池沒電Bios會重新設定
+-維修門的右側會架設木層板放主機和電控系統</p><p id="bd237f83-a4aa-4211-8590-020d2b05156a" class="">一日古生物
+-昨日測試觸控邊框周圍觸控會有偏移，我們會使用到的觸控範圍按鈕可正常運作，但選取衣服時會有觸控感應問題（像是偏移加連點）
+-昨日大圖輸出貼時螢幕又有重落下需要注意日後螢幕使用狀況
+-此項今日並無開啟測試</p><p id="8b3c97e3-f9ef-47f7-b26d-a881fa45cf94" class="">備註
+下週會開放遊客</p><p id="96da5b09-8d2d-4c23-a202-4df651192493" class="">2020-1216</p><p id="0a045da3-177c-4870-9ed7-592d6113d969" class="">Trekkie10 30</p><p id="af8403fb-2fc1-4fbb-8c4d-7ad3e03f80e7" class="">2020-1219</p><p id="edbf46bc-d446-4cee-b8c3-ff38f991f601" class="">藝奇</p><p id="e2840848-0c7a-43dc-ae6d-a6b32d392817" class="">2020-1223</p><p id="d12a86a8-2ab4-4ca6-9127-1f4c7020ad07" class="">自光體</p><p id="e0dbdfa6-6c71-4095-8d42-e3a24461aa69" class="">束帶
+快速夾頭
+剝線鉗
+M3螺絲</p><p id="2f95b5f6-a91d-4fab-a342-ef7a060de49b" class="">2020-1223</p><p id="517f756f-6cef-407d-89e4-eec248c4439e" class="">1/2 0.5
+1/3 0.3_ 0.3_=1/4+1/12
+1/4 0.25
+1/5 0.2
+1/6 0.16_ 0.16_=1/2×1/3 0.16_=0.5×0.3_
+1/7 0.<em>142857</em></p><p id="9a2e98b0-3d6e-4c40-9a9c-4b5640e91da1" class="">1/49 0.020406081632</p><p id="2ce3f30c-f12d-429a-b1fa-b76fe374727d" class="">1/12 0.083_</p><p id="cf619fab-78ab-478a-95e8-8540c5c9aa32" class="">1 2 4 8 16 32 64 128
+1.5 3 6 12 24 48</p><p id="05c66b80-dfb7-4d2e-88f7-89cad3543d84" class="">100/7=14...2
+200/7=28...4
+400/7=56...8
+800/7=112...16
+1600/7=224...32</p><p id="108ccdf4-2e8c-433a-8a8c-914b7bf607df" class="">36 72
+54</p><p id="11bf24bd-8cc2-4049-9af0-84420e271020" class="">1 2
+1.5</p><p id="4eaaea4f-527c-420a-9c60-46f45934f568" class="">2020-1223</p><p id="5b3487af-a286-41ac-a7ff-bc8e92129657" class="">來讀數學跟物理好了</p><p id="b8dbe69c-45c6-4b56-b74a-74b671500dbf" class="">2020-1223</p><p id="c9e9ff87-8972-4303-9f3a-234a49777da0" class="">訂餐 統編 披薩要切</p><p id="1b37036c-9063-4863-98ed-de167b17e33e" class="">2020-1224</p><p id="8d2d7dfb-abbc-448c-9bc4-3e40ed302500" class="">鮪魚蛋餅 中冰紅</p><p id="57407bc6-507d-477c-a8eb-be7dbfac6743" class="">2020-1226</p><p id="182d8e51-81cd-40c9-88f9-801c0264909c" class="">牙醫 孫東寶</p><p id="e49a5c83-8956-4324-865d-d5ebbf477950" class="">眼科 健檢
+換工作</p><p id="220fc44b-0095-4cd9-8db6-318d70916d36" class="">2020-1227</p><p id="d36a2dc9-6b0c-48f8-a319-8a3bc2c609a5" class="">只要好好傾聽就好了</p><p id="373379d9-c8fa-4a80-9c89-c6b0a540282a" class="">2020-1227</p><p id="4a1b522d-35c8-48f2-a4ea-f5989960ca76" class="">其實每個人都很棒了 都需要被鼓勵</p><p id="4da5e539-b592-4324-9a9e-a72e35657c49" class="">2020-1227</p><p id="a3e9a46d-4c74-428a-9258-8e9da574f210" class="">今天聽到有一個人看牙醫 牙醫都會說他很棒</p><p id="2fc23c56-b290-440a-b3a5-bb2abbb0e3f3" class="">他就想到只有他媽媽會說他很棒</p><p id="3e65d794-ce0b-4b31-bad4-8d2947ae26d5" class="">2020-1228</p><p id="dc1920c8-e107-4a36-9fd4-6661c5d01b63" class="">眼壓 眼底 視野</p><p id="69d96811-c094-49c2-b8f4-373f5d57f1f7" class="">2020-1230</p><p id="6f821dc5-29b5-4243-9b36-b13a49e28bd0" class="">看電影
+藝文券
+公司藝文補助
+711領錢抽獎</p><p id="81aef768-cb82-4857-963a-14f7ff5218ef" class="">2020-1231</p><p id="e2740bc6-d3b4-466f-970c-b83c44b39eca" class="">如果我一直做同一個夢
+現實又失憶而斷斷續續的
+那會不會夢才是現實</p><p id="34863220-cf94-4b27-824c-493801c9bf16" class="">2020-1231</p><p id="87140d9a-fbbc-4d40-87c7-7668948ff8d9" class="">我夢到吳宗憲他們玩平衡棋盤塔的遊戲
+上面的棋格都是我畫的符號</p><p id="5e8f45b6-f740-4208-bd76-46686ddf6582" class="">2020-1231</p><p id="3bcc5081-df00-4fb1-85b3-357a5696e369" class="">擅長的事就是一條道
+人的視野眼界就是一種本身的境界
+不同的道幫助每個境界的成長速度不同
+若是只握著同一條道成長會很穩固但也緩慢
+甚至有可能無法成長
+不是所有的道都在每個境界有成長的路
+不是每條道路都能在適合的境界被觀察到
+你可能需要提前發現便一直相信自己 就算認為不合理
+你可能要過了適合的境界才開始顯現道路 然後回頭走你重視的路</p><p id="c62c651b-262a-402c-a501-857c2cec03bc" class="">若是決定了 請鍾愛 珍惜 重視 謹記自己的道</p><p id="a4f12a87-553b-4db8-98d0-b89fe3e2e7be" class="">2020-1231</p><p id="618f305b-b0e6-4b94-829f-29b78edfc2e2" class="">到了新的階段會有更多你能做的事
+每個階段都要收斂
+你沒有真的那麼想
+真的那摸想的事就會去做</p><p id="13c9fcc0-07a9-4951-b587-6b288afd0ca7" class="">2020-1231</p><p id="887ff13d-a32e-4036-9d19-eda61b80b00f" class="">我在假裝自己很認真又很開心的畫畫</p></div></article></body></html>

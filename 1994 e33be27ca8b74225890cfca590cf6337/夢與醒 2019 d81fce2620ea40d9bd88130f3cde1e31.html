@@ -1,0 +1,1230 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>夢與醒:2019</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="d81fce26-20ea-40d9-bd88-130f3cde1e31" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">🎴</span></div><h1 class="page-title">夢與醒:2019</h1></header><div class="page-body"><ul id="0f967bf8-8e53-4a84-88b3-653a869c5653" class="block-color-gray_background bulleted-list"><li>2019-0122
+儲值100
+小火鍋250+20鴨血</li></ul><ul id="006f97f0-de18-4233-9159-0e9bb9c16119" class="block-color-gray_background bulleted-list"><li>2019-0122
+人有了編號和時間就成為能擁抱好和壞的商品</li></ul><ul id="db79594d-5cd9-406c-8c74-ac846a454faf" class="block-color-gray_background bulleted-list"><li>2019-0122
+只能我為我享受而去做的</li></ul><ul id="08296a97-ac94-4418-a339-bec6d0057308" class="block-color-gray_background bulleted-list"><li>2019-0122
+創作就是做 看 思考</li></ul><ul id="597510c3-7fad-425d-8e9c-44649ff9b3c9" class="block-color-gray_background bulleted-list"><li>2019-0122
+預兆可以隨性
+超越需要累積</li></ul><ul id="69d5fbcc-79a6-4eda-ba1b-229467adc2c8" class="block-color-gray_background bulleted-list"><li>2019-0122
+文字擺放調整</li></ul><ul id="3112c1c0-cd90-4795-8cb6-5de7c1577078" class="block-color-gray_background bulleted-list"><li>2019-0122
+*最重要的不是要讓對方不知道你在想什麼，而且要讓別人覺得他完全知道你在想什麼，這樣你才能操作對方往你的坑裡跳</li></ul><ul id="535241b1-9076-4171-ac93-37aa595c47f6" class="block-color-gray_background bulleted-list"><li>2019-0122
+是不是什麼都沒有留下就是遠離自己</li></ul><ul id="3c268f32-73e7-475a-8d8e-f5762fdf64d0" class="block-color-gray_background bulleted-list"><li>2019-0122
+我不會鼓勵你要成為哪種人
+我們都是不同的人在某個時空觀點
+當我們尋求方法的時候
+其實我們需要的是時間</li></ul><ul id="2946ecc1-c39b-422b-ba87-13b17a730b31" class="block-color-gray_background bulleted-list"><li>2019-0122
+Fuck the accept
+放棄放棄了</li></ul><ul id="65204d45-06ea-415d-94ab-a58c00a44b06" class="block-color-gray_background bulleted-list"><li>2019-0122
+蝦卷25
+鳥蛋20
+生蠔100</li></ul><ul id="49d7bfc6-2931-4a95-bc12-364aeaa04a52" class="block-color-gray_background bulleted-list"><li>2019-0122
+感受需要時間</li></ul><ul id="671a8bd8-c98a-474a-acee-83ea01e8a81b" class="block-color-gray_background bulleted-list"><li>2019-0122
+他們想要前往的地方已經是我來時的方向</li></ul><ul id="1122d93d-7434-4a86-af29-2fb79706c702" class="block-color-gray_background bulleted-list"><li>2019-0123
+被你沖昏了頭</li></ul><ul id="9365c70a-693e-46e9-92e6-1bee0910b030" class="block-color-gray_background bulleted-list"><li>2019-0323
+現在最應該做的是什麼</li></ul><ul id="7021f101-f1ea-40ee-99a3-30e46728860b" class="block-color-gray_background bulleted-list"><li>2019-0323
+我已經是特別的</li></ul><ul id="af252229-a250-483d-9bea-c194cf721491" class="block-color-gray_background bulleted-list"><li>2019-0323
+我不想經歷一段漫長的旅程
+然後無人等待我的擁抱</li></ul><ul id="4cf58abb-3faf-460d-8c5a-96553c951fd4" class="block-color-gray_background bulleted-list"><li>2019-0323
+我看你的時候都不知道該看哪隻眼睛</li></ul><ul id="3a0489e9-7c33-40b2-a672-bb273e228cae" class="block-color-gray_background bulleted-list"><li>2019-0323
+我夢到你離開了
+我知道你還在
+但我不知道怎麼抱你</li></ul><ul id="bfa4a090-5933-4ff8-af2b-0cc01b21834b" class="block-color-gray_background bulleted-list"><li>2019-0323
+做與不做都是成本</li></ul><ul id="980078b4-b106-4f66-9112-0ac146602529" class="block-color-gray_background bulleted-list"><li>2019-0323
+過去的招不再靈 世間少了氣
+練了一身好的吐納 仍然學習平民
+所有都暗示著重新認識自己</li></ul><ul id="00f68313-778b-422c-b23d-e286d2139698" class="block-color-gray_background bulleted-list"><li>2019-0323
+掌握自由的人這麼稀少
+可不可貴嗎</li></ul><ul id="7f07e2bc-e039-499d-85d9-f8d9a6c0046a" class="block-color-gray_background bulleted-list"><li>2019-0323
+我們會不會為了生活忘記認識的開始
+會不會因為走向不同的樣子而分離</li></ul><ul id="391a7ef8-8f85-4868-92f6-55821e27b16f" class="block-color-gray_background bulleted-list"><li>2019-0323
+雞蛋
+擦臉
+牙套橡皮筋
+鞋子</li></ul><ul id="97238474-0c91-4c17-a31a-7e7687f86603" class="block-color-gray_background bulleted-list"><li>2019-0323
+不是所有的水流都該依舊的去流</li></ul><ul id="fd5cf0f8-5b57-4377-a090-5df219525048" class="block-color-gray_background bulleted-list"><li>2019-0323
+不同方向的星星</li></ul><ul id="3e3c1a7a-9a62-4668-8118-9c5d5a9c66a4" class="block-color-gray_background bulleted-list"><li>2019-0323
+生命最後一天
+就像夏令營的最後一天</li></ul><ul id="2ceed64e-9b6a-4c8e-b2b7-7e44626e15fb" class="block-color-gray_background bulleted-list"><li>2019-0323
+生命是有限的
+但你也許還有明天</li></ul><ul id="f9ff52bc-229a-4f8b-a530-ca809d01736f" class="block-color-gray_background bulleted-list"><li>2019-0323
+在所有事情上都看到自己的影子
+卻又找不回自己</li></ul><ul id="ff86aaca-2706-4078-b480-cc4689ab059d" class="block-color-gray_background bulleted-list"><li>2019-0323
+不同的個性靠近或遠離就會產生情緒的流動</li></ul><ul id="857768d3-686e-45e5-8202-c966bbfdd1b8" class="block-color-gray_background bulleted-list"><li>2019-0323
+現象觀察而來的目的只是暫時的</li></ul><ul id="6c92623f-41a9-4261-98d9-1bc1fa559cf8" class="block-color-gray_background bulleted-list"><li>2019-0323
+閉著嘴巴說S</li></ul><ul id="769aec78-b69d-46b8-915a-7c2b3ba65a4e" class="block-color-gray_background bulleted-list"><li>2019-0323
+內容是帶有可拋棄的性質的</li></ul><ul id="eef3fabc-fe24-479c-9734-a8af11dbe47a" class="block-color-gray_background bulleted-list"><li>2019-0323
+477</li></ul><ul id="c62c14e3-0eaf-4234-a247-8f231c15836b" class="block-color-gray_background bulleted-list"><li>2019-0323
+用心生活
+情緒變化就是你生命中最好的豐富</li></ul><ul id="a5b24d33-5a55-4e01-9c8a-971de310e215" class="block-color-gray_background bulleted-list"><li>2019-0323
+驚爆遊戲
+金充姬</li></ul><ul id="46200fd5-4290-48e7-a81e-e8f18f82f44d" class="block-color-gray_background bulleted-list"><li>2019-0323
+我們努力細心警惕地去脆弱的如此自在</li></ul><ul id="ece0faa1-addd-40e0-971a-b5a4e73a766d" class="block-color-gray_background bulleted-list"><li>2019-0323
+存在只屬於追問者</li></ul><ul id="efaf095e-2a44-42a3-85ca-08cd10b844ef" class="block-color-gray_background bulleted-list"><li>2019-0323
+變不變的煩惱</li></ul><ul id="dddb625f-f17b-4fef-91af-e343870c10e7" class="block-color-gray_background bulleted-list"><li>2019-0323
+有沒有幫助我更了解自己
+讓自己也知道我想要了解他
+和自己建立關係
+善待自己
+和自己一起生活，學習，感受 自己以外
+善待自己以外</li></ul><ul id="59b3e8db-83c5-42a3-bd95-5f81c43e74e5" class="block-color-gray_background bulleted-list"><li>2019-0323
+事情的先後也是看著事情發生的時候</li></ul><ul id="731a98cd-0258-41ec-b8d1-7e07ecac7276" class="block-color-gray_background bulleted-list"><li>2019-0323
+我希望可以用自己的身體去成為科學與社會連結的力量</li></ul><ul id="096d4a49-d4df-42e4-b38d-28a8e3e34c9e" class="block-color-gray_background bulleted-list"><li>2019-0323
+我也是時時需要修正</li></ul><ul id="ed380dc4-747e-4752-bdde-5e57843c78c9" class="block-color-gray_background bulleted-list"><li>2019-0323
+我是海或是繩子在你溺水的時候</li></ul><ul id="c1a7a1b8-a601-4193-9748-3769e32724a5" class="block-color-gray_background bulleted-list"><li>2019-0323
+既然我們所有人都要離開</li></ul><ul id="fd7f1a48-7cad-4ca7-8604-d8fa1f235270" class="block-color-gray_background bulleted-list"><li>2019-0323
+錯過了就再也讀不懂也寫不回去了
+就是這麼駭人聽聞</li></ul><ul id="a250d2a4-01c0-404a-b59f-a8eb66444ef3" class="block-color-gray_background bulleted-list"><li>2019-0323
+為一副畫留一個空間</li></ul><ul id="c714f41e-3ca2-447a-93c1-4e1b59b14c5f" class="block-color-gray_background bulleted-list"><li>2019-0323
+忘記丟垃圾了</li></ul><ul id="b6c0c2c5-9d9c-4a6f-be31-c0abad150418" class="block-color-gray_background bulleted-list"><li>2019-0323
+你逃不了
+除非你準備好</li></ul><ul id="ba392529-7487-4086-915f-40a06105a2d3" class="block-color-gray_background bulleted-list"><li>2019-0323
+他引導著自己的身體
+而身體也是這樣教導他的</li></ul><ul id="99c17fa0-bd0c-4269-9826-d80394718224" class="block-color-gray_background bulleted-list"><li>2019-0323
+創意是否會被規範</li></ul><ul id="26ffb5a3-c1f1-4cf1-9637-526a9a0c86ed" class="block-color-gray_background bulleted-list"><li>2019-0323
+舒服了才會想創作</li></ul><ul id="32336ce8-2c19-4daa-830d-7af6b58e1150" class="block-color-gray_background bulleted-list"><li>2019-0323
+611sandy姐</li></ul><ul id="43d987c4-0803-4008-887c-4ccd3a316e71" class="block-color-gray_background bulleted-list"><li>2019-0323
+合理的利潤是服務品質的開始</li></ul><ul id="3e84e9df-1e0f-498e-ae94-9f5284a97cdc" class="block-color-gray_background bulleted-list"><li>2019-0323
+你要不要起床然後迎接一堆混亂</li></ul><ul id="5a8f4d59-13c9-407f-a2a3-9e2b3a0549a7" class="block-color-gray_background bulleted-list"><li>2019-0323
+解決了問題跟獲得幸福是兩回事</li></ul><ul id="6233829e-73f3-4ab8-8b87-936ae674cf32" class="block-color-gray_background bulleted-list"><li>2019-0323
+科技與創意基金會
+英國 fact
+Sonification
+科技的未來
+人和機器
+Exploratrium example
+Solar eclipse
+Factlab
+Do something Saturday
+Future learning team
+Prototype camp
+透納獎英國
+assemble studio
+Kinicho
+不是不想用
+而是讓人體驗是重要的
+Previous artist in residence
+並不是取得現場的展現 而是延伸
+科技融意 發展計畫
+你必須去回應各個面向才能串聯這些資源
+打散 重新分配
+協調內部與外部的關係
+抓緊核心 或是放任作品在這些規則中成長
+回頭思考的時候要如何
+War veteran
+Dementia connect
+Be another lab
+No such thing as gravity
+一個健康的藝術家大概看起來就像一個健康的人</li></ul><ul id="63944447-21de-49a4-9b6f-05b5b0564866" class="block-color-gray_background bulleted-list"><li>2019-0323
+我不會擔心失眠
+但也從未入睡</li></ul><ul id="836cc077-f674-4e3c-83f8-eb0224765270" class="block-color-gray_background bulleted-list"><li>2019-0323
+做我自己的樣子很舒服
+我愛的人也愛著能夠做自己的我</li></ul><ul id="bf121eb5-9f4a-4234-b878-cbd9bd504622" class="block-color-gray_background bulleted-list"><li>2019-0323
+東急時間
+小誌
+保險套
+頭髮
+指甲</li></ul><ul id="eb7cd769-44e2-4ca1-97e9-37cec7d014d4" class="block-color-gray_background bulleted-list"><li>2019-0323
+需要的人會發現它</li></ul><ul id="2723e594-043d-4147-be4a-12429355310a" class="block-color-gray_background bulleted-list"><li>2019-0323
+不被觀察的時間消耗的比觀察的快
+動起來看時間就很快
+坐下來看時間其實很慢</li></ul><ul id="9d62076f-b422-4a67-a2d2-959c48e0514d" class="block-color-gray_background bulleted-list"><li>2019-0323
+湯包100
+車票440
+電風扇4680／2</li></ul><ul id="52db2eda-9ea2-4cc6-b496-a7f2c254ea5a" class="block-color-gray_background bulleted-list"><li>2019-0323
+轉電風扇 4680
+領錢 20000
+付pchome 2455ibon
+蝦皮全家貨到付款959</li></ul><ul id="b1e751fb-2e29-4f9e-90bd-55ba96a2a929" class="block-color-gray_background bulleted-list"><li>2019-0507
+如果明天還是剩下兩顆維他命，那今天就是假的</li></ul><ul id="eea96c09-ee52-4344-b219-afa2ce0f81cb" class="block-color-gray_background bulleted-list"><li>2019-0507
+人們因為不了解我，使得我的故事更加生動</li></ul><ul id="b71f0096-e8ce-47fa-a604-de7371655342" class="block-color-gray_background bulleted-list"><li>2019-0507
+會從我身上獲得平靜的人大概都太需要休息了</li></ul><ul id="57f6692e-b96e-4dd0-b91d-65d97f378aad" class="block-color-gray_background bulleted-list"><li>2019-0507
+我的靈魂又超速了</li></ul><ul id="eabe5e5e-8e28-46fe-8464-efbd05a4671b" class="block-color-gray_background bulleted-list"><li>2019-0507
+：相處的每一天都是在準備離開
+：就是因為他們不會離開所以才要留下啊</li></ul><ul id="c6f7b24e-f315-4311-946a-04d8c3258152" class="block-color-gray_background bulleted-list"><li>2019-0507
+771拜拜 4／3拿ㄌ</li></ul><ul id="bfc0e150-b607-45cb-97f5-e9332d74c0a8" class="block-color-gray_background bulleted-list"><li>2019-0507
+語音密碼</li></ul><ul id="ce384c61-18f7-47f8-a967-02d47d49e4ca" class="block-color-gray_background bulleted-list"><li>2019-0507
+我很多時候都太混亂了
+其實事情沒有很多
+但我都沒有讓事情在適合的時候得到思考
+其實事情是會接著發生的
+其實也還是會有忘記的時候
+所以只要先處理現在就好了
+現在好就都好了
+怕忘記就寫下來
+如果沒有寫也沒想到就順著他適合遺忘
+我看不完所有結局的
+如果現在是很累的時候
+就不適合有錯誤的幻想做不存在的加速</li></ul><ul id="4abe47aa-ec3e-4b9f-bd57-bb0c300cf5c4" class="block-color-gray_background bulleted-list"><li>2019-0507
+幸福痛苦之人</li></ul><ul id="5e194027-ca39-41cf-9ea5-db481bd4efb2" class="block-color-gray_background bulleted-list"><li>2019-0507
+松江海南京</li></ul><ul id="2f17b0ef-f1ff-4320-8b95-9a10a917d9fb" class="block-color-gray_background bulleted-list"><li>2019-0507
+銀行帳務紛爭找金管會</li></ul><ul id="2c5f75bc-a6c3-4b96-bf88-017fb84b0d33" class="block-color-gray_background bulleted-list"><li>2019-0507
+Flash啟用</li></ul><ul id="6a41ac8b-8eb0-45c4-af14-c5a2932483d2" class="block-color-gray_background bulleted-list"><li>2019-0507
+喜歡的歌不紅
+喜歡的人沒聽過</li></ul><ul id="7ec95ec9-a087-4298-9f3b-456d9dfe8498" class="block-color-gray_background bulleted-list"><li>2019-0507
+改低解析度+自動重開就做完了
+送聲音</li></ul><ul id="48a2ad9a-ccc4-43b1-8850-dbb712546afc" class="block-color-gray_background bulleted-list"><li>2019-0507
+羈絆是不是擁抱未知的動力</li></ul><ul id="b3905769-8193-4037-8846-ffd097a17957" class="block-color-gray_background bulleted-list"><li>2019-0507
+傳棍箕
+傅崐萁</li></ul><ul id="ab21fde5-ddc0-438b-a7fb-ad6e3b67c52d" class="block-color-gray_background bulleted-list"><li>2019-0507
+130+100+140-120 safe</li></ul><ul id="f5c126a7-9fd7-4c14-8644-08f0af254082" class="block-color-gray_background bulleted-list"><li>2019-0507
+只要能夠講出在表演中得到的事情那就足夠了</li></ul><ul id="121a925f-487c-44e5-a9fc-4c7fc48bea44" class="block-color-gray_background bulleted-list"><li>2019-0507
+Press release</li></ul><ul id="0705e21e-26d7-43ff-817f-d230e0136f40" class="block-color-gray_background bulleted-list"><li>2019-0507
+紀錄
+開洞位置：
+目的：不超出輸出logo大字之黑底為準，求觀眾正面之觀感。
+調整：以logo大字之r右上能放入最大圓之中心設定為喇叭之中心位置，以r心代稱，r心之直徑為46.6，固r心向下23.3處為中層夾板之高度，r心水平向左21.2為a心，直徑為1.1，三心皆位於同一水平線上
+備註：定位之水平線高度與中層夾板之距離大於攝影機鏡頭中心之高度，需墊。
+固定方式：
+上層夾板尺寸剛好卡入固定，開啟之方式使用透明膠帶貼於夾板底下，露出一緞作為拉開使用
+中層夾板使用魔鬼氈與瓶身固定，水管與底部不焊接
+下層使用水平旋轉之卡準固定，轉至定位時，瓶身之a心與內部底部之中間水管卡準對齊
+下週待辦：
+貼輸出
+確認洞口位置與水管最後長度及攝影機角度
+帶筆電攝影機和動力機構
+動力機構主要是測試安裝上去攝影之高度角度
+待確認：
+內部設備固定方式？是否還有需要木工調整或配合的地方
+確認最後木作重量</li></ul><ul id="b9671927-7344-4a09-a03b-066019feb91c" class="block-color-gray_background bulleted-list"><li>2019-0507
+樹梅散熱片
+魔鬼氈束帶
+銅柱
+螺帽m3
+母座加長排針 6匹*2 3匹
+24伏繼電器
+兩組
+小米開關</li></ul><ul id="cd0a6090-e3f3-4e2a-947c-eba93e7dfd38" class="block-color-gray_background bulleted-list"><li>2019-0507
+勤務召集 六月寄通知</li></ul><ul id="68673802-123c-4489-a9c8-ee5861db6a45" class="block-color-gray_background bulleted-list"><li>2019-0507
+文化部
+文化局 臺北市
+國藝會
+文建會</li></ul><ul id="63444f6e-41e2-4e38-af6f-185b8deacf07" class="block-color-gray_background bulleted-list"><li>2019-0525
+荒home唐town</li></ul><ul id="64e90b21-faea-44da-b8f6-b1f41bc34d60" class="block-color-gray_background bulleted-list"><li>2019-0525
+找到loop
+Else V&gt;0-- press v++</li></ul><ul id="47f45931-90d0-4051-ae05-e1d1473453cf" class="block-color-gray_background bulleted-list"><li>2019-0525
+一天一天是這麼的慢
+回想起來是這麼的快</li></ul><ul id="37ce056a-8b89-471a-a69f-339325f7b025" class="block-color-gray_background bulleted-list"><li>2019-0525
+寫三個motor port 去支援
+或是乾脆手動</li></ul><ul id="1d261664-c24d-4e46-9b7d-ab6529c42f37" class="block-color-gray_background bulleted-list"><li>2019-0525
+聲音放大
+下面變重
+急停
+機器人收音麥孔
+視訊開孔
+輪子噴黑</li></ul><ul id="6248e989-752e-4758-9d00-c03839e70031" class="block-color-gray_background bulleted-list"><li>2019-0525
+裝python</li></ul><ul id="6fde9212-1268-4579-b331-be3c67466c62" class="block-color-gray_background bulleted-list"><li>2019-0527
+這些因為孤獨才會出現的能量最後都會去了哪裡</li></ul><ul id="90c21587-3d78-437f-a1c8-d6e16f842e5d" class="block-color-gray_background bulleted-list"><li>2019-0530
+730 2300 1530
+730 2300。： 1530
+0000 2000 ： 2000-0800
+0000 1200 2000 2400 ：1600-0800
+1000 2400 ：0500
+0000 0200 745 1900：0415
+1000 2400 ：0500
+0514 1000 2000 ：0100
+0510 1000 2100 ：0200
+0510 1000 2045 ：0145</li></ul><ul id="37bd800c-a424-4de9-9633-5d04cd3c9ce0" class="block-color-gray_background bulleted-list"><li>2019-0601
+服務 產品
+團隊
+平台
+市場
+永續</li></ul><ul id="d09f3c2b-7ee0-42a8-84fd-fb67bd6c63dd" class="block-color-gray_background bulleted-list"><li>2019-0604
+如果只是想應付過去或是找無償的服務，那還是趕快換工作比較好</li></ul><ul id="4700d71c-df73-48e6-bf82-cf257fa4166c" class="block-color-gray_background bulleted-list"><li>2019-0605
+我的創作在這一段時間幾乎停擺，雖然也能繼續，但也不是自然而然的</li></ul><ul id="7dc5c3cb-0ebe-4bed-9024-21e54ceac129" class="block-color-gray_background bulleted-list"><li>2019-0607
+其實就是覺得自己時間不夠才需要變聰明，要是不會死笨一點好像比較快樂</li></ul><ul id="60eb22e8-b435-47ae-ab3b-566a9a5d12f2" class="block-color-gray_background bulleted-list"><li>2019-0607
+在全聯買菜超過三十分鐘才是修養的開始</li></ul><ul id="56f4d776-8f07-4a91-8e41-1df4d3a2d88a" class="block-color-gray_background bulleted-list"><li>2019-0607
+智慧和時間是我們如影隨形的詛咒</li></ul><ul id="e75254f9-776d-4e26-ac25-dba5bc041a08" class="block-color-gray_background bulleted-list"><li>2019-0609
+不管101再高，都會被眼前的事物擋住</li></ul><ul id="7a00cc9c-6967-4a35-830d-cca516fd2638" class="block-color-gray_background bulleted-list"><li>2019-0614
+優秀與溫柔</li></ul><ul id="f53875b9-3e6e-4371-a04b-37bc3bb91f2d" class="block-color-gray_background bulleted-list"><li>2019-0616
+一艘船一個國家</li></ul><ul id="ccb7087a-84aa-429b-8e2f-83cb13ff2287" class="block-color-gray_background bulleted-list"><li>2019-0617
+哪一種生活會沖淡其他生活</li></ul><ul id="d549a39b-0785-491d-9192-d319ecc9a7ea" class="block-color-gray_background bulleted-list"><li>2019-0617
+我將構築我過去所探索的</li></ul><ul id="0932b93a-249d-45f0-b203-10ad710042b9" class="block-color-gray_background bulleted-list"><li>2019-0617
+在臺北躲在夢中</li></ul><ul id="987e0a07-a0a4-4dd8-9d96-bb3ac61afa82" class="block-color-gray_background bulleted-list"><li>2019-0617
+我在夢中的底片</li></ul><ul id="beb1a53b-de6c-469a-b981-09171eb283f3" class="block-color-gray_background bulleted-list"><li>2019-0617
+我想不起來</li></ul><ul id="9444644c-f553-4835-b273-88dbca597543" class="block-color-gray_background bulleted-list"><li>2019-0617
+我是跟誰一起生活
+陌生的家具
+替誰準備了一些東西
+突然熟悉的擺設
+床單</li></ul><ul id="f3196267-767b-41c2-a687-4230f8f69238" class="block-color-gray_background bulleted-list"><li>2019-0618
+我的想法是如此的憤怒心卻是哀傷</li></ul><ul id="9fc4aa56-9080-4482-835b-8c5871fc7ecd" class="block-color-gray_background bulleted-list"><li>2019-0618
+不順利只是慢了點
+還是會到</li></ul><ul id="001fc604-0a35-4453-b2b7-d1dafd54a2a8" class="block-color-gray_background bulleted-list"><li>2019-0619
+以前的人知道以前的事
+以後的人知道以後的事</li></ul><ul id="dc77147c-5f36-4caf-be89-a9c8702c26a4" class="block-color-gray_background bulleted-list"><li>2019-0619
+你不會問嬰兒這些問題</li></ul><ul id="c66bdf5d-6707-4f1a-8f28-0fe86d5eae62" class="block-color-gray_background bulleted-list"><li>2019-0619
+只是其中的規則沒有看中你</li></ul><ul id="3c3960b6-b591-4958-ae6c-40db91ff60e5" class="block-color-gray_background bulleted-list"><li>2019-0619
+我是這樣了解的，但這不重要</li></ul><ul id="0eb7f17f-467f-4035-8439-075d786b343e" class="block-color-gray_background bulleted-list"><li>2019-0619
+讀書日誌
+19
+我能不能重新擁有生命</li></ul><ul id="9a1614c4-8fa7-474d-8f73-7b9ef6099618" class="block-color-gray_background bulleted-list"><li>2019-0622
+Pianet my
+超乎於演奏之上的空間
+現場發生什麼
+無限zoom in</li></ul><ul id="7466ddda-f44d-440f-b0ee-75ad731c0217" class="block-color-gray_background bulleted-list"><li>2019-0625
+你已經遇到誰了吧</li></ul><ul id="daaef736-7aee-42d2-a9d0-6cd4b5ed4f41" class="block-color-gray_background bulleted-list"><li>2019-0626
+你已經投入了，即便是賠償，那仍然是你投入的延續
+對象不是單一可量化的物件
+而是不可量化的複合感受 其中更有許多是你無法割捨的
+這些事情正是如此才能形成這些不可割捨的感受</li></ul><ul id="b2012f2b-0bac-42f4-ac62-170451f64104" class="block-color-gray_background bulleted-list"><li>2019-0627
+時光換千金</li></ul><ul id="05c82fea-39eb-4a12-b2ba-fbfcf9238a7e" class="block-color-gray_background bulleted-list"><li>2019-0627
+欣賞每一個風景</li></ul><ul id="c69a39a9-21a9-4e22-b482-19825a180b57" class="block-color-gray_background bulleted-list"><li>2019-0627
+我相信我適合的方向
+我相信努力</li></ul><ul id="b160177e-57c6-499a-a2d4-7dca3f9100f3" class="block-color-gray_background bulleted-list"><li>2019-0627
+3～5個月
+50萬</li></ul><ul id="9be92fce-d386-420e-a61b-dc9983ccddcf" class="block-color-gray_background bulleted-list"><li>2019-0627
+這個混亂的世道，到處都是落魄的人</li></ul><ul id="aaa9bc1a-4289-4e1f-9720-cc61a3d6df9d" class="block-color-gray_background bulleted-list"><li>2019-0628
+找工作 勤務召集</li></ul><ul id="3b9d48f5-b7b9-4d2c-ab73-7ee79d725b97" class="block-color-gray_background bulleted-list"><li>2019-0629
+創作是 看 做 思考 紀錄 交流</li></ul><ul id="2c323329-a581-4ab5-9d4d-8d8f42dcf369" class="block-color-gray_background bulleted-list"><li>2019-0702
+把思考留給自己，不要因為自己在意以外的事而忘記留意美好的事</li></ul><ul id="ccc61388-98f6-48ff-8f74-10a75d6ed0f8" class="block-color-gray_background bulleted-list"><li>2019-0703
+你想當什麼樣的人就走什麼樣的路</li></ul><ul id="e4a23af3-4aa5-424a-b20f-a4f115b3104b" class="block-color-gray_background bulleted-list"><li>2019-0804
+明天早上去看聖哥傳第二季</li></ul><ul id="6a571276-8f76-44e2-9e4e-cc4c9ad017b3" class="block-color-gray_background bulleted-list"><li>2019-0804
+沒有目的才能展現你靈魂的形狀
+而真正的目的就會顯露其中</li></ul><ul id="fecfa67a-87cf-46d7-996b-bf5700166289" class="block-color-gray_background bulleted-list"><li>2019-0804
+什麼是會得到補助的企劃
+Ai</li></ul><ul id="8ee0df42-59c2-4201-92fe-1ce7a289260b" class="block-color-gray_background bulleted-list"><li>2019-0804
+有目的的漫無目的</li></ul><ul id="94f2e48f-fdcc-45e3-a8cc-1a3d1b0cc3b7" class="block-color-gray_background bulleted-list"><li>2019-0804
+Good roll Jim ton</li></ul><ul id="a4cb4476-09b2-4349-89bd-85d197868e64" class="block-color-gray_background bulleted-list"><li>2019-0804
+1.尋找下一個合適的工作機會
+詢問maxray新公司
+2.寄國美館計畫申請書
+3.了解國美館另一個計畫
+4.ㄐㄑ的圖
+5.思考離職
+6.毛牛良日展覽申請／討論
+7.小誌製作／交換大會</li></ul><ul id="6c7d7de8-a0f3-475a-88ed-8a5edf693e0d" class="block-color-gray_background bulleted-list"><li>2019-0804
+也許有一天我們莫名其妙的溝通就失靈了</li></ul><ul id="de5e2c06-734e-436a-8588-bd12b68473b2" class="block-color-gray_background bulleted-list"><li>2019-0804
+你想著什麼事
+就會遇到什麼樣的人</li></ul><ul id="90b7166b-ce1b-4e63-a3a9-da328b8ecc22" class="block-color-gray_background bulleted-list"><li>2019-0804
+有太多沒完成的事了，所以深陷回憶之中</li></ul><ul id="68800a1a-e314-4193-9eef-060208037b63" class="block-color-gray_background bulleted-list"><li>2019-0804
+淨空自己的心</li></ul><ul id="29267930-55f0-4918-ba16-69e7afd87680" class="block-color-gray_background bulleted-list"><li>2019-0804
+最可怕的是：說不定我能</li></ul><ul id="ae75ed4a-07b9-4d0a-a1ea-eab2740e49d1" class="block-color-gray_background bulleted-list"><li>2019-0804
+我想做的是
+更貼近人，更貼近生命的</li></ul><ul id="07356fb8-8bd2-4f72-9c05-dc48c2db16f9" class="block-color-gray_background bulleted-list"><li>2019-0804
+我將永遠見不到那樣的自己了</li></ul><ul id="9c21f1f7-9fb9-4773-8528-b3e4e9b8fbd9" class="block-color-gray_background bulleted-list"><li>2019-0804
+智慧
+增加對自己的認識
+關係</li></ul><ul id="741563d9-afbb-4785-86b7-194945dda61a" class="block-color-gray_background bulleted-list"><li>2019-0804
+魔鬼只是放大你的念頭
+而不堅定的是自己</li></ul><ul id="dfa00ef5-bb80-40b8-84fe-eb5bd086ec52" class="block-color-gray_background bulleted-list"><li>2019-0804
+爸微軟帳號hinet信箱</li></ul><ul id="074980e0-7279-4a13-a63a-d9600137691c" class="block-color-gray_background bulleted-list"><li>2019-0821
+事情怎麼搞成這樣</li></ul><ul id="f6fc3b82-a73b-463b-96b2-3af9a98ae61f" class="block-color-gray_background bulleted-list"><li>2019-0821
+你以為自己瘋了
+而事情卻真的如此</li></ul><ul id="6d9aae88-50f3-4a8f-b88e-b26cefe877f2" class="block-color-gray_background bulleted-list"><li>2019-0821
+點</li></ul><ul id="42261cb1-6779-4772-9482-ec46e4fbfbe1" class="block-color-gray_background bulleted-list"><li>2019-0821
+如果我不能依靠自己站在這裡
+遲早會選擇離開</li></ul><ul id="c010a1a0-7471-4919-8f42-94cd3fbe3a3c" class="block-color-gray_background bulleted-list"><li>2019-0821
+問大家
+我能不能復活</li></ul><ul id="56e5da32-b911-4a4d-90b9-0ea051e2c920" class="block-color-gray_background bulleted-list"><li>2019-0821
+憂慮
+然後照顧憂慮</li></ul><ul id="e07a2965-83f9-43e6-8cc4-0b49518cdf6b" class="block-color-gray_background bulleted-list"><li>2019-0821
+我沒聽音樂的念頭一陣子了</li></ul><ul id="97cbe3ef-4138-43a3-9e48-60d50bcedf64" class="block-color-gray_background bulleted-list"><li>2019-0821
+網址不會失聯
+圖片不會失效</li></ul><ul id="c91925f4-9f50-4a2e-bdf9-4a6a37a1d7de" class="block-color-gray_background bulleted-list"><li>2019-0821
+這麼多結束過</li></ul><ul id="2d9f3507-3fe6-4c38-ae53-144e8306b374" class="block-color-gray_background bulleted-list"><li>2019-0822
+以我過去的經驗來說</li></ul><ul id="1b00f72b-8638-4e5e-827e-809180980dab" class="block-color-gray_background bulleted-list"><li>2019-0823
+我們還沒定義</li></ul><ul id="9feeff7c-f261-4dfb-8dc1-0ca0736bd567" class="block-color-gray_background bulleted-list"><li>2019-0826
+西湖的星期一只剩下爭鮮吃壽司</li></ul><ul id="eef016d1-49ac-413f-be6b-2cd21bcd27a5" class="block-color-gray_background bulleted-list"><li>2019-0826
+上次編輯的時間
+7564312
+間的時輯編上次</li></ul><ul id="fe090f99-675f-4289-ab89-8d797ac2edbe" class="block-color-gray_background bulleted-list"><li>2019-0829
+你的下巴是我的遮雨棚
+我有兩個遮雨棚</li></ul><ul id="4a11fe4f-5fef-4101-810d-18c38f5d2f08" class="block-color-gray_background bulleted-list"><li>2019-0830
+假裝年輕的辦法
+就是讓自己加速變老</li></ul><ul id="00ed2e20-1670-4b9c-a49a-d50fe8e4f97b" class="block-color-gray_background bulleted-list"><li>2019-0830
+離職證明
+拜拜錢</li></ul><ul id="e019d410-5767-4800-bc7b-1af93408c35a" class="block-color-gray_background bulleted-list"><li>2019-0831
+把聲音震動轉成滑鼠很激動</li></ul><ul id="192bb7a5-a9d2-429d-9901-fad2310b48d3" class="block-color-gray_background bulleted-list"><li>2019-0901
+如何在遺忘中成長</li></ul><ul id="b29e6adc-1c20-4285-a53e-ef6c8793827d" class="block-color-gray_background bulleted-list"><li>2019-0902
+把對面電腦設定teamviewr自動開
+把電腦重開機
+晚上再上傳課程
+準備上班要印的東西</li></ul><ul id="43acd21c-6583-489c-9eb3-2d4d0ff6624b" class="block-color-gray_background bulleted-list"><li>2019-0902
+360*600</li></ul><ul id="107ddb32-2024-43d6-8fd0-4816d8bbfa84" class="block-color-gray_background bulleted-list"><li>2019-0904
+過來的人都撐著雨傘</li></ul><ul id="7b8c8ac6-4894-4592-902b-e8e73bafa4fd" class="block-color-gray_background bulleted-list"><li>2019-0905
+如果我不追尋自己驕傲或害怕的樣子活著
+那我如何活著</li></ul><ul id="dcfe6740-ce07-41d7-860e-9b192dab50fd" class="block-color-gray_background bulleted-list"><li>2019-0905
+你只能以某種神采存在一渺</li></ul><ul id="dd7aaa07-7e1f-419a-a008-0a11848f85dc" class="block-color-gray_background bulleted-list"><li>2019-0908
+用每一個小成功去堆積</li></ul><ul id="d864fc5b-cd71-44ab-b469-4e8b3941ed0c" class="block-color-gray_background bulleted-list"><li>2019-0909
+我換了新的水桶，但杯子卻破了</li></ul><ul id="6983620f-211a-493f-a62b-2573093ca54d" class="block-color-gray_background bulleted-list"><li>2019-0909
+我一直在回想我是怎麼創作的
+縱使已經沒有事情是一樣的了</li></ul><ul id="01b3731a-9d61-4e9c-896e-4bdedaf7e451" class="block-color-gray_background bulleted-list"><li>2019-0912
+下週整理海科電腦</li></ul><ul id="b7fdd451-2745-49bf-9512-ebccf5bfbcb6" class="block-color-gray_background bulleted-list"><li>2019-0912
+生活還是簡單一點好</li></ul><ul id="722f088f-ae3e-4c21-b1b5-4bf47375191c" class="block-color-gray_background bulleted-list"><li>2019-0921
+金翅雀</li></ul><ul id="d5c0e6da-b56a-41e8-b18d-361e3b900048" class="block-color-gray_background bulleted-list"><li>2019-0922
+帶衣架 毛巾
+收衣服 和收髒衣服一件
+要小袋子裝耳機</li></ul><ul id="85bc46a7-f042-4b0d-be80-50569dd47532" class="block-color-gray_background bulleted-list"><li>2019-0922
+好想抱你</li></ul><ul id="93236696-ed2e-41a5-9858-500fab292b32" class="block-color-gray_background bulleted-list"><li>2019-0923
+有的時候，路上的人走的快一點了，步伐大一點了，動作活潑亂跳了，我就以為是你跑過來了
+我有的時候會想過，我們會用什麼樣的方式分開，會用什麼樣的樣子懷念對方，應該都還是會很想抱著對方，畢竟只有抱著你才真的覺得你在這裡，如果只有掛在心上，那是掛在哪裡，
+這五天是不是就像很長的一天，現在才剛開始天亮，我就想好好了解我要完成的是什麼，完成了什麼才能完成這一天，什麼空檔我們可以聯繫，聯繫什麼才會剛好不會太累，
+如果把全臺灣的轉運站都走過一遍，是不是有可能就會轉運
+上次這麼難過就像知道你要去深圳，那時候也不明所以，只覺得蠻珍貴的關係，所以也痛哭流涕，這一次是覺得好久不見，
+這裡的711沒有提款機，但對面就有富邦的機器，只是它很慢，我第一次按太快還密碼錯誤，然後不繼續服務也以為是延遲按了兩下，就也直接沒列印到明細了
+八點了，還以為客運八點會開始賣票，但聽拉客的運將說八點半才會開，坐他們的比較快，只是他們也是要拉客，一車滿才會出發，如果下車目的不同，不知道怎麼計價，我還被他口水噴到，這是什麼緣份，
+兩個運將都在拉客，拼車感覺有它危險，為什麼要選擇這樣的方式，我只是想轉移一些注意嗎，</li></ul><ul id="789f74b6-46cf-4b8c-9f73-ac4e0f11576c" class="block-color-gray_background bulleted-list"><li>2019-0924
+ㄟ0
+確認kiosk 定位時間
+ㄟ1
+協調是否充電開機拿掉
+50電視盒
+上午
+用電線較穩
+下午
+固定紅外線
+換算公式 40～80
+整線</li></ul><ul id="d7bf0451-ae39-4448-85fb-5921df01d7f2" class="block-color-gray_background bulleted-list"><li>2019-0927
+你會有深沉的創作慾嗎</li></ul><ul id="9450e348-0073-4db5-b784-fdecfb2333b1" class="block-color-gray_background bulleted-list"><li>2019-0927
+你喜歡互動嗎</li></ul><ul id="ca872b82-217c-475b-81aa-0c6d77acb099" class="block-color-gray_background bulleted-list"><li>2019-0927
+我過去的興趣都像某個人的興趣</li></ul><ul id="86e21701-7565-483d-b94f-5f8451ae833c" class="block-color-gray_background bulleted-list"><li>2019-0929
+小ㄆ 1000</li></ul><ul id="d4c0d1e2-6d1f-4ad3-b591-0ee1ddcec372" class="block-color-gray_background bulleted-list"><li>2019-0929
+能幸福的時候就要努力幸福
+哪怕接下來會一生孤寂</li></ul><ul id="cfc83a0a-1840-4fce-af8f-0233615dc8c4" class="block-color-gray_background bulleted-list"><li>2019-0930
+她用一天願意嫁給我</li></ul><ul id="33470aab-4223-49c7-bdcb-435914aee651" class="block-color-gray_background bulleted-list"><li>2019-1001
+公司統編</li></ul><ul id="45af656f-e02f-4449-a01c-1642ef59cff3" class="block-color-gray_background bulleted-list"><li>2019-1004
+十萬次的完美體驗
+完美體驗從十萬次開始</li></ul><ul id="25c2c61c-280f-42de-8b93-cd406adfa3f4" class="block-color-gray_background bulleted-list"><li>2019-1004
+探索事物之間抽象的連結
+腦補</li></ul><ul id="4af3f237-df57-4af5-a7a0-13112eeb9401" class="block-color-gray_background bulleted-list"><li>2019-1005
+好的故事會隨著版本更新而逝去</li></ul><ul id="bbee216a-25d3-4f66-a2b4-042b7869b730" class="block-color-gray_background bulleted-list"><li>2019-1005
+多開始包 我開始把我的創作目標從我的個人生命的最終目的轉變成另外一個社會角色我想當個一般家庭也負荷的起的藝術家 我的作品時常圍繞著許多關於我個人生命的最終目的的討論但同時也在同時從創作面來檢視的話我的作品時常伴隨著非常低的成本及個人觀點去認識這個世界一種最基層的角度的觀看方式 我不確定這是否是我這個時代 所有供這個時代的人所擁有的共同特徵 也許有許多創作的成份在進入社會之後開始遠離他們 我的思想就是我最大的保障但我不可能永久帶著我的思想存活在這個世界上有人需要和其他人進行社交進行交涉 需要許和能幫助我的人互動和需要我的幫助的人互動 那也意味著重實我的人生最終目標是我需要並且我的心也鼓勵我去前往的方向但除此之外我仍然需要一個社會角色是能夠和其他人進行社交的</li></ul><ul id="873dbb5b-9c5b-4921-803c-f7e502ed20e1" class="block-color-gray_background bulleted-list"><li>2019-1005
+在畢業之後我開始需要面對生活而創作也從時仍然是我生命中 很重要的一個部分 也許不一定是未來他該是我生命的中心但他是我前一段生命中非時常進行的運動 我知道創作和生活並不一定該有什麼樣的關係或是什麼樣的交涉但是在這一個人生階段我所面臨到的事情變身重創作的身份轉移到開始注意我的生活 這同時也是我周圍許多創作者在我這一個時代這一個年齡階段所共同面臨到的問題 生活慧相逢十一樣去侵蝕我們過去所累積的知識及經理不論我們如何去累積他們 所以很多人也許就會將創作視為他生命中可割捨的一部分 一或是生命其實並不由得我們做選擇我們生命也許在我們 較不察覺的時候就帶走了所以我們重要的重視的事情 不論我們有一失或無意識的 我該說我的生命帶給我的則是讓我保留著我努力保留著創作與生活開始進行的關係
+2從這一刻開始我才孵出了我想成為一般家庭也能負擔的藝術家的念頭</li></ul><ul id="35357e56-b2b2-4e62-b497-7473723fda71" class="block-color-gray_background bulleted-list"><li>2019-1006
+相同的問題在不同需求的時候會產生不同的答案</li></ul><ul id="4e93ca7e-84b9-4114-aacf-4cc4cf364064" class="block-color-gray_background bulleted-list"><li>2019-1006
+無法預期的堆疊
+不由自主的失去</li></ul><ul id="ee0994cb-f35c-4a99-b48c-2fab76dafaac" class="block-color-gray_background bulleted-list"><li>2019-1010
+給自己蛤蜊蛤蜊</li></ul><ul id="20c56996-edc4-4510-96e5-bc99aaeca7c5" class="block-color-gray_background bulleted-list"><li>2019-1012
+從我去學習死亡</li></ul><ul id="dafe8326-2845-43d1-a263-1cbdb1b307eb" class="block-color-gray_background bulleted-list"><li>2019-1012
+忘記過自己會死</li></ul><ul id="5dc719c7-69f7-4cf3-90c3-cc55349c5e9a" class="block-color-gray_background bulleted-list"><li>2019-1012
+追憶展</li></ul><ul id="812e10bc-64b2-48bf-9d13-6afcb25c846a" class="block-color-gray_background bulleted-list"><li>2019-1013
+食道異物身體檢查
+全聯換東西
+高鐵票</li></ul><ul id="aed814a7-3394-4dcc-8a9f-e11bd4affe5a" class="block-color-gray_background bulleted-list"><li>2019-1015
+我的生命好像很多等待
+在各種特殊的場合
+像是我心中的儀式一樣
+總是會選擇不舒服的方式
+或是我總在許多混亂的場合
+總是需要我出現在這些環境
+我是沖淡這些混亂的人
+我是更加的混亂</li></ul><ul id="96c1a6b8-ef9e-401c-b4b3-3f7804859aa9" class="block-color-gray_background bulleted-list"><li>2019-1015
+想法只要不具象就不具閱讀就不具干擾</li></ul><ul id="31ae0850-9824-4212-b6ff-1fcb3379f26c" class="block-color-gray_background bulleted-list"><li>2019-1017
+如果生氣是對一件事情的愛的話
+那你應該不會為這件事生氣</li></ul><ul id="1f6c1d4e-ade2-4557-b3d6-99ffe78a7e22" class="block-color-gray_background bulleted-list"><li>2019-1022
+文本在作品中扮演什麼角色</li></ul><ul id="c1eb432e-7a88-4af2-97c7-f6816491a80e" class="block-color-gray_background bulleted-list"><li>2019-1022
+因為美
+作品需要經過轉化
+透過距離 時間 去感受變化</li></ul><ul id="fd7704de-17f5-4044-a5d8-be83d59c0fc3" class="block-color-gray_background bulleted-list"><li>2019-1022
+美是如此沒有深度嗎</li></ul><ul id="78f1d958-2d93-4bf6-8690-ea0aef25e908" class="block-color-gray_background bulleted-list"><li>2019-1025
+八點半到公司</li></ul><ul id="8c032270-19a0-4a70-bdc1-10ebc5eb8ec6" class="block-color-gray_background bulleted-list"><li>2019-1025
+林鵬買噴漆300 -50午餐 =250
+已還</li></ul><ul id="8932af38-06e1-4207-aef2-c62cc2d5ee31" class="block-color-gray_background bulleted-list"><li>2019-1026
+擁有自天地
+放之不失去</li></ul><ul id="44aa51c6-e59e-45f0-8116-d8cf5e5ac66c" class="block-color-gray_background bulleted-list"><li>2019-1102
+電費
+熱水器？
+家電 沒冰箱網路洗衣機
+押金</li></ul><ul id="0bf71176-9d10-4f65-a362-b926864cd1eb" class="block-color-gray_background bulleted-list"><li>2019-1104
+我希望我30歲前能夠分擔家裡的經濟</li></ul><ul id="8675be12-f4d2-4192-8fc8-ecb716b29f8a" class="block-color-gray_background bulleted-list"><li>2019-1105
+發票
+水費
+電卡一張</li></ul><ul id="8e9f8a87-8f39-498d-b4b2-92e0f448a4db" class="block-color-gray_background bulleted-list"><li>2019-1107
+有人是為了讀我的文字而來的</li></ul><ul id="d4fca961-0441-41de-b801-3c8483bbdeb1" class="block-color-gray_background bulleted-list"><li>2019-1107
+明天就要回去了</li></ul><ul id="bff03c7d-ccdd-4cc4-98d6-29466eff3c29" class="block-color-gray_background bulleted-list"><li>2019-1108
+收到貨款 1722</li></ul><ul id="3d9fb867-353c-4a4a-aaaa-f0bcf86e257c" class="block-color-gray_background bulleted-list"><li>2019-1108
+她被我改變了
+我參與了時間的推進</li></ul><ul id="44e34a2d-2b59-4122-9c4f-8a1fa93d3d22" class="block-color-gray_background bulleted-list"><li>2019-1108
+我要怎麼想起我忘了什麼</li></ul><ul id="d65b2ebc-09ab-47c7-998a-04738ecb7a0c" class="block-color-gray_background bulleted-list"><li>2019-1109
+腦子都是一樣的清晰
+只是關注的面向太多了</li></ul><ul id="86c7c34b-f79d-4761-aa08-f9cc000f16b6" class="block-color-gray_background bulleted-list"><li>2019-1120
+木作 電 網路 確認
+吊掛 三來
+大王優於
+給搖頭燈 和線的箱子
+相框
+對位子
+逼0
+插座太大 改善
+西1
+決定高度
+相框放法
+------------------+----感應器測試
+主機放法
+牆壁開孔位置
+厚紙板挖孔藏sensor看看
+程式改key
+西土載具
+確認固定方式
+投影機固定方式向外修正
+播放器位置
+Ups層板
+收播放器
+收一點網路線
+西三
+對螢幕尺寸
+開風扇
+上主機ups
+西四
+主機木箱開風扇散熱
+對螢幕位置 木作變更
+加把手
+扶手往前推
+----_--------------搖桿走線方式
+維修孔
+--------------------Usb長度評估
+進pc ups
+--------------------先拉隱線
+延伸木作的孔
+滴零
+相框對位置
+醫零
+手臂位置
+--------------------場景高度
+挖走線孔
+增加一座控制木作
+維修孔開法
+維修孔換邊 改成玻璃開門 開門的方式 要能拆螺絲
+玻璃來時間
+確認按鈕
+---------------3.量塑膠按鈕尺寸
+確認對面兩個電源
+和播放器位置
+Oceantag
+觸控螢幕尺寸 比原來大請木工處理
+和水電確認線的分類
+直播
+找光纖網路跳線
+電腦做木箱
+確認投影機播放電腦
+Edid
+買dvi轉hdmi
+機房電腦設定
+木作 上電腦
+移電腦到定位
+和移水產的工具
+網頁rwd 字太小
+檢查環控檔案
+整線
+Ar主機立起
+歸位ups
+挖孔
+整寶藏線
+環控檢查
+買潛水鐘相框電源延長</li></ul><ul id="787e3451-22bd-47b1-94f4-e1ca2125b261" class="block-color-gray_background bulleted-list"><li>2019-1112
+場景高度設定
+拆kiosk 跟協助移動
+確認usb跟改網路頭</li></ul><ul id="a3acfc85-5a67-4071-8699-578e578f1b77" class="block-color-gray_background bulleted-list"><li>2019-1113
+手臂場景定位
+寶藏搖桿換網路及測試及西型環安裝
+潛水鐘定位
+測試潛水鐘</li></ul><ul id="ad4f0313-6c47-40aa-89d0-56022cdc6bc8" class="block-color-gray_background bulleted-list"><li>2019-1114
+歷史的轉折
+真相的初顯</li></ul><ul id="ed7be650-aadc-4d78-ba85-111ca7a33cfe" class="block-color-gray_background bulleted-list"><li>2019-1114
+今天學到兩件事</li></ul><ul id="89f8b2ef-6f89-4d29-b949-4576c06f11a5" class="block-color-gray_background bulleted-list"><li>2019-1120
+1921680
+191
+進階
+個人 使用
+不要再顯示此對話方塊
+電腦名稱
+密碼統編
+不建立帳號
+Id不用打
+安裝好打開設定
+一般 Lan連入 接受
+進階
+檢查新版本 永不
+自動安裝更新 無自動更新
+本機自動最小化 打勾</li></ul><ul id="bbf9dea3-0087-4cdf-98ce-efec67652c3a" class="block-color-gray_background bulleted-list"><li>2019-1120
+進階
+個人使用</li></ul><ul id="594b6ca2-af7c-4461-8164-c7d323939bcd" class="block-color-gray_background bulleted-list"><li>2019-1120
+在詮釋宮位時
+特別會以主管此宮位的宮主星與落在宮位內的行星，以及這些行星的運作狀態來判斷
+從星座出發
+星座就是行星的家，家庭
+星座位於哪一個宮位
+主管星座的行星就會主管這個宮位
+行星在星盤中所呈現的狀態就會影像到宮位代表的事物</li></ul><ul id="b96c170a-f246-448a-a6cb-c40902ac77c9" class="block-color-gray_background bulleted-list"><li>2019-1121
+明天去洗床單</li></ul><ul id="ce6c496f-8e42-4e5e-8238-58744f348964" class="block-color-gray_background bulleted-list"><li>2019-1124
+各種的文化是一種相對的人生時間</li></ul><ul id="13311f0b-a1ad-4c46-bdfc-53702cd22f62" class="block-color-gray_background bulleted-list"><li>2019-1130
+人們會為了一點點恐怖的碎片前往地獄</li></ul><ul id="d5c9293c-d3eb-45f7-88c4-21088ae74ffa" class="block-color-gray_background bulleted-list"><li>2019-1130
+任何身份都可以只是一個時期</li></ul><ul id="9fd19c26-d00c-4497-b8b9-870d6ca931e0" class="block-color-gray_background bulleted-list"><li>2019-1204
+社畜要怎麼滿足呢
+3000塊以上的消費或溫暖的一個擁抱</li></ul><ul id="42aee589-ac3f-411a-9170-a599904c4577" class="block-color-gray_background bulleted-list"><li>2019-1206
+林鵬1000有還</li></ul><ul id="83a59b59-fb00-44a4-a30b-dbbc17318269" class="block-color-gray_background bulleted-list"><li>2019-1206
+我的時間總是錯亂的
+不管是前一隻手機還是現在這隻還是我本人</li></ul><ul id="5c62120a-e58f-45d9-8d4e-b2c2839b27d0" class="block-color-gray_background bulleted-list"><li>2019-1210
+確認電是110的項目
+插座數量
+燈光配合展品
+燈光及各自decoder
+確認電腦ip</li></ul><ul id="8f6bdd34-a010-4256-902c-84e88e6cd9f1" class="block-color-gray_background bulleted-list"><li>2019-1214
+完全想不起來新的事情又發生了</li></ul><ul id="fe3cfcf4-fc84-4ca4-8601-c65096b0f311" class="block-color-gray_background bulleted-list"><li>2019-1214
+移動的幻象就是時間</li></ul><ul id="64a64937-cc35-4105-b71e-113ba4fbb186" class="block-color-gray_background bulleted-list"><li>2019-1214
+提拉米蘇 千層蛋糕</li></ul><ul id="016356ee-8edb-4cf4-9b6b-f2c41462f35d" class="block-color-gray_background bulleted-list"><li>2019-1220
+當你吞下藥丸的那一刻起，你就再也不是自己，你預期的方向與你背離，身體的記憶沒有延續，然後唯一相同的是你認為你還是你</li></ul><ul id="7f791adc-6a2f-458e-bc35-7f2c844e4ad9" class="block-color-gray_background bulleted-list"><li>2019-1220
+我一定會把你修好的</li></ul><ul id="6602a9fa-9005-45eb-9def-2650d5f5d176" class="block-color-gray_background bulleted-list"><li>2019-1220
+別急著去死 嘗試去超越</li></ul><ul id="f63956ab-5105-4205-b7b6-4a82308d9c6b" class="block-color-gray_background bulleted-list"><li>2019-1223
+如果我思考的跟時間一樣快
+那我能感受時間嗎
+我的感受與時間是不相同的行進
+一個完整的體驗是我與滿足的認識之間的距離</li></ul><ul id="c61a8897-dc84-461d-9b4c-85fd9076f004" class="block-color-gray_background bulleted-list"><li>2019-1223
+我的感受變的更加難得
+並非是四周失去了值得被觀察的事情
+而是我時常選擇了其他的注意
+我開始願意去選擇觀察我以外的感受更大於自己
+這並不全然是值得欣喜
+我仍然可以視之一部分是不健康的
+認為這是呼應著來自於我之外的期待
+也認為這份期待是屬於只有我能觀察到
+是來自於我的期待
+我無法再完整的寫出如果過去的句子
+正如我無法完整的成為過去
+我選擇在時間之中成長的方式</li></ul><ul id="3caeb48a-ad44-4e39-bb69-b8ba71745ee1" class="block-color-gray_background bulleted-list"><li>2019-1223
+思緒泉湧像是一種身體不舒服一樣
+是一種豐富的身體感受
+就像無法也不該被打擾的
+而潛進身體深處的感受
+許多的聲音代表著你的各種面向
+爭奪著你的心聲
+就像到處都疼痛的身體
+無法做出適當的行為
+而這一切不得不的行為就好像讓我更成為了我
+無法避免的在深處獨自的探索
+我身體中的失控帶給我思考身體內部的世界之外
+仍然是內部卻又無法被征服的那些存在
+對年輕人而言是一種豐富的身體感受</li></ul><ul id="7d7783f5-c27c-407f-8ce3-79bbfd65878d" class="block-color-gray_background bulleted-list"><li>2019-1225
+這個房間一個人住太大了</li></ul><ul id="73bdb28a-968e-4019-b995-f49cd8aa7ba6" class="block-color-gray_background bulleted-list"><li>2019-1226
+記憶力不好之後就開始不會亂試，因為也想不起來自己做過什麼</li></ul><ul id="e42b0d2d-c533-45fa-9d52-b7f68a125175" class="block-color-gray_background bulleted-list"><li>2019-1227
+163
+24.5
+225</li></ul><ul id="15da75b0-613b-4926-b091-8b08b2f4a337" class="block-color-gray_background bulleted-list"><li>2019-1230
+The elevator is cozy</li></ul><ul id="ad2a5687-d8d7-484f-a853-6d618e19b947" class="block-color-gray_background bulleted-list"><li>2019-1231
+對錯誤紀錄</li></ul></div></article></body></html>
